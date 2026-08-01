@@ -1,0 +1,6 @@
+{
+  "projeto": "oraculo-imobiliario-br",
+  "versao": "1.0",
+  "criador": "Kenny Wilson - CRECI AL",
+  "naturezas": ["posse_pura", "recibo_gaveta", "escritura_sem_registro", "heranca_cessao", "matricula_vicio", "loteamento_irregular", "matricula_ok_onus", "spu", "rural"]
+}
