@@ -1,0 +1,14 @@
+{
+  "oraculo_imobiliario_br": "8 niveis de risco",
+  "criador": "Kenny Wilson - CRECI 2468 AL",
+  "niveis": [
+    {"nivel": 1, "nome": "Posse Pura", "risco": "ALTISSIMO", "solucao": "Usucapião + Cessão Posse"},
+    {"nivel": 2, "nome": "Recibo de Gaveta", "risco": "ALTO", "solucao": "Escritura + Registro + ITBI"},
+    {"nivel": 3, "nome": "Escritura sem Registro", "risco": "MEDIO", "solucao": "Levar a Registro urgente"},
+    {"nivel": 4, "nome": "Herança / Cessão", "risco": "MEDIO", "solucao": "Inventário + CENSEC + ITCMD 4%"},
+    {"nivel": 5, "nome": "Matrícula com Vício", "risco": "ALTO", "solucao": "Retificação Art 212/213"},
+    {"nivel": 6, "nome": "Loteamento Irregular", "risco": "ALTISSIMO", "solucao": "REURB + Prefeitura"},
+    {"nivel": 7, "nome": "SPU / Marinha", "risco": "CRITICO", "solucao": "RIP + CAT 90d + Laudêmio 5%"},
+    {"nivel": 8, "nome": "Rural / CAR / Geo", "risco": "CRITICO", "solucao": "CCIR + ITR 5a + SIGEF + FMP"}
+  ]
+}
