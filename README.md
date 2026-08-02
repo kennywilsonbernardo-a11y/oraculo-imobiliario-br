@@ -1,4 +1,5 @@
-# Oráculo Imobiliário BR Kenny Wilson Creci 2468-AL-BR
+# Oráculo Imobiliário BR
+Checklist PEI - 8 Itens | Material Educacional - Não é PTAM/CNAI nem Laudo
 > Checklist open-source de due diligence - PEI (Parecer Educativo e Interpretativo) - MVP Alagoas. Material educacional, não é PTAM/CNAI nem laudo jurídico.
 
 **Status:** MVP educativo em Alagoas | **Licença:** MIT
