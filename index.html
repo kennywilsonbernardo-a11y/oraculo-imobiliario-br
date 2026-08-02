@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oráculo Imobiliário BR - Checklist PEI 8 Itens</title>
+<title>Oráculo Imobiliário BR - Checklist PEI 13 Itens</title>
 <style>
   body{font-family:-apple-system,system-ui,sans-serif;background:#f6f7f9;margin:0;padding:16px;color:#111}
   .card{background:white;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
@@ -13,81 +13,88 @@
   .ok{background:#dcfce7;color:#166534;border:1px solid #bbf7d0}
   .alerta{background:#fef9c3;color:#854d0e;border:1px solid #fde68a}
   .neutro{background:#e5e7eb;color:#374151}
+  .extra{background:#e0f2fe;color:#0c4a6e;border:1px solid #bae6fd}
   textarea{width:100%;min-height:160px;border:1px solid #d1d5db;border-radius:10px;padding:12px;font-size:14px;box-sizing:border-box}
   button{background:#111;color:white;border:none;padding:14px 20px;border-radius:10px;font-weight:700;width:100%;font-size:16px;margin-top:10px}
   .item{border-left:4px solid #e5e7eb;padding-left:12px;margin:12px 0}
-  .item.ativo{border-color:#ef4444}.item.ok{border-color:#22c55e}.item.alerta{border-color:#eab308}
+  .item.ativo{border-color:#ef4444}.item.ok{border-color:#22c55e}.item.alerta{border-color:#eab308}.item.extra{border-color:#0ea5e9}
   #drop{border:2px dashed #d1d5db;border-radius:12px;padding:20px;text-align:center;background:#fff;margin:12px 0}
+  h2{margin:24px 0 8px 0;font-size:18px}
 </style>
 </head>
 <body>
 <div class="header">
   <h1 style="margin:0 0 6px 0">Oráculo Imobiliário BR</h1>
-  <p style="margin:0;opacity:.8">Checklist PEI - 8 Itens | Parecer Educativo e Interpretativo</p>
-  <small style="color:#9ca3af">MVP Alagoas - Material educacional, não é PTAM/CNAI nem laudo jurídico</small>
+  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | 8 da Matrícula + 5 Complementares</p>
+  <small style="color:#9ca3af">MVP Alagoas 2.0 - Material educacional, não é PTAM/CNAI nem laudo jurídico - Colab: Claude + Meta AI</small>
 </div>
 <div class="card">
   <h3 style="margin:0 0 8px 0">1. Enviar matrícula (caso Gabriel 145690)</h3>
   <div id="drop">Arraste o .txt da matrícula aqui ou clique para selecionar<input type="file" id="file" accept=".txt,.md" style="display:none"></div>
   <p style="text-align:center;margin:6px 0"><small>OU COLE O TEXTO ABAIXO</small></p>
-  <textarea id="texto" placeholder="Cole aqui o texto da matrícula... Ex: MATRÍCULA 145690 ... AV.22 INDISPONIBILIDADE CNIB ... AV.23 17/09/2025 ... RECUPERAÇÃO JUDICIAL..."></textarea>
-  <button id="btn">Gerar Checklist 8 Itens</button>
-  <small>🔒 100% no navegador, nada é enviado.</small>
+  <textarea id="texto" placeholder="Cole aqui o texto da matrícula... Ex: MATRICULA 145690 ... AV.22 INDISPONIBILIDADE ... AV.23 ... RECUPERAÇÃO JUDICIAL..."></textarea>
+  <button id="btn">Gerar Checklist 13 Itens</button>
+  <small>🔒 100% no navegador. 8 itens auto-detectados na matrícula + 5 complementares (fora da matrícula) pra solicitar.</small>
 </div>
 <div id="resultado" style="display:none">
   <div class="card" id="lista"></div>
   <div class="card">
-    <h3>Parecer Pronto</h3>
-    <textarea id="parecer" style="min-height:300px"></textarea>
-    <button onclick="copiar()">Copiar Parecer</button>
+    <h3>Parecer Pronto 13 Itens</h3>
+    <textarea id="parecer" style="min-height:500px"></textarea>
+    <button onclick="copiar()">Copiar Parecer Completo</button>
   </div>
 </div>
 <script>
-function analisarPEI(textoExtraido){
-  const t=textoExtraido.toUpperCase();
+function analisarPEI(t){
+  const txt=t.toUpperCase();
   const itens={
-    1:{nome:"Matrícula / Registro Geral",status:"Não identificado",factual:"",classe:"neutro"},
-    2:{nome:"Propriedade / Cadeia",status:"Não identificado",factual:"",classe:"neutro"},
-    3:{nome:"Ônus - Hipoteca / Alienação",status:"Não identificado",factual:"",classe:"neutro"},
-    4:{nome:"Ônus - Indisponibilidade CNIB / Penhora",status:"Não consta",factual:"Nenhuma indisponibilidade encontrada",classe:"ok"},
-    5:{nome:"Apontamentos - Ações",status:"Não consta",factual:"",classe:"ok"},
-    6:{nome:"Débitos - IPTU / Condomínio",status:"Documento não enviado",factual:"Solicitar certidões atualizadas",classe:"neutro"},
-    7:{nome:"Situação Especial",status:"Não constatada",factual:"",classe:"ok"},
-    8:{nome:"Condição para Transação",status:"Aguardando itens",factual:"",classe:"neutro"}
+    1:{nome:"Matrícula / Registro Geral",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
+    2:{nome:"Propriedade / Cadeia",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
+    3:{nome:"Ônus - Hipoteca / Alienação",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
+    4:{nome:"Ônus - Indisponibilidade CNIB / Penhora",status:"Não consta",factual:"Nenhuma indisponibilidade encontrada",classe:"ok",tipo:"matricula"},
+    5:{nome:"Apontamentos - Ações",status:"Não consta",factual:"",classe:"ok",tipo:"matricula"},
+    6:{nome:"Débitos - IPTU / Condomínio (na matrícula)",status:"Documento não enviado",factual:"Solicitar certidões atualizadas",classe:"neutro",tipo:"matricula"},
+    7:{nome:"Situação Especial",status:"Não constatada",factual:"",classe:"ok",tipo:"matricula"},
+    8:{nome:"Condição para Transação (matrícula)",status:"Aguardando itens",factual:"",classe:"neutro",tipo:"matricula"},
+    9:{nome:"Certidões Pessoais do Vendedor",status:"Solicitar",factual:"Solicitar certidões cíveis, trabalhistas e execuções fiscais (federal, estadual, municipal) no nome do proprietário/sócios - não só o averbado. Indisponibilidade demora a chegar no cartório.",classe:"extra",tipo:"extra"},
+    10:{nome:"Regularidade da Construção",status:"Solicitar",factual:"Solicitar Habite-se e conferir se averbação de construção bate com realidade (área construída x escritura). Divergência trava financiamento e registro.",classe:"extra",tipo:"extra"},
+    11:{nome:"Situação do Condomínio",status:"Solicitar",factual:"Solicitar convenção registrada, certidão de débitos condominiais, atas de obras/ações judiciais do condomínio. Não aparece na matrícula do apê.",classe:"extra",tipo:"extra"},
+    12:{nome:"Capacidade de Quem Assina",status:"Solicitar",factual:"Se PF casada: solicitar outorga uxória. Se PJ: conferir poderes no contrato social/procuração de quem assina. Assinatura sem poder anula venda.",classe:"extra",tipo:"extra"},
+    13:{nome:"ITBI - Imposto de Transmissão",status:"Solicitar",factual:"Solicitar comprovante de ITBI pago ou guia pendente antes da escritura. Sem ITBI pago, cartório não registra - trava final.",classe:"extra",tipo:"extra"}
   };
-  if(t.includes("MATRICULA")){itens[1].status="Apresentada";itens[1].classe="ok";const m=t.match(/MATRICULA\s*[\:\-]?\s*(\d+[\.\d]*)/);itens[1].factual=m?`Matrícula ${m[1]} identificada`:"Matrícula identificada";}
-  if(t.includes("CERUTTI")||t.includes("PROPRIETAR")){itens[2].status="Consta";itens[2].classe="alerta";itens[2].factual="Proprietária identificada";}
-  if(t.includes("RECUPERA")&&t.includes("JUDICIAL")){itens[7].status="Constatada";itens[7].classe="alerta";itens[7].factual="Recuperação Judicial - Lei 11.101/05";itens[2].factual+=" - Em Recuperação Judicial";}
-  if(t.includes("HIPOTECA")){if(t.includes("BAIXA DE HIPOTECA")||t.includes("CANCELADA")){itens[3].status="Consta Baixa";itens[3].classe="ok";itens[3].factual="Hipoteca e baixa - AV.1 e AV.2";}else{itens[3].status="Consta Ativa";itens[3].classe="alerta";itens[3].factual="Hipoteca ativa - validar baixa";}}
-  const indis=(t.match(/INDISPONIBILIDADE/g)||[]).length;
-  if(indis>0){if(t.includes("2023")||t.includes("2025")||t.includes("INDISPONIVEL")){itens[4].status="Consta apontamento ATIVO";itens[4].classe="ativo";itens[4].factual=`CRÍTICO: ${indis} averbações de INDISPONIBILIDADE CNIB. Ex: AV.22 (20/03/2023) e AV.23 (17/09/2025) ativas - Mat. 145690. Cartório não registra escritura.`;}else{itens[4].status="Consta histórico";itens[4].classe="alerta";itens[4].factual=`Histórico de ${indis} indisponibilidades - verificar cancelamentos`;}}
-  if(t.includes("VARA DO TRABALHO")||t.includes("VARA FEDERAL")||t.includes("VARA CIVEL")){itens[5].status="Consta histórico";itens[5].classe="alerta";itens[5].factual="Histórico de processos - Trabalho/Federal/Cível";}
-  if(itens[4].classe==="ativo"){itens[8].status="Sem condição registral no momento";itens[8].classe="ativo";itens[8].factual="Sem condição registral para venda à vista por indisponibilidade ativa. Transação somente com autorização judicial por advogado - Lei 11.101/05.";}else if(itens[1].status==="Apresentada"){itens[8].status="Apta para validação jurídica";itens[8].classe="ok";itens[8].factual="Checklist conferido. Validar com advogado e certidão atualizada 30 dias.";}
+  if(txt.includes("MATRICULA")){itens[1].status="Apresentada";itens[1].classe="ok";const m=txt.match(/MATRICULA\s*[\:\-]?\s*(\d+[\.\d]*)/);itens[1].factual=m?`Matrícula ${m[1]} identificada`:"Matrícula identificada";}
+  if(txt.includes("CERUTTI")||txt.includes("PROPRIETAR")){itens[2].status="Consta";itens[2].classe="alerta";itens[2].factual="Proprietária identificada";}
+  if(txt.includes("RECUPERA")&&txt.includes("JUDICIAL")){itens[7].status="Constatada";itens[7].classe="alerta";itens[7].factual="Recuperação Judicial - Lei 11.101/05";itens[2].factual+=" - Em Recuperação Judicial";}
+  if(txt.includes("HIPOTECA")){if(txt.includes("BAIXA DE HIPOTECA")||txt.includes("CANCELADA")){itens[3].status="Consta Baixa";itens[3].classe="ok";itens[3].factual="Hipoteca e baixa - AV.1 e AV.2";}else{itens[3].status="Consta Ativa";itens[3].classe="alerta";itens[3].factual="Hipoteca ativa - validar baixa";}}
+  const indis=(txt.match(/INDISPONIBILIDADE/g)||[]).length;
+  if(indis>0){if(txt.includes("2023")||txt.includes("2025")||txt.includes("INDISPONIVEL")){itens[4].status="Consta apontamento ATIVO";itens[4].classe="ativo";itens[4].factual=`CRÍTICO: ${indis} averbações INDISPONIBILIDADE CNIB. Ex: AV.22 (20/03/2023) e AV.23 (17/09/2025) - Mat. 145690. Cartório não registra.`;}else{itens[4].status="Consta histórico";itens[4].classe="alerta";itens[4].factual=`Histórico de ${indis} indisponibilidades - verificar cancelamentos`;}}
+  if(txt.includes("VARA DO TRABALHO")||txt.includes("VARA FEDERAL")||txt.includes("VARA CIVEL")){itens[5].status="Consta histórico";itens[5].classe="alerta";itens[5].factual="Histórico de processos - Trabalho/Federal/Cível";}
+  if(itens[4].classe==="ativo"){itens[8].status="Sem condição registral no momento";itens[8].classe="ativo";itens[8].factual="Sem condição registral para venda à vista por indisponibilidade ativa. Transação somente com autorização judicial por advogado - Lei 11.101/05.";}else if(itens[1].status==="Apresentada"){itens[8].status="Apta para validação jurídica";itens[8].classe="ok";itens[8].factual="Checklist matrícula conferido. Validar com advogado e certidão 30 dias.";}
   return itens;
 }
-function gerarTextoParecer(itens,cliente="Gabriel - Mat. 145690"){
-  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI (8 ITENS)\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nCliente: ${cliente}\nData: ${new Date().toLocaleString('pt-BR')}\n\n`;
+function gerarTextoParecer(itens){
+  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5)\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: DENTRO DA MATRÍCULA (auto-detectado) ===\n`;
   for(let i=1;i<=8;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nFactual: ${itens[i].factual}\n\n`;}
-  txt+=`ORIENTAÇÃO: Enquanto constar indisponibilidade ativa (CNIB), o RI não registra escritura (art. 53, Lei 6.015/73). Empresa em Recuperação, venda de ativo depende de autorização judicial (art. 66, Lei 11.101/05). Procedimento por advogado.\n\nDISCLAIMER: Material educacional. Não substitui parecer jurídico.\n`;
+  txt+=`=== BLOCO 2: FORA DA MATRÍCULA - DOCUMENTOS COMPLEMENTARES A SOLICITAR (Claude + Oráculo) ===\nEstes não aparecem só lendo matrícula, exigem certidão separada:\n\n`;
+  for(let i=9;i<=13;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nO que solicitar: ${itens[i].factual}\n\n`;}
+  txt+=`ORIENTAÇÃO PEDAGÓGICA:\n- Bloco 1: factual da matrícula. Enquanto constar indisponibilidade ativa, RI não registra (art. 53 Lei 6.015/73). RJ precisa autorização judicial (art. 66 Lei 11.101/05).\n- Bloco 2: estes 5 pontos são os que mais geram dor de cabeça e não estão na matrícula. Sempre solicitar antes de fechar.\n\nDISCLAIMER: Material educacional. Não substitui parecer jurídico. Validar com certidão 30 dias e advogado.\n`;
   return txt;
 }
 const drop=document.getElementById('drop'),fileInput=document.getElementById('file'),texto=document.getElementById('texto'),btn=document.getElementById('btn'),res=document.getElementById('resultado'),lista=document.getElementById('lista'),parecerTA=document.getElementById('parecer');
 drop.addEventListener('click',()=>fileInput.click());
-drop.addEventListener('dragover',(e)=>{e.preventDefault();});
 drop.addEventListener('drop',(e)=>{e.preventDefault();if(e.dataTransfer.files[0])lerArquivo(e.dataTransfer.files[0])});
 fileInput.addEventListener('change',(e)=>{if(e.target.files[0])lerArquivo(e.target.files[0])});
-function lerArquivo(file){const r=new FileReader();r.onload=(ev)=>{texto.value=ev.target.result};r.readAsText(file);drop.textContent=`Arquivo carregado: ${file.name}`;}
+function lerArquivo(f){const r=new FileReader();r.onload=(ev)=>{texto.value=ev.target.result};r.readAsText(f);drop.textContent=`Arquivo carregado: ${f.name}`;}
 btn.addEventListener('click',()=>{
-  const conteudo=texto.value.trim();
-  if(!conteudo){alert('Cole o texto da matrícula');return;}
-  const itens=analisarPEI(conteudo);
-  let html=`<h3>Checklist PEI - 8 Itens Conferidos</h3>`;
+  const c=texto.value.trim();if(!c){alert('Cole o texto');return;}
+  const itens=analisarPEI(c);
+  let html=`<h3>Checklist PEI - 8 Itens Conferidos (Matrícula)</h3>`;
   for(let i=1;i<=8;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
-  lista.innerHTML=html;
-  parecerTA.value=gerarTextoParecer(itens);
-  res.style.display='block';
+  html+=`<h2>📋 5 Complementares - Fora da Matrícula (a solicitar)</h2><small>Esses não aparecem na matrícula, exigem certidão separada - sugestão Claude</small>`;
+  for(let i=9;i<=13;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
+  lista.innerHTML=html;parecerTA.value=gerarTextoParecer(itens);res.style.display='block';
 });
-function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer copiado!');}
+function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer 13 itens copiado!');}
 </script>
 </body>
 </html>
