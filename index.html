@@ -3,7 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oráculo Imobiliário BR - Checklist PEI 13 Itens</title>
+<title>Oráculo Imobiliário BR - Checklist PEI 13 Itens - v4 PDF</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>if(window['pdfjsLib']){pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}</script>
 <style>
   body{font-family:-apple-system,system-ui,sans-serif;background:#f6f7f9;margin:0;padding:16px;color:#111}
   .card{background:white;border-radius:12px;padding:16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,.1)}
@@ -18,30 +20,34 @@
   button{background:#111;color:white;border:none;padding:14px 20px;border-radius:10px;font-weight:700;width:100%;font-size:16px;margin-top:10px}
   .item{border-left:4px solid #e5e7eb;padding-left:12px;margin:12px 0}
   .item.ativo{border-color:#ef4444}.item.ok{border-color:#22c55e}.item.alerta{border-color:#eab308}.item.extra{border-color:#0ea5e9}
-  #drop{border:2px dashed #d1d5db;border-radius:12px;padding:20px;text-align:center;background:#fff;margin:12px 0}
+  #drop{border:2px dashed #0ea5e9;border-radius:12px;padding:24px;text-align:center;background:#f0f9ff;margin:12px 0;cursor:pointer;transition:.2s}
+  #drop.dragover{background:#e0f2fe;border-color:#0284c7}
   h2{margin:24px 0 8px 0;font-size:18px}
+  #status{font-size:13px;color:#0c4a6e;margin-top:8px;text-align:center;font-weight:600}
 </style>
 </head>
 <body>
 <div class="header">
   <h1 style="margin:0 0 6px 0">Oráculo Imobiliário BR</h1>
-  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | 8 Matrícula + 5 Complementares</p>
-  <small style="color:#9ca3af">v3.0 Blindada - Material educacional, não é PTAM/CNAI nem laudo jurídico - Colab: Claude + Meta AI</small>
+  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | 8 Matrícula + 5 Complementares | v4 PDF Reader</p>
+  <small style="color:#9ca3af">v4.0 - Agora lê PDF direto! - Material educacional, não é PTAM/CNAI nem laudo jurídico</small>
 </div>
 <div class="card">
-  <h3 style="margin:0 0 8px 0">1. Enviar matrícula (caso Gabriel 145690)</h3>
-  <div id="drop">Arraste o .txt da matrícula aqui ou clique para selecionar<input type="file" id="file" accept=".txt,.md" style="display:none"></div>
+  <h3 style="margin:0 0 8px 0">1. Enviar matrícula (PDF ou TXT - caso Gabriel 145690)</h3>
+  <div id="drop">📄 Arraste o PDF ou TXT da matrícula aqui<br><small>Clique para selecionar - Agora lê PDF direto!</small><input type="file" id="file" accept=".pdf,.txt,.md" style="display:none"></div>
+  <div id="status"></div>
   <p style="text-align:center;margin:6px 0"><small>OU COLE O TEXTO ABAIXO</small></p>
-  <textarea id="texto" placeholder="Cole aqui o texto da matrícula... Ex: MATRICULA 145690 ... AV.22 INDISPONIBILIDADE ... AV.23 ... RECUPERAÇÃO JUDICIAL..."></textarea>
+  <textarea id="texto" placeholder="Cole aqui o texto da matrícula... ou arraste o PDF acima. Ex: MATRICULA 145690 ... AV.22 INDISPONIBILIDADE ... AV.23 ... RECUPERAÇÃO JUDICIAL..."></textarea>
   <button id="btn">Gerar Checklist 13 Itens</button>
-  <small>🔒 100% no navegador. 8 itens auto-detectados + 5 complementares pra solicitar.</small>
+  <small>🔒 100% no navegador. PDF lido localmente via PDF.js, nada enviado pra servidor. 8 itens auto-detectados + 5 complementares.</small>
 </div>
 <div id="resultado" style="display:none">
   <div class="card" id="lista"></div>
   <div class="card">
-    <h3>Parecer Pronto 13 Itens</h3>
+    <h3>Parecer Pronto 13 Itens v4</h3>
     <textarea id="parecer" style="min-height:500px"></textarea>
     <button onclick="copiar()">Copiar Parecer Completo</button>
+    <button onclick="whats()" style="background:#25D366;margin-top:8px">Compartilhar no WhatsApp</button>
   </div>
 </div>
 <script>
@@ -73,28 +79,63 @@ function analisarPEI(t){
   return itens;
 }
 function gerarTextoParecer(itens){
-  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5) - v3.0 BLINDADA\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: DENTRO DA MATRÍCULA (auto-detectado) ===\n`;
+  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5) - v4.0 PDF READER\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: DENTRO DA MATRÍCULA (auto-detectado) ===\n`;
   for(let i=1;i<=8;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nFactual: ${itens[i].factual}\n\n`;}
-  txt+=`=== BLOCO 2: FORA DA MATRÍCULA - DOCUMENTOS COMPLEMENTARES A SOLICITAR (Claude + Oráculo) ===\nEstes não aparecem só lendo matrícula, exigem certidão separada:\n\n`;
+  txt+=`=== BLOCO 2: FORA DA MATRÍCULA - DOCUMENTOS COMPLEMENTARES A SOLICITAR ===\n`;
   for(let i=9;i<=13;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nO que solicitar: ${itens[i].factual}\n\n`;}
-  txt+=`ORIENTAÇÃO PEDAGÓGICA v3:\n- Bloco 1: factual da matrícula. Enquanto constar indisponibilidade ativa, RI não registra (art. 53 Lei 6.015/73). RJ precisa autorização judicial (art. 66 Lei 11.101/05).\n- Item 6: débitos de IPTU se constar na matrícula, condomínio detalhado no item 11 pra não duplicar.\n- Item 12: assinatura sem poder pode comprometer validade, não anula automaticamente - verificar poderes.\n- Bloco 2: 5 pontos que mais geram dor de cabeça e não estão na matrícula. Sempre solicitar antes de fechar.\n\nDISCLAIMER: Material educacional. Não substitui parecer jurídico. Validar com certidão 30 dias e advogado.\n`;
+  txt+=`ORIENTAÇÃO v4: Leitura de PDF local via PDF.js. Bloco 1 factual da matrícula. Enquanto constar indisponibilidade ativa, RI não registra. RJ precisa autorização judicial. Item 6: IPTU se constar, condomínio ver item 11. Item 12 blindado: pode comprometer validade.\nDISCLAIMER: Material educacional. Validar com certidão 30 dias e advogado.\n`;
   return txt;
 }
-const drop=document.getElementById('drop'),fileInput=document.getElementById('file'),texto=document.getElementById('texto'),btn=document.getElementById('btn'),res=document.getElementById('resultado'),lista=document.getElementById('lista'),parecerTA=document.getElementById('parecer');
+const drop=document.getElementById('drop'),fileInput=document.getElementById('file'),texto=document.getElementById('texto'),btn=document.getElementById('btn'),res=document.getElementById('resultado'),lista=document.getElementById('lista'),parecerTA=document.getElementById('parecer'),statusEl=document.getElementById('status');
 drop.addEventListener('click',()=>fileInput.click());
-drop.addEventListener('drop',(e)=>{e.preventDefault();if(e.dataTransfer.files[0])lerArquivo(e.dataTransfer.files[0])});
-fileInput.addEventListener('change',(e)=>{if(e.target.files[0])lerArquivo(e.target.files[0])});
-function lerArquivo(f){const r=new FileReader();r.onload=(ev)=>{texto.value=ev.target.result};r.readAsText(f);drop.textContent=`Arquivo carregado: ${f.name}`;}
+drop.addEventListener('dragover',(e)=>{e.preventDefault();drop.classList.add('dragover');});
+drop.addEventListener('dragleave',()=>drop.classList.remove('dragover'));
+drop.addEventListener('drop',async (e)=>{e.preventDefault();drop.classList.remove('dragover');if(e.dataTransfer.files[0])await lerArquivo(e.dataTransfer.files[0])});
+fileInput.addEventListener('change',async (e)=>{if(e.target.files[0])await lerArquivo(e.target.files[0])});
+
+async function lerArquivo(f){
+  statusEl.textContent='';
+  if(f.type==='application/pdf' || f.name.toLowerCase().endsWith('.pdf')){
+    try{
+      statusEl.textContent='📄 Lendo PDF... extraindo texto (100% local)...';
+      drop.innerHTML='⏳ Lendo PDF... aguarde';
+      const arrayBuffer=await f.arrayBuffer();
+      const pdf=await pdfjsLib.getDocument({data:arrayBuffer}).promise;
+      let fullText='';
+      for(let i=1;i<=pdf.numPages;i++){
+        statusEl.textContent=`📄 Lendo PDF... página ${i}/${pdf.numPages}`;
+        const page=await pdf.getPage(i);
+        const content=await page.getTextContent();
+        const pageText=content.items.map(it=>it.str).join(' ');
+        fullText+=pageText+'\n';
+      }
+      texto.value=fullText;
+      statusEl.textContent=`✅ PDF lido! ${pdf.numPages} páginas extraídas. Clique em Gerar Checklist.`;
+      drop.innerHTML=`✅ PDF carregado: ${f.name} (${pdf.numPages} págs)<br><small>Clique para trocar</small><input type="file" id="file" accept=".pdf,.txt,.md" style="display:none">`;
+    }catch(err){
+      console.error(err);
+      statusEl.textContent='❌ Erro ao ler PDF: '+err.message+' - tente colar o texto manualmente';
+      drop.innerHTML=`❌ Erro no PDF<br><small>Clique para tentar outro</small><input type="file" id="file" accept=".pdf,.txt,.md" style="display:none">`;
+      const t=await f.text(); if(t) texto.value=t;
+    }
+  }else{
+    const r=new FileReader();
+    r.onload=(ev)=>{texto.value=ev.target.result;statusEl.textContent=`✅ Arquivo TXT carregado: ${f.name}`;drop.innerHTML=`✅ Arquivo: ${f.name}<br><small>Clique para trocar</small>`;};
+    r.readAsText(f);
+  }
+}
+
 btn.addEventListener('click',()=>{
-  const c=texto.value.trim();if(!c){alert('Cole o texto');return;}
+  const c=texto.value.trim();if(!c){alert('Cole o texto ou arraste o PDF');return;}
   const itens=analisarPEI(c);
   let html=`<h3>Bloco 1: 8 Itens da Matrícula (auto-detectado)</h3>`;
   for(let i=1;i<=8;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
-  html+=`<h2>📋 Bloco 2: 5 Complementares - Fora da Matrícula (a solicitar)</h2><small>Esses não aparecem na matrícula, exigem certidão separada - sugestão Claude - v3 blindada</small>`;
+  html+=`<h2>📋 Bloco 2: 5 Complementares - Fora da Matrícula (a solicitar) - v4 PDF</h2><small>Não aparecem na matrícula, exigem certidão separada - v4 blindada + PDF Reader</small>`;
   for(let i=9;i<=13;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
-  lista.innerHTML=html;parecerTA.value=gerarTextoParecer(itens);res.style.display='block';
+  lista.innerHTML=html;parecerTA.value=gerarTextoParecer(itens);res.style.display='block';res.scrollIntoView({behavior:'smooth'});
 });
-function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer 13 itens v3 blindado copiado!');}
+function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer v4 copiado!');}
+function whats(){const txt=encodeURIComponent(parecerTA.value.substring(0,1500)+'... veja completo no Oráculo');window.open('https://wa.me/?text='+txt,'_blank');}
 </script>
 </body>
 </html>
