@@ -25,8 +25,8 @@
 <body>
 <div class="header">
   <h1 style="margin:0 0 6px 0">Oráculo Imobiliário BR</h1>
-  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | 8 da Matrícula + 5 Complementares</p>
-  <small style="color:#9ca3af">MVP Alagoas 2.0 - Material educacional, não é PTAM/CNAI nem laudo jurídico - Colab: Claude + Meta AI</small>
+  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | 8 Matrícula + 5 Complementares</p>
+  <small style="color:#9ca3af">v3.0 Blindada - Material educacional, não é PTAM/CNAI nem laudo jurídico - Colab: Claude + Meta AI</small>
 </div>
 <div class="card">
   <h3 style="margin:0 0 8px 0">1. Enviar matrícula (caso Gabriel 145690)</h3>
@@ -34,7 +34,7 @@
   <p style="text-align:center;margin:6px 0"><small>OU COLE O TEXTO ABAIXO</small></p>
   <textarea id="texto" placeholder="Cole aqui o texto da matrícula... Ex: MATRICULA 145690 ... AV.22 INDISPONIBILIDADE ... AV.23 ... RECUPERAÇÃO JUDICIAL..."></textarea>
   <button id="btn">Gerar Checklist 13 Itens</button>
-  <small>🔒 100% no navegador. 8 itens auto-detectados na matrícula + 5 complementares (fora da matrícula) pra solicitar.</small>
+  <small>🔒 100% no navegador. 8 itens auto-detectados + 5 complementares pra solicitar.</small>
 </div>
 <div id="resultado" style="display:none">
   <div class="card" id="lista"></div>
@@ -53,13 +53,13 @@ function analisarPEI(t){
     3:{nome:"Ônus - Hipoteca / Alienação",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
     4:{nome:"Ônus - Indisponibilidade CNIB / Penhora",status:"Não consta",factual:"Nenhuma indisponibilidade encontrada",classe:"ok",tipo:"matricula"},
     5:{nome:"Apontamentos - Ações",status:"Não consta",factual:"",classe:"ok",tipo:"matricula"},
-    6:{nome:"Débitos - IPTU / Condomínio (na matrícula)",status:"Documento não enviado",factual:"Solicitar certidões atualizadas",classe:"neutro",tipo:"matricula"},
+    6:{nome:"Débitos - IPTU (se constar na matrícula)",status:"Documento não enviado",factual:"Solicitar certidões atualizadas - detalhamento de condomínio ver item 11",classe:"neutro",tipo:"matricula"},
     7:{nome:"Situação Especial",status:"Não constatada",factual:"",classe:"ok",tipo:"matricula"},
     8:{nome:"Condição para Transação (matrícula)",status:"Aguardando itens",factual:"",classe:"neutro",tipo:"matricula"},
     9:{nome:"Certidões Pessoais do Vendedor",status:"Solicitar",factual:"Solicitar certidões cíveis, trabalhistas e execuções fiscais (federal, estadual, municipal) no nome do proprietário/sócios - não só o averbado. Indisponibilidade demora a chegar no cartório.",classe:"extra",tipo:"extra"},
     10:{nome:"Regularidade da Construção",status:"Solicitar",factual:"Solicitar Habite-se e conferir se averbação de construção bate com realidade (área construída x escritura). Divergência trava financiamento e registro.",classe:"extra",tipo:"extra"},
     11:{nome:"Situação do Condomínio",status:"Solicitar",factual:"Solicitar convenção registrada, certidão de débitos condominiais, atas de obras/ações judiciais do condomínio. Não aparece na matrícula do apê.",classe:"extra",tipo:"extra"},
-    12:{nome:"Capacidade de Quem Assina",status:"Solicitar",factual:"Se PF casada: solicitar outorga uxória. Se PJ: conferir poderes no contrato social/procuração de quem assina. Assinatura sem poder anula venda.",classe:"extra",tipo:"extra"},
+    12:{nome:"Capacidade de Quem Assina",status:"Solicitar",factual:"Se PF casada: solicitar outorga uxória. Se PJ: conferir poderes no contrato social/procuração de quem assina. Assinatura sem poder pode comprometer a validade da venda.",classe:"extra",tipo:"extra"},
     13:{nome:"ITBI - Imposto de Transmissão",status:"Solicitar",factual:"Solicitar comprovante de ITBI pago ou guia pendente antes da escritura. Sem ITBI pago, cartório não registra - trava final.",classe:"extra",tipo:"extra"}
   };
   if(txt.includes("MATRICULA")){itens[1].status="Apresentada";itens[1].classe="ok";const m=txt.match(/MATRICULA\s*[\:\-]?\s*(\d+[\.\d]*)/);itens[1].factual=m?`Matrícula ${m[1]} identificada`:"Matrícula identificada";}
@@ -73,11 +73,11 @@ function analisarPEI(t){
   return itens;
 }
 function gerarTextoParecer(itens){
-  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5)\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: DENTRO DA MATRÍCULA (auto-detectado) ===\n`;
+  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5) - v3.0 BLINDADA\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: DENTRO DA MATRÍCULA (auto-detectado) ===\n`;
   for(let i=1;i<=8;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nFactual: ${itens[i].factual}\n\n`;}
   txt+=`=== BLOCO 2: FORA DA MATRÍCULA - DOCUMENTOS COMPLEMENTARES A SOLICITAR (Claude + Oráculo) ===\nEstes não aparecem só lendo matrícula, exigem certidão separada:\n\n`;
   for(let i=9;i<=13;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nO que solicitar: ${itens[i].factual}\n\n`;}
-  txt+=`ORIENTAÇÃO PEDAGÓGICA:\n- Bloco 1: factual da matrícula. Enquanto constar indisponibilidade ativa, RI não registra (art. 53 Lei 6.015/73). RJ precisa autorização judicial (art. 66 Lei 11.101/05).\n- Bloco 2: estes 5 pontos são os que mais geram dor de cabeça e não estão na matrícula. Sempre solicitar antes de fechar.\n\nDISCLAIMER: Material educacional. Não substitui parecer jurídico. Validar com certidão 30 dias e advogado.\n`;
+  txt+=`ORIENTAÇÃO PEDAGÓGICA v3:\n- Bloco 1: factual da matrícula. Enquanto constar indisponibilidade ativa, RI não registra (art. 53 Lei 6.015/73). RJ precisa autorização judicial (art. 66 Lei 11.101/05).\n- Item 6: débitos de IPTU se constar na matrícula, condomínio detalhado no item 11 pra não duplicar.\n- Item 12: assinatura sem poder pode comprometer validade, não anula automaticamente - verificar poderes.\n- Bloco 2: 5 pontos que mais geram dor de cabeça e não estão na matrícula. Sempre solicitar antes de fechar.\n\nDISCLAIMER: Material educacional. Não substitui parecer jurídico. Validar com certidão 30 dias e advogado.\n`;
   return txt;
 }
 const drop=document.getElementById('drop'),fileInput=document.getElementById('file'),texto=document.getElementById('texto'),btn=document.getElementById('btn'),res=document.getElementById('resultado'),lista=document.getElementById('lista'),parecerTA=document.getElementById('parecer');
@@ -88,13 +88,13 @@ function lerArquivo(f){const r=new FileReader();r.onload=(ev)=>{texto.value=ev.t
 btn.addEventListener('click',()=>{
   const c=texto.value.trim();if(!c){alert('Cole o texto');return;}
   const itens=analisarPEI(c);
-  let html=`<h3>Checklist PEI - 8 Itens Conferidos (Matrícula)</h3>`;
+  let html=`<h3>Bloco 1: 8 Itens da Matrícula (auto-detectado)</h3>`;
   for(let i=1;i<=8;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
-  html+=`<h2>📋 5 Complementares - Fora da Matrícula (a solicitar)</h2><small>Esses não aparecem na matrícula, exigem certidão separada - sugestão Claude</small>`;
+  html+=`<h2>📋 Bloco 2: 5 Complementares - Fora da Matrícula (a solicitar)</h2><small>Esses não aparecem na matrícula, exigem certidão separada - sugestão Claude - v3 blindada</small>`;
   for(let i=9;i<=13;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
   lista.innerHTML=html;parecerTA.value=gerarTextoParecer(itens);res.style.display='block';
 });
-function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer 13 itens copiado!');}
+function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer 13 itens v3 blindado copiado!');}
 </script>
 </body>
 </html>
