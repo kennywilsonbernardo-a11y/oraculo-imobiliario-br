@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Oráculo Imobiliário BR - Checklist PEI 13 Itens - v5 OCR</title>
+<title>Oráculo Imobiliário BR - Checklist PEI 13 Itens - v6</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>if(window['pdfjsLib']){pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';}</script>
 <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
@@ -18,7 +18,8 @@
   .neutro{background:#e5e7eb;color:#374151}
   .extra{background:#e0f2fe;color:#0c4a6e;border:1px solid #bae6fd}
   textarea{width:100%;min-height:160px;border:1px solid #d1d5db;border-radius:10px;padding:12px;font-size:14px;box-sizing:border-box}
-  button{background:#111;color:white;border:none;padding:14px 20px;border-radius:10px;font-weight:700;width:100%;font-size:16px;margin-top:10px}
+  button{background:#111;color:white;border:none;padding:14px 20px;border-radius:10px;font-weight:700;width:100%;font-size:16px;margin-top:10px;cursor:pointer}
+  button:disabled{opacity:.5;cursor:not-allowed}
   .item{border-left:4px solid #e5e7eb;padding-left:12px;margin:12px 0}
   .item.ativo{border-color:#ef4444}.item.ok{border-color:#22c55e}.item.alerta{border-color:#eab308}.item.extra{border-color:#0ea5e9}
   #drop{border:2px dashed #0ea5e9;border-radius:12px;padding:24px;text-align:center;background:#f0f9ff;margin:12px 0;cursor:pointer;transition:.2s}
@@ -26,74 +27,198 @@
   h2{margin:24px 0 8px 0;font-size:18px}
   #status{font-size:13px;color:#0c4a6e;margin-top:8px;text-align:center;font-weight:600;line-height:1.4}
   #canvasHolder{display:none}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#111;color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;opacity:0;transition:opacity .25s;pointer-events:none;z-index:999}
+  .toast.show{opacity:1}
 </style>
 </head>
 <body>
 <div class="header">
   <h1 style="margin:0 0 6px 0">Oráculo Imobiliário BR</h1>
-  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | v5 OCR - Lê PDF Digital + Escaneado</p>
-  <small style="color:#9ca3af">v5.0 - OCR para fotos de matrícula! - Educacional, não é PTAM/CNAI</small>
+  <p style="margin:0;opacity:.8">Checklist PEI - 13 Itens | v6 - Lê PDF Digital + Escaneado</p>
+  <small style="color:#9ca3af">Material educacional - não é PTAM/CNAI nem laudo jurídico</small>
 </div>
 <div class="card">
-  <h3 style="margin:0 0 8px 0">1. Enviar matrícula (PDF Digital ou Foto/Escaneado - 6643 e 145690)</h3>
-  <div id="drop">📄📸 Arraste PDF aqui - Digital ou Escaneado<br><small>Clique para selecionar - Agora com OCR!</small><input type="file" id="file" accept=".pdf,.jpg,.jpeg,.png" style="display:none"></div>
-  <div id="status">Aguardando PDF...</div>
+  <h3 style="margin:0 0 8px 0">1. Enviar matrícula (PDF digital, PDF escaneado ou foto)</h3>
+  <div id="drop">📄📸 Arraste PDF ou imagem aqui<br><small>Clique para selecionar - OCR automático se necessário</small><input type="file" id="file" accept=".pdf,.jpg,.jpeg,.png" style="display:none"></div>
+  <div id="status">Aguardando arquivo...</div>
   <div id="canvasHolder"><canvas id="pdfCanvas"></canvas></div>
   <p style="text-align:center;margin:6px 0"><small>OU COLE O TEXTO / CORRIJA O OCR ABAIXO</small></p>
-  <textarea id="texto" placeholder="Cole ou aguarde OCR extrair... Ex: MATRICULA 6643 ou 145690..."></textarea>
+  <textarea id="texto" placeholder="Cole o texto da matrícula aqui, ou aguarde o OCR extrair automaticamente..."></textarea>
   <button id="btn">Gerar Checklist 13 Itens</button>
-  <small>🔒 100% no navegador. PDF.js + Tesseract.js OCR local. Escaneado demora 30-60s nas 12 págs. 8 auto + 5 complementares.</small>
+  <small>🔒 100% no navegador. PDF.js + Tesseract.js OCR local — nada é enviado a servidor algum. Documentos escaneados podem levar 30–60s dependendo do nº de páginas. 8 itens automáticos + 5 complementares.</small>
 </div>
 <div id="resultado" style="display:none">
   <div class="card" id="lista"></div>
   <div class="card">
-    <h3>Parecer Pronto 13 Itens v5 OCR</h3>
+    <h3>Parecer Pronto</h3>
     <textarea id="parecer" style="min-height:500px"></textarea>
     <button onclick="copiar()">Copiar Parecer</button>
-    <button onclick="whats()" style="background:#25D366;margin-top:8px">WhatsApp</button>
+    <button onclick="whats()" style="background:#25D366;margin-top:8px">Enviar por WhatsApp</button>
   </div>
 </div>
+<div id="toast" class="toast"></div>
 <script>
-function analisarPEI(t){
-  const txt=t.toUpperCase();
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg;
+  el.classList.add('show');
+  clearTimeout(toast._t);
+  toast._t=setTimeout(()=>el.classList.remove('show'),2200);
+}
+
+// ---------- Motor de análise (genérico, não depende de casos específicos) ----------
+function analisarPEI(textoOriginal){
+  const txt=textoOriginal.toUpperCase();
+
   const itens={
     1:{nome:"Matrícula / Registro Geral",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
     2:{nome:"Propriedade / Cadeia",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
     3:{nome:"Ônus - Hipoteca / Alienação",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
-    4:{nome:"Ônus - Indisponibilidade CNIB / Penhora",status:"Não consta",factual:"Nenhuma indisponibilidade ativa encontrada",classe:"ok",tipo:"matricula"},
-    5:{nome:"Apontamentos - Ações",status:"Não consta",factual:"",classe:"ok",tipo:"matricula"},
-    6:{nome:"Débitos - IPTU/ITR (se constar)",status:"Documento não enviado",factual:"Solicitar certidões atualizadas - condomínio ver item 11",classe:"neutro",tipo:"matricula"},
-    7:{nome:"Situação Especial",status:"Não constatada",factual:"",classe:"ok",tipo:"matricula"},
+    4:{nome:"Ônus - Indisponibilidade CNIB / Penhora",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
+    5:{nome:"Apontamentos - Ações",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
+    6:{nome:"Débitos - IPTU/ITR (se constar)",status:"Documento não enviado",factual:"",classe:"neutro",tipo:"matricula"},
+    7:{nome:"Situação Especial",status:"Não identificado",factual:"",classe:"neutro",tipo:"matricula"},
     8:{nome:"Condição para Transação",status:"Aguardando itens",factual:"",classe:"neutro",tipo:"matricula"},
-    9:{nome:"Certidões Pessoais do Vendedor",status:"Solicitar",factual:"Solicitar cíveis, trabalhistas e execuções fiscais - PJ consultar sócios. CNIB demora no cartório.",classe:"extra",tipo:"extra"},
-    10:{nome:"Regularidade da Construção",status:"Solicitar",factual:"Solicitar Habite-se / averbação bate com realidade. Divergência trava financiamento.",classe:"extra",tipo:"extra"},
-    11:{nome:"Situação do Condomínio",status:"Solicitar",factual:"Solicitar convenção, débitos, atas de obras/ações. Não aparece na matrícula.",classe:"extra",tipo:"extra"},
-    12:{nome:"Capacidade de Quem Assina",status:"Solicitar",factual:"PF casada: outorga uxória. PJ: conferir poderes contrato social. Sem poder pode comprometer validade da venda.",classe:"extra",tipo:"extra"},
-    13:{nome:"ITBI / ITR",status:"Solicitar",factual:"Solicitar ITBI/ITR pago ou guia pendente antes da escritura. Sem quitação não registra.",classe:"extra",tipo:"extra"}
+    9:{nome:"Certidões Pessoais do Vendedor",status:"Solicitar",factual:"Solicitar certidões cíveis, trabalhistas e de execuções fiscais. Se pessoa jurídica, consultar também os sócios. A CNIB pode demorar para atualizar no cartório.",classe:"extra",tipo:"extra"},
+    10:{nome:"Regularidade da Construção",status:"Solicitar",factual:"Solicitar Habite-se / verificar se a averbação de construção bate com a realidade do imóvel. Divergência pode travar financiamento.",classe:"extra",tipo:"extra"},
+    11:{nome:"Situação do Condomínio",status:"Solicitar",factual:"Solicitar convenção de condomínio, débitos e atas (obras/ações em curso). Essas informações não aparecem na matrícula.",classe:"extra",tipo:"extra"},
+    12:{nome:"Capacidade de Quem Assina",status:"Solicitar",factual:"Pessoa física casada: verificar outorga uxória. Pessoa jurídica: conferir poderes no contrato social. Assinatura sem poder pode comprometer a validade da venda.",classe:"extra",tipo:"extra"},
+    13:{nome:"ITBI / ITR",status:"Solicitar",factual:"Solicitar comprovante de ITBI/ITR pago ou guia pendente antes da escritura. Sem quitação, o cartório não registra.",classe:"extra",tipo:"extra"}
   };
-  if(txt.includes("6643")||txt.includes("MATRICULA")){itens[1].status="Apresentada";itens[1].classe="ok";const m=txt.match(/6643|145690|\d{4,6}/);itens[1].factual=`Matrícula ${m?m[0]:''} identificada`;}
-  if(txt.includes("GARANTIA GESTAO")||txt.includes("CERUTTI")||txt.includes("WILSON RODRIGUES")||txt.includes("PROPRIETAR")){itens[2].status="Consta";itens[2].classe="alerta";if(txt.includes("6643"))itens[2].factual="Proprietária atual: GARANTIA GESTÃO EMPRESARIAL LTDA (PJ) - 2008 - Terreno de Marinha"; else itens[2].factual="Proprietária identificada";}
-  if(txt.includes("RECUPERA")&&txt.includes("JUDICIAL")){itens[7].status="Constatada - Recuperação Judicial";itens[7].classe="alerta";itens[7].factual="Recuperação Judicial Lei 11.101/05 - caso Gabriel 145690";}
-  if(txt.includes("TERRENO DE MARINHA")||txt.includes("SPU")||txt.includes("ACRESCIDO")){itens[7].status="Constatada - Terreno de Marinha + SPU";itens[7].classe="alerta";itens[7].factual="Terreno de Marinha com acrescido - Cert. SPU 0537/2014 - Barra Santo Antônio/AL - precisa autorização SPU";}
-  if(txt.includes("HIPOTECA")){if(txt.includes("BAIXA")||txt.includes("CANCELADA")){itens[3].status="Consta Baixa";itens[3].classe="ok";}else{itens[3].status="Consta Ativa";itens[3].classe="alerta";itens[3].factual="Hipoteca ativa - validar baixa";}}
-  const penhora=(txt.match(/PENHORA/g)||[]).length;
-  if(penhora>0||txt.includes("CARTA PRECATORIA")||txt.includes("EXECUCAO")){itens[5].status="Consta histórico - Penhora";itens[5].classe="alerta";itens[5].factual=`Histórico de ${penhora||1} penhora(s) - AV-04/2008 Banco Itaú x Usina Ouricuri - solicitar baixa/cancelamento`;}
-  const indis=(txt.match(/INDISPONIBILIDADE/g)||[]).length;
-  if(indis>0){itens[4].status="Consta ATIVA";itens[4].classe="ativo";itens[4].factual=`CRÍTICO: ${indis} indisponibilidade(s) CNIB - ex: AV.22 e AV.23 caso 145690 - Cartório não registra`;}
-  if(txt.includes("RURAL")||txt.includes("SITIO")||txt.includes("FAZENDA")||txt.includes("HECTARE")){itens[6].factual="Imóvel RURAL 292ha - ITR + CAR + INCRA + SPU (não IPTU).";}
-  if(itens[4].classe==="ativo"){itens[8].status="Sem condição registral no momento";itens[8].classe="ativo";itens[8].factual="Sem condição registral por indisponibilidade/penhora ativa. Transação com autorização judicial.";}
-  else if(itens[1].status==="Apresentada"){if(itens[7].classe==="alerta"||itens[5].classe==="alerta"){itens[8].status="Apta com ressalvas";itens[8].classe="alerta";itens[8].factual="Apta com ressalvas: validar baixa penhora e autorização SPU (terreno marinha).";}else{itens[8].status="Apta para validação";itens[8].classe="ok";itens[8].factual="Checklist ok. Validar com certidão 30 dias e advogado.";}}
+
+  // 1. Matrícula — extrai número via regex ao invés de procurar valores fixos
+  const matMatch = txt.match(/MATR[IÍ]CULA[S]?\s*(?:SOB\s*)?(?:N[º°O.]*\s*)?[:\-]?\s*(\d{1,3}(?:[.\s]?\d{3})*(?:-\d)?)/);
+  if(matMatch){
+    itens[1].status="Apresentada";
+    itens[1].classe="ok";
+    itens[1].factual=`Matrícula nº ${matMatch[1].trim()} identificada no texto.`;
+  }else{
+    itens[1].factual="Número de matrícula não identificado automaticamente no texto — confira o documento manualmente.";
+  }
+
+  // 2. Propriedade / Cadeia — extrai nome próximo à palavra "PROPRIETÁRIO"
+  const propMatch = txt.match(/PROPRIET[AÁ]RI[OA]S?\s*[:\-]?\s*([A-ZÀ-Ú0-9.,\/\s]{5,80}?)(?:\.|,|\n|CPF|CNPJ|RG|$)/);
+  if(propMatch){
+    itens[2].status="Consta";
+    itens[2].classe="alerta";
+    itens[2].factual=`Titular identificado no texto: "${propMatch[1].trim()}". Confirme nome completo e qualificação no documento original.`;
+  }else if(/PROPRIET[AÁ]RI/.test(txt)){
+    itens[2].status="Consta - revisar manualmente";
+    itens[2].classe="alerta";
+    itens[2].factual="Há menção a proprietário, mas não foi possível extrair o nome automaticamente. Revise o documento diretamente.";
+  }else{
+    itens[2].factual="Nenhuma referência clara a proprietário/cadeia dominial encontrada no texto analisado.";
+  }
+
+  // 3. Ônus - Hipoteca / Alienação — usa presença de termos, sem concluir baixa automaticamente
+  const temHipoteca = /HIPOTECA|ALIENA[CÇ][AÃ]O FIDUCI[AÁ]RIA/.test(txt);
+  const temBaixa = /BAIXA|CANCELAD[AO]|QUITAD[AO]/.test(txt);
+  if(temHipoteca){
+    if(temBaixa){
+      itens[3].status="Consta menção + possível baixa";
+      itens[3].classe="alerta";
+      itens[3].factual="Hipoteca/alienação fiduciária e também termo de baixa/cancelamento aparecem no texto. A ordem cronológica das averbações precisa ser conferida manualmente para saber se o ônus segue ativo.";
+    }else{
+      itens[3].status="Consta - aparenta ativa";
+      itens[3].classe="alerta";
+      itens[3].factual="Hipoteca/alienação fiduciária mencionada, sem indicação de baixa no texto analisado. Confirme com certidão de ônus atualizada.";
+    }
+  }else{
+    itens[3].status="Não consta no texto";
+    itens[3].classe="ok";
+    itens[3].factual="Nenhuma hipoteca ou alienação fiduciária identificada no texto analisado.";
+  }
+
+  // 4. Indisponibilidade / Penhora ativa — nunca assume "ok" por ausência de palavra-chave
+  const indisCount=(txt.match(/INDISPONIBILIDADE/g)||[]).length;
+  if(indisCount>0){
+    itens[4].status="Consta ATIVA";
+    itens[4].classe="ativo";
+    itens[4].factual=`CRÍTICO: ${indisCount} menção(ões) a indisponibilidade encontrada(s) no texto. Isso normalmente impede o registro — confirme com urgência junto ao cartório.`;
+  }else{
+    itens[4].status="Não identificada no texto";
+    itens[4].classe="alerta";
+    itens[4].factual="Nenhuma menção a indisponibilidade encontrada no texto analisado. Isso NÃO garante ausência real — sempre confirme com certidão de ônus/CNIB atualizada.";
+  }
+
+  // 5. Apontamentos - Ações / Penhora
+  const penhoraCount=(txt.match(/PENHORA/g)||[]).length;
+  const temAcao=/CARTA PRECAT[OÓ]RIA|EXECU[CÇ][AÃ]O|A[CÇ][AÃ]O (CIVIL|JUDICIAL|ORDIN[AÁ]RIA)/.test(txt);
+  if(penhoraCount>0||temAcao){
+    itens[5].status="Consta histórico";
+    itens[5].classe="alerta";
+    itens[5].factual=`Encontrada(s) referência(s) a penhora e/ou ação judicial no texto (${penhoraCount} menção(ões) a "penhora"). Identifique a averbação específica e verifique se há baixa/cancelamento registrado.`;
+  }else{
+    itens[5].status="Não identificado no texto";
+    itens[5].classe="alerta";
+    itens[5].factual="Nenhuma penhora ou ação judicial identificada no texto analisado. Confirme com certidão de ações reais e pessoais reipersecutórias.";
+  }
+
+  // 6. Débitos IPTU/ITR
+  const eRural=/\bRURAL\b|S[IÍ]TIO|FAZENDA|HECTARE/.test(txt);
+  itens[6].status="Solicitar";
+  itens[6].classe="neutro";
+  itens[6].factual = eRural
+    ? "Indícios de imóvel RURAL no texto — solicitar ITR + CCIR/INCRA + CAR, não IPTU (ver também item 11 se houver condomínio)."
+    : "Solicitar certidão de débitos de IPTU atualizada — o valor não pode ser confirmado apenas pelo texto da matrícula.";
+
+  // 7. Situação Especial — detecta padrões gerais, extrai referência de certidão se houver
+  let situacoes=[];
+  if(/RECUPERA[CÇ][AÃ]O JUDICIAL/.test(txt)){
+    situacoes.push("Recuperação judicial (Lei 11.101/2005) mencionada no texto — validar se o imóvel está sujeito ao plano de recuperação.");
+  }
+  if(/TERRENO DE MARINHA|\bSPU\b|ACRESCIDO/.test(txt)){
+    const certMatch = txt.match(/CERT(?:ID[AÃ]O)?\.?\s*(?:SPU)?\s*N?[º°O.]*\s*[:\-]?\s*([\d\/\-]{4,20})/);
+    situacoes.push(`Indícios de terreno de marinha / SPU no texto${certMatch?` (referência encontrada: ${certMatch[1]})`:''} — pode exigir autorização da SPU para transferência.`);
+  }
+  if(situacoes.length){
+    itens[7].status="Constatada(s) situação(ões) especial(is)";
+    itens[7].classe="alerta";
+    itens[7].factual=situacoes.join(' ');
+  }else{
+    itens[7].status="Não constatada";
+    itens[7].classe="ok";
+    itens[7].factual="Nenhuma situação especial (recuperação judicial, terreno de marinha etc.) identificada no texto analisado.";
+  }
+
+  // 8. Condição para Transação — derivado dos itens acima
+  if(itens[4].classe==="ativo"){
+    itens[8].status="Sem condição registral no momento";
+    itens[8].classe="ativo";
+    itens[8].factual="Indisponibilidade ativa identificada — normalmente impede o registro sem decisão judicial que a levante.";
+  }else if(itens[1].status==="Apresentada"){
+    if(itens[3].classe==="alerta"||itens[5].classe==="alerta"||itens[7].classe==="alerta"){
+      itens[8].status="Apta com ressalvas";
+      itens[8].classe="alerta";
+      itens[8].factual="Há pontos de atenção nos itens acima (ônus, ações ou situação especial) que precisam ser esclarecidos antes de prosseguir.";
+    }else{
+      itens[8].status="Sem pendências identificadas no texto";
+      itens[8].classe="ok";
+      itens[8].factual="Nenhuma pendência crítica identificada no texto analisado. Ainda assim, valide com certidão emitida há no máximo 30 dias e acompanhamento jurídico.";
+    }
+  }else{
+    itens[8].factual="Aguardando identificação da matrícula para concluir a análise.";
+  }
+
   return itens;
 }
+
 function gerarTextoParecer(itens){
-  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5) - v5.0 OCR\nNatureza: Educacional - Não é PTAM/CNAI/Laudo\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: MATRÍCULA (auto) ===\n`;
+  let txt=`PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI 13 ITENS (8 + 5)\nNatureza: Material educacional - Não é PTAM/CNAI/Laudo jurídico\nData: ${new Date().toLocaleString('pt-BR')}\n\n=== BLOCO 1: MATRÍCULA (análise automática do texto enviado) ===\n`;
   for(let i=1;i<=8;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nFactual: ${itens[i].factual}\n\n`;}
-  txt+=`=== BLOCO 2: COMPLEMENTARES A SOLICITAR ===\n`;
+  txt+=`=== BLOCO 2: COMPLEMENTARES A SOLICITAR (não constam na matrícula) ===\n`;
   for(let i=9;i<=13;i++){txt+=`${i}. ${itens[i].nome}\nStatus: ${itens[i].status}\nO que solicitar: ${itens[i].factual}\n\n`;}
-  txt+=`v5 OCR: Lê PDF digital + escaneado. 6643 = Terreno Marinha + Penhora histórica. 145690 = RJ + dupla indisponibilidade.\nDISCLAIMER: Educacional. Validar 30 dias + advogado.\n`;
+  txt+=`DISCLAIMER: Este parecer é educacional e foi gerado por análise automática de texto. Não substitui PTAM, CNAI ou laudo jurídico. Sempre valide com certidão emitida há no máximo 30 dias e acompanhamento de advogado antes de qualquer decisão.\n`;
   return txt;
 }
+
+// ---------- UI / arquivo ----------
 const drop=document.getElementById('drop'),fileInput=document.getElementById('file'),texto=document.getElementById('texto'),btn=document.getElementById('btn'),res=document.getElementById('resultado'),lista=document.getElementById('lista'),parecerTA=document.getElementById('parecer'),statusEl=document.getElementById('status'),canvas=document.getElementById('pdfCanvas');
+
+const MAX_FILE_SIZE = 20*1024*1024; // 20MB
 
 drop.addEventListener('click',()=>fileInput.click());
 drop.addEventListener('dragover',(e)=>{e.preventDefault();drop.classList.add('dragover');});
@@ -102,16 +227,30 @@ drop.addEventListener('drop',async (e)=>{e.preventDefault();drop.classList.remov
 fileInput.addEventListener('change',async (e)=>{if(e.target.files[0])await lerArquivo(e.target.files[0])});
 
 async function lerArquivo(f){
-  statusEl.innerHTML=`📄 Lendo ${f.name}...`;
-  if(f.type.startsWith('image/')){
-    statusEl.innerHTML=`📸 OCR em imagem... pode levar 20s...`;
-    try{const {data:{text}}=await Tesseract.recognize(f,'por');texto.value=text;statusEl.innerHTML=`✅ OCR imagem concluído! ${text.length} caracteres. Clique Gerar.`;drop.innerHTML=`✅ Imagem lida<br><small>${f.name}</small>`;}catch(err){statusEl.innerHTML=`❌ Erro OCR: ${err.message}`;}
+  if(f.size>MAX_FILE_SIZE){
+    statusEl.innerHTML=`❌ Arquivo muito grande (${(f.size/1024/1024).toFixed(1)}MB). Limite: 20MB. Tente compactar o PDF ou enviar menos páginas.`;
     return;
   }
+
+  statusEl.innerHTML=`📄 Lendo ${escapeHtml(f.name)}...`;
+
+  if(f.type.startsWith('image/')){
+    statusEl.innerHTML=`📸 OCR em imagem... pode levar cerca de 20s...`;
+    try{
+      const {data:{text}}=await Tesseract.recognize(f,'por');
+      texto.value=text;
+      statusEl.innerHTML=`✅ OCR da imagem concluído! ${text.length} caracteres extraídos. Revise e clique em Gerar.`;
+      drop.innerHTML=`✅ Imagem lida<br><small>${escapeHtml(f.name)}</small>`;
+    }catch(err){
+      statusEl.innerHTML=`❌ Erro no OCR: ${escapeHtml(err.message)}`;
+    }
+    return;
+  }
+
   if(f.type==='application/pdf' || f.name.toLowerCase().endsWith('.pdf')){
     try{
-      statusEl.innerHTML=`📄 Lendo PDF digital... 12 págs`;
-      drop.innerHTML=`⏳ Lendo PDF digital...`;
+      statusEl.innerHTML=`📄 Lendo PDF...`;
+      drop.innerHTML=`⏳ Lendo PDF...`;
       const arrayBuffer=await f.arrayBuffer();
       const pdf=await pdfjsLib.getDocument({data:arrayBuffer}).promise;
       let fullText='';
@@ -124,48 +263,89 @@ async function lerArquivo(f){
       }
       if(fullText.trim().length>200){
         texto.value=fullText;
-        statusEl.innerHTML=`✅ PDF digital lido! ${pdf.numPages} págs, ${fullText.length} caracteres. Clique Gerar.`;
-        drop.innerHTML=`✅ PDF digital: ${f.name} (${pdf.numPages} págs)<br><small>Texto extraído</small>`;
+        statusEl.innerHTML=`✅ PDF digital lido! ${pdf.numPages} págs, ${fullText.length} caracteres. Clique em Gerar.`;
+        drop.innerHTML=`✅ PDF digital: ${escapeHtml(f.name)} (${pdf.numPages} págs)<br><small>Texto extraído</small>`;
       }else{
-        statusEl.innerHTML=`📸 PDF escaneado detectado! Iniciando OCR nas ${pdf.numPages} páginas... (30-60s, 100% local)`;
+        const paginasParaOcr=Math.min(pdf.numPages,12);
+        statusEl.innerHTML=`📸 PDF parece escaneado (pouco texto extraído). Iniciando OCR em ${paginasParaOcr} página(s)... (pode levar 30-60s, 100% local)`;
         drop.innerHTML=`⏳ PDF escaneado - OCR em andamento...`;
         let ocrText='';
         const ctx=canvas.getContext('2d');
-        for(let i=1;i<=Math.min(pdf.numPages,12);i++){
-          statusEl.innerHTML=`🔍 OCR página ${i}/${pdf.numPages}... aguarde (foto → texto)...`;
+        for(let i=1;i<=paginasParaOcr;i++){
+          statusEl.innerHTML=`🔍 OCR página ${i}/${paginasParaOcr}... aguarde...`;
           const page=await pdf.getPage(i);
           const viewport=page.getViewport({scale:2.0});
           canvas.width=viewport.width;canvas.height=viewport.height;
           await page.render({canvasContext:ctx,viewport}).promise;
           try{
-            const {data:{text}}=await Tesseract.recognize(canvas,'por',{logger:m=>{if(m.status==='recognizing text')statusEl.innerHTML=`🔍 OCR página ${i}/${pdf.numPages}: ${Math.round(m.progress*100)}%`;}});
+            const {data:{text}}=await Tesseract.recognize(canvas,'por',{logger:m=>{if(m.status==='recognizing text')statusEl.innerHTML=`🔍 OCR página ${i}/${paginasParaOcr}: ${Math.round(m.progress*100)}%`;}});
             ocrText+=text+'\n--- PÁGINA '+i+' ---\n';
           }catch(e){ocrText+=`[Erro OCR pág ${i}]\n`;}
         }
+        if(pdf.numPages>paginasParaOcr){
+          ocrText+=`\n[Aviso: PDF tem ${pdf.numPages} páginas, apenas as primeiras ${paginasParaOcr} foram processadas via OCR automaticamente.]`;
+        }
         texto.value=ocrText;
-        statusEl.innerHTML=`✅ OCR concluído! ${pdf.numPages} págs escaneadas → ${ocrText.length} caracteres. Revise e clique Gerar.`;
-        drop.innerHTML=`✅ PDF escaneado lido via OCR: ${f.name}<br><small>${ocrText.length} caracteres</small>`;
+        statusEl.innerHTML=`✅ OCR concluído! ${ocrText.length} caracteres extraídos. Revise o texto (OCR pode ter erros) e clique em Gerar.`;
+        drop.innerHTML=`✅ PDF escaneado lido via OCR: ${escapeHtml(f.name)}<br><small>${ocrText.length} caracteres</small>`;
       }
     }catch(err){
-      statusEl.innerHTML=`❌ Erro PDF: ${err.message}`;
+      statusEl.innerHTML=`❌ Erro ao ler PDF: ${escapeHtml(err.message)}`;
       console.error(err);
     }
   }else{
-    const r=new FileReader();r.onload=(ev)=>{texto.value=ev.target.result;statusEl.textContent=`✅ TXT: ${f.name}`;};r.readAsText(f);
+    const r=new FileReader();
+    r.onload=(ev)=>{texto.value=ev.target.result;statusEl.textContent=`✅ Texto lido de ${f.name}`;};
+    r.readAsText(f);
   }
 }
 
 btn.addEventListener('click',()=>{
-  const c=texto.value.trim();if(!c){alert('Arraste PDF ou cole texto');return;}
+  const c=texto.value.trim();
+  if(!c){alert('Envie um arquivo ou cole o texto da matrícula antes de gerar o checklist.');return;}
   const itens=analisarPEI(c);
-  let html=`<h3>Bloco 1: 8 Itens - Matrícula ${c.includes('6643')?'6643 Terreno Marinha':c.includes('145690')?'145690 Gabriel':''}</h3>`;
-  for(let i=1;i<=8;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
+  let html=`<h3>Bloco 1: 8 Itens - Matrícula</h3>`;
+  for(let i=1;i<=8;i++){
+    html+=`<div class="item ${itens[i].classe}"><b>${i}. ${escapeHtml(itens[i].nome)}</b><br><span class="badge ${itens[i].classe}">${escapeHtml(itens[i].status)}</span><br><small>${escapeHtml(itens[i].factual)}</small></div>`;
+  }
   html+=`<h2>📋 Bloco 2: 5 Complementares</h2>`;
-  for(let i=9;i<=13;i++){html+=`<div class="item ${itens[i].classe}"><b>${i}. ${itens[i].nome}</b><br><span class="badge ${itens[i].classe}">${itens[i].status}</span><br><small>${itens[i].factual}</small></div>`;}
-  lista.innerHTML=html;parecerTA.value=gerarTextoParecer(itens);res.style.display='block';res.scrollIntoView({behavior:'smooth'});
+  for(let i=9;i<=13;i++){
+    html+=`<div class="item ${itens[i].classe}"><b>${i}. ${escapeHtml(itens[i].nome)}</b><br><span class="badge ${itens[i].classe}">${escapeHtml(itens[i].status)}</span><br><small>${escapeHtml(itens[i].factual)}</small></div>`;
+  }
+  lista.innerHTML=html;
+  parecerTA.value=gerarTextoParecer(itens);
+  res.style.display='block';
+  res.scrollIntoView({behavior:'smooth'});
 });
-function copiar(){parecerTA.select();document.execCommand('copy');alert('Parecer v5 copiado!');}
-function whats(){const txt=encodeURIComponent(parecerTA.value.substring(0,1500)+'...');window.open('https://wa.me/?text='+txt,'_blank');}
+
+async function copiar(){
+  try{
+    await navigator.clipboard.writeText(parecerTA.value);
+    toast('Parecer copiado!');
+  }catch(e){
+    try{
+      parecerTA.select();
+      document.execCommand('copy');
+      toast('Parecer copiado! (modo compatibilidade)');
+    }catch(e2){
+      toast('Não foi possível copiar automaticamente — selecione o texto manualmente.');
+    }
+  }
+}
+
+function whats(){
+  const full=parecerTA.value;
+  const limit=1200;
+  let excerpt=full;
+  if(full.length>limit){
+    excerpt=full.slice(0,limit);
+    const lastBreak=excerpt.lastIndexOf('\n\n');
+    if(lastBreak>200) excerpt=excerpt.slice(0,lastBreak);
+    excerpt+='\n\n[Parecer resumido — o texto completo foi copiado com o botão "Copiar Parecer". Cole-o se quiser enviar o conteúdo integral.]';
+  }
+  const txt=encodeURIComponent(excerpt);
+  window.open('https://wa.me/?text='+txt,'_blank');
+}
 </script>
 </body>
 </html>
