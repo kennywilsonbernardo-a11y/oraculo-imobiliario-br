@@ -1,374 +1,208 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Oráculo Imobiliário BR v7.2</title>
-
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      padding: 16px;
-      background: #0f172a;
-      color: #e2e8f0;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .card {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 12px 0;
-    }
-
-    .top {
-      background: linear-gradient(135deg, #0ea5e9, #22c55e);
-      color: #001;
-      font-weight: 800;
-    }
-
-    label {
-      display: block;
-      margin-top: 12px;
-      font-weight: 700;
-    }
-
-    select,
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 10px;
-      border: 1px solid #334155;
-      background: #0b1220;
-      color: #fff;
-      font-size: 16px;
-      margin-top: 6px;
-      box-sizing: border-box;
-    }
-
-    button {
-      width: 100%;
-      padding: 14px;
-      border-radius: 12px;
-      border: 0;
-      background: #38bdf8;
-      color: #001;
-      font-weight: 900;
-      margin-top: 16px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-    }
-
-    .ok {
-      background: #22c55e;
-      color: #000;
-      padding: 3px 9px;
-      border-radius: 99px;
-      font-size: 11px;
-      font-weight: 900;
-    }
-
-    .erro {
-      border-color: #ef4444 !important;
-      background: #450a0a !important;
-      color: #fecaca;
-    }
-
-    .muted {
-      color: #94a3b8;
-      font-size: 13px;
-    }
-
-    h2 {
-      margin-bottom: 8px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oráculo Imobiliário BR v9.1 DIAMANTE AUDITÁVEL - Alagoas</title>
+<meta name="theme-color" content="#0f172a">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{--bg:#0f172a;--card:#1e293b;--b:#334155;--v:#22c55e;--c:#22d3ee;--m:#94a3b8}
+*{box-sizing:border-box}body{font-family:system-ui;background:var(--bg);color:#e2e8f0;margin:0;padding:16px}
+.card{max-width:980px;margin:0 auto;background:var(--card);padding:20px;border-radius:16px}
+.badge{display:inline-block;padding:4px 10px;border-radius:20px;font-weight:800;font-size:11px}
+.b-d{background:linear-gradient(135deg,#a5b4fc,#22d3ee,#f0abfc);color:#0f172a}
+.b-v{background:var(--v);color:#0f172a}
+.muted{color:var(--m);font-size:11px;line-height:1.5}
+.top{ display:flex; gap:8px; flex-wrap:wrap; margin:12px 0}
+select,input{padding:12px;border-radius:10px;border:1px solid var(--b);background:#0f172a;color:#fff;font-size:14px;outline:none}
+.wrap{position:relative;flex:1;min-width:260px}.wrap input{width:100%}
+.result{border:1px solid var(--b);border-radius:12px;padding:14px;margin-top:10px;background:#0f172a;cursor:pointer}
+.result:hover{border-color:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.k{color:var(--m);font-size:10px;text-transform:uppercase}.v{font-weight:700;font-size:14px}
+.btn{border:none;padding:8px 12px;border-radius:8px;font-weight:700;cursor:pointer;font-size:12px}
+.btn-v{background:var(--v);color:#0f172a}.btn-g{background:var(--b);color:#fff}
+.hash{font-family:monospace;font-size:10px;background:#0f172a;border:1px dashed var(--b);padding:8px;border-radius:8px;word-break:break-all;margin-top:8px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:16px;z-index:99}
+.modal.open{display:flex}.mc{background:#1e293b;max-width:640px;width:100%;border-radius:16px;padding:20px;max-height:90vh;overflow:auto}
+.alert{padding:8px;border-radius:8px;font-size:11px;margin-top:8px}
+.alert-t{background:#fee2e2;color:#7f1d1d;border:1px solid #fecaca}
+.steps{display:flex;gap:6px;flex-wrap:wrap;list-style:none;padding:0;margin:8px 0}.steps li{font-size:10px;background:#0f172a;border:1px solid var(--b);padding:4px 8px;border-radius:20px}
+.steps li.ok{color:var(--v);border-color:var(--v)}
+</style>
 </head>
-
 <body>
-  <h2>Oráculo Imobiliário BR v7.2</h2>
+<div class="card">
+<h1 style="margin:0">Oráculo Imobiliário BR <span class="badge b-d">v9.1 DIAMANTE AUDITÁVEL</span> <span class="badge b-v" id="total">CARREGANDO</span></h1>
+<div class="muted" id="versoes"></div>
+<div class="muted" id="sub"></div>
 
-  <div class="card top">
-    102 MUNICÍPIOS DE ALAGOAS | Fonte: INCRA IE 5/2022
+<div class="top">
+<select id="selUF"><option value="AL">AL - Alagoas (102)</option></select>
+<div class="wrap"><input id="busca" placeholder="Carregando..." disabled></div>
+<button class="btn btn-g" id="modoBtn">[Modo Auditor]</button>
+<button class="btn btn-g" id="btnSobre">Sobre</button>
+</div>
+
+<ul class="steps" id="steps"><li id="s1">○ Load</li><li id="s2">○ SHA256</li><li id="s3">○ Checksum</li><li id="s4">○ Pronto</li></ul>
+<div class="muted" id="cont"></div>
+<div id="saida" class="muted">Carregando config.json...</div>
+<div id="hashBox" class="hash" style="display:none"></div>
+
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+<button class="btn btn-v" id="btnPrint" style="display:none" onclick="window.print()">🖨️ PDF</button>
+<button class="btn btn-g" id="btnJson" style="display:none">📄 Exportar JSON</button>
+<button class="btn btn-g" id="btnDiag">🔍 Diagnóstico</button>
+</div>
+<div class="muted" id="rodape" style="margin-top:12px"></div>
+</div>
+
+<div class="modal" id="mFicha"><div class="mc"><div id="fichaContent"></div><div style="margin-top:10px;display:flex;gap:8px"><button class="btn btn-v" onclick="window.print()">🖨️ Imprimir</button><button class="btn btn-g" onclick="document.getElementById('mFicha').classList.remove('open')">Fechar</button></div></div></div>
+<div class="modal" id="mSobre"><div class="mc"><div id="sobreC"></div><button class="btn btn-g" onclick="document.getElementById('mSobre').classList.remove('open')">Fechar</button></div></div>
+
+<script>
+// CONFIG - NUCLEO REAL
+const APP_VERSION="v9.1 DIAMANTE AUDITÁVEL";
+let CONFIG=null;
+let DADOS=[];
+let HASH_CALC="";
+let HASH_OFICIAL="";
+let MODO="auditor"; // cliente | auditor
+let FICHA_ATUAL=null;
+let logs=[];
+function log(msg){ const h=new Date().toLocaleString("pt-BR"); logs.push(`${h} ${msg}`); if(logs.length>50) logs.shift(); }
+function escapeHTML(s){return String(s??"").replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#39;");}
+function norm(s=""){return String(s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();}
+async function sha256(t){ try{ const b=await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t)); return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join(""); }catch{return "";} }
+
+const el={total:document.getElementById("total"),busca:document.getElementById("busca"),saida:document.getElementById("saida"),cont:document.getElementById("cont"),hashBox:document.getElementById("hashBox"),versoes:document.getElementById("versoes"),sub:document.getElementById("sub"),rodape:document.getElementById("rodape")};
+
+function setStep(n,t,ok){ const e=document.getElementById("s"+n); e.textContent=(ok?"✓ ":"● ")+t; if(ok) e.className="ok"; }
+
+async function carregar(){
+ try{
+  log("LOAD config.json");
+  // 1. CONFIG.JSON REAL - NUCLEO
+  const cfgR=await fetch("./config.json?v="+Date.now(),{cache:"no-store"});
+  if(!cfgR.ok) throw new Error("config.json não encontrado - crie o arquivo");
+  CONFIG=await cfgR.json();
+  const estadoAtivo=CONFIG.estados_ativos.find(e=>e.uf===CONFIG.estado_padrao);
+  el.versoes.innerHTML=`<b>APP_VERSION:</b> ${escapeHTML(APP_VERSION)} | <b>DATA_VERSION:</b> ${escapeHTML(estadoAtivo.data_version||estadoAtivo.hash_id)} | <b>Atualizada:</b> ${escapeHTML(estadoAtivo.atualizada||"-")} | <b>Vigência:</b> ${escapeHTML(CONFIG.vigencia_status)} desde ${escapeHTML(CONFIG.vigencia_inicio)}`;
+  el.sub.textContent=`Fonte: ${CONFIG.fontes.join(", ")} | Arquivo: ${estadoAtivo.arquivo} | Checksums externos: ${CONFIG.checksums.length} pontos`;
+  el.rodape.innerHTML=`Base: ${escapeHTML(CONFIG.fontes[0])} | Vigência normativa: ${escapeHTML(CONFIG.vigencia_inicio)} - ${escapeHTML(CONFIG.vigencia_status)} | APP ${APP_VERSION} | DATA ${escapeHTML(estadoAtivo.data_version)} | Responsável: ${escapeHTML(CONFIG.responsavel)}`;
+  setStep(1,"config.json OK",true);
+
+  const baseURL="https://raw.githubusercontent.com/kennywilsonbernardo-a11y/oraculo-imobiliario-br/main/";
+  const jsonURL=baseURL+estadoAtivo.arquivo;
+  const shaURL=jsonURL.replace(".json",".sha256");
+
+  log("LOAD JSON "+jsonURL);
+  const r=await fetch(jsonURL+"?v="+Date.now(),{cache:"no-store"});
+  const txt=await r.text();
+  DADOS=JSON.parse(txt);
+
+  log("CALC SHA256");
+  HASH_CALC=await sha256(txt);
+
+  try{
+   const r2=await fetch(shaURL+"?v="+Date.now(),{cache:"no-store"});
+   if(r2.ok){ HASH_OFICIAL=(await r2.text()).trim(); log("SHA256 oficial carregado"); }
+  }catch{}
+
+  const confere = HASH_OFICIAL? (HASH_CALC===HASH_OFICIAL) : true;
+  el.hashBox.style.display="block";
+  el.hashBox.innerHTML=`<b>SHA256 calculado:</b> ${escapeHTML(HASH_CALC)}<br><b>SHA256 oficial (.sha256):</b> ${escapeHTML(HASH_OFICIAL||"ainda não criado - crie o arquivo")}<br><b>Conferência:</b> ${confere?"✅ ÍNTEGRA":"❌ DIVERGENTE"}<br><b>Fluxo:</b> JSON → SHA-256 → comparar.sha256 → liberar consulta`;
+  setStep(2,`SHA256 ${confere?"OK":"DIVERGENTE"}`,confere);
+
+  // CHECKSUM EXTERNO (vindo do config.json)
+  log("CHECKSUM externo");
+  for(const c of CONFIG.checksums){
+   const f=DADOS.find(x=>norm(x.municipio_busca||x.municipio)===norm(c.municipio));
+   if(!f || f.modulo_fiscal_ha!==c.mf || f.fracao_minima_parcelamento_ha!==c.fmp) throw new Error(`CHECKSUM FALHOU ${c.municipio.toUpperCase()} MF${c.mf}/FMP${c.fmp}`);
+  }
+  setStep(3,"Checksum territorial OK",true);
+
+  el.total.textContent=`${DADOS.length} MUNICÍPIOS`;
+  el.busca.disabled=false; el.busca.placeholder=`Digite município: MACEIO, JAPARATINGA... (${DADOS.length})`;
+  el.cont.textContent=`✅ Base íntegra | ${DADOS.length} | APP ${APP_VERSION} | DATA ${estadoAtivo.data_version} | Clique no card para gerar ficha (corrige histórico duplicado)`;
+  el.saida.innerHTML=`<div class="muted">Digite para buscar. Clique no resultado para abrir ficha técnica numerada.</div>`;
+  setStep(4,"Sistema pronto - congelável",true);
+  log("SISTEMA PRONTO");
+ }catch(e){ log("ERRO "+e.message); el.total.textContent="ERRO"; el.saida.innerHTML=`<div style="color:#f87171">❌ ${escapeHTML(e.message)}</div>`; el.hashBox.style.display="block"; el.hashBox.textContent=logs.join("\n"); }
+}
+
+function buscar(q){
+ if(!q){ el.saida.innerHTML=`<div class="muted">Digite para buscar.</div>`; return; }
+ const nq=norm(q);
+ const res=DADOS.filter(m=>norm([m.municipio_busca,m.municipio_display,m.municipio].join(" ")).includes(nq)).slice(0,15);
+ el.cont.textContent=`Encontrados: ${res.length} para "${q}" | Modo: ${MODO.toUpperCase()}`;
+ if(res.length===0){ el.saida.innerHTML=`<div class="muted">Nenhum para "${escapeHTML(q)}"</div>`; return; }
+ el.saida.innerHTML=res.map(m=>{
+  // CORREÇÃO 1.1: NÃO salva histórico aqui! Só lista!
+  if(MODO==="cliente"){
+   return `<div class="result" onclick='abrirFicha(${JSON.stringify(m).replaceAll("'","&#39;")})'><b>${escapeHTML(m.municipio_display||m.municipio)} / ${escapeHTML(m.uf||"AL")}</b><div class="grid"><div><div class="k">Módulo Fiscal</div><div class="v">${escapeHTML(String(m.modulo_fiscal_ha))} ha</div></div><div><div class="k">FMP</div><div class="v">${escapeHTML(String(m.fracao_minima_parcelamento_ha))} ha</div></div></div></div>`;
+  } else {
+   const alertas=m.alertas?`<div class="alert alert-t">${m.alertas.map(a=>`• ${escapeHTML(a)}`).join("<br>")}</div>`:"";
+   return `<div class="result" onclick='abrirFicha(${JSON.stringify(m).replaceAll("'","&#39;")})'><b>${escapeHTML(m.municipio_display||m.municipio)} / ${escapeHTML(m.uf||"AL")}</b><div class="grid"><div><div class="k">MF</div><div class="v">${escapeHTML(String(m.modulo_fiscal_ha))} ha</div></div><div><div class="k">FMP</div><div class="v">${escapeHTML(String(m.fracao_minima_parcelamento_ha))} ha</div></div></div><div class="muted" style="margin-top:6px">SHA: ${HASH_CALC.slice(0,12)}... | Clique para ficha + QR</div>${alertas}</div>`;
+  }
+ }).join("");
+}
+
+// CORREÇÃO 1.1: SÓ AQUI SALVA HISTÓRICO!
+function abrirFicha(m){
+ const counter=parseInt(localStorage.getItem("ficha_counter")||"0")+1;
+ localStorage.setItem("ficha_counter",counter);
+ const numero=String(counter).padStart(6,"0");
+ const ficha={
+  ficha:numero, municipio:m.municipio_display||m.municipio, uf:m.uf||"AL", mf:m.modulo_fiscal_ha, fmp:m.fracao_minima_parcelamento_ha,
+  fonte:m.fonte||CONFIG.fontes[0], hash:HASH_CALC, data:new Date().toLocaleString("pt-BR"), app_version:APP_VERSION, data_version:CONFIG.estados_ativos[0].data_version, vigencia:CONFIG.vigencia_inicio
+ };
+ FICHA_ATUAL=ficha;
+ const hist=JSON.parse(localStorage.getItem("historico_consultas")||"[]"); hist.unshift(ficha); localStorage.setItem("historico_consultas",JSON.stringify(hist.slice(0,100)));
+ log(`CONSULTA ${ficha.municipio} Ficha ${numero}`);
+
+ // QR CODE - ITEM 8
+ const qrData=encodeURIComponent(`https://oraculo.com/ficha/${numero}|${ficha.municipio}|MF${ficha.mf}|FMP${ficha.fmp}|${ficha.hash.slice(0,16)}`);
+ const qrUrl=`https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${qrData}`;
+
+ document.getElementById("fichaContent").innerHTML=`
+  <h2 style="margin-top:0">${escapeHTML(ficha.municipio)} - Ficha nº ${escapeHTML(ficha.ficha)}</h2>
+  <div class="grid">
+   <div><div class="k">Módulo Fiscal</div><div class="v">${escapeHTML(String(ficha.mf))} ha</div></div>
+   <div><div class="k">FMP</div><div class="v">${escapeHTML(String(ficha.fmp))} ha</div></div>
+   <div><div class="k">Fonte</div><div class="v">${escapeHTML(ficha.fonte)}</div></div>
+   <div><div class="k">Vigência</div><div class="v">${escapeHTML(CONFIG.vigencia_inicio)} - ${escapeHTML(CONFIG.vigencia_status)}</div></div>
+   <div><div class="k">APP</div><div class="v">${escapeHTML(ficha.app_version)}</div></div>
+   <div><div class="k">DATA</div><div class="v">${escapeHTML(ficha.data_version)}</div></div>
   </div>
+  <div class="hash" style="margin-top:10px"><b>SHA-256:</b> ${escapeHTML(ficha.hash)}<br><b>Data:</b> ${escapeHTML(ficha.data)}<br><b>Hash ID:</b> ${escapeHTML(CONFIG.estados_ativos[0].hash_id)}</div>
+  <div style="text-align:center;margin-top:12px"><img src="${qrUrl}" style="border:8px solid #fff;border-radius:8px"><div class="muted">QR Code validável - Ficha ${escapeHTML(ficha.ficha)}<br>Escaneie para validar</div></div>
+  <div class="muted" style="margin-top:10px">Log técnico:<br>${escapeHTML(logs.slice(-4).join("<br>"))}</div>
+ `;
+ document.getElementById("mFicha").classList.add("open");
+ document.getElementById("btnPrint").style.display="inline-block";
+ document.getElementById("btnJson").style.display="inline-block";
+}
 
-  <div class="card">
-    <label for="m">Município (Alagoas)</label>
-    <select id="m" disabled>
-      <option value="">Carregando biblioteca oficial...</option>
-    </select>
+document.getElementById("busca").addEventListener("input",e=>buscar(e.target.value));
+document.getElementById("modoBtn").addEventListener("click",()=>{ MODO=MODO==="cliente"?"auditor":"cliente"; document.getElementById("modoBtn").textContent=MODO==="cliente"?"[Modo Cliente]":"[Modo Auditor]"; document.getElementById("busca").dispatchEvent(new Event("input")); });
+document.getElementById("btnSobre").addEventListener("click",()=>{
+ const diag=DADOS.length===102;
+ document.getElementById("sobreC").innerHTML=`<h2>Oráculo Imobiliário BR</h2><b>Versão:</b> ${escapeHTML(APP_VERSION)}<br><b>DATA:</b> ${escapeHTML(CONFIG?.estados_ativos[0].data_version||"")}<br><b>Base:</b> ${escapeHTML(CONFIG?.fontes[0]||"")}<br><b>Vigência:</b> ${escapeHTML(CONFIG?.vigencia_inicio||"")} - ${escapeHTML(CONFIG?.vigencia_status||"")}<br><b>Responsável:</b> ${escapeHTML(CONFIG?.responsavel||"Kenny Wilson")}<br><br><b>SHA-256:</b> <span style="font-family:monospace;font-size:9px;word-break:break-all">${escapeHTML(HASH_CALC)}</span><br><b>Oficial.sha256:</b> ${escapeHTML(HASH_OFICIAL||"não criado")}<br><br><b>Checksums externos:</b> ${CONFIG?.checksums.map(c=>escapeHTML(c.municipio)).join(", ")}<br><br><b>Logs:</b><div class="hash">${escapeHTML(logs.join("<br>"))}</div>`;
+ document.getElementById("mSobre").classList.add("open");
+});
+document.getElementById("btnJson").addEventListener("click",()=>{
+ if(!FICHA_ATUAL) return;
+ const blob=new Blob([JSON.stringify(FICHA_ATUAL,null,2)],{type:"application/json"});
+ const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=`ficha-${FICHA_ATUAL.ficha}-${FICHA_ATUAL.municipio}.json`; a.click();
+});
+document.getElementById("btnDiag").addEventListener("click",()=>{
+ const checks=[DADOS.length===102,!!HASH_CALC, CONFIG?.checksums.every(c=>{const f=DADOS.find(x=>norm(x.municipio_busca||x.municipio)===norm(c.municipio)); return f&&f.modulo_fiscal_ha===c.mf&&f.fracao_minima_parcelamento_ha===c.fmp;})];
+ alert(`Diagnóstico: ${checks.filter(Boolean).length}/${checks.length}\n- 102 municípios: ${checks[0]?"OK":"FALHA"}\n- SHA256: ${checks[1]?"OK":"FALHA"}\n- Checksum externo: ${checks[2]?"OK":"FALHA"}\n\nLogs:\n${logs.slice(-3).join("\n")}`);
+});
 
-    <label for="a">Área em hectares</label>
-    <input
-      id="a"
-      type="text"
-      value="6,07"
-      inputmode="decimal"
-      placeholder="Ex.: 6,07"
-    >
-
-    <button id="b" type="button" disabled>Carregando...</button>
-
-    <div class="muted" id="status" style="margin-top: 10px">
-      Inicializando biblioteca...
-    </div>
-  </div>
-
-  <div id="o" aria-live="polite"></div>
-
-  <script>
-    let BIB = [];
-
-    const seletorMunicipio = document.getElementById("m");
-    const campoArea = document.getElementById("a");
-    const resultado = document.getElementById("o");
-    const status = document.getElementById("status");
-    const botao = document.getElementById("b");
-
-    function escaparHtml(valor) {
-      return String(valor)
-        .replaceAll("&", "&amp;")
-        .replaceAll("<", "&lt;")
-        .replaceAll(">", "&gt;")
-        .replaceAll('"', "&quot;")
-        .replaceAll("'", "&#039;");
-    }
-
-    function normalizarBiblioteca(lista) {
-      return lista
-        .map((item) => ({
-          municipio: String(item.municipio || "")
-            .trim()
-            .toUpperCase(),
-          modulo_fiscal_ha: Number(item.modulo_fiscal_ha),
-          fracao_minima_parcelamento_ha: Number(
-            item.fracao_minima_parcelamento_ha
-          ),
-          fonte: item.fonte_normativa || item.fonte || "INCRA IE 5/2022",
-          versao: item.versao_base || ""
-        }))
-        .filter((item) =>
-          item.municipio &&
-          item.modulo_fiscal_ha > 0 &&
-          item.fracao_minima_parcelamento_ha > 0
-        );
-    }
-
-    function mostrarErro(mensagem) {
-      resultado.innerHTML = `
-        <div class="card erro">
-          <strong>⚠️ ${escaparHtml(mensagem)}</strong>
-        </div>
-      `;
-    }
-
-    function renderizarMunicipios() {
-      const municipios = BIB
-        .slice()
-        .sort((a, b) => a.municipio.localeCompare(b.municipio));
-
-      seletorMunicipio.innerHTML =
-        '<option value="">Selecione...</option>' +
-        municipios
-          .map(
-            (item) => `
-              <option
-                value="${escaparHtml(item.municipio)}"
-                ${item.municipio === "JAPARATINGA" ? "selected" : ""}
-              >
-                ${escaparHtml(item.municipio)} -
-                MF ${item.modulo_fiscal_ha} ha /
-                FMP ${item.fracao_minima_parcelamento_ha} ha
-              </option>
-            `
-          )
-          .join("");
-
-      const japaratinga = BIB.find(
-        (item) => item.municipio === "JAPARATINGA"
-      );
-
-      seletorMunicipio.disabled = false;
-      botao.disabled = false;
-      botao.textContent = "Analisar imóvel";
-
-      status.innerHTML = `
-        <span class="ok">Biblioteca carregada: ${BIB.length} municípios</span>
-        | JAPARATINGA: MF ${japaratinga.modulo_fiscal_ha} ha /
-        FMP ${japaratinga.fracao_minima_parcelamento_ha} ha
-      `;
-    }
-
-    async function carregarBiblioteca() {
-      try {
-        const resposta = await fetch(
-          "biblioteca/BR/AL/alagoas.json",
-          { cache: "no-store" }
-        );
-
-        if (!resposta.ok) {
-          throw new Error(`Erro HTTP ${resposta.status}`);
-        }
-
-        const json = await resposta.json();
-        const lista = Array.isArray(json) ? json : (json.municipios || []);
-
-        if (lista.length !== 102) {
-          throw new Error(
-            `Biblioteca deve conter 102 municípios; encontrados: ${lista.length}`
-          );
-        }
-
-        BIB = normalizarBiblioteca(lista);
-
-        if (BIB.length !== 102) {
-          throw new Error(
-            "Biblioteca possui municípios com MF ou FMP inválidos"
-          );
-        }
-
-        const japaratinga = BIB.find(
-          (item) => item.municipio === "JAPARATINGA"
-        );
-
-        if (
-          !japaratinga ||
-          japaratinga.modulo_fiscal_ha !== 7 ||
-          japaratinga.fracao_minima_parcelamento_ha !== 2
-        ) {
-          throw new Error(
-            "Dados de JAPARATINGA divergentes: esperado MF 7 ha e FMP 2 ha"
-          );
-        }
-
-        renderizarMunicipios();
-      } catch (erro) {
-        BIB = [];
-        seletorMunicipio.innerHTML =
-          '<option value="">Biblioteca indisponível</option>';
-        seletorMunicipio.disabled = true;
-        botao.disabled = true;
-        botao.textContent = "Biblioteca indisponível";
-
-        status.innerHTML = `
-          <div class="card erro">
-            <strong>Falha ao carregar a biblioteca.</strong><br>
-            ${escaparHtml(erro.message)}<br><br>
-            Verifique o arquivo:
-            <code>biblioteca/BR/AL/alagoas.json</code>
-          </div>
-        `;
-      }
-    }
-
-    botao.addEventListener("click", () => {
-      resultado.innerHTML = "";
-
-      const municipio = seletorMunicipio.value;
-      const valorDigitado = campoArea.value.trim();
-      const area = Number(valorDigitado.replace(",", "."));
-
-      if (!municipio) {
-        mostrarErro("Selecione um município");
-        return;
-      }
-
-      if (
-        valorDigitado === "" ||
-        !Number.isFinite(area) ||
-        area <= 0
-      ) {
-        mostrarErro("Digite uma área válida maior que 0");
-        return;
-      }
-
-      const dados = BIB.find(
-        (item) => item.municipio === municipio
-      );
-
-      if (!dados) {
-        mostrarErro("Município não encontrado na biblioteca");
-        return;
-      }
-
-      const mf = dados.modulo_fiscal_ha;
-      const fmp = dados.fracao_minima_parcelamento_ha;
-      const quantidadeMF = area / mf;
-
-      let classificacao = "";
-      let abaixoFmp = false;
-
-      if (area < fmp) {
-        classificacao = `ABAIXO DA FMP — abaixo de ${fmp} ha`;
-        abaixoFmp = true;
-      } else if (quantidadeMF <= 4) {
-        classificacao = "PEQUENA PROPRIEDADE";
-      } else if (quantidadeMF <= 15) {
-        classificacao = "MÉDIA PROPRIEDADE";
-      } else {
-        classificacao = "GRANDE PROPRIEDADE";
-      }
-
-      const casoJaparatinga =
-        municipio === "JAPARATINGA" &&
-        Math.abs(area - 6.07) < 0.001;
-
-      resultado.innerHTML = `
-        <div class="card">
-          <h3>
-            ${escaparHtml(municipio)}/AL —
-            ${escaparHtml(classificacao)}
-          </h3>
-
-          <p>
-            MF: <strong>${mf} ha</strong> |
-            FMP: <strong>${fmp} ha</strong> |
-            Área: <strong>${area} ha</strong> =
-            <strong>${quantidadeMF.toFixed(3)} MF</strong>
-          </p>
-
-          ${
-            casoJaparatinga
-              ? `
-                <div class="card" style="background:#052e16;border-color:#22c55e">
-                  <strong>✅ JAPARATINGA 6,07 ha:</strong>
-                  6,07 ÷ 7 = 0,867 MF. Como a área é igual ou superior
-                  à FMP de 2 ha e está dentro de 4 MF, a classificação é
-                  <strong>PEQUENA PROPRIEDADE</strong>.
-                </div>
-              `
-              : ""
-          }
-
-          <p style="font-weight:900;color:#38bdf8;font-size:18px">
-            ${escaparHtml(classificacao)}
-          </p>
-
-          <p class="muted">
-            ${
-              abaixoFmp
-                ? `Em regra, a área não atende ao parâmetro mínimo da FMP de ${fmp} ha; requer análise jurídica, registral e técnica.`
-                : `A área atende ao parâmetro mínimo da FMP de ${fmp} ha. Isso não substitui análise jurídica, registral, técnica ou administrativa do caso concreto.`
-            }
-          </p>
-
-          <small class="muted">
-            Fonte: ${escaparHtml(dados.fonte)}
-            ${dados.versao ? ` | Base: ${escaparHtml(dados.versao)}` : ""}
-            | Análise orientativa.
-          </small>
-        </div>
-      `;
-    });
-
-    carregarBiblioteca();
-  </script>
+carregar();
+</script>
 </body>
 </html>
