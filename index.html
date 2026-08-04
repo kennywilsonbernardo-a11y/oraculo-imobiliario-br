@@ -1,174 +1,374 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Oráculo Imobiliário BR v7.1 FINAL - 102 Municípios AL</title>
-<style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto; padding:16px; background:#0f172a; color:#e2e8f0; max-width:800px; margin:auto}
-  .card{background:#1e293b; border:1px solid #334155; border-radius:12px; padding:16px; margin:12px 0}
-  .top{background:linear-gradient(135deg,#0ea5e9,#22c55e); color:#001; font-weight:800}
-  select,input{width:100%; padding:12px; border-radius:10px; border:1px solid #334155; background:#0b1220; color:#fff; font-size:16px; margin-top:6px; box-sizing:border-box}
-  button{width:100%; padding:14px; border-radius:12px; border:0; background:#38bdf8; color:#001; font-weight:900; margin-top:12px; cursor:pointer; font-size:16px}
-  button:disabled{opacity:.5}
-  .ok{background:#22c55e; color:#000; padding:3px 9px; border-radius:99px; font-size:11px; font-weight:900}
-  .warn{background:#f59e0b; color:#000; padding:3px 9px; border-radius:99px; font-size:11px; font-weight:900}
-  .erro{border-color:#ef4444 !important; background:#450a0a !important; color:#fecaca}
-  .muted{color:#94a3b8; font-size:13px}
-  h2{margin:0 0 8px 0}
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Oráculo Imobiliário BR v7.2</title>
+
+  <style>
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      padding: 16px;
+      background: #0f172a;
+      color: #e2e8f0;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .top {
+      background: linear-gradient(135deg, #0ea5e9, #22c55e);
+      color: #001;
+      font-weight: 800;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      font-weight: 700;
+    }
+
+    select,
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+      background: #0b1220;
+      color: #fff;
+      font-size: 16px;
+      margin-top: 6px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 12px;
+      border: 0;
+      background: #38bdf8;
+      color: #001;
+      font-weight: 900;
+      margin-top: 16px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    .ok {
+      background: #22c55e;
+      color: #000;
+      padding: 3px 9px;
+      border-radius: 99px;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .erro {
+      border-color: #ef4444 !important;
+      background: #450a0a !important;
+      color: #fecaca;
+    }
+
+    .muted {
+      color: #94a3b8;
+      font-size: 13px;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+    }
+  </style>
 </head>
+
 <body>
-<h2>Oráculo Imobiliário BR v7.1 FINAL ✅</h2>
-<div class="card top">102 MUNICÍPIOS AL | Japaratinga 6,07ha = Pequena Propriedade - MF 7 / FMP 2 CORRIGIDO | Biblioteca: biblioteca/BR/AL/alagoas.json</div>
+  <h2>Oráculo Imobiliário BR v7.2</h2>
 
-<div class="card">
-<label for="m">Município (Alagoas)</label>
-<select id="m"><option value="">Carregando biblioteca de 102 municípios...</option></select>
-<label for="a" style="margin-top:12px;display:block">Área em hectares</label>
-<input id="a" value="6,07" inputmode="decimal" placeholder="Ex: 6,07">
-<button id="b" type="button">Analisar Imóvel</button>
-<div class="muted" id="status" style="margin-top:8px">Aguardando biblioteca...</div>
-</div>
+  <div class="card top">
+    102 MUNICÍPIOS DE ALAGOAS | Fonte: INCRA IE 5/2022
+  </div>
 
-<div id="o" aria-live="polite"></div>
+  <div class="card">
+    <label for="m">Município (Alagoas)</label>
+    <select id="m" disabled>
+      <option value="">Carregando biblioteca oficial...</option>
+    </select>
 
-<script>
-const FALLBACK_BIB = [
-  {municipio:"JAPARATINGA", modulo_fiscal_ha:7, fracao_minima_parcelamento_ha:2, fonte:"INCRA IE 5/2022 - MF 7 FMP 2 - CORRIGIDO v7.1 FINAL"},
-  {municipio:"MACEIO", modulo_fiscal_ha:10, fracao_minima_parcelamento_ha:2, fonte:"INCRA IE 5/2022"},
-  {municipio:"MARAGOGI", modulo_fiscal_ha:14, fracao_minima_parcelamento_ha:2, fonte:"INCRA IE 5/2022"},
-  {municipio:"PORTO CALVO", modulo_fiscal_ha:10, fracao_minima_parcelamento_ha:2, fonte:"INCRA IE 5/2022"},
-  {municipio:"TEOTONIO VILELA", modulo_fiscal_ha:35, fracao_minima_parcelamento_ha:4, fonte:"INCRA IE 5/2022"},
-  {municipio:"TRAIPU", modulo_fiscal_ha:30, fracao_minima_parcelamento_ha:4, fonte:"INCRA IE 5/2022"},
-  {municipio:"VICOSA", modulo_fiscal_ha:16, fracao_minima_parcelamento_ha:4, fonte:"INCRA IE 5/2022"}
-];
+    <label for="a">Área em hectares</label>
+    <input
+      id="a"
+      type="text"
+      value="6,07"
+      inputmode="decimal"
+      placeholder="Ex.: 6,07"
+    >
 
-let BIB = [];
+    <button id="b" type="button" disabled>Carregando...</button>
 
-const selM = document.getElementById("m");
-const campoArea = document.getElementById("a");
-const divResult = document.getElementById("o");
-const divStatus = document.getElementById("status");
-
-function normalizaBiblioteca(arr){
-  return arr.map(item=>{
-    const mun = (item.municipio || item.Municipio || "").toString().trim().toUpperCase();
-    let mf = Number(item.modulo_fiscal_ha ?? item.modulo_fiscal ?? item.MF);
-    let fmp = Number(item.fracao_minima_parcelamento_ha ?? item.fracao_minima ?? item.FMP);
-    // CORREÇÃO OBRIGATÓRIA JAPARATINGA v7.1
-    if(mun === "JAPARATINGA"){ mf = 7; fmp = 2; }
-    return { municipio: mun, modulo_fiscal_ha: mf, fracao_minima_parcelamento_ha: fmp, fonte: item.fonte || "INCRA" };
-  }).filter(x=>x.municipio && x.modulo_fiscal_ha>0);
-}
-
-function renderSelect(){
-  const sorted = BIB.slice().sort((a,b)=>a.municipio.localeCompare(b.municipio));
-  selM.innerHTML = '<option value="">Selecione...</option>' + sorted.map(i=>
-    `<option value="${i.municipio}" ${i.municipio==="JAPARATINGA"?"selected":""}>${i.municipio} - MF ${i.modulo_fiscal_ha} / FMP ${i.fracao_minima_parcelamento_ha}</option>`
-  ).join("");
-  divStatus.textContent = `Biblioteca carregada: ${BIB.length} municípios | Fonte: ${BIB[0]?.fonte || "INCRA"} | JAPARATINGA = MF 7 FMP 2`;
-}
-
-async function carregar(){
-  try{
-    const r = await fetch("biblioteca/BR/AL/alagoas.json", {cache:"no-store"});
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    const json = await r.json();
-    const arr = Array.isArray(json) ? json : (json.municipios || json.data || []);
-    if(!Array.isArray(arr) || arr.length < 10) throw new Error("JSON inválido ou <10");
-    BIB = normalizaBiblioteca(arr);
-    if(BIB.length < 50) throw new Error("Biblioteca incompleta");
-    renderSelect();
-  }catch(e){
-    console.warn("Fallback para 7:", e);
-    BIB = normalizaBiblioteca(FALLBACK_BIB);
-    renderSelect();
-    divStatus.innerHTML = `<span class="warn">FALHA AO CARREGAR alagoas.json (${e.message}) - Usando fallback 7 DEMO. Verifique se o arquivo está em /biblioteca/BR/AL/alagoas.json</span>`;
-  }
-}
-
-function mostrarErro(msg){
-  divResult.innerHTML = `<div class="card erro"><strong>⚠️ ${msg}</strong></div>`;
-}
-
-document.getElementById("b").onclick = ()=>{
-  divResult.innerHTML = "";
-  const municipio = selM.value;
-  const valorDigitado = campoArea.value.trim();
-  const area = Number(valorDigitado.replace(",", "."));
-
-  // FLUXO DE ERRO 1 - validado Codex
-  if(!municipio){
-    mostrarErro("Selecione um município");
-    return;
-  }
-  // FLUXO DE ERRO 2 - validado Codex - area vazia, 0, <=0, NaN
-  if(valorDigitado==="" || !Number.isFinite(area) || area <= 0){
-    mostrarErro("Digite uma área válida maior que 0");
-    return;
-  }
-
-  const dados = BIB.find(x=>x.municipio===municipio);
-  if(!dados){ mostrarErro("Município não encontrado na biblioteca"); return; }
-
-  const mf = dados.modulo_fiscal_ha;
-  const fmp = dados.fracao_minima_parcelamento_ha;
-  const qtdMF = area / mf;
-
-  let classificacao = "";
-  let tipo = "";
-
-  if(area < fmp){
-    classificacao = `ABAIXO DA FMP - Abaixo de ${fmp} ha`;
-    tipo = "ABAIXO_FMP";
-  } else if(qtdMF <= 4){
-    classificacao = "PEQUENA PROPRIEDADE";
-    tipo = "PEQUENA";
-  } else if(qtdMF <= 15){
-    classificacao = "MÉDIA PROPRIEDADE";
-    tipo = "MEDIA";
-  } else {
-    classificacao = "GRANDE PROPRIEDADE";
-    tipo = "GRANDE";
-  }
-
-  const isJap = municipio==="JAPARATINGA" && Math.abs(area-6.07)<0.01;
-
-  divResult.innerHTML = `
-    <div class="card">
-      <h3 style="margin:0">${municipio}/AL - ${classificacao} ${isJap ? '<span class="ok">CORRIGIDO v7.1 FINAL</span>' : ''}</h3>
-      <p style="margin:10px 0">MF: <b>${mf} ha</b> | FMP: <b>${fmp} ha</b> | Área: <b>${area} ha</b> = <b>${qtdMF.toFixed(3)} MF</b></p>
-      ${isJap ? '<div class="card" style="background:#052e16;border-color:#22c55e"><b>✅ Fluxo JAPARATINGA 6,07 validado:</b> 6,07ha / 7 MF = 0,867 MF. Como 0,867 ≤ 4 e área ≥ FMP (2), classifica como <b>PEQUENA PROPRIEDADE</b>. FMP com ressalva: atende mínimo de parcelamento, mas exige análise jurídica do caso concreto.</div>' : ''}
-      <p style="font-weight:900;color:#38bdf8;font-size:18px">${classificacao}</p>
-      ${tipo==="ABAIXO_FMP" ? `<p class="muted">⚠️ Área abaixo da Fração Mínima de Parcelamento (${fmp} ha) deste município. Vedado desmembramento/parcelamento abaixo da FMP, salvo exceções legais. Indicação orientativa, exige análise jurídica e técnica.</p>` : `<p class="muted">✔️ Área atende ao parâmetro mínimo da FMP de ${fmp} ha. Isso não substitui análise jurídica, registral, técnica ou administrativa do caso concreto.</p>`}
-      <small class="muted">${dados.fonte} | Classificação conforme Lei 8.629/93 - MF: 1-4 Pequena, 4-15 Média, >15 Grande</small>
+    <div class="muted" id="status" style="margin-top: 10px">
+      Inicializando biblioteca...
     </div>
-  `;
-};
+  </div>
 
-carregar();
-</script>
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script></body>
+  <div id="o" aria-live="polite"></div>
+
+  <script>
+    let BIB = [];
+
+    const seletorMunicipio = document.getElementById("m");
+    const campoArea = document.getElementById("a");
+    const resultado = document.getElementById("o");
+    const status = document.getElementById("status");
+    const botao = document.getElementById("b");
+
+    function escaparHtml(valor) {
+      return String(valor)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function normalizarBiblioteca(lista) {
+      return lista
+        .map((item) => ({
+          municipio: String(item.municipio || "")
+            .trim()
+            .toUpperCase(),
+          modulo_fiscal_ha: Number(item.modulo_fiscal_ha),
+          fracao_minima_parcelamento_ha: Number(
+            item.fracao_minima_parcelamento_ha
+          ),
+          fonte: item.fonte_normativa || item.fonte || "INCRA IE 5/2022",
+          versao: item.versao_base || ""
+        }))
+        .filter((item) =>
+          item.municipio &&
+          item.modulo_fiscal_ha > 0 &&
+          item.fracao_minima_parcelamento_ha > 0
+        );
+    }
+
+    function mostrarErro(mensagem) {
+      resultado.innerHTML = `
+        <div class="card erro">
+          <strong>⚠️ ${escaparHtml(mensagem)}</strong>
+        </div>
+      `;
+    }
+
+    function renderizarMunicipios() {
+      const municipios = BIB
+        .slice()
+        .sort((a, b) => a.municipio.localeCompare(b.municipio));
+
+      seletorMunicipio.innerHTML =
+        '<option value="">Selecione...</option>' +
+        municipios
+          .map(
+            (item) => `
+              <option
+                value="${escaparHtml(item.municipio)}"
+                ${item.municipio === "JAPARATINGA" ? "selected" : ""}
+              >
+                ${escaparHtml(item.municipio)} -
+                MF ${item.modulo_fiscal_ha} ha /
+                FMP ${item.fracao_minima_parcelamento_ha} ha
+              </option>
+            `
+          )
+          .join("");
+
+      const japaratinga = BIB.find(
+        (item) => item.municipio === "JAPARATINGA"
+      );
+
+      seletorMunicipio.disabled = false;
+      botao.disabled = false;
+      botao.textContent = "Analisar imóvel";
+
+      status.innerHTML = `
+        <span class="ok">Biblioteca carregada: ${BIB.length} municípios</span>
+        | JAPARATINGA: MF ${japaratinga.modulo_fiscal_ha} ha /
+        FMP ${japaratinga.fracao_minima_parcelamento_ha} ha
+      `;
+    }
+
+    async function carregarBiblioteca() {
+      try {
+        const resposta = await fetch(
+          "biblioteca/BR/AL/alagoas.json",
+          { cache: "no-store" }
+        );
+
+        if (!resposta.ok) {
+          throw new Error(`Erro HTTP ${resposta.status}`);
+        }
+
+        const json = await resposta.json();
+        const lista = Array.isArray(json) ? json : (json.municipios || []);
+
+        if (lista.length !== 102) {
+          throw new Error(
+            `Biblioteca deve conter 102 municípios; encontrados: ${lista.length}`
+          );
+        }
+
+        BIB = normalizarBiblioteca(lista);
+
+        if (BIB.length !== 102) {
+          throw new Error(
+            "Biblioteca possui municípios com MF ou FMP inválidos"
+          );
+        }
+
+        const japaratinga = BIB.find(
+          (item) => item.municipio === "JAPARATINGA"
+        );
+
+        if (
+          !japaratinga ||
+          japaratinga.modulo_fiscal_ha !== 7 ||
+          japaratinga.fracao_minima_parcelamento_ha !== 2
+        ) {
+          throw new Error(
+            "Dados de JAPARATINGA divergentes: esperado MF 7 ha e FMP 2 ha"
+          );
+        }
+
+        renderizarMunicipios();
+      } catch (erro) {
+        BIB = [];
+        seletorMunicipio.innerHTML =
+          '<option value="">Biblioteca indisponível</option>';
+        seletorMunicipio.disabled = true;
+        botao.disabled = true;
+        botao.textContent = "Biblioteca indisponível";
+
+        status.innerHTML = `
+          <div class="card erro">
+            <strong>Falha ao carregar a biblioteca.</strong><br>
+            ${escaparHtml(erro.message)}<br><br>
+            Verifique o arquivo:
+            <code>biblioteca/BR/AL/alagoas.json</code>
+          </div>
+        `;
+      }
+    }
+
+    botao.addEventListener("click", () => {
+      resultado.innerHTML = "";
+
+      const municipio = seletorMunicipio.value;
+      const valorDigitado = campoArea.value.trim();
+      const area = Number(valorDigitado.replace(",", "."));
+
+      if (!municipio) {
+        mostrarErro("Selecione um município");
+        return;
+      }
+
+      if (
+        valorDigitado === "" ||
+        !Number.isFinite(area) ||
+        area <= 0
+      ) {
+        mostrarErro("Digite uma área válida maior que 0");
+        return;
+      }
+
+      const dados = BIB.find(
+        (item) => item.municipio === municipio
+      );
+
+      if (!dados) {
+        mostrarErro("Município não encontrado na biblioteca");
+        return;
+      }
+
+      const mf = dados.modulo_fiscal_ha;
+      const fmp = dados.fracao_minima_parcelamento_ha;
+      const quantidadeMF = area / mf;
+
+      let classificacao = "";
+      let abaixoFmp = false;
+
+      if (area < fmp) {
+        classificacao = `ABAIXO DA FMP — abaixo de ${fmp} ha`;
+        abaixoFmp = true;
+      } else if (quantidadeMF <= 4) {
+        classificacao = "PEQUENA PROPRIEDADE";
+      } else if (quantidadeMF <= 15) {
+        classificacao = "MÉDIA PROPRIEDADE";
+      } else {
+        classificacao = "GRANDE PROPRIEDADE";
+      }
+
+      const casoJaparatinga =
+        municipio === "JAPARATINGA" &&
+        Math.abs(area - 6.07) < 0.001;
+
+      resultado.innerHTML = `
+        <div class="card">
+          <h3>
+            ${escaparHtml(municipio)}/AL —
+            ${escaparHtml(classificacao)}
+          </h3>
+
+          <p>
+            MF: <strong>${mf} ha</strong> |
+            FMP: <strong>${fmp} ha</strong> |
+            Área: <strong>${area} ha</strong> =
+            <strong>${quantidadeMF.toFixed(3)} MF</strong>
+          </p>
+
+          ${
+            casoJaparatinga
+              ? `
+                <div class="card" style="background:#052e16;border-color:#22c55e">
+                  <strong>✅ JAPARATINGA 6,07 ha:</strong>
+                  6,07 ÷ 7 = 0,867 MF. Como a área é igual ou superior
+                  à FMP de 2 ha e está dentro de 4 MF, a classificação é
+                  <strong>PEQUENA PROPRIEDADE</strong>.
+                </div>
+              `
+              : ""
+          }
+
+          <p style="font-weight:900;color:#38bdf8;font-size:18px">
+            ${escaparHtml(classificacao)}
+          </p>
+
+          <p class="muted">
+            ${
+              abaixoFmp
+                ? `Em regra, a área não atende ao parâmetro mínimo da FMP de ${fmp} ha; requer análise jurídica, registral e técnica.`
+                : `A área atende ao parâmetro mínimo da FMP de ${fmp} ha. Isso não substitui análise jurídica, registral, técnica ou administrativa do caso concreto.`
+            }
+          </p>
+
+          <small class="muted">
+            Fonte: ${escaparHtml(dados.fonte)}
+            ${dados.versao ? ` | Base: ${escaparHtml(dados.versao)}` : ""}
+            | Análise orientativa.
+          </small>
+        </div>
+      `;
+    });
+
+    carregarBiblioteca();
+  </script>
+</body>
 </html>
