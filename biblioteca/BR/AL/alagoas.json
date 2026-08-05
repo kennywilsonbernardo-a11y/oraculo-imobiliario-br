@@ -23,11 +23,11 @@
     "municipio": "ARAPIRACA",
     "municipio_display": "Arapiraca",
     "municipio_busca": "ARAPIRACA",
-    "modulo_fiscal_ha": 18,
-    "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "PROVISORIO - VALIDAR NO INCRA gov.br - Anexo IV IE 5/2022",
-    "fonte": "INCRA IE 5/2022 - MF provisorio - FMP provisorio por regra MF<=14=2 senão 4 - PRECISA VALIDAR",
-    "uf": "AL"
+    "modulo_fiscal_ha": 15,
+    "fracao_minima_parcelamento_ha": 2,
+    "fmp_status": "VALIDADO - PGT INCRA 2026-08-05",
+    "fonte": "INCRA IE 05/2022 - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-05 - MF 15 / FMP 2",
+    "UF": "AL"
   },
   {
     "municipio": "ATALAIA",
@@ -494,10 +494,10 @@
     "municipio_display": "Maragogi",
     "municipio_busca": "MARAGOGI",
     "modulo_fiscal_ha": 14,
-    "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "PROVISORIO - VALIDAR NO INCRA gov.br - Anexo IV IE 5/2022",
-    "fonte": "INCRA IE 5/2022 - MF provisorio - FMP provisorio por regra MF<=14=2 senão 4 - PRECISA VALIDAR",
-    "uf": "AL"
+"fracao_minima_parcelamento_ha": 2,
+"fmp_status": "VALIDADO - PGT INCRA 2026-08-05",
+"fonte": "INCRA IE 05/2022 - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-05 - MF 14 / FMP 2",
+"UF": "AL"
   },
   {
     "municipio": "MARAVILHA",
