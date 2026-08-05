@@ -1,0 +1,54 @@
+{
+  "sistema": "Oráculo Imobiliário BR",
+  "versao": "v9.2.0-RC",
+  "versao_nome": "v9.2.0-beta CANDIDATA AO SELAMENTO",
+  "estado_atual": {
+    "uf": "AL",
+    "nome": "Alagoas",
+    "municipios": 102,
+    "data_version": "AL-2026.08.04"
+  },
+  "estados_ativos": [
+    {
+      "uf": "AL",
+      "nome": "Alagoas",
+      "data_version": "AL-2026.08.04",
+      "municipios": 102
+    }
+  ],
+  "vigencia_status": "vigente conforme fonte cadastrada - validar fonte oficial",
+  "checks": {
+    "japaratinga": {
+      "municipio_busca": "japaratinga",
+      "modulo_fiscal_ha": 7,
+      "fracao_minima_parcelamento_ha": 2
+    },
+    "maceio": {
+      "municipio_busca": "maceio",
+      "modulo_fiscal_ha": 10,
+      "fracao_minima_parcelamento_ha": 2
+    },
+    "maragogi": {
+      "municipio_busca": "maragogi",
+      "modulo_fiscal_ha": 7,
+      "fracao_minima_parcelamento_ha": 2
+    },
+    "arapiraca": {
+      "municipio_busca": "arapiraca",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 3
+    }
+  },
+  "fontes": {
+    "AL": {
+      "fonte": "INCRA",
+      "referencia": "AL-2026.08.04",
+      "status": "provisorio - validar fonte oficial"
+    }
+  },
+  "metadados": {
+    "build_timestamp_utc": "2026-08-04T23:30:00Z",
+    "governanca": "4 pilares - fonte unica da verdade - artefato auditavel",
+    "proximo_passo": "index.html"
+  }
+}
