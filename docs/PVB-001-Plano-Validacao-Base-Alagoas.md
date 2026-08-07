@@ -246,6 +246,5 @@ Este plano não bloqueia tecnicamente o selamento do software (a ATR-003 Revisad
 
 ---
 
-*Documento vivo — atualizar a tabela da seção 5 e o indicador da seção 2 conforme municípios forem validados.*
- "completa conteúdo do PVB-001" e clique em Commit changes.
+*Documento vivo — conforme municípios forem validados
 
