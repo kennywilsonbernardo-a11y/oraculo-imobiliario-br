@@ -246,5 +246,4 @@ Este plano não bloqueia tecnicamente o selamento do software (a ATR-003 Revisad
 
 ---
 
-*Documento vivo — conforme municípios forem validados
-
+*Documento vivo — atualizar a tabela da seção 5 e o indicador da seção 2 conforme municípios forem validados.*
