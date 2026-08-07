@@ -1,7 +1,7 @@
 {
   "sistema": "Oráculo Imobiliário BR",
-  "versao": "v9.2.0-RC",
-  "versao_nome": "v9.2.0 Release Candidate - Candidata ao Selamento",
+  "versao": "v9.2.1-RC",
+  "versao_nome": "v9.2.1 Release Candidate - Candidata ao Selamento",
   "estado_atual": {
     "uf": "AL",
     "nome": "Alagoas",
@@ -30,13 +30,13 @@
     },
     "maragogi": {
       "municipio_busca": "maragogi",
-      "modulo_fiscal_ha": 7,
+      "modulo_fiscal_ha": 14,
       "fracao_minima_parcelamento_ha": 2
     },
     "arapiraca": {
       "municipio_busca": "arapiraca",
-      "modulo_fiscal_ha": 35,
-      "fracao_minima_parcelamento_ha": 3
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2
     }
   },
   "fontes": {
