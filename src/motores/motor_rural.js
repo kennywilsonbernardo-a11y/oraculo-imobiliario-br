@@ -3,7 +3,10 @@
 
 export async function analisarRural({ municipio, uf, area_ha }) {
   // 1. Carrega Biblioteca
-  const biblioteca = await fetch(`/biblioteca/BR/${uf}/${uf.toLowerCase() === 'al' ? 'alagoas' : uf.toLowerCase()}.json`).then(r=>r.json());
+  // AT-006: path relativo (./) em vez de absoluto (/) - path absoluto quebra em GitHub Pages
+  // de projeto, que publica sob /nome-do-repo/ e não na raiz do domínio (mesmo bug já corrigido
+  // no index.html via AT-004).
+  const biblioteca = await fetch(`./biblioteca/BR/${uf}/${uf.toLowerCase() === 'al' ? 'alagoas' : uf.toLowerCase()}.json`).then(r=>r.json());
   
   // 2. Consulta
   const dadosConsultados = biblioteca.find(m => 
@@ -24,9 +27,13 @@ export async function analisarRural({ municipio, uf, area_ha }) {
   const fmp = dadosConsultados.fracao_minima_parcelamento_ha;
   const qtdMF = area_ha / mf;
   
+  // AT-006: classificação alinhada ao Estatuto da Terra (Lei 4.504/64, art. 4º):
+  // minifúndio < 1 MF | pequena propriedade 1 a 4 MF | média propriedade 4 a 15 MF | latifúndio > 15 MF
+  // Antes: "media_propriedade" cobria indevidamente de 1 a 15 MF, misturando pequena e média propriedade.
   let classificacao = "minifundio";
   if (qtdMF > 15) classificacao = "latifundio";
-  else if (qtdMF >= 1) classificacao = "media_propriedade";
+  else if (qtdMF >= 4) classificacao = "media_propriedade";
+  else if (qtdMF >= 1) classificacao = "pequena_propriedade";
 
   // 4. Retorna JSON padronizado
   return {
@@ -43,7 +50,8 @@ export async function analisarRural({ municipio, uf, area_ha }) {
       permite_desmembramento: area_ha >= fmp
     },
     fundamentos: [
-      `${dadosConsultados.fonte_normativa}`,
+      // AT-006: campo real no schema de alagoas.json é "fonte" (fonte_normativa não existe -> vinha "undefined")
+      `${dadosConsultados.fonte}`,
       `INCRA MF=${mf}ha para ${municipio}`
     ],
     alertas: area_ha < fmp ? [`Área abaixo da FMP de ${fmp}ha`] : [],
