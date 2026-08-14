@@ -42,4 +42,4 @@ Ainda NÃO faz consulta automática em ONR/SREI, ARISP, CNIB, TJAL. É um motor 
 
 ### Autor
 Kenny Wilson Bernardo da Silva — Corretor de Imóveis (CRECI 2468-AL) — Maceió/AL  
-*Todos os direitos reservados. Ver arquivo [LICENSE](./LICENSE).*
+*Todos os direitos reservados. Ver arquivo License](./License)*
