@@ -2,7 +2,7 @@
 Governança fundiária + Checklist PEI - 8 Itens | Material Educacional - Não é PTAM/CNAI nem Laudo
 > Projeto com dois módulos em estágios diferentes de maturidade. Veja "Status por módulo" abaixo antes de assumir o que está disponível na página publicada.
 
-**Status:** MVP educativo em Alagoas | **Licença:** MIT
+**Status:** MVP educativo em Alagoas | **Licença:** Proprietária — todos os direitos reservados (ver arquivo License)
 
 ### ⚠️ AVISO LEGAL - O QUE É E O QUE NÃO É
 **NÃO É:** PTAM (precisa CRECI + CNAI - Res. COFECI 1066/2007), laudo jurídico, substituto de certidão oficial.
@@ -41,4 +41,5 @@ A cobertura de validação documental da base está detalhada em `docs/PVB-001-P
 Ainda NÃO faz consulta automática em ONR/SREI, ARISP, CNIB, TJAL. É um motor de checklist educativo em construção, e **ainda não está acessível na página publicada** — só rodando localmente a partir dos arquivos-fonte em `src/`.
 
 ### Autor
-Kenny Wilson - Corretor de Imóveis Creci 2468-AL- Maceió/AL - MIT open-source.
+Kenny Wilson Bernardo da Silva — Corretor de Imóveis (CRECI 2468-AL) — Maceió/AL  
+*Todos os direitos reservados. Ver arquivo [LICENSE](./LICENSE).*
