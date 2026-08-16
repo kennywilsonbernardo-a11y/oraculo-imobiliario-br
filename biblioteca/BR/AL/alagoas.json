@@ -822,10 +822,10 @@
     "municipio": "RIO LARGO",
     "municipio_display": "Rio Largo",
     "municipio_busca": "RIO LARGO",
-    "modulo_fiscal_ha": 10,
+    "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "PROVISORIO - VALIDAR NO INCRA gov.br - Anexo IV IE 5/2022",
-    "fonte": "INCRA IE 5/2022 - MF provisorio - FMP provisorio por regra MF<=14=2 senão 4 - PRECISA VALIDAR",
+    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16"
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707701 - MF 12 / FMP 2"
     "uf": "AL"
   },
   {
