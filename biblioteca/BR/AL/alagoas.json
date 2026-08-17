@@ -5,9 +5,10 @@
     "municipio_busca": "AGUA BRANCA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700107 - MF 35 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700102 - MF 35 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700102"
   },
   {
     "municipio": "ANADIA",
@@ -15,9 +16,10 @@
     "municipio_busca": "ANADIA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700206 - MF 16 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700201 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700201"
   },
   {
     "municipio": "ARAPIRACA",
@@ -25,9 +27,10 @@
     "municipio_busca": "ARAPIRACA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-05",
-    "fonte": "INCRA IE 05/2022 - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-05 - MF 15 / FMP 2",
-    "UF": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700300 - MF 15 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2700300"
   },
   {
     "municipio": "ATALAIA",
@@ -35,9 +38,10 @@
     "municipio_busca": "ATALAIA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700305 - MF 12 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700409 - MF 12 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2700409"
   },
   {
     "municipio": "BARRA DE SANTO ANTÔNIO",
@@ -45,9 +49,10 @@
     "municipio_busca": "BARRA DE SANTO ANTONIO",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700404 - MF 30 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "CORRIGIDO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700508 - MF 30 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700508"
   },
   {
     "municipio": "BARRA DE SÃO MIGUEL",
@@ -55,9 +60,10 @@
     "municipio_busca": "BARRA DE SAO MIGUEL",
     "modulo_fiscal_ha": 10,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700503 - MF 10 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700607 - MF 10 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2700607"
   },
   {
     "municipio": "BATALHA",
@@ -65,9 +71,10 @@
     "municipio_busca": "BATALHA",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700602 - MF 30 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700706 - MF 30 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700706"
   },
   {
     "municipio": "BELÉM",
@@ -75,9 +82,10 @@
     "municipio_busca": "BELEM",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700701 - MF 16 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "CORRIGIDO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700805 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700805"
   },
   {
     "municipio": "BELO MONTE",
@@ -85,9 +93,10 @@
     "municipio_busca": "BELO MONTE",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700800 - MF 30 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700904 - MF 30 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2700904"
   },
   {
     "municipio": "BOCA DA MATA",
@@ -95,9 +104,10 @@
     "municipio_busca": "BOCA DA MATA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2700909 - MF 16 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701001 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701001"
   },
   {
     "municipio": "BRANQUINHA",
@@ -105,9 +115,10 @@
     "municipio_busca": "BRANQUINHA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701006 - MF 12 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701100 - MF 12 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2701100"
   },
   {
     "municipio": "CACIMBINHAS",
@@ -115,9 +126,10 @@
     "municipio_busca": "CACIMBINHAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701105 - MF 35 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701209 - MF 35 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701209"
   },
   {
     "municipio": "CAJUEIRO",
@@ -125,9 +137,10 @@
     "municipio_busca": "CAJUEIRO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701204 - MF 12 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701308 - MF 12 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2701308"
   },
   {
     "municipio": "CAMPESTRE",
@@ -135,9 +148,10 @@
     "municipio_busca": "CAMPESTRE",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701303 - MF 12 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701357 - MF 12 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2701357"
   },
   {
     "municipio": "CAMPO ALEGRE",
@@ -145,9 +159,10 @@
     "municipio_busca": "CAMPO ALEGRE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701352 - MF 16 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701407 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701407"
   },
   {
     "municipio": "CAMPO GRANDE",
@@ -155,9 +170,10 @@
     "municipio_busca": "CAMPO GRANDE",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701402 - MF 30 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701506 - MF 30 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701506"
   },
   {
     "municipio": "CANAPI",
@@ -165,9 +181,10 @@
     "municipio_busca": "CANAPI",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701501 - MF 35 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701605 - MF 35 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701605"
   },
   {
     "municipio": "CAPELA",
@@ -175,9 +192,10 @@
     "municipio_busca": "CAPELA",
     "modulo_fiscal_ha": 14,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701600 - MF 14 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701704 - MF 14 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2701704"
   },
   {
     "municipio": "CARNEIROS",
@@ -185,9 +203,10 @@
     "municipio_busca": "CARNEIROS",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701709 - MF 30 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701803 - MF 30 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701803"
   },
   {
     "municipio": "CHÃ PRETA",
@@ -195,9 +214,10 @@
     "municipio_busca": "CHA PRETA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701808 - MF 16 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701902 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2701902"
   },
   {
     "municipio": "COITÉ DO NÓIA",
@@ -205,9 +225,10 @@
     "municipio_busca": "COITE DO NOIA",
     "modulo_fiscal_ha": 18,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2701907 - MF 18 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702009 - MF 18 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2702009"
   },
   {
     "municipio": "COLÔNIA LEOPOLDINA",
@@ -215,9 +236,10 @@
     "municipio_busca": "COLONIA LEOPOLDINA",
     "modulo_fiscal_ha": 14,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702004 - MF 14 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702108 - MF 14 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2702108"
   },
   {
     "municipio": "COQUEIRO SECO",
@@ -225,9 +247,10 @@
     "municipio_busca": "COQUEIRO SECO",
     "modulo_fiscal_ha": 10,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702103 - MF 10 / FMP 2",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702207 - MF 10 / FMP 2",
+    "uf": "AL",
+    "codigo_ibge": "2702207"
   },
   {
     "municipio": "CORURIPE",
@@ -235,9 +258,10 @@
     "municipio_busca": "CORURIPE",
     "modulo_fiscal_ha": 24,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702202 - MF 24 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "CORRIGIDO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702306 - MF 24 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2702306"
   },
   {
     "municipio": "CRAÍBAS",
@@ -245,9 +269,10 @@
     "municipio_busca": "CRAIBAS",
     "modulo_fiscal_ha": 20,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702301 - MF 20 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702355 - MF 20 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2702355"
   },
   {
     "municipio": "DELMIRO GOUVEIA",
@@ -255,9 +280,10 @@
     "municipio_busca": "DELMIRO GOUVEIA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702405 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702405"
   },
   {
     "municipio": "DOIS RIACHOS",
@@ -265,9 +291,10 @@
     "municipio_busca": "DOIS RIACHOS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702504 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702504"
   },
   {
     "municipio": "ESTRELA DE ALAGOAS",
@@ -275,9 +302,10 @@
     "municipio_busca": "ESTRELA DE ALAGOAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702553 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702553"
   },
   {
     "municipio": "FEIRA GRANDE",
@@ -285,9 +313,10 @@
     "municipio_busca": "FEIRA GRANDE",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702603 - MF 15 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702603"
   },
   {
     "municipio": "FELIZ DESERTO",
@@ -295,9 +324,10 @@
     "municipio_busca": "FELIZ DESERTO",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702702 - MF 60 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702702"
   },
   {
     "municipio": "FLEXEIRAS",
@@ -305,9 +335,10 @@
     "municipio_busca": "FLEXEIRAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702801 - MF 16 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702801"
   },
   {
     "municipio": "GIRAU DO PONCIANO",
@@ -315,9 +346,10 @@
     "municipio_busca": "GIRAU DO PONCIANO",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2702900 - MF 15 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2702900"
   },
   {
     "municipio": "IBATEGUARA",
@@ -325,9 +357,10 @@
     "municipio_busca": "IBATEGUARA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703007 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703007"
   },
   {
     "municipio": "IGACI",
@@ -335,9 +368,10 @@
     "municipio_busca": "IGACI",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703106 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703106"
   },
   {
     "municipio": "IGREJA NOVA",
@@ -345,9 +379,10 @@
     "municipio_busca": "IGREJA NOVA",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703205 - MF 60 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703205"
   },
   {
     "municipio": "INHAPI",
@@ -355,9 +390,10 @@
     "municipio_busca": "INHAPI",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703304 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703304"
   },
   {
     "municipio": "JACARÉ DOS HOMENS",
@@ -365,9 +401,10 @@
     "municipio_busca": "JACARE DOS HOMENS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703403 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703403"
   },
   {
     "municipio": "JACUÍPE",
@@ -375,9 +412,10 @@
     "municipio_busca": "JACUIPE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703502 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703502"
   },
   {
     "municipio": "JAPARATINGA",
@@ -385,9 +423,10 @@
     "municipio_busca": "JAPARATINGA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703601 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703601"
   },
   {
     "municipio": "JARAMATAIA",
@@ -395,9 +434,10 @@
     "municipio_busca": "JARAMATAIA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703700 - MF 70 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703700"
   },
   {
     "municipio": "JEQUIÁ DA PRAIA",
@@ -405,9 +445,10 @@
     "municipio_busca": "JEQUIA DA PRAIA",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703759 - MF 30 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703759"
   },
   {
     "municipio": "JOAQUIM GOMES",
@@ -415,9 +456,10 @@
     "municipio_busca": "JOAQUIM GOMES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703809 - MF 16 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703809"
   },
   {
     "municipio": "JUNDIÁ",
@@ -425,9 +467,10 @@
     "municipio_busca": "JUNDIA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2703908 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2703908"
   },
   {
     "municipio": "JUNQUEIRO",
@@ -435,9 +478,10 @@
     "municipio_busca": "JUNQUEIRO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704005 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704005"
   },
   {
     "municipio": "LAGOA DA CANOA",
@@ -445,9 +489,10 @@
     "municipio_busca": "LAGOA DA CANOA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704104 - MF 15 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704104"
   },
   {
     "municipio": "LIMOEIRO DE ANADIA",
@@ -455,9 +500,10 @@
     "municipio_busca": "LIMOEIRO DE ANADIA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704203 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704203"
   },
   {
     "municipio": "MACEIÓ",
@@ -465,9 +511,10 @@
     "municipio_busca": "MACEIO",
     "modulo_fiscal_ha": 7,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704302 - MF 7 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704302"
   },
   {
     "municipio": "MAJOR ISIDORO",
@@ -475,9 +522,10 @@
     "municipio_busca": "MAJOR ISIDORO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704401 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704401"
   },
   {
     "municipio": "MAR VERMELHO",
@@ -485,19 +533,21 @@
     "municipio_busca": "MAR VERMELHO",
     "modulo_fiscal_ha": 20,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704500 - MF 20 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704906 - MF 20 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2704906"
   },
   {
     "municipio": "MARAGOGI",
     "municipio_display": "Maragogi",
     "municipio_busca": "MARAGOGI",
-    "modulo_fiscal_ha": 14,
-    "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-05",
-    "fonte": "INCRA IE 05/2022 - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-05 - MF 14 / FMP 2",
-    "UF": "AL"
+    "modulo_fiscal_ha": 16,
+    "fracao_minima_parcelamento_ha": 4,
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704500 - MF 16 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2704500"
   },
   {
     "municipio": "MARAVILHA",
@@ -505,9 +555,10 @@
     "municipio_busca": "MARAVILHA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16",
+    "fmp_status": "CORRIGIDO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704609 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704609"
   },
   {
     "municipio": "MARECHAL DEODORO",
@@ -515,9 +566,10 @@
     "municipio_busca": "MARECHAL DEODORO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704708 - MF 12 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704708"
   },
   {
     "municipio": "MARIBONDO",
@@ -525,9 +577,10 @@
     "municipio_busca": "MARIBONDO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704807 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2704807"
   },
   {
     "municipio": "MATA GRANDE",
@@ -535,9 +588,10 @@
     "municipio_busca": "MATA GRANDE",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
-    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2704906 - MF 35 / FMP 4",
-    "uf": "AL"
+    "fmp_status": "VALIDADO",
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705002 - MF 35 / FMP 4",
+    "uf": "AL",
+    "codigo_ibge": "2705002"
   },
   {
     "municipio": "MATRIZ DE CAMARAGIBE",
@@ -545,9 +599,10 @@
     "municipio_busca": "MATRIZ DE CAMARAGIBE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705101 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705101"
   },
   {
     "municipio": "MESSIAS",
@@ -555,9 +610,10 @@
     "municipio_busca": "MESSIAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705200 - MF 16 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705200"
   },
   {
     "municipio": "MINADOR DO NEGRÃO",
@@ -565,9 +621,10 @@
     "municipio_busca": "MINADOR DO NEGRAO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705309 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705309"
   },
   {
     "municipio": "MONTEIRÓPOLIS",
@@ -575,9 +632,10 @@
     "municipio_busca": "MONTEIROPOLIS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705408 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705408"
   },
   {
     "municipio": "MURICI",
@@ -585,9 +643,10 @@
     "municipio_busca": "MURICI",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705507 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705507"
   },
   {
     "municipio": "NOVO LINO",
@@ -595,9 +654,10 @@
     "municipio_busca": "NOVO LINO",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705606 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705606"
   },
   {
     "municipio": "OLHO D'ÁGUA DAS FLORES",
@@ -605,9 +665,10 @@
     "municipio_busca": "OLHO D'AGUA DAS FLORES",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705705 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705705"
   },
   {
     "municipio": "OLHO D'ÁGUA DO CASADO",
@@ -615,9 +676,10 @@
     "municipio_busca": "OLHO D'AGUA DO CASADO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705804 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705804"
   },
   {
     "municipio": "OLHO D'ÁGUA GRANDE",
@@ -625,9 +687,10 @@
     "municipio_busca": "OLHO D'AGUA GRANDE",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2705903 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2705903"
   },
   {
     "municipio": "OLIVENÇA",
@@ -635,9 +698,10 @@
     "municipio_busca": "OLIVENCA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706000 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706000"
   },
   {
     "municipio": "OURO BRANCO",
@@ -645,9 +709,10 @@
     "municipio_busca": "OURO BRANCO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706109 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706109"
   },
   {
     "municipio": "PALESTINA",
@@ -655,9 +720,10 @@
     "municipio_busca": "PALESTINA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706208 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706208"
   },
   {
     "municipio": "PALMEIRA DOS ÍNDIOS",
@@ -665,9 +731,10 @@
     "municipio_busca": "PALMEIRA DOS INDIOS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706307 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706307"
   },
   {
     "municipio": "PÃO DE AÇÚCAR",
@@ -675,9 +742,10 @@
     "municipio_busca": "PAO DE ACUCAR",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706406 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706406"
   },
   {
     "municipio": "PARICONHA",
@@ -685,9 +753,10 @@
     "municipio_busca": "PARICONHA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706422 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706422"
   },
   {
     "municipio": "PARIPUEIRA",
@@ -695,9 +764,10 @@
     "municipio_busca": "PARIPUEIRA",
     "modulo_fiscal_ha": 18,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706448 - MF 18 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706448"
   },
   {
     "municipio": "PASSO DE CAMARAGIBE",
@@ -705,9 +775,10 @@
     "municipio_busca": "PASSO DE CAMARAGIBE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706505 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706505"
   },
   {
     "municipio": "PAULO JACINTO",
@@ -715,9 +786,10 @@
     "municipio_busca": "PAULO JACINTO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706604 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706604"
   },
   {
     "municipio": "PENEDO",
@@ -725,9 +797,10 @@
     "municipio_busca": "PENEDO",
     "modulo_fiscal_ha": 50,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706703 - MF 50 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706703"
   },
   {
     "municipio": "PIAÇABUÇU",
@@ -735,9 +808,10 @@
     "municipio_busca": "PIACABUCU",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706802 - MF 60 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706802"
   },
   {
     "municipio": "PILAR",
@@ -745,9 +819,10 @@
     "municipio_busca": "PILAR",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2706901 - MF 12 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2706901"
   },
   {
     "municipio": "PINDOBA",
@@ -755,9 +830,10 @@
     "municipio_busca": "PINDOBA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707008 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707008"
   },
   {
     "municipio": "PIRANHAS",
@@ -765,9 +841,10 @@
     "municipio_busca": "PIRANHAS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707107 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707107"
   },
   {
     "municipio": "POÇO DAS TRINCHEIRAS",
@@ -775,9 +852,10 @@
     "municipio_busca": "POCO DAS TRINCHEIRAS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707206 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707206"
   },
   {
     "municipio": "PORTO CALVO",
@@ -785,9 +863,10 @@
     "municipio_busca": "PORTO CALVO",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707305 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707305"
   },
   {
     "municipio": "PORTO DE PEDRAS",
@@ -795,9 +874,10 @@
     "municipio_busca": "PORTO DE PEDRAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707404 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707404"
   },
   {
     "municipio": "PORTO REAL DO COLÉGIO",
@@ -805,9 +885,10 @@
     "municipio_busca": "PORTO REAL DO COLEGIO",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707503 - MF 60 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707503"
   },
   {
     "municipio": "QUEBRANGULO",
@@ -815,9 +896,10 @@
     "municipio_busca": "QUEBRANGULO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707602 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707602"
   },
   {
     "municipio": "RIO LARGO",
@@ -825,9 +907,10 @@
     "municipio_busca": "RIO LARGO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707701 - MF 12 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707701"
   },
   {
     "municipio": "ROTEIRO",
@@ -835,9 +918,10 @@
     "municipio_busca": "ROTEIRO",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707800 - MF 30 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707800"
   },
   {
     "municipio": "SANTA LUZIA DO NORTE",
@@ -845,9 +929,10 @@
     "municipio_busca": "SANTA LUZIA DO NORTE",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707909 - MF 12 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2707909"
   },
   {
     "municipio": "SANTANA DO IPANEMA",
@@ -855,9 +940,10 @@
     "municipio_busca": "SANTANA DO IPANEMA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708006 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708006"
   },
   {
     "municipio": "SANTANA DO MUNDAÚ",
@@ -865,9 +951,10 @@
     "municipio_busca": "SANTANA DO MUNDAU",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708105 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708105"
   },
   {
     "municipio": "SÃO BRÁS",
@@ -875,9 +962,10 @@
     "municipio_busca": "SAO BRAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708204 - MF 35 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708204"
   },
   {
     "municipio": "SÃO JOSÉ DA LAJE",
@@ -885,9 +973,10 @@
     "municipio_busca": "SAO JOSE DA LAJE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708303 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708303"
   },
   {
     "municipio": "SÃO JOSÉ DA TAPERA",
@@ -895,9 +984,10 @@
     "municipio_busca": "SAO JOSE DA TAPERA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708402 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708402"
   },
   {
     "municipio": "SÃO LUÍS DO QUITUNDE",
@@ -905,9 +995,10 @@
     "municipio_busca": "SAO LUIS DO QUITUNDE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708501 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708501"
   },
   {
     "municipio": "SÃO MIGUEL DOS CAMPOS",
@@ -915,9 +1006,10 @@
     "municipio_busca": "SAO MIGUEL DOS CAMPOS",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708600 - MF 30 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708600"
   },
   {
     "municipio": "SÃO MIGUEL DOS MILAGRES",
@@ -925,9 +1017,10 @@
     "municipio_busca": "SAO MIGUEL DOS MILAGRES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708709 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708709"
   },
   {
     "municipio": "SÃO SEBASTIÃO",
@@ -935,9 +1028,10 @@
     "municipio_busca": "SAO SEBASTIAO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708808 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708808"
   },
   {
     "municipio": "SATUBA",
@@ -945,9 +1039,10 @@
     "municipio_busca": "SATUBA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708907 - MF 12 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708907"
   },
   {
     "municipio": "SENADOR RUI PALMEIRA",
@@ -955,9 +1050,10 @@
     "municipio_busca": "SENADOR RUI PALMEIRA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2708956 - MF 70 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2708956"
   },
   {
     "municipio": "TANQUE D'ARCA",
@@ -965,9 +1061,10 @@
     "municipio_busca": "TANQUE D'ARCA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709004 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709004"
   },
   {
     "municipio": "TAQUARANA",
@@ -975,9 +1072,10 @@
     "municipio_busca": "TAQUARANA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709103 - MF 15 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709103"
   },
   {
     "municipio": "TEOTÔNIO VILELA",
@@ -985,9 +1083,10 @@
     "municipio_busca": "TEOTONIO VILELA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709152 - MF 35 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709152"
   },
   {
     "municipio": "TRAIPU",
@@ -995,9 +1094,10 @@
     "municipio_busca": "TRAIPU",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 2,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709202 - MF 30 / FMP 2",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709202"
   },
   {
     "municipio": "UNIÃO DOS PALMARES",
@@ -1005,9 +1105,10 @@
     "municipio_busca": "UNIAO DOS PALMARES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO-SESSAO-ANTERIOR - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709301 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709301"
   },
   {
     "municipio": "VIÇOSA",
@@ -1015,8 +1116,9 @@
     "municipio_busca": "VICOSA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "VALIDADO - PGT INCRA 2026-08-16",
+    "fmp_status": "VALIDADO",
     "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2709400 - MF 16 / FMP 4",
-    "uf": "AL"
+    "uf": "AL",
+    "codigo_ibge": "2709400"
   }
 ]
