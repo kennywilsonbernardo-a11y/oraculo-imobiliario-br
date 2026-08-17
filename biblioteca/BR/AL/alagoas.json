@@ -828,10 +828,10 @@
     "municipio": "ROTEIRO",
     "municipio_display": "Roteiro",
     "municipio_busca": "ROTEIRO",
-    "modulo_fiscal_ha": 16,
+    "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
-    "fmp_status": "PROVISORIO - VALIDAR NO INCRA gov.br - Anexo IV IE 5/2022",
-    "fonte": "INCRA IE 5/2022 - MF provisorio - FMP provisorio por regra MF<=14=2 senão 4 - PRECISA VALIDAR",
+    "fmp_status": "CORRIGIDO - PGT INCRA 2026-08-16"
+    "fonte": "INCRA PGT - indices-basicos - pro-pgt-incra.estaleiro.serpro.gov.br - consulta 2026-08-16 - IBGE 2707800 - MF 30 / FMP 4"
     "uf": "AL"
   },
   {
