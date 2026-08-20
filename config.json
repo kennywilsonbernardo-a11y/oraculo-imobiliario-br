@@ -6,13 +6,13 @@
     "uf": "AL",
     "nome": "Alagoas",
     "municipios": 102,
-    "data_version": "AL-2026.08.04"
+    "data_version": "AL-2026.08.19"
   },
   "estados_ativos": [
     {
       "uf": "AL",
       "nome": "Alagoas",
-      "data_version": "AL-2026.08.04",
+      "data_version": "AL-2026.08.19",
       "municipios": 102
     }
   ],
@@ -656,12 +656,12 @@
   "fontes": {
     "AL": {
       "fonte": "INCRA",
-      "referencia": "AL-2026.08.04",
+      "referencia": "AL-2026.08.19",
       "status": "provisorio - validar fonte oficial"
     }
   },
   "metadados": {
-    "build_timestamp_utc": "2026-08-04T23:30:00Z",
+    "build_timestamp_utc": "2026-08-20T00:00:00Z",
     "governanca": "4 pilares - fonte unica da verdade - artefato auditavel",
     "proximo_passo": "index.html"
   }
