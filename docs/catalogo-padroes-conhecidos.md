@@ -67,6 +67,8 @@ O catálogo registra as vias oficiais de consulta automática, sempre com a ress
 
 O modelo recomendado é **híbrido**: APIs oficiais para validações de barreira (CNDs federais, consultas históricas) e integrações pagas de busca complexa (múltiplos CPFs/CNPJs retroativos) somente quando o caso exigir — e cada integração nasce como deliberação própria de integração, com verificação independente de disponibilidade antes de qualquer promessa comercial.
 
+Nota normativa: as taxas de emolumentos dos serviços notariais e de registro no Brasil são definidas pela Lei 10.169/2000, com tabelas fixadas por lei estadual — em Alagoas, pela legislação própria do estado e pelo simulador oficial de emolumentos do TJAL. A Lei 9.492/1997 rege o protesto de títulos e não se aplica a emolumentos de registro de imóveis. Não existe, portanto, "consulta automática gratuita de matrícula": o modelo do Oráculo (upload do usuário com extração pelo sistema) é a via economicamente viável e juridicamente correta.
+
 ## 7. Fluxo de entrada mista (o coração pedagógico da entrada)
 
 O fluxo educativo do Oráculo, aplicável a qualquer caso, tem três estágios:
