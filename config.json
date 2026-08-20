@@ -39,6 +39,620 @@
       "fracao_minima_parcelamento_ha": 2
     }
   },
+  "espelho_completude": {
+    "agua branca": {
+      "municipio_display": "Água Branca",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700102"
+    },
+    "anadia": {
+      "municipio_display": "Anadia",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700201"
+    },
+    "arapiraca": {
+      "municipio_display": "Arapiraca",
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2700300"
+    },
+    "atalaia": {
+      "municipio_display": "Atalaia",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2700409"
+    },
+    "barra de santo antonio": {
+      "municipio_display": "Barra de Santo Antônio",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700508"
+    },
+    "barra de sao miguel": {
+      "municipio_display": "Barra de São Miguel",
+      "modulo_fiscal_ha": 10,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2700607"
+    },
+    "batalha": {
+      "municipio_display": "Batalha",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700706"
+    },
+    "belem": {
+      "municipio_display": "Belém",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700805"
+    },
+    "belo monte": {
+      "municipio_display": "Belo Monte",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2700904"
+    },
+    "boca da mata": {
+      "municipio_display": "Boca da Mata",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701001"
+    },
+    "branquinha": {
+      "municipio_display": "Branquinha",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2701100"
+    },
+    "cacimbinhas": {
+      "municipio_display": "Cacimbinhas",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701209"
+    },
+    "cajueiro": {
+      "municipio_display": "Cajueiro",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2701308"
+    },
+    "campestre": {
+      "municipio_display": "Campestre",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2701357"
+    },
+    "campo alegre": {
+      "municipio_display": "Campo Alegre",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701407"
+    },
+    "campo grande": {
+      "municipio_display": "Campo Grande",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701506"
+    },
+    "canapi": {
+      "municipio_display": "Canapi",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701605"
+    },
+    "capela": {
+      "municipio_display": "Capela",
+      "modulo_fiscal_ha": 14,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2701704"
+    },
+    "carneiros": {
+      "municipio_display": "Carneiros",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701803"
+    },
+    "cha preta": {
+      "municipio_display": "Chã Preta",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2701902"
+    },
+    "coite do noia": {
+      "municipio_display": "Coité do Nóia",
+      "modulo_fiscal_ha": 18,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702009"
+    },
+    "colonia leopoldina": {
+      "municipio_display": "Colônia Leopoldina",
+      "modulo_fiscal_ha": 14,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2702108"
+    },
+    "coqueiro seco": {
+      "municipio_display": "Coqueiro Seco",
+      "modulo_fiscal_ha": 10,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2702207"
+    },
+    "coruripe": {
+      "municipio_display": "Coruripe",
+      "modulo_fiscal_ha": 24,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702306"
+    },
+    "craibas": {
+      "municipio_display": "Craíbas",
+      "modulo_fiscal_ha": 20,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702355"
+    },
+    "delmiro gouveia": {
+      "municipio_display": "Delmiro Gouveia",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702405"
+    },
+    "dois riachos": {
+      "municipio_display": "Dois Riachos",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702504"
+    },
+    "estrela de alagoas": {
+      "municipio_display": "Estrela de Alagoas",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702553"
+    },
+    "feira grande": {
+      "municipio_display": "Feira Grande",
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2702603"
+    },
+    "feliz deserto": {
+      "municipio_display": "Feliz Deserto",
+      "modulo_fiscal_ha": 60,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2702702"
+    },
+    "flexeiras": {
+      "municipio_display": "Flexeiras",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2702801"
+    },
+    "girau do ponciano": {
+      "municipio_display": "Girau do Ponciano",
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2702900"
+    },
+    "ibateguara": {
+      "municipio_display": "Ibateguara",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703007"
+    },
+    "igaci": {
+      "municipio_display": "Igaci",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703106"
+    },
+    "igreja nova": {
+      "municipio_display": "Igreja Nova",
+      "modulo_fiscal_ha": 60,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703205"
+    },
+    "inhapi": {
+      "municipio_display": "Inhapi",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703304"
+    },
+    "jacare dos homens": {
+      "municipio_display": "Jacaré dos Homens",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703403"
+    },
+    "jacuipe": {
+      "municipio_display": "Jacuípe",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703502"
+    },
+    "japaratinga": {
+      "municipio_display": "Japaratinga",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703601"
+    },
+    "jaramataia": {
+      "municipio_display": "Jaramataia",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2703700"
+    },
+    "jequia da praia": {
+      "municipio_display": "Jequiá da Praia",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703759"
+    },
+    "joaquim gomes": {
+      "municipio_display": "Joaquim Gomes",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2703809"
+    },
+    "jundia": {
+      "municipio_display": "Jundiá",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2703908"
+    },
+    "junqueiro": {
+      "municipio_display": "Junqueiro",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704005"
+    },
+    "lagoa da canoa": {
+      "municipio_display": "Lagoa da Canoa",
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704104"
+    },
+    "limoeiro de anadia": {
+      "municipio_display": "Limoeiro de Anadia",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704203"
+    },
+    "maceio": {
+      "municipio_display": "Maceió",
+      "modulo_fiscal_ha": 7,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704302"
+    },
+    "major isidoro": {
+      "municipio_display": "Major Isidoro",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2704401"
+    },
+    "mar vermelho": {
+      "municipio_display": "Mar Vermelho",
+      "modulo_fiscal_ha": 20,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2704906"
+    },
+    "maragogi": {
+      "municipio_display": "Maragogi",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2704500"
+    },
+    "maravilha": {
+      "municipio_display": "Maravilha",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2704609"
+    },
+    "marechal deodoro": {
+      "municipio_display": "Marechal Deodoro",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704708"
+    },
+    "maribondo": {
+      "municipio_display": "Maribondo",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2704807"
+    },
+    "mata grande": {
+      "municipio_display": "Mata Grande",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705002"
+    },
+    "matriz de camaragibe": {
+      "municipio_display": "Matriz de Camaragibe",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705101"
+    },
+    "messias": {
+      "municipio_display": "Messias",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2705200"
+    },
+    "minador do negrao": {
+      "municipio_display": "Minador do Negrão",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705309"
+    },
+    "monteiropolis": {
+      "municipio_display": "Monteirópolis",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705408"
+    },
+    "murici": {
+      "municipio_display": "Murici",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705507"
+    },
+    "novo lino": {
+      "municipio_display": "Novo Lino",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705606"
+    },
+    "olho d'agua das flores": {
+      "municipio_display": "Olho d'Água das Flores",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705705"
+    },
+    "olho d'agua do casado": {
+      "municipio_display": "Olho d'Água do Casado",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2705804"
+    },
+    "olho d'agua grande": {
+      "municipio_display": "Olho d'Água Grande",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2705903"
+    },
+    "olivenca": {
+      "municipio_display": "Olivença",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706000"
+    },
+    "ouro branco": {
+      "municipio_display": "Ouro Branco",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706109"
+    },
+    "palestina": {
+      "municipio_display": "Palestina",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706208"
+    },
+    "palmeira dos indios": {
+      "municipio_display": "Palmeira dos Índios",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706307"
+    },
+    "pao de acucar": {
+      "municipio_display": "Pão de Açúcar",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706406"
+    },
+    "pariconha": {
+      "municipio_display": "Pariconha",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706422"
+    },
+    "paripueira": {
+      "municipio_display": "Paripueira",
+      "modulo_fiscal_ha": 18,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2706448"
+    },
+    "passo de camaragibe": {
+      "municipio_display": "Passo de Camaragibe",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706505"
+    },
+    "paulo jacinto": {
+      "municipio_display": "Paulo Jacinto",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706604"
+    },
+    "penedo": {
+      "municipio_display": "Penedo",
+      "modulo_fiscal_ha": 50,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706703"
+    },
+    "piacabucu": {
+      "municipio_display": "Piaçabuçu",
+      "modulo_fiscal_ha": 60,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2706802"
+    },
+    "pilar": {
+      "municipio_display": "Pilar",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2706901"
+    },
+    "pindoba": {
+      "municipio_display": "Pindoba",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707008"
+    },
+    "piranhas": {
+      "municipio_display": "Piranhas",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707107"
+    },
+    "poco das trincheiras": {
+      "municipio_display": "Poço das Trincheiras",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707206"
+    },
+    "porto calvo": {
+      "municipio_display": "Porto Calvo",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707305"
+    },
+    "porto de pedras": {
+      "municipio_display": "Porto de Pedras",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707404"
+    },
+    "porto real do colegio": {
+      "municipio_display": "Porto Real do Colégio",
+      "modulo_fiscal_ha": 60,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707503"
+    },
+    "quebrangulo": {
+      "municipio_display": "Quebrangulo",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707602"
+    },
+    "rio largo": {
+      "municipio_display": "Rio Largo",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2707701"
+    },
+    "roteiro": {
+      "municipio_display": "Roteiro",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2707800"
+    },
+    "santa luzia do norte": {
+      "municipio_display": "Santa Luzia do Norte",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2707909"
+    },
+    "santana do ipanema": {
+      "municipio_display": "Santana do Ipanema",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708006"
+    },
+    "santana do mundau": {
+      "municipio_display": "Santana do Mundaú",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708105"
+    },
+    "sao bras": {
+      "municipio_display": "São Brás",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708204"
+    },
+    "sao jose da laje": {
+      "municipio_display": "São José da Laje",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708303"
+    },
+    "sao jose da tapera": {
+      "municipio_display": "São José da Tapera",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708402"
+    },
+    "sao luis do quitunde": {
+      "municipio_display": "São Luís do Quitunde",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708501"
+    },
+    "sao miguel dos campos": {
+      "municipio_display": "São Miguel dos Campos",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708600"
+    },
+    "sao miguel dos milagres": {
+      "municipio_display": "São Miguel dos Milagres",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708709"
+    },
+    "sao sebastiao": {
+      "municipio_display": "São Sebastião",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2708808"
+    },
+    "satuba": {
+      "municipio_display": "Satuba",
+      "modulo_fiscal_ha": 12,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2708907"
+    },
+    "senador rui palmeira": {
+      "municipio_display": "Senador Rui Palmeira",
+      "modulo_fiscal_ha": 70,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2708956"
+    },
+    "tanque d'arca": {
+      "municipio_display": "Tanque d'Arca",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2709004"
+    },
+    "taquarana": {
+      "municipio_display": "Taquarana",
+      "modulo_fiscal_ha": 15,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2709103"
+    },
+    "teotonio vilela": {
+      "municipio_display": "Teotônio Vilela",
+      "modulo_fiscal_ha": 35,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2709152"
+    },
+    "traipu": {
+      "municipio_display": "Traipu",
+      "modulo_fiscal_ha": 30,
+      "fracao_minima_parcelamento_ha": 2,
+      "codigo_ibge": "2709202"
+    },
+    "uniao dos palmares": {
+      "municipio_display": "União dos Palmares",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2709301"
+    },
+    "vicosa": {
+      "municipio_display": "Viçosa",
+      "modulo_fiscal_ha": 16,
+      "fracao_minima_parcelamento_ha": 4,
+      "codigo_ibge": "2709400"
+    }
+  },
   "fontes": {
     "AL": {
       "fonte": "INCRA",
