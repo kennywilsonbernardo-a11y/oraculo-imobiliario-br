@@ -1,5 +1,5 @@
 # PARECER OPINATIVO IMOBILIÁRIO - CHECKLIST PEI EDUCACIONAL
-**Natureza:** Material educacional open-source - Não é PTAM, não é parecer CNAI, não é parecer jurídico, não é laudo.
+**Natureza:** Material educacional - Não é PTAM, não é parecer CNAI, não é parecer jurídico, não é laudo.
 
 ### DADOS DA CONFERÊNCIA
 **Imóvel analisado:** [Endereço / Matrícula informada pelo cliente]
