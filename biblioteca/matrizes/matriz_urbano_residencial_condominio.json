@@ -1,0 +1,134 @@
+{
+  "versao": "1.0 - Roadmap Self-Service Sem Atalho",
+  "tipo": "urbano_residencial_condominio",
+  "status": "pronta_para_self_service_trilha_A",
+  "base_legal": "Lei 7433/1985, Decreto 93240/1986, Lei 4591/1964",
+  "checklist_base_obrigatorio_todos": [
+    {
+      "id": "matricula_atualizada",
+      "nome": "Matrícula Atualizada com Certidão de Ônus Reais",
+      "obrigatorio": true,
+      "validade_dias": 30,
+      "onde_emitir": "Cartório de Registro de Imóveis da comarca - https://www.registradores.onr.org.br/",
+      "bloco_relatorio": "B",
+      "base_legal": "Lei 7433/85"
+    },
+    {
+      "id": "cnd_iptu",
+      "nome": "Certidão Negativa de Débitos Municipais (IPTU)",
+      "obrigatorio": true,
+      "onde_emitir": "Prefeitura do município - mapear por CEP via ViaCEP/BrasilAPI",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "itbi_pago",
+      "nome": "Guia de ITBI paga",
+      "obrigatorio": true,
+      "onde_emitir": "Prefeitura - Secretaria de Finanças",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "rg_cpf_vendedor_pf",
+      "nome": "RG e CPF do vendedor PF",
+      "obrigatorio": true,
+      "condicao": "vendedor_tipo == PF",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "certidao_estado_civil",
+      "nome": "Certidão de Nascimento ou Casamento atualizada (90 dias)",
+      "obrigatorio": true,
+      "condicao": "vendedor_tipo == PF",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "cnd_vendedor_pf",
+      "nome": "Certidões Negativas PF - Cível, Criminal, Trabalhista, Federal, Protestos",
+      "obrigatorio": true,
+      "condicao": "vendedor_tipo == PF",
+      "onde_emitir": "Tabela de links por UF - TJAL, TRF, TST - APENAS LINK, sem scraping",
+      "observacao": "Bloqueado emissão automática - Roadmap Secao 5",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "doc_vendedor_pj",
+      "nome": "PJ - Contrato Social + CNPJ + Ata + RG representante + CND Conjunta Receita/PGFN + FGTS",
+      "obrigatorio": true,
+      "condicao": "vendedor_tipo == PJ",
+      "onde_emitir": "BrasilAPI CNPJ - dado público gratuito",
+      "bloco_relatorio": "B"
+    }
+  ],
+  "checklist_especifico_condominio": [
+    {
+      "id": "cnd_condominio",
+      "nome": "Certidão Negativa de Débitos Condominiais + Ata eleição síndico",
+      "obrigatorio": true,
+      "tipo_imovel": [
+        "apartamento",
+        "casa_condominio"
+      ],
+      "motivo": "Dívida propter rem acompanha imóvel",
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "convencao_condominio",
+      "nome": "Convenção e Regimento Interno",
+      "obrigatorio": false,
+      "recomendado": true,
+      "tipo_imovel": [
+        "apartamento",
+        "casa_condominio"
+      ],
+      "bloco_relatorio": "B"
+    }
+  ],
+  "checklist_especifico_casa_rua_lote": [
+    {
+      "id": "habitese",
+      "nome": "Habite-se",
+      "obrigatorio": false,
+      "recomendado": true,
+      "tipo_imovel": [
+        "casa_rua",
+        "terreno_com_construcao"
+      ],
+      "onde_emitir": "Prefeitura",
+      "bloco_relatorio": "B",
+      "obs": "Indispensável para financiamento"
+    },
+    {
+      "id": "cnd_inss_obra",
+      "nome": "CND INSS da Obra",
+      "obrigatorio": false,
+      "recomendado": true,
+      "tipo_imovel": [
+        "casa_rua"
+      ],
+      "bloco_relatorio": "B"
+    },
+    {
+      "id": "planta_aprovada",
+      "nome": "Planta Baixa Aprovada",
+      "obrigatorio": false,
+      "recomendado": true,
+      "tipo_imovel": [
+        "casa_rua",
+        "loteamento"
+      ],
+      "bloco_relatorio": "B"
+    }
+  ],
+  "relatorio_estrutura_3_blocos": {
+    "bloco_A_diagnostico": {
+      "permitido": "X de Y verificações concluídas - indicador de cobertura (padrão de produto Trilha A, sem vínculo formal com E1)",
+      "proibido": "Score 0-100 ou Baixo/Medio/Alto - vetado VIS-001 S4",
+      "exemplo": "6 de 8 documentos base enviados - 2 pendentes - 3 específicos de condomínio pendentes",
+      "impostos_alerta": "ITBI previsto - verificar alíquota municipal",
+      "alerta_conjuge": "Se casado comunhão parcial/universal exige outorga"
+    },
+    "bloco_B_checklist": "Dividir em Documentos do Imóvel / Vendedor / Onde Emitir",
+    "bloco_C_termo": "Material educacional PEI - Não é PTAM/CNAI nem laudo jurídico - Não substitui certidão oficial - Valide com advogado - VIS-001 S8"
+  },
+  "observacao_trilha": "Trilha A apenas - NAO usar em e1/matrizes/ - E1 continua bloqueado esperando A4 real - disciplina separada - este arquivo não satisfaz requisitos E1"
+}
