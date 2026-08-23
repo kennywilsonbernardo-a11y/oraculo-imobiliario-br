@@ -1,0 +1,13 @@
+{
+  "tipo": "casos_especiais",
+  "casos": [
+    {"situacao": "Imóvel em inventário", "documento_adicional": "Certidão de inventário ou alvará judicial", "cuidado": "Só vende após partilha homologada", "gatilho": "operacao == inventario"},
+    {"situacao": "Casado em comunhão parcial/universal", "documento_adicional": "Outorga uxória/marital - assinatura cônjuge", "cuidado": "Sem outorga venda é nula", "gatilho": "vendedor_casado == true && regime != separacao_absoluta"},
+    {"situacao": "Imóvel financiado", "documento_adicional": "Autorização do banco - cessão de financiamento", "cuidado": "Vender por fora é arriscado", "gatilho": "tem_financiamento == true"},
+    {"situacao": "Menor proprietário", "documento_adicional": "Autorização judicial - alvará", "cuidado": "Sem alvará venda nula", "gatilho": "vendedor_menor == true"},
+    {"situacao": "Hipoteca/Penhora", "documento_adicional": "Certidão de liberação/levantamento", "cuidado": "Vender sem liberação expõe comprador", "gatilho": "matricula_tem_onus == hipoteca || penhora"},
+    {"situacao": "Vendedor estrangeiro", "documento_adicional": "CPF brasileiro + RNE/passaporte", "cuidado": "Tributação específica", "gatilho": "vendedor_estrangeiro == true"},
+    {"situacao": "Terreno de Marinha", "documento_adicional": "CAT SPU + Laudêmio + Certidão ocupação/aforamento", "cuidado": "Área da União - exige SPU", "gatilho": "tipo_imovel == terreno_marinha"},
+    {"situacao": "Imóvel de Leilão", "documento_adicional": "Carta de Arrematação + Imissão na Posse se ocupado", "cuidado": "Verificar ocupação", "gatilho": "origem == leilao"}
+  ]
+}
