@@ -122,7 +122,7 @@ O fixture Bulgarelli é um caso feliz de complexidade: os três gatilhos de crit
 
 ### T4.1 — CPF malformado
 
-**Injeção:** cpf_proprietario: "652.238.617-8X" ou vazio.
+   Injeção: cpf_proprietario: "111.111.111-1X" ou vazio.
 
 **Comportamento esperado:** validação de formato rejeita o campo com mensagem clara; o gatilho que depende de CPF simplesmente não se aplica (cláusula falha em null) — nunca quebra com exceção não tratada.
 
