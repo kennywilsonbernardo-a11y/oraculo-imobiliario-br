@@ -38,7 +38,7 @@ const exemplo = {
   tipo_imovel: 'Apartamento em condomínio',
   cidade: 'Maceió',
   uf: 'AL',
-  impostos_alerta: 'ITBI previsto - alíquota Maceió 2% - verificar Prefeitura',
+  impostos_alerta: 'ITBI previsto - alíquota Maceió 3% (padrão) - exceção SFH: 0,5% financiado + 2% restante - verificar Prefeitura',
   alerta_conjuge: 'Vendedor casado comunhão parcial - exige outorga uxória - sem outorga venda nula',
   casos_especiais_lista: 'Nenhum - imóvel padrão urbano',
   hash_auditoria: 'sha256:a1b2c3d4e5f6...',
