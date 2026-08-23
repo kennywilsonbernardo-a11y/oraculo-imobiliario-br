@@ -19,7 +19,7 @@ O repositório contém **dois módulos independentes**. Eles não devem ser lido
 | Módulo | O que faz | Está na página publicada (`index.html`)? | Status |
 |---|---|---|---|
 | **1. Biblioteca MF/FMP** | Consulta de Módulo Fiscal e Fração Mínima de Parcelamento por município de Alagoas | ✅ **Sim** — é o que está no link publicado hoje | Em produção (Release Candidate, base em validação — ver `docs/PVB-001`) |
-| **2. Checklist PEI (8 itens)** | Upload de documento → análise de 8 categorias de risco → Score Educativo 0-100 | ❌ **Não** — código existe em `src/core/analisador-8-itens.js`, `src/motores/motor_rural.js` e `src/models/upload-model.js`, mas nenhum arquivo é carregado pelo `index.html` publicado | Código-fonte disponível no repositório; ainda não integrado à interface pública |
+| **2. Checklist PEI (8 itens)** | Upload de documento → análise de 8 categorias de risco → indicador de cobertura (X de 8 itens verificados) | ❌ **Não** — código existe em `src/core/analisador-8-itens.js`, `src/motores/motor_rural.js` e `src/models/upload-model.js`, mas nenhum arquivo é carregado pelo `index.html` publicado | Código-fonte disponível no repositório; ainda não integrado à interface pública |
 
 Se você abrir o link do GitHub Pages hoje, vai ver **apenas o Módulo 1**. O Módulo 2 existe como código para quem for ler o repositório diretamente, mas não tem tela, botão ou fluxo de upload acessível na página.
 
@@ -36,8 +36,7 @@ A cobertura de validação documental da base está detalhada em `docs/PVB-001-P
 ### Módulo 2 — Checklist PEI (código-fonte, não publicado)
 1. Recebe dados básicos do imóvel (via upload de arquivo texto)
 2. Aplica checklist de 8 categorias de risco comuns em AL
-3. Gera Relatório de Pontos de Atenção com Score Educativo 0-100 e indica onde consultar cada certidão
-
+3. Gera Relatório de Pontos de Atenção com indicador de cobertura (X de 8 itens verificados) e indica onde consultar cada certidão
 Ainda NÃO faz consulta automática em ONR/SREI, ARISP, CNIB, TJAL. É um motor de checklist educativo em construção, e **ainda não está acessível na página publicada** — só rodando localmente a partir dos arquivos-fonte em `src/`.
 
 ### Autor
