@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @page { margin: 20mm; }
+  body { font-family: 'Inter', Arial, sans-serif; color: #1a1a1a; line-height: 1.5; }
+  .header { border-bottom: 3px solid #0f172a; padding-bottom: 12px; display: flex; justify-content: space-between; }
+  .logo { font-weight: 800; font-size: 18px; }
+  .badge { background: #f1f5f9; border: 1px solid #cbd5e1; padding: 4px 10px; border-radius: 20px; font-size: 11px; }
+  .bloco { margin-top: 28px; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; }
+  .bloco-titulo { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #475569; margin-bottom: 12px; }
+  .big-metric { font-size: 28px; font-weight: 800; }
+  .sub { font-size: 12px; color: #64748b; }
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12px; }
+  th { text-align: left; background: #f8fafc; padding: 8px; border-bottom: 1px solid #e2e8f0; }
+  td { padding: 8px; border-bottom: 1px solid #f1f5f9; }
+  .tag-obrigatorio { background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+  .tag-recomendado { background: #fef3c7; color: #92400e; padding: 2px 6px; border-radius: 4px; font-size: 10px; }
+  .onde { color: #2563eb; font-size: 11px; }
+  .alerta { background: #fffbeb; border-left: 4px solid #f59e0b; padding: 12px; font-size: 11px; margin-top: 12px; }
+  .termo { background: #f8fafc; font-size: 10px; color: #475569; padding: 14px; border-radius: 8px; line-height: 1.4; }
+  .footer { margin-top: 30px; border-top: 1px solid #e2e8f0; padding-top: 10px; font-size: 9px; color: #94a3b8; display: flex; justify-content: space-between; }
+  .qr { width: 80px; height: 80px; border: 1px dashed #cbd5e1; display: flex; align-items: center; justify-content: center; font-size: 8px; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <div class="logo">ORÁCULO IMOBILIÁRIO BR — PEI</div>
+      <div class="sub">Parecer Educativo e Interpretativo | CRECI 2468-AL | Material Educacional - Não é PTAM/CNAI nem Laudo</div>
+    </div>
+    <div class="badge">{{protocolo}} • {{data}}</div>
+  </div>
+
+  <!-- BLOCO A - DIAGNÓSTICO DE COBERTURA - SEM SCORE -->
+  <div class="bloco">
+    <div class="bloco-titulo">Bloco A — Diagnóstico de Cobertura (Indicador de Cobertura - Padrão Trilha A)</div>
+    <div class="big-metric">{{verificacoes_concluidas}} de {{verificacoes_total}} verificações concluídas</div>
+    <div class="sub">{{percentual_cobertura}}% da documentação mapeada • {{tipo_imovel}} em {{cidade}}/{{uf}}</div>
+    
+    <div class="alerta">
+      <strong>Impostos incidentes:</strong> {{impostos_alerta}}<br>
+      <strong>Alerta cônjuge/outorga:</strong> {{alerta_conjuge}}<br>
+      <strong>Casos especiais detectados:</strong> {{casos_especiais_lista}}
+    </div>
+    <div class="sub" style="margin-top:10px;">Indicador de processo, não de segurança. Não é percentual de risco. VIS-001 §4.</div>
+  </div>
+
+  <!-- BLOCO B - CHECKLIST CUSTOMIZADO -->
+  <div class="bloco">
+    <div class="bloco-titulo">Bloco B — Checklist Documental Customizado — Raio-X Documental (Padrão de produto Trilha A)</div>
+    <table>
+      <tr><th>Documento</th><th>Tipo</th><th>Status</th><th>Onde emitir</th></tr>
+      {{linhas_checklist}}
+    </table>
+    <div class="sub" style="margin-top:8px;">Base legal: Lei 7.433/85, Decreto 93.240/86. Validade matrícula: 30 dias. Certidão estado civil: 90 dias.</div>
+  </div>
+
+  <!-- BLOCO C - TERMO DE ISENÇÃO -->
+  <div class="bloco">
+    <div class="bloco-titulo">Bloco C — Termo de Isenção e Próximos Passos (VIS-001 §8)</div>
+    <div class="termo">
+      Este documento é um <strong>Parecer Educativo e Interpretativo (PEI)</strong> — material educacional que organiza as obrigações documentais com base nos dados fornecidos pelo usuário e nas matrizes públicas (BR/AL). <strong>NÃO É</strong> PTAM (Res. COFECI 1066/2007 exige CNAI), laudo jurídico, nem substitui certidão oficial emitida por Cartório, Prefeitura, INCRA, Receita Federal ou Tribunal.<br><br>
+      A análise foi revisada por corretor CRECI, não apenas por sistema automático (Roadmap Self-Service Sem Atalho - Trilha A com interface). Não há promessa de resultado, percentual de segurança ou detecção de riscos ocultos. Valide sempre com advogado e com as certidões oficiais originais.<br><br>
+      <strong>Próximos passos:</strong> 1) Emitir documentos pendentes nos links indicados 2) Levar dossiê a advogado para due diligence 3) Somente após validação jurídica, lavrar escritura.
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-top:16px;">
+      <div class="sub">Revisado por: Kenny Wilson — CRECI 2468-AL<br>Assinatura digital: {{hash_auditoria}}</div>
+      <div class="qr">QR CODE<br>{{hash_auditoria_curto}}</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>Oráculo Imobiliário BR — MVP Alagoas — Protocolo {{protocolo}} — Hash {{hash_auditoria}}</div>
+    <div>{{cidade}}/AL • {{data}} • PEI</div>
+  </div>
+</body>
+</html>
