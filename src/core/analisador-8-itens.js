@@ -1,8 +1,19 @@
 // src/core/analisador-8-itens.js - Motor do Oráculo BR - Checklist PEI
 // Não gera laudo, só confere presença factual - Blindagem CRECI/OAB
+// AT-007 (auditoria externa 24/08/2026): normalização de acentos + correção de precedência
+// lógica no gatilho de indisponibilidade (item 4).
+
+// Remove acentos e diacríticos antes das buscas, para que "MATRÍCULA" bata com "MATRICULA"
+// e "VARA CÍVEL" bata com "VARA CIVEL" — documentos reais em português quase sempre vêm acentuados.
+function normalizarTexto(texto) {
+  return texto
+    .toUpperCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
 
 export function analisarPEI(textoExtraido) {
-  const t = textoExtraido.toUpperCase();
+  const t = normalizarTexto(textoExtraido);
 
   const itens = {
     1: { nome: "Matrícula / Registro Geral", status: "Não identificado", factual: "" },
@@ -48,7 +59,13 @@ export function analisarPEI(textoExtraido) {
   const indisponibilidades = (t.match(/INDISPONIBILIDADE/g) || []).length;
   if (indisponibilidades > 0) {
     // Procura por ativas ainda não canceladas
-    if (t.includes("INDISPONIVEL") && t.includes("2023") || t.includes("2025")) {
+    // AT-007: correção de precedência lógica — antes era
+    //   t.includes("INDISPONIVEL") && t.includes("2023") || t.includes("2025")
+    // que o JS lê como (INDISPONIVEL && 2023) || 2025, então qualquer "2025" isolado no
+    // documento (ex: data de emissão de uma certidão sem relação nenhuma) já marcava o
+    // apontamento mais crítico do sistema como ativo. Agora exige INDISPONIVEL presente E
+    // pelo menos um dos anos de referência.
+    if (t.includes("INDISPONIVEL") && (t.includes("2023") || t.includes("2025"))) {
       itens[4].status = "Consta apontamento ATIVO";
       itens[4].factual = `Consta ${indisponibilidades} averbações de INDISPONIBILIDADE CNIB. Consta AV.22 (2023) e AV.23 (17/09/2025) ativas. Enquanto ativa, cartório não registra escritura.`;
     } else {
