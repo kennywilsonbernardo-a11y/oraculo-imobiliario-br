@@ -1,0 +1,93 @@
+{
+  "_meta": {
+    "titulo": "Tabela de Emolumentos Extrajudiciais - Alagoas",
+    "fonte_oficial": "Tribunal de Justiça de Alagoas - Simulador de Emolumentos",
+    "url_fonte": "https://emolumentos.tjal.jus.br/",
+    "lei_vigente": "Lei nº 9.778/2025",
+    "vigencia_inicio": "2026-03-29",
+    "url_lei": "https://drive.google.com/file/d/1oAgvHrhJDw3mMN7GFlPyd0wV8yVkKTXS/view",
+    "data_coleta": "2026-08-28",
+    "coletado_por": "Claude (a pedido de Kenny Wilson, CRECI 2468-AL)",
+    "formula_padrao": "Total = VE (Valor do Emolumento) + TSNR (26% do VE) + ISS (opcional, alíquota municipal, geralmente 5%)",
+    "observacao_selo": "O Selo de Autenticidade não é mais repassado ao usuário desde a Lei 9.778/2025 — passou a ser custo da própria serventia.",
+    "alerta_atencao": "A página antiga cgj.tjal.jus.br/?pag=emolumentos (Tabelas A-P) ainda referencia a Lei 5.763/1995, vigente só até 28/03/2026. A partir de 29/03/2026 a fonte correta é o simulador emolumentos.tjal.jus.br, baseado na Lei 9.778/2025. Reconferir esta matriz periodicamente, pois os valores são reajustados anualmente em janeiro pelo INPC (art. 8º da Lei 9.778/2025).",
+    "regra_credito_rural": "Para Constituição de Direitos Reais de Garantia destinados a Crédito Rural (item 222): VE = 95% de 0,3% do valor do crédito; TSNR = 5% de 0,3% do valor do crédito (alíquota especial, não os 26% padrão)."
+  },
+
+  "faixas_ad_valorem_padrao": {
+    "_descricao": "Tabela de faixas por valor declarado, usada repetidamente em vários atos de ambas as tabelas (registro com valor declarado, escritura com conteúdo financeiro, procuração com valor econômico, ata notarial constitutiva, adjudicação compulsória, usucapião, etc). Cada item abaixo referencia esta tabela pelo campo \"usa_faixa_padrao\": true.",
+    "faixas": [
+      { "ate": 2500.00,     "ve": 178.62,  "tsnr": 46.44,   "total_sem_iss": 225.06,  "iss_5pct": 8.93,   "total_com_iss": 233.99 },
+      { "ate": 5000.00,     "ve": 257.21,  "tsnr": 66.87,   "total_sem_iss": 324.08,  "iss_5pct": 12.86,  "total_com_iss": 336.94 },
+      { "ate": 7500.00,     "ve": 436.86,  "tsnr": 113.58,  "total_sem_iss": 550.44,  "iss_5pct": 21.84,  "total_com_iss": 572.28 },
+      { "ate": 15000.00,    "ve": 624.12,  "tsnr": 162.27,  "total_sem_iss": 786.39,  "iss_5pct": 31.21,  "total_com_iss": 817.60 },
+      { "ate": 25000.00,    "ve": 873.80,  "tsnr": 227.19,  "total_sem_iss": 1100.99, "iss_5pct": 43.69,  "total_com_iss": 1144.68 },
+      { "ate": 35000.00,    "ve": 1092.27, "tsnr": 283.99,  "total_sem_iss": 1376.26, "iss_5pct": 54.61,  "total_com_iss": 1430.87 },
+      { "ate": 45000.00,    "ve": 1341.95, "tsnr": 348.91,  "total_sem_iss": 1690.86, "iss_5pct": 67.10,  "total_com_iss": 1757.96 },
+      { "ate": 60000.00,    "ve": 1716.47, "tsnr": 446.28,  "total_sem_iss": 2162.75, "iss_5pct": 85.82,  "total_com_iss": 2248.57 },
+      { "ate": 75000.00,    "ve": 2090.99, "tsnr": 543.66,  "total_sem_iss": 2634.65, "iss_5pct": 104.55, "total_com_iss": 2739.20 },
+      { "ate": 90000.00,    "ve": 2434.30, "tsnr": 632.92,  "total_sem_iss": 3067.22, "iss_5pct": 121.72, "total_com_iss": 3188.94 },
+      { "ate": 120000.00,   "ve": 3183.34, "tsnr": 827.67,  "total_sem_iss": 4011.01, "iss_5pct": 159.17, "total_com_iss": 4170.18 },
+      { "ate": 150000.00,   "ve": 3901.17, "tsnr": 1014.30, "total_sem_iss": 4915.47, "iss_5pct": 195.06, "total_com_iss": 5110.53 },
+      { "ate": 200000.00,   "ve": 4494.16, "tsnr": 1168.48, "total_sem_iss": 5662.64, "iss_5pct": 224.71, "total_com_iss": 5887.35 },
+      { "ate": 250000.00,   "ve": 4900.16, "tsnr": 1274.04, "total_sem_iss": 6174.20, "iss_5pct": 245.01, "total_com_iss": 6419.21 },
+      { "ate": 300000.00,   "ve": 5306.11, "tsnr": 1379.59, "total_sem_iss": 6685.70, "iss_5pct": 265.31, "total_com_iss": 6951.01 },
+      { "ate": 450000.00,   "ve": 5712.11, "tsnr": 1485.15, "total_sem_iss": 7197.26, "iss_5pct": 285.61, "total_com_iss": 7482.87 },
+      { "ate": 600000.00,   "ve": 6118.11, "tsnr": 1590.71, "total_sem_iss": 7708.82, "iss_5pct": 305.91, "total_com_iss": 8014.73 },
+      { "ate": 750000.00,   "ve": 6524.11, "tsnr": 1696.27, "total_sem_iss": 8220.38, "iss_5pct": 326.21, "total_com_iss": 8546.59 },
+      { "ate": 1000000.00,  "ve": 6930.11, "tsnr": 1801.83, "total_sem_iss": 8731.94, "iss_5pct": 346.51, "total_com_iss": 9078.45 },
+      { "ate": 1500000.00,  "ve": 7539.67, "tsnr": 1960.31, "total_sem_iss": 9499.98, "iss_5pct": 376.98, "total_com_iss": 9876.96 },
+      { "ate": 2000000.00,  "ve": 8148.11, "tsnr": 2118.51, "total_sem_iss": 10266.62,"iss_5pct": 407.41, "total_com_iss": 10674.03 },
+      { "ate": 4000000.00,  "ve": 8960.11, "tsnr": 2329.63, "total_sem_iss": 11289.74,"iss_5pct": 448.01, "total_com_iss": 11737.75 },
+      { "ate": 6000000.00,  "ve": 9772.11, "tsnr": 2540.75, "total_sem_iss": 12312.86,"iss_5pct": 488.61, "total_com_iss": 12801.47 },
+      { "ate": 8000000.00,  "ve": 10584.11,"tsnr": 2751.87, "total_sem_iss": 13335.98,"iss_5pct": 529.21, "total_com_iss": 13865.19 },
+      { "ate": 10000000.00, "ve": 11396.11,"tsnr": 2962.99, "total_sem_iss": 14359.10,"iss_5pct": 569.81, "total_com_iss": 14928.91 },
+      { "ate": null,        "ve": 12208.11,"tsnr": 3174.11, "total_sem_iss": 15382.22,"iss_5pct": 610.41, "total_com_iss": 15992.63 }
+    ],
+    "_faixa_50pct_item1": "Alguns atos (adjudicação compulsória, usucapião extrajudicial, retificação de memorial) usam 50% dos valores desta mesma tabela. Ver campo 'multiplicador' no item específico."
+  },
+
+  "tabela_I_registro_imoveis": {
+    "_descricao": "Atos dos Oficiais dos Registros de Imóveis (47 tipos de atos)",
+    "relevantes_para_oraculo": [
+      { "codigo": "200", "nome": "Registro - Com Valor Declarado", "usa_faixa_padrao": true, "categoria_oraculo": "Imóvel" },
+      { "codigo": "201", "nome": "Registro - Sem Valor Declarado (Livro 03)", "tipo": "unitário", "ve": 108.44, "tsnr": 28.19, "total_sem_iss": 136.63, "total_com_iss": 142.05 },
+      { "codigo": "202", "nome": "Averbação - Com Valor Declarado e Construção", "tipo": "faixa_reduzida", "nota": "usa a mesma tabela de faixas de valor mas com VE menor que o item 200 (aprox. metade); ver PDF oficial para valores exatos por faixa" },
+      { "codigo": "203", "nome": "Averbação - Sem Valor Declarado", "tipo": "unitário", "ve": 108.44, "tsnr": 28.19, "total_sem_iss": 136.63, "total_com_iss": 142.05 },
+      { "codigo": "223", "nome": "Certidão de Inteiro Teor / Certidão de Ônus / Busca por CPF ou imóvel", "tipo": "unitário", "ve": 89.13, "tsnr": 23.17, "total_sem_iss": 112.30, "total_com_iss": 116.76, "categoria_oraculo": "Imóvel" },
+      { "codigo": "224", "nome": "Certidão da Situação Jurídica do Imóvel", "tipo": "unitário", "ve": 138.26, "tsnr": 35.95, "total_sem_iss": 174.21, "total_com_iss": 181.12 },
+      { "codigo": "228", "nome": "Alienação Fiduciária / Hipoteca / Patrimônio de Afetação / Cédula de Crédito Imobiliário", "usa_faixa_padrao": true },
+      { "codigo": "229", "nome": "Prenotação", "tipo": "unitário", "ve": 69.31, "tsnr": 18.02, "total_sem_iss": 87.33, "total_com_iss": 90.80 },
+      { "codigo": "231", "nome": "Abertura de Matrícula", "tipo": "unitário", "ve": 32.57, "tsnr": 8.47, "total_sem_iss": 41.04, "total_com_iss": 42.67, "categoria_oraculo": "Imóvel" },
+      { "codigo": "221", "nome": "Convenção de Condomínio (1 a 15 unidades, mínimo)", "tipo": "fixo", "ve": 325.64, "tsnr": 84.67, "total_sem_iss": 410.31, "total_com_iss": 426.59, "categoria_oraculo": "Condomínio" },
+      { "codigo": "219", "nome": "Registro de Memorial de Incorporação / Instituição de Condomínio (até 10 unidades)", "tipo": "fixo", "ve": 723.80, "tsnr": 188.19, "total_sem_iss": 911.99, "total_com_iss": 948.18, "categoria_oraculo": "Condomínio" },
+      { "codigo": "207-209", "nome": "Adjudicação Compulsória Extrajudicial (processamento + deferimento + registro)", "usa_faixa_padrao": true, "multiplicador": "processamento e deferimento = 50% da faixa padrão; registro (209) = 100% da faixa padrão", "categoria_oraculo": "Natureza do Título" },
+      { "codigo": "214-216", "nome": "Usucapião Extrajudicial (processamento + deferimento + registro)", "usa_faixa_padrao": true, "multiplicador": "processamento e deferimento = 50% da faixa padrão; registro (216) = 100% da faixa padrão", "categoria_oraculo": "Natureza do Título" },
+      { "codigo": "210-213", "nome": "Execução Extrajudicial de Garantias (alienação fiduciária) - intimação, notificação, consolidação, averbação", "tipo": "misto", "nota": "210=R$239,19 | 211=R$137,55 | 212=usa faixa padrão | 213=R$24,89" }
+    ]
+  },
+
+  "tabela_II_tabelionato_notas": {
+    "_descricao": "Atos do Tabelionato de Notas (31 tipos de atos)",
+    "relevantes_para_oraculo": [
+      { "codigo": "242", "nome": "Reconhecimento de firma por autenticidade", "tipo": "unitário", "ve": 9.49, "tsnr": 2.47, "total_sem_iss": 11.96, "total_com_iss": 12.43, "categoria_oraculo": "Vendedor" },
+      { "codigo": "243", "nome": "Reconhecimento de firma por semelhança / sinal público", "tipo": "unitário", "ve": 7.25, "tsnr": 1.89, "total_sem_iss": 9.14, "total_com_iss": 9.50 },
+      { "codigo": "246", "nome": "Procuração - poderes para o foro em geral", "tipo": "unitário", "ve": 45.26, "tsnr": 11.77, "total_sem_iss": 57.03, "total_com_iss": 59.29 },
+      { "codigo": "247", "nome": "Procuração - sem valor econômico", "tipo": "unitário", "ve": 67.69, "tsnr": 17.60, "total_sem_iss": 85.29, "total_com_iss": 88.67, "categoria_oraculo": "Vendedor" },
+      { "codigo": "248", "nome": "Procuração - com valor econômico", "tipo": "unitário", "ve": 135.38, "tsnr": 35.20, "total_sem_iss": 170.58, "total_com_iss": 177.35 },
+      { "codigo": "249", "nome": "Procuração em causa própria", "usa_faixa_padrao": true },
+      { "codigo": "250", "nome": "Procuração - por outorgante a mais", "tipo": "unitário", "ve": 4.77, "tsnr": 1.24, "total_sem_iss": 6.01, "total_com_iss": 6.25 },
+      { "codigo": "251", "nome": "Averbação de revogação ou substabelecimento de procuração", "tipo": "unitário", "ve": 24.29, "tsnr": 6.32, "total_sem_iss": 30.61, "total_com_iss": 31.82 },
+      { "codigo": "258", "nome": "Escritura Pública - Sem conteúdo financeiro (inclusive aditamentos)", "tipo": "unitário", "ve": 141.97, "tsnr": 36.91, "total_sem_iss": 178.88, "total_com_iss": 185.98, "categoria_oraculo": "Natureza do Título" },
+      { "codigo": "259", "nome": "Escritura Pública - Com conteúdo financeiro (valor declarado, inclui 1º traslado)", "usa_faixa_padrao": true, "categoria_oraculo": "Natureza do Título", "nota_importante": "Este é o item mais usado no Oráculo — escritura de compra e venda com valor declarado" },
+      { "codigo": "260", "nome": "Escritura de Divórcio/Separação/Inventário/Partilha - sem bens", "tipo": "unitário", "ve": 196.32, "tsnr": 51.04, "total_sem_iss": 247.36, "total_com_iss": 257.18 },
+      { "codigo": "261", "nome": "Escritura de Divórcio/Separação/Inventário/Partilha - com bens (valor global)", "usa_faixa_padrao": true, "categoria_oraculo": "Natureza do Título" },
+      { "codigo": "257", "nome": "Ata notarial constitutiva (usucapião, adjudicação compulsória, prova de transmissão)", "usa_faixa_padrao": true, "categoria_oraculo": "Natureza do Título" },
+      { "codigo": "255-256", "nome": "Ata notarial - 1ª folha / página excedente", "tipo": "misto", "nota": "255=R$185,98 (1ª folha) | 256=R$7,86 (por página excedente)" },
+      { "codigo": "264", "nome": "Certidão ou traslado (a partir da 2ª via)", "tipo": "unitário", "ve": 44.35, "tsnr": 11.53, "total_sem_iss": 55.88, "total_com_iss": 58.10 },
+      { "codigo": "252-254", "nome": "Testamentos (público com bens / sem bens / aprovação de cerrado)", "tipo": "misto", "nota": "252=R$748,70 | 253=R$187,17 | 254=R$748,70" },
+      { "codigo": "241", "nome": "Autenticação (por documento ou página)", "tipo": "unitário", "ve": 7.25, "tsnr": 1.89, "total_sem_iss": 9.14, "total_com_iss": 9.50 },
+      { "codigo": "266-267", "nome": "Diligência para coleta de assinatura (padrão / acima de 10km)", "tipo": "misto", "nota": "266=R$53,97 | 267=R$78,77" }
+    ]
+  }
+}
