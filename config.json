@@ -19,22 +19,18 @@
   "vigencia_status": "vigente conforme fonte cadastrada - validar fonte oficial",
   "checks": {
     "japaratinga": {
-      "municipio_busca": "japaratinga",
       "modulo_fiscal_ha": 16,
       "fracao_minima_parcelamento_ha": 4
     },
     "maceio": {
-      "municipio_busca": "maceio",
       "modulo_fiscal_ha": 7,
       "fracao_minima_parcelamento_ha": 2
     },
     "maragogi": {
-      "municipio_busca": "maragogi",
       "modulo_fiscal_ha": 16,
       "fracao_minima_parcelamento_ha": 4
     },
     "arapiraca": {
-      "municipio_busca": "arapiraca",
       "modulo_fiscal_ha": 15,
       "fracao_minima_parcelamento_ha": 2
     }
