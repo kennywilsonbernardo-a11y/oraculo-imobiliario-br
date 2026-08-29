@@ -2,7 +2,6 @@
   {
     "municipio": "ÁGUA BRANCA",
     "municipio_display": "Água Branca",
-    "municipio_busca": "AGUA BRANCA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -13,7 +12,6 @@
   {
     "municipio": "ANADIA",
     "municipio_display": "Anadia",
-    "municipio_busca": "ANADIA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -24,7 +22,6 @@
   {
     "municipio": "ARAPIRACA",
     "municipio_display": "Arapiraca",
-    "municipio_busca": "ARAPIRACA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -35,7 +32,6 @@
   {
     "municipio": "ATALAIA",
     "municipio_display": "Atalaia",
-    "municipio_busca": "ATALAIA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -46,7 +42,6 @@
   {
     "municipio": "BARRA DE SANTO ANTÔNIO",
     "municipio_display": "Barra de Santo Antônio",
-    "municipio_busca": "BARRA DE SANTO ANTONIO",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -57,7 +52,6 @@
   {
     "municipio": "BARRA DE SÃO MIGUEL",
     "municipio_display": "Barra de São Miguel",
-    "municipio_busca": "BARRA DE SAO MIGUEL",
     "modulo_fiscal_ha": 10,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -68,7 +62,6 @@
   {
     "municipio": "BATALHA",
     "municipio_display": "Batalha",
-    "municipio_busca": "BATALHA",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -79,7 +72,6 @@
   {
     "municipio": "BELÉM",
     "municipio_display": "Belém",
-    "municipio_busca": "BELEM",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -90,7 +82,6 @@
   {
     "municipio": "BELO MONTE",
     "municipio_display": "Belo Monte",
-    "municipio_busca": "BELO MONTE",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -101,7 +92,6 @@
   {
     "municipio": "BOCA DA MATA",
     "municipio_display": "Boca da Mata",
-    "municipio_busca": "BOCA DA MATA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -112,7 +102,6 @@
   {
     "municipio": "BRANQUINHA",
     "municipio_display": "Branquinha",
-    "municipio_busca": "BRANQUINHA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -123,7 +112,6 @@
   {
     "municipio": "CACIMBINHAS",
     "municipio_display": "Cacimbinhas",
-    "municipio_busca": "CACIMBINHAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -134,7 +122,6 @@
   {
     "municipio": "CAJUEIRO",
     "municipio_display": "Cajueiro",
-    "municipio_busca": "CAJUEIRO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -145,7 +132,6 @@
   {
     "municipio": "CAMPESTRE",
     "municipio_display": "Campestre",
-    "municipio_busca": "CAMPESTRE",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -156,7 +142,6 @@
   {
     "municipio": "CAMPO ALEGRE",
     "municipio_display": "Campo Alegre",
-    "municipio_busca": "CAMPO ALEGRE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -167,7 +152,6 @@
   {
     "municipio": "CAMPO GRANDE",
     "municipio_display": "Campo Grande",
-    "municipio_busca": "CAMPO GRANDE",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -178,7 +162,6 @@
   {
     "municipio": "CANAPI",
     "municipio_display": "Canapi",
-    "municipio_busca": "CANAPI",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -189,7 +172,6 @@
   {
     "municipio": "CAPELA",
     "municipio_display": "Capela",
-    "municipio_busca": "CAPELA",
     "modulo_fiscal_ha": 14,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -200,7 +182,6 @@
   {
     "municipio": "CARNEIROS",
     "municipio_display": "Carneiros",
-    "municipio_busca": "CARNEIROS",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -211,7 +192,6 @@
   {
     "municipio": "CHÃ PRETA",
     "municipio_display": "Chã Preta",
-    "municipio_busca": "CHA PRETA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -222,7 +202,6 @@
   {
     "municipio": "COITÉ DO NÓIA",
     "municipio_display": "Coité do Nóia",
-    "municipio_busca": "COITE DO NOIA",
     "modulo_fiscal_ha": 18,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -233,7 +212,6 @@
   {
     "municipio": "COLÔNIA LEOPOLDINA",
     "municipio_display": "Colônia Leopoldina",
-    "municipio_busca": "COLONIA LEOPOLDINA",
     "modulo_fiscal_ha": 14,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -244,7 +222,6 @@
   {
     "municipio": "COQUEIRO SECO",
     "municipio_display": "Coqueiro Seco",
-    "municipio_busca": "COQUEIRO SECO",
     "modulo_fiscal_ha": 10,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -255,7 +232,6 @@
   {
     "municipio": "CORURIPE",
     "municipio_display": "Coruripe",
-    "municipio_busca": "CORURIPE",
     "modulo_fiscal_ha": 24,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -266,7 +242,6 @@
   {
     "municipio": "CRAÍBAS",
     "municipio_display": "Craíbas",
-    "municipio_busca": "CRAIBAS",
     "modulo_fiscal_ha": 20,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -277,7 +252,6 @@
   {
     "municipio": "DELMIRO GOUVEIA",
     "municipio_display": "Delmiro Gouveia",
-    "municipio_busca": "DELMIRO GOUVEIA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -288,7 +262,6 @@
   {
     "municipio": "DOIS RIACHOS",
     "municipio_display": "Dois Riachos",
-    "municipio_busca": "DOIS RIACHOS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -299,7 +272,6 @@
   {
     "municipio": "ESTRELA DE ALAGOAS",
     "municipio_display": "Estrela de Alagoas",
-    "municipio_busca": "ESTRELA DE ALAGOAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -310,7 +282,6 @@
   {
     "municipio": "FEIRA GRANDE",
     "municipio_display": "Feira Grande",
-    "municipio_busca": "FEIRA GRANDE",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -321,7 +292,6 @@
   {
     "municipio": "FELIZ DESERTO",
     "municipio_display": "Feliz Deserto",
-    "municipio_busca": "FELIZ DESERTO",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -332,7 +302,6 @@
   {
     "municipio": "FLEXEIRAS",
     "municipio_display": "Flexeiras",
-    "municipio_busca": "FLEXEIRAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -343,7 +312,6 @@
   {
     "municipio": "GIRAU DO PONCIANO",
     "municipio_display": "Girau do Ponciano",
-    "municipio_busca": "GIRAU DO PONCIANO",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -354,7 +322,6 @@
   {
     "municipio": "IBATEGUARA",
     "municipio_display": "Ibateguara",
-    "municipio_busca": "IBATEGUARA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -365,7 +332,6 @@
   {
     "municipio": "IGACI",
     "municipio_display": "Igaci",
-    "municipio_busca": "IGACI",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -376,7 +342,6 @@
   {
     "municipio": "IGREJA NOVA",
     "municipio_display": "Igreja Nova",
-    "municipio_busca": "IGREJA NOVA",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -387,7 +352,6 @@
   {
     "municipio": "INHAPI",
     "municipio_display": "Inhapi",
-    "municipio_busca": "INHAPI",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -398,7 +362,6 @@
   {
     "municipio": "JACARÉ DOS HOMENS",
     "municipio_display": "Jacaré dos Homens",
-    "municipio_busca": "JACARE DOS HOMENS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -409,7 +372,6 @@
   {
     "municipio": "JACUÍPE",
     "municipio_display": "Jacuípe",
-    "municipio_busca": "JACUIPE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -420,7 +382,6 @@
   {
     "municipio": "JAPARATINGA",
     "municipio_display": "Japaratinga",
-    "municipio_busca": "JAPARATINGA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -431,7 +392,6 @@
   {
     "municipio": "JARAMATAIA",
     "municipio_display": "Jaramataia",
-    "municipio_busca": "JARAMATAIA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -442,7 +402,6 @@
   {
     "municipio": "JEQUIÁ DA PRAIA",
     "municipio_display": "Jequiá da Praia",
-    "municipio_busca": "JEQUIA DA PRAIA",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -453,7 +412,6 @@
   {
     "municipio": "JOAQUIM GOMES",
     "municipio_display": "Joaquim Gomes",
-    "municipio_busca": "JOAQUIM GOMES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -464,7 +422,6 @@
   {
     "municipio": "JUNDIÁ",
     "municipio_display": "Jundiá",
-    "municipio_busca": "JUNDIA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -475,7 +432,6 @@
   {
     "municipio": "JUNQUEIRO",
     "municipio_display": "Junqueiro",
-    "municipio_busca": "JUNQUEIRO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -486,7 +442,6 @@
   {
     "municipio": "LAGOA DA CANOA",
     "municipio_display": "Lagoa da Canoa",
-    "municipio_busca": "LAGOA DA CANOA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -497,7 +452,6 @@
   {
     "municipio": "LIMOEIRO DE ANADIA",
     "municipio_display": "Limoeiro de Anadia",
-    "municipio_busca": "LIMOEIRO DE ANADIA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "CORRIGIDO",
@@ -508,7 +462,6 @@
   {
     "municipio": "MACEIÓ",
     "municipio_display": "Maceió",
-    "municipio_busca": "MACEIO",
     "modulo_fiscal_ha": 7,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -519,7 +472,6 @@
   {
     "municipio": "MAJOR ISIDORO",
     "municipio_display": "Major Isidoro",
-    "municipio_busca": "MAJOR ISIDORO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -530,7 +482,6 @@
   {
     "municipio": "MAR VERMELHO",
     "municipio_display": "Mar Vermelho",
-    "municipio_busca": "MAR VERMELHO",
     "modulo_fiscal_ha": 20,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -541,7 +492,6 @@
   {
     "municipio": "MARAGOGI",
     "municipio_display": "Maragogi",
-    "municipio_busca": "MARAGOGI",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -552,7 +502,6 @@
   {
     "municipio": "MARAVILHA",
     "municipio_display": "Maravilha",
-    "municipio_busca": "MARAVILHA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "CORRIGIDO",
@@ -563,7 +512,6 @@
   {
     "municipio": "MARECHAL DEODORO",
     "municipio_display": "Marechal Deodoro",
-    "municipio_busca": "MARECHAL DEODORO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -574,7 +522,6 @@
   {
     "municipio": "MARIBONDO",
     "municipio_display": "Maribondo",
-    "municipio_busca": "MARIBONDO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -585,7 +532,6 @@
   {
     "municipio": "MATA GRANDE",
     "municipio_display": "Mata Grande",
-    "municipio_busca": "MATA GRANDE",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -596,7 +542,6 @@
   {
     "municipio": "MATRIZ DE CAMARAGIBE",
     "municipio_display": "Matriz de Camaragibe",
-    "municipio_busca": "MATRIZ DE CAMARAGIBE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -607,7 +552,6 @@
   {
     "municipio": "MESSIAS",
     "municipio_display": "Messias",
-    "municipio_busca": "MESSIAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -618,7 +562,6 @@
   {
     "municipio": "MINADOR DO NEGRÃO",
     "municipio_display": "Minador do Negrão",
-    "municipio_busca": "MINADOR DO NEGRAO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -629,7 +572,6 @@
   {
     "municipio": "MONTEIRÓPOLIS",
     "municipio_display": "Monteirópolis",
-    "municipio_busca": "MONTEIROPOLIS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -640,7 +582,6 @@
   {
     "municipio": "MURICI",
     "municipio_display": "Murici",
-    "municipio_busca": "MURICI",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -651,7 +592,6 @@
   {
     "municipio": "NOVO LINO",
     "municipio_display": "Novo Lino",
-    "municipio_busca": "NOVO LINO",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -662,7 +602,6 @@
   {
     "municipio": "OLHO D'ÁGUA DAS FLORES",
     "municipio_display": "Olho d'Água das Flores",
-    "municipio_busca": "OLHO D'AGUA DAS FLORES",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -673,7 +612,6 @@
   {
     "municipio": "OLHO D'ÁGUA DO CASADO",
     "municipio_display": "Olho d'Água do Casado",
-    "municipio_busca": "OLHO D'AGUA DO CASADO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -684,7 +622,6 @@
   {
     "municipio": "OLHO D'ÁGUA GRANDE",
     "municipio_display": "Olho d'Água Grande",
-    "municipio_busca": "OLHO D'AGUA GRANDE",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -695,7 +632,6 @@
   {
     "municipio": "OLIVENÇA",
     "municipio_display": "Olivença",
-    "municipio_busca": "OLIVENCA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -706,7 +642,6 @@
   {
     "municipio": "OURO BRANCO",
     "municipio_display": "Ouro Branco",
-    "municipio_busca": "OURO BRANCO",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -717,7 +652,6 @@
   {
     "municipio": "PALESTINA",
     "municipio_display": "Palestina",
-    "municipio_busca": "PALESTINA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -728,7 +662,6 @@
   {
     "municipio": "PALMEIRA DOS ÍNDIOS",
     "municipio_display": "Palmeira dos Índios",
-    "municipio_busca": "PALMEIRA DOS INDIOS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -739,7 +672,6 @@
   {
     "municipio": "PÃO DE AÇÚCAR",
     "municipio_display": "Pão de Açúcar",
-    "municipio_busca": "PAO DE ACUCAR",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -750,7 +682,6 @@
   {
     "municipio": "PARICONHA",
     "municipio_display": "Pariconha",
-    "municipio_busca": "PARICONHA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -761,7 +692,6 @@
   {
     "municipio": "PARIPUEIRA",
     "municipio_display": "Paripueira",
-    "municipio_busca": "PARIPUEIRA",
     "modulo_fiscal_ha": 18,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -772,7 +702,6 @@
   {
     "municipio": "PASSO DE CAMARAGIBE",
     "municipio_display": "Passo de Camaragibe",
-    "municipio_busca": "PASSO DE CAMARAGIBE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -783,7 +712,6 @@
   {
     "municipio": "PAULO JACINTO",
     "municipio_display": "Paulo Jacinto",
-    "municipio_busca": "PAULO JACINTO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -794,7 +722,6 @@
   {
     "municipio": "PENEDO",
     "municipio_display": "Penedo",
-    "municipio_busca": "PENEDO",
     "modulo_fiscal_ha": 50,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -805,7 +732,6 @@
   {
     "municipio": "PIAÇABUÇU",
     "municipio_display": "Piaçabuçu",
-    "municipio_busca": "PIACABUCU",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -816,7 +742,6 @@
   {
     "municipio": "PILAR",
     "municipio_display": "Pilar",
-    "municipio_busca": "PILAR",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -827,7 +752,6 @@
   {
     "municipio": "PINDOBA",
     "municipio_display": "Pindoba",
-    "municipio_busca": "PINDOBA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -838,7 +762,6 @@
   {
     "municipio": "PIRANHAS",
     "municipio_display": "Piranhas",
-    "municipio_busca": "PIRANHAS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -849,7 +772,6 @@
   {
     "municipio": "POÇO DAS TRINCHEIRAS",
     "municipio_display": "Poço das Trincheiras",
-    "municipio_busca": "POCO DAS TRINCHEIRAS",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -860,7 +782,6 @@
   {
     "municipio": "PORTO CALVO",
     "municipio_display": "Porto Calvo",
-    "municipio_busca": "PORTO CALVO",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -871,7 +792,6 @@
   {
     "municipio": "PORTO DE PEDRAS",
     "municipio_display": "Porto de Pedras",
-    "municipio_busca": "PORTO DE PEDRAS",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -882,7 +802,6 @@
   {
     "municipio": "PORTO REAL DO COLÉGIO",
     "municipio_display": "Porto Real do Colégio",
-    "municipio_busca": "PORTO REAL DO COLEGIO",
     "modulo_fiscal_ha": 60,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -893,7 +812,6 @@
   {
     "municipio": "QUEBRANGULO",
     "municipio_display": "Quebrangulo",
-    "municipio_busca": "QUEBRANGULO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -904,7 +822,6 @@
   {
     "municipio": "RIO LARGO",
     "municipio_display": "Rio Largo",
-    "municipio_busca": "RIO LARGO",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -915,7 +832,6 @@
   {
     "municipio": "ROTEIRO",
     "municipio_display": "Roteiro",
-    "municipio_busca": "ROTEIRO",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -926,7 +842,6 @@
   {
     "municipio": "SANTA LUZIA DO NORTE",
     "municipio_display": "Santa Luzia do Norte",
-    "municipio_busca": "SANTA LUZIA DO NORTE",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -937,7 +852,6 @@
   {
     "municipio": "SANTANA DO IPANEMA",
     "municipio_display": "Santana do Ipanema",
-    "municipio_busca": "SANTANA DO IPANEMA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -948,7 +862,6 @@
   {
     "municipio": "SANTANA DO MUNDAÚ",
     "municipio_display": "Santana do Mundaú",
-    "municipio_busca": "SANTANA DO MUNDAU",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -959,7 +872,6 @@
   {
     "municipio": "SÃO BRÁS",
     "municipio_display": "São Brás",
-    "municipio_busca": "SAO BRAS",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -970,7 +882,6 @@
   {
     "municipio": "SÃO JOSÉ DA LAJE",
     "municipio_display": "São José da Laje",
-    "municipio_busca": "SAO JOSE DA LAJE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -981,7 +892,6 @@
   {
     "municipio": "SÃO JOSÉ DA TAPERA",
     "municipio_display": "São José da Tapera",
-    "municipio_busca": "SAO JOSE DA TAPERA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -992,7 +902,6 @@
   {
     "municipio": "SÃO LUÍS DO QUITUNDE",
     "municipio_display": "São Luís do Quitunde",
-    "municipio_busca": "SAO LUIS DO QUITUNDE",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -1003,7 +912,6 @@
   {
     "municipio": "SÃO MIGUEL DOS CAMPOS",
     "municipio_display": "São Miguel dos Campos",
-    "municipio_busca": "SAO MIGUEL DOS CAMPOS",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -1014,7 +922,6 @@
   {
     "municipio": "SÃO MIGUEL DOS MILAGRES",
     "municipio_display": "São Miguel dos Milagres",
-    "municipio_busca": "SAO MIGUEL DOS MILAGRES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -1025,7 +932,6 @@
   {
     "municipio": "SÃO SEBASTIÃO",
     "municipio_display": "São Sebastião",
-    "municipio_busca": "SAO SEBASTIAO",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1036,7 +942,6 @@
   {
     "municipio": "SATUBA",
     "municipio_display": "Satuba",
-    "municipio_busca": "SATUBA",
     "modulo_fiscal_ha": 12,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1047,7 +952,6 @@
   {
     "municipio": "SENADOR RUI PALMEIRA",
     "municipio_display": "Senador Rui Palmeira",
-    "municipio_busca": "SENADOR RUI PALMEIRA",
     "modulo_fiscal_ha": 70,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -1058,7 +962,6 @@
   {
     "municipio": "TANQUE D'ARCA",
     "municipio_display": "Tanque d'Arca",
-    "municipio_busca": "TANQUE D'ARCA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1069,7 +972,6 @@
   {
     "municipio": "TAQUARANA",
     "municipio_display": "Taquarana",
-    "municipio_busca": "TAQUARANA",
     "modulo_fiscal_ha": 15,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1080,7 +982,6 @@
   {
     "municipio": "TEOTÔNIO VILELA",
     "municipio_display": "Teotônio Vilela",
-    "municipio_busca": "TEOTONIO VILELA",
     "modulo_fiscal_ha": 35,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1091,7 +992,6 @@
   {
     "municipio": "TRAIPU",
     "municipio_display": "Traipu",
-    "municipio_busca": "TRAIPU",
     "modulo_fiscal_ha": 30,
     "fracao_minima_parcelamento_ha": 2,
     "fmp_status": "VALIDADO",
@@ -1102,7 +1002,6 @@
   {
     "municipio": "UNIÃO DOS PALMARES",
     "municipio_display": "União dos Palmares",
-    "municipio_busca": "UNIAO DOS PALMARES",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
@@ -1113,7 +1012,6 @@
   {
     "municipio": "VIÇOSA",
     "municipio_display": "Viçosa",
-    "municipio_busca": "VICOSA",
     "modulo_fiscal_ha": 16,
     "fracao_minima_parcelamento_ha": 4,
     "fmp_status": "VALIDADO",
