@@ -16,7 +16,7 @@
       "municipios": 102
     }
   ],
-  "vigencia_status": "vigente conforme fonte cadastrada - validar fonte oficial",
+  "vigencia_status": "Vigente — fonte INCRA PGT (revalidação periódica)",
   "checks": {
     "japaratinga": {
       "modulo_fiscal_ha": 16,
@@ -653,7 +653,7 @@
     "AL": {
       "fonte": "INCRA",
       "referencia": "AL-2026.08.19",
-      "status": "provisorio - validar fonte oficial"
+      "status": "Vigente — fonte INCRA PGT (revalidação periódica)"
     }
   },
   "metadados": {
