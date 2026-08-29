@@ -176,7 +176,12 @@ function escapeHTML(str){
 }
 
 function normalizeBusca(s){
- return String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim();
+ // v9.2.2: além de acento, remove espaço/apóstrofo/hífen/pontuação
+ // para casar variações de digitação (ex: "olho dagua" == "Olho d'Água")
+ return String(s||'')
+  .normalize('NFD').replace(/[\u0300-\u036f]/g,'')
+  .toLowerCase()
+  .replace(/[^a-z0-9]/g,'');
 }
 
 async function sha256Hex(text){
