@@ -31,7 +31,7 @@
       "id": "georreferenciamento",
       "nome": "Georreferenciamento certificado INCRA + planta e memorial descritivo",
       "obrigatorio": true,
-      "obs": "Obrigatório conforme tamanho da área - Lei 10.267/01 - Decreto 12.689/2025 suspendeu por 4 anos a exigência para imóveis menores - verificar enquadramento atual",
+      "obs": "Obrigatório conforme tamanho da área - Lei 10.267/01. Decreto 12.689/2025 suspendeu por 4 anos a exigência para imóveis menores - verificar enquadramento atual",
       "onde_emitir": "Profissional habilitado + SIGEF/INCRA",
       "base_legal": "Lei 10.267/2001 + Decreto 12.689/2025"
     },
