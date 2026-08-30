@@ -89,5 +89,24 @@
       { "codigo": "241", "nome": "Autenticação (por documento ou página)", "tipo": "unitário", "ve": 7.25, "tsnr": 1.89, "total_sem_iss": 9.14, "total_com_iss": 9.50 },
       { "codigo": "266-267", "nome": "Diligência para coleta de assinatura (padrão / acima de 10km)", "tipo": "misto", "nota": "266=R$53,97 | 267=R$78,77" }
     ]
+  },
+
+  "tabela_III_registro_civil_pn": {
+    "_descricao": "Atos dos Oficiais de Registro Civil das Pessoas Naturais (30 tipos de atos)",
+    "_fonte": "https://emolumentos.tjal.jus.br/atos-oficiais-registro-civil-pessoas-naturais",
+    "_data_coleta": "2026-08-30",
+    "relevantes_para_oraculo": [
+      { "codigo": "281", "nome": "Registro de nascimento + 1ª certidão", "tipo": "isento", "total_com_iss": 0.00, "categoria_oraculo": "Vendedor" },
+      { "codigo": "282", "nome": "Assento de óbito + 1ª certidão", "tipo": "isento", "total_com_iss": 0.00 },
+      { "codigo": "292", "nome": "Certidão (2ª via) - com uma folha - ex: casamento/nascimento", "tipo": "unitário", "ve": 44.35, "tsnr": 11.53, "total_sem_iss": 55.88, "iss_5pct": 2.22, "total_com_iss": 58.10, "categoria_oraculo": "Vendedor", "nota_importante": "Este é o item que cobre a certidão de estado civil (casamento/nascimento) usada no Diagnóstico PEI" },
+      { "codigo": "293", "nome": "Certidão - por folha acrescida além da primeira", "tipo": "unitário", "ve": 14.05, "tsnr": 3.65, "total_sem_iss": 17.70, "iss_5pct": 0.70, "total_com_iss": 18.40 },
+      { "codigo": "294", "nome": "Certidão de inteiro teor", "tipo": "unitário", "ve": 66.52, "tsnr": 17.30, "total_sem_iss": 83.82, "iss_5pct": 3.33, "total_com_iss": 87.15 },
+      { "codigo": "287", "nome": "Retificação, restauração ou cancelamento de registro / alteração de patronímico", "tipo": "unitário", "ve": 91.04, "tsnr": 23.67, "total_sem_iss": 114.71, "iss_5pct": 4.55, "total_com_iss": 119.26 },
+      { "codigo": "289", "nome": "Averbação lavrada à margem do registro (ex: divórcio, mudança de nome)", "tipo": "unitário", "ve": 56.66, "tsnr": 14.73, "total_sem_iss": 71.39, "iss_5pct": 2.83, "total_com_iss": 74.22, "categoria_oraculo": "Vendedor" },
+      { "codigo": "291", "nome": "Averbação de anulação de casamento, separação, divórcio ou restabelecimento", "tipo": "unitário", "ve": 70.07, "tsnr": 18.22, "total_sem_iss": 88.29, "iss_5pct": 3.50, "total_com_iss": 91.79, "categoria_oraculo": "Vendedor" },
+      { "codigo": "299", "nome": "Registro de união estável", "tipo": "unitário", "ve": 146.64, "tsnr": 38.13, "total_sem_iss": 184.77, "iss_5pct": 7.33, "total_com_iss": 192.10, "categoria_oraculo": "Vendedor" },
+      { "codigo": "300", "nome": "Termo de união estável", "tipo": "unitário", "ve": 217.29, "tsnr": 56.50, "total_sem_iss": 273.79, "iss_5pct": 10.86, "total_com_iss": 284.65 },
+      { "codigo": "297", "nome": "Busca em meio físico, por pessoa", "tipo": "unitário", "ve": 46.31, "tsnr": 12.04, "total_sem_iss": 58.35, "iss_5pct": 2.32, "total_com_iss": 60.67 }
+    ]
   }
 }
