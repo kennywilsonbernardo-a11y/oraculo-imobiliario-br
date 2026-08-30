@@ -6,7 +6,7 @@ Governança fundiária + Checklist PEI - 8 Itens | Material Educacional - Não �
 
 ### ⚠️ AVISO LEGAL - O QUE É E O QUE NÃO É
 **NÃO É:** PTAM (precisa CRECI + CNAI - Res. COFECI 1066/2007), laudo jurídico, substituto de certidão oficial.
-**É:** PEI - Parecer Educativo e Interpretativo da Condição do Imóvel - Checklist de pontos de atenção.
+**É:** PEI - Panorama Educativo e Interpretativo da Condição do Imóvel - Checklist de pontos de atenção.
 
 > Material educacional. Não substitui análise jurídica, PTAM com CNAI ou certidões oficiais. Valide com advogado.
 
