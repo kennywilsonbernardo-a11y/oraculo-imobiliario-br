@@ -8,7 +8,7 @@
 
 **Arquivos ativos:**
 - biblioteca/matrizes/matriz_urbano_residencial_condominio.json → pronta_para_self_service_trilha_A
-- biblioteca/matrizes/matriz_rural.json → Lei 10.267/01 + Decreto 12.689/2025
+- biblioteca/matrizes/Matriz-Rural.json → Lei 10.267/01 + Decreto 12.689/2025
 - biblioteca/matrizes/matriz_casos_especiais.json
 - docs/template-relatorio-3-blocos.html → 3 blocos sem F2B
 - docs/gerar-pdf.js → ITBI Maceió 3%
