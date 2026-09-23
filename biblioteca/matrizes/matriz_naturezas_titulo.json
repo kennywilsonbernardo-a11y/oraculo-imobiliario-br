@@ -1,0 +1,681 @@
+{
+ "_meta": {
+  "titulo": "Matriz de Naturezas do Título - KW Oráculo Imobiliário BR",
+  "trilha": "A (self-service) - NÃO usar em e1/",
+  "status": "ESQUELETO v0.1 - nenhum campo jurídico novo foi preenchido sem fonte",
+  "data": "2026-09-23",
+  "regra": "Todo campo 'PENDENTE' só é preenchido com fonte primária citada (lei no Planalto, norma CNJ/CNNR-AL, prefeitura). Campo sem fonte continua pendente.",
+  "casos_especiais": "índices referem-se à lista 'casos' de biblioteca/matrizes/matriz_casos_especiais.json (ordem atual)",
+  "aviso": "Material educacional PEI - Não é PTAM/CNAI nem laudo jurídico - Não substitui certidão oficial - Valide com advogado",
+  "selo": "Proposta de Selo de Natureza Documental registrada em docs/ADR-004-PROPOSTA-Selo-Natureza.md - aguarda deliberação da Mesa (VIS-001 §11)",
+  "naturezas_especificas": "24 naturezas do Kenny conciliadas em biblioteca/matrizes/matriz_naturezas_especificas.json"
+ },
+ "naturezas": [
+  {
+   "id": "N0",
+   "nivel": 0,
+   "nome": "Posse pura - sem documento",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": {
+    "texto": "Você mora, usa ou cuida do imóvel como se fosse dono, mas não tem nenhum papel em seu nome: nem escritura, nem contrato, nem recibo. Se tiver recibo ou contrato particular, o nível é N1.",
+    "atencao_detencao": "Quem cuida do imóvel em nome de outra pessoa, cumprindo ordens dela (ex.: caseiro, zelador), NÃO é possuidor, é detentor - e detentor não usucape.",
+    "fontes": [
+     {
+      "norma": "CC art. 1.196 (possuidor)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "CC art. 1.198 (detentor)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
+   "o_que_significa": {
+    "texto": "Posse não é propriedade. Quem só tem a posse pode virar dono pela usucapião, se cumprir tempo e requisitos da lei. Enquanto isso não for declarado e registrado, a matrícula continua em nome de outra pessoa (ou o imóvel nem tem matrícula).",
+    "fontes": [
+     {
+      "norma": "CC arts. 1.238 e 1.241, parágrafo único (sentença é título para registro)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Usucapião / REURB",
+    "base_citada_no_mapa": "CC art. 1.238",
+    "status_conferencia": "conferido",
+    "passo_a_passo": [
+     "1. Juntar provas do tempo de posse: contas de água/luz, carnês de IPTU, fotos, declarações de vizinhos.",
+     "2. Escolher a via: judicial (juiz) ou extrajudicial (cartório de registro de imóveis da comarca). Nas duas, precisa de advogado.",
+     "3. Via extrajudicial: ata notarial do tabelião sobre o tempo de posse + planta e memorial com ART de profissional habilitado + certidões negativas dos distribuidores + documentos da posse (ex.: impostos pagos).",
+     "4. O cartório notifica titulares da matrícula e confrontantes que não assinaram a planta; silêncio em 15 dias vale como concordância. União, Estado e Município também são avisados.",
+     "5. Reconhecida a usucapião, registra-se na matrícula (ou abre-se matrícula nova). Aí o possuidor vira proprietário.",
+     "Alternativa coletiva: REURB, quando o imóvel está em núcleo urbano informal - ver caso especial 8."
+    ],
+    "fontes": [
+     {
+      "norma": "CC art. 1.241",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "Lei 6.015/73, art. 216-A, caput, I a IV e §§ 2º e 3º",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     }
+    ]
+   },
+   "orgaos": [
+    "Tabelionato de Notas (ata notarial)",
+    "Cartório de Registro de Imóveis da comarca",
+    "Poder Judiciário (via judicial)",
+    "Prefeitura (IPTU / cadastro)",
+    "Profissional habilitado com ART/RRT (planta e memorial)",
+    "Advogado (obrigatório)"
+   ],
+   "custos": {
+    "itbi": {
+     "texto": "Em regra NÃO incide: usucapião é aquisição originária, não transmissão. Mas há municípios que cobram assim mesmo - conferir a lei do município antes.",
+     "status": "fonte secundária - conferir Provimento CNJ 149/2023 art. 421 e lei municipal de Maceió/Rota dos Milagres",
+     "fontes": [
+      {
+       "norma": "CTN art. 35 (redação LC 227/2026: fato gerador é transmissão/cessão onerosa inter vivos)",
+       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"
+      },
+      {
+       "norma": "STF RE 94.580/RS e CNJ Prov. 149/2023 art. 421, citados em ConJur 02/07/2026",
+       "url": "https://www.conjur.com.br/2026-jul-02/itbi-na-usucapiao-problema-nao-e-incidencia-mas-como-enfrentar-cobranca-indevida/"
+      }
+     ]
+    },
+    "iptu": {
+     "texto": "O possuidor pode ser contribuinte do IPTU. Pagar o IPTU em seu nome ajuda a provar a posse.",
+     "fontes": [
+      {
+       "norma": "CTN art. 34",
+       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"
+      },
+      {
+       "norma": "Lei 6.015/73, art. 216-A, IV (pagamento de impostos como prova)",
+       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      }
+     ]
+    },
+    "emolumentos": "ata notarial + registro: valores em biblioteca/matrizes/matriz_emolumentos_al.json - PENDENTE mapear os itens exatos",
+    "outros": "honorários de advogado e do profissional da planta/memorial - variam, não tabelar"
+   },
+   "riscos": [
+    {
+     "risco": "Bem público não pode ser usucapido (inclui áreas da União como terreno de marinha - ver N5).",
+     "fonte": "CC art. 102"
+    },
+    {
+     "risco": "Posse com oposição ou interrompida não conta prazo.",
+     "fonte": "CC arts. 1.238 a 1.240 ('sem interrupção, nem oposição')"
+    },
+    {
+     "risco": "Comprar 'só a posse' de alguém: você compra um direito ainda não reconhecido. O tempo do vendedor só soma se a posse dele era contínua e pacífica.",
+     "fonte": "CC art. 1.243"
+    },
+    {
+     "risco": "Usucapião especial urbana/familiar só vale uma vez na vida e para quem não tem outro imóvel.",
+     "fonte": "CC arts. 1.240 §2º e 1.240-A §1º"
+    }
+   ],
+   "quando_chamar_advogado": "Sempre: tanto a usucapião judicial quanto a extrajudicial exigem advogado (Lei 6.015/73, art. 216-A, caput). O Oráculo orienta o caminho; o pedido é do advogado.",
+   "casos_especiais_relacionados": [
+    8,
+    9
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 no Planalto (textos compilados) - aguarda revisão de Kenny",
+   "modalidades_usucapiao": [
+    {
+     "nome": "Extraordinária",
+     "prazo": "15 anos (10 se morar no imóvel ou fizer obras/serviços produtivos)",
+     "requisitos": "posse sem interrupção nem oposição, como dono; dispensa título e boa-fé",
+     "fonte": "CC art. 1.238 e parágrafo único"
+    },
+    {
+     "nome": "Especial rural",
+     "prazo": "5 anos",
+     "requisitos": "até 50 ha em zona rural, tornada produtiva pelo trabalho próprio ou da família, com moradia; não ser dono de outro imóvel",
+     "fonte": "CC art. 1.239"
+    },
+    {
+     "nome": "Especial urbana",
+     "prazo": "5 anos",
+     "requisitos": "área urbana até 250 m², moradia própria ou da família; não ser dono de outro imóvel; só uma vez na vida",
+     "fonte": "CC art. 1.240 e §§ 1º e 2º"
+    },
+    {
+     "nome": "Familiar (abandono do lar)",
+     "prazo": "2 anos",
+     "requisitos": "imóvel urbano até 250 m² dividido com ex-cônjuge/companheiro que abandonou o lar; posse direta e exclusiva, moradia; não ser dono de outro imóvel; só uma vez",
+     "fonte": "CC art. 1.240-A"
+    },
+    {
+     "nome": "Ordinária",
+     "prazo": "10 anos (5 em hipótese do parágrafo único)",
+     "requisitos": "exige justo título e boa-fé - normalmente é caminho do N1, não do N0",
+     "fonte": "CC art. 1.242"
+    }
+   ],
+   "soma_de_posses": {
+    "texto": "O tempo dos possuidores anteriores pode ser somado, se todas as posses forem contínuas e pacíficas.",
+    "fonte": "CC art. 1.243"
+   }
+  },
+  {
+   "id": "N1",
+   "nivel": 1,
+   "nome": "Recibo / contrato de gaveta",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": {
+    "texto": "Você tem um papel particular - recibo, contrato de compra e venda, promessa ou cessão de direitos - mas não tem escritura pública, e a matrícula não está no seu nome. Se tiver escritura pública sem registro, o nível é N2.",
+    "pergunta_chave": "Quem assinou como vendedor é a mesma pessoa (ou empresa) que aparece como dona na matrícula? Se não for, existe uma corrente de contratos ligando os dois?"
+   },
+   "o_que_significa": {
+    "texto": "Contrato particular prova um negócio, mas não transfere a propriedade. Para imóveis acima de 30 salários mínimos, a lei exige escritura pública para transferir. Promessa de compra e venda só vira direito real (valendo contra todos) se for registrada na matrícula; sem registro, é um direito só entre as partes.",
+    "fontes": [
+     {
+      "norma": "CC art. 108 (escritura pública acima de 30 salários mínimos)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "CC art. 1.417 (promessa registrada = direito real à aquisição)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Usucapião / Adjudicação",
+    "base_citada_no_mapa": "CC art. 1.242",
+    "status_conferencia": "conferido e ampliado",
+    "caminhos": [
+     {
+      "nome": "A. Caminho normal - escritura com o dono",
+      "quando": "vendedor é o titular da matrícula, está vivo, localizável e disposto a assinar",
+      "passos": "certidões → ITBI → escritura pública no tabelionato → registro no cartório de imóveis",
+      "fonte": "CC arts. 108 e 1.245"
+     },
+     {
+      "nome": "B. Adjudicação compulsória EXTRAJUDICIAL",
+      "quando": "preço pago, mas o vendedor não assina a escritura (recusa, sumiu, faleceu)",
+      "passos": "advogado requer no cartório de imóveis: contrato de promessa/cessão; notificação pelo cartório e 15 dias sem a escritura; ata notarial com prova do pagamento; certidões dos distribuidores sem litígio sobre o contrato; ITBI pago; procuração específica",
+      "destaque": "NÃO precisa que a promessa esteja registrada antes, nem da regularidade fiscal do vendedor",
+      "fonte": "Lei 6.015/73, art. 216-B, §§ 1º a 3º (Lei 14.382/2022)"
+     },
+     {
+      "nome": "C. Adjudicação compulsória JUDICIAL",
+      "quando": "mesma situação de B, pela via do juiz",
+      "fonte": "CC art. 1.418"
+     },
+     {
+      "nome": "D. Usucapião",
+      "quando": "não dá para adjudicar (ex.: cadeia de gavetas quebrada, vendedor não era o dono)",
+      "passos": "ordinária: 10 anos com justo título e boa-fé; ou extraordinária: 15/10 anos (ver N0)",
+      "fonte": "CC arts. 1.242 e 1.238",
+      "pendente": "se o contrato de gaveta serve como 'justo título' é tema de interpretação - conferir enunciado/jurisprudência antes de afirmar"
+     }
+    ]
+   },
+   "orgaos": [
+    "Tabelionato de Notas (escritura ou ata notarial)",
+    "Cartório de Registro de Imóveis da situação do imóvel",
+    "Prefeitura (ITBI, IPTU)",
+    "Poder Judiciário (via judicial)",
+    "Advogado (obrigatório na adjudicação e na usucapião)"
+   ],
+   "custos": {
+    "itbi": {
+     "texto": "Na adjudicação extrajudicial o ITBI pago é documento obrigatório. Na simples CESSÃO de contrato de gaveta a terceiro, a regra está em disputa: a LC 227/2026 colocou a cessão onerosa de direitos como fato gerador no CTN, e o STF reabriu o Tema 1124 em 2022 para rediscutir justamente a cessão. Conferir a lei do município antes de orientar.",
+     "status": "EM DISPUTA - não afirmar isenção",
+     "fontes": [
+      {
+       "norma": "Lei 6.015/73, art. 216-B, § 1º, V",
+       "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+      },
+      {
+       "norma": "CTN art. 35, III (redação LC 227/2026)",
+       "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"
+      },
+      {
+       "norma": "STF, ARE 1.294.969 (Tema 1124) - reexame reconhecido em 26/08/2022",
+       "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=493330&ori=1"
+      }
+     ]
+    },
+    "iptu": {
+     "texto": "Como no N0: o possuidor pode ser contribuinte; carnê em seu nome ajuda a provar posse e pagamento.",
+     "fonte": "CTN art. 34"
+    },
+    "emolumentos": "escritura/ata notarial + registro - ligar à matriz_emolumentos_al.json - PENDENTE mapear itens",
+    "outros": "honorários de advogado (adjudicação/usucapião)"
+   },
+   "riscos": [
+    {
+     "risco": "Vendedor do contrato não é o dono da matrícula. Sem corrente de contratos até o titular, não há o que adjudicar contra quem assinou.",
+     "exemplo": "padrão observado no caso Vale Verde (docs/GAP-EPISTEMOLOGICO-Evidencia-Vale-Verde.md)"
+    },
+    {
+     "risco": "Promessa não registrada não vale contra terceiros: o dono pode vender de novo, dar em garantia ou o imóvel pode ser penhorado por dívida dele.",
+     "fonte": "CC art. 1.417 (a contrario)"
+    },
+    {
+     "risco": "Contrato com cláusula de arrependimento não gera direito real mesmo registrado.",
+     "fonte": "CC art. 1.417 ('em que se não pactuou arrependimento')"
+    },
+    {
+     "risco": "Pagar a maior parte do preço antes de ver a matrícula atualizada.",
+     "exemplo": "padrão Vale Verde: 81% do preço na assinatura"
+    }
+   ],
+   "quando_chamar_advogado": "Adjudicação (judicial ou extrajudicial) e usucapião exigem advogado. Também antes de assinar qualquer cessão de contrato de gaveta.",
+   "casos_especiais_relacionados": [
+    11,
+    16
+   ],
+   "observacao": "Verificar adjudicação compulsória extrajudicial (Lei 14.382/2022) - pendente de conferência",
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto + portal STF) - aguarda revisão de Kenny"
+  },
+  {
+   "id": "N2",
+   "nivel": 2,
+   "nome": "Escritura sem registro",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": {
+    "texto": "Você tem ESCRITURA PÚBLICA (feita no tabelionato de notas), mas a matrícula do imóvel ainda mostra outra pessoa como dona.",
+    "pergunta_chave": "A escritura foi levada ao Cartório de Registro de Imóveis? Aparece um 'R.' com o seu nome na matrícula?"
+   },
+   "o_que_significa": {
+    "texto": "Escritura não é registro. 'Quem não registra não é dono': enquanto a escritura não for registrada, para a lei o vendedor continua sendo o dono do imóvel.",
+    "fontes": [
+     {
+      "norma": "CC art. 1.245, caput e § 1º",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Registrar a escritura",
+    "base_citada_no_mapa": "CC art. 1.245",
+    "status_conferencia": "conferido",
+    "passo_a_passo": [
+     "1. Tirar matrícula atualizada e conferir se nada mudou desde a escritura (nova venda, penhora, indisponibilidade).",
+     "2. Levar a escritura ao Cartório de Registro de Imóveis da situação do imóvel (protocolo/prenotação).",
+     "3. O cartório registra ou devolve com nota de exigências em até 10 dias do protocolo.",
+     "4. Havendo exigências, cumprir em até 20 dias - senão a prenotação perde o efeito e a prioridade.",
+     "5. Registrado: o comprador passa a ser dono, com efeito desde a data da prenotação."
+    ],
+    "fontes": [
+     {
+      "norma": "CC art. 1.246 (eficácia desde a prenotação)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "Lei 6.015/73, art. 188 (10 dias, redação Lei 14.382/2022)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     },
+     {
+      "norma": "Lei 6.015/73, art. 205 (20 dias, redação Lei 14.382/2022)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     }
+    ]
+   },
+   "orgaos": [
+    "Cartório de Registro de Imóveis da situação do imóvel",
+    "Prefeitura (ITBI)",
+    "Tabelionato de Notas (se precisar corrigir a escritura)"
+   ],
+   "custos": {
+    "itbi": {
+     "texto": "Verificar se o ITBI foi pago quando a escritura foi lavrada. Se não foi, será exigido.",
+     "status": "PENDENTE - momento do fato gerador após LC 227/2026 e Tema 1124 em reexame; conferir lei municipal"
+    },
+    "iptu": "conferir CND de IPTU atualizada",
+    "emolumentos": "registro da escritura - ligar à matriz_emolumentos_al.json (faixas ad valorem) - PENDENTE mapear item",
+    "outros": "—"
+   },
+   "riscos": [
+    {
+     "risco": "Enquanto não registra, o imóvel responde por dívidas do vendedor e pode ser penhorado ou ficar indisponível (CNIB).",
+     "fonte": "CC art. 1.245 § 1º"
+    },
+    {
+     "risco": "Venda dupla: se outro comprador registrar primeiro, ele tem prioridade.",
+     "fonte": "Lei 6.015/73, art. 186 (prioridade pelo número de ordem)"
+    },
+    {
+     "risco": "Deixar a prenotação vencer (20 dias) faz perder a prioridade.",
+     "fonte": "Lei 6.015/73, art. 205"
+    },
+    {
+     "risco": "Escritura antiga pode não bater mais com a matrícula (vendedor faleceu, casou, imóvel foi desmembrado).",
+     "status": "PENDENTE - caminho de correção a conferir"
+    }
+   ],
+   "quando_chamar_advogado": "Se o cartório devolver com exigência que você não consegue cumprir, se houver penhora/indisponibilidade lançada depois da escritura, ou se o vendedor já faleceu.",
+   "casos_especiais_relacionados": [
+    4,
+    11,
+    16
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto) - aguarda revisão de Kenny"
+  },
+  {
+   "id": "N2.5",
+   "nivel": 2.5,
+   "nome": "Herança e cessão de direitos",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": {
+    "texto": "O dono que aparece na matrícula faleceu e ainda não foi feita a partilha (inventário) registrada. Quem negocia é herdeiro, viúvo(a) ou alguém que 'comprou a parte' de um herdeiro.",
+    "pergunta_chave": "O dono da matrícula está vivo? Se não, o inventário foi feito e a partilha registrada na matrícula?"
+   },
+   "o_que_significa": {
+    "texto": "Com a morte, a herança passa na hora aos herdeiros - mas como um TODO único e indivisível até a partilha. Antes da partilha, nenhum herdeiro é dono de um imóvel específico: cada um tem uma fração do conjunto.",
+    "fontes": [
+     {
+      "norma": "CC art. 1.784 (transmissão imediata)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "CC art. 1.791 e parágrafo único (todo unitário, indivisível até a partilha)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Só vale escritura pública",
+    "base_citada_no_mapa": "CC art. 1.793",
+    "status_conferencia": "conferido e ampliado",
+    "passo_a_passo": [
+     "1. Fazer o inventário: prazo legal de abertura é 2 meses do falecimento.",
+     "2. Via cartório (escritura pública) se todos forem capazes e concordes, sempre com advogado.",
+     "3. Desde a Res. CNJ 571/2024, o cartório também pode fazer com herdeiro menor/incapaz (quinhão em parte ideal de cada bem + parecer favorável do Ministério Público) e com testamento (com autorização do juiz em ação de abertura e cumprimento do testamento, transitada em julgado).",
+     "4. Pagar o ITCMD (imposto estadual da herança).",
+     "5. Registrar a partilha (formal ou escritura) na matrícula. Só então o herdeiro vira dono do imóvel e pode vender normalmente.",
+     "Atalho para vender ANTES da partilha: venda vinculada do art. 11-A da Res. CNJ 35/2007 (incluído pela Res. 571/2024) - ver caso especial 0."
+    ],
+    "fontes": [
+     {
+      "norma": "CPC art. 611 (prazo de 2 meses)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+     },
+     {
+      "norma": "CPC art. 610 e §§ 1º e 2º (via extrajudicial, advogado)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13105.htm"
+     },
+     {
+      "norma": "Res. CNJ 35/2007, arts. 12-A e 12-B (incluídos pela Res. CNJ 571/2024)",
+      "url": "https://www.legisweb.com.br/legislacao/?id=463871"
+     },
+     {
+      "norma": "docs/juridico/RES_571_2024_venda_imovel_inventario.md (base do Kenny)"
+     }
+    ]
+   },
+   "orgaos": [
+    "Tabelionato de Notas (inventário extrajudicial, cessão)",
+    "Poder Judiciário (inventário judicial, testamento)",
+    "Ministério Público (quando há menor/incapaz)",
+    "SEFAZ-AL (ITCMD)",
+    "Cartório de Registro de Imóveis (registro da partilha)",
+    "Advogado (obrigatório)"
+   ],
+   "custos": {
+    "itbi": {
+     "texto": "Cessão ONEROSA de direitos hereditários: possível incidência de ITBI (CTN art. 35, III, redação LC 227/2026) - tema em disputa (Tema 1124). Cessão gratuita/partilha: imposto é o ITCMD, não o ITBI.",
+     "status": "PENDENTE - conferir lei municipal e estadual"
+    },
+    "itcmd": {
+     "texto": "Imposto estadual sobre a herança - alíquota e regras de Alagoas",
+     "status": "PENDENTE - conferir legislação da SEFAZ-AL (Etapa 3)"
+    },
+    "iptu": "CND de IPTU exigida na escritura",
+    "emolumentos": "escritura de inventário + registro da partilha - ligar à matriz_emolumentos_al.json - PENDENTE",
+    "outros": "honorários de advogado; multa por atraso no inventário conforme lei estadual - PENDENTE"
+   },
+   "riscos": [
+    {
+     "risco": "'Comprar a parte de um herdeiro' por contrato particular: não vale - só escritura pública.",
+     "fonte": "CC art. 1.793"
+    },
+    {
+     "risco": "Comprar 'a casa' de um herdeiro antes da partilha: ineficaz sem autorização judicial.",
+     "fonte": "CC art. 1.793, §§ 2º e 3º"
+    },
+    {
+     "risco": "Comprar quota de um herdeiro sem avisar os outros: eles podem tomar a quota em até 180 dias.",
+     "fonte": "CC art. 1.795"
+    },
+    {
+     "risco": "Herdeiro casado precisa de outorga do cônjuge (conforme regime) - ver caso especial 1.",
+     "fonte": "CC arts. 1.647/1.648"
+    },
+    {
+     "risco": "Indisponibilidade sobre algum herdeiro impede a venda vinculada da Res. 571.",
+     "fonte": "Res. CNJ 35/2007, art. 11-A (base do Kenny)"
+    }
+   ],
+   "quando_chamar_advogado": "Sempre - inventário (judicial ou extrajudicial) e cessão exigem advogado. Especialmente se houver menor, testamento, herdeiro que discorda ou herdeiro desconhecido.",
+   "casos_especiais_relacionados": [
+    0,
+    1,
+    3
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto; Res. CNJ 571/2024 via LegisWeb - reconferir em atos.cnj.jus.br) - aguarda revisão de Kenny",
+   "regras_da_cessao": [
+    {
+     "regra": "Cessão de direitos hereditários só vale por ESCRITURA PÚBLICA. Recibo/contrato particular de 'compra de herança' não serve.",
+     "fonte": "CC art. 1.793, caput"
+    },
+    {
+     "regra": "É ineficaz o herdeiro ceder 'a casa tal' da herança isoladamente: ele cede sua quota no conjunto, não um bem específico.",
+     "fonte": "CC art. 1.793, § 2º"
+    },
+    {
+     "regra": "Herdeiro vender bem da herança antes da partilha, sem autorização do juiz, é ineficaz (salvo a venda vinculada da Res. CNJ 571/2024 - ver caso especial 0).",
+     "fonte": "CC art. 1.793, § 3º"
+    },
+    {
+     "regra": "Os outros herdeiros têm preferência para comprar a quota pelo mesmo preço; quem não foi avisado pode tomar a quota para si em até 180 dias, depositando o preço.",
+     "fonte": "CC arts. 1.794 e 1.795"
+    }
+   ],
+   "registro_de_leituras": {
+    "tema": "CPC art. 610 diz que, havendo testamento ou incapaz, o inventário é judicial; a Res. CNJ 571/2024 passou a permitir escritura nesses casos, com condições.",
+    "leitura": "Registrar as duas fontes lado a lado; na prática cartorária vale a Res. 571 com suas condições. Confirmação final com advogado/tabelião (Regra 4)."
+   }
+  },
+  {
+   "id": "N3",
+   "nivel": 3,
+   "nome": "Matrícula com vício",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Retificação",
+    "base_citada_no_mapa": "não citada no mapa",
+    "status_conferencia": "pendente",
+    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "custos": {
+    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
+    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "casos_especiais_relacionados": [
+    11
+   ]
+  },
+  {
+   "id": "N3.5",
+   "nivel": 3.5,
+   "nome": "Loteamento irregular",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "REURB-E",
+    "base_citada_no_mapa": "não citada no mapa",
+    "status_conferencia": "pendente",
+    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "custos": {
+    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
+    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "casos_especiais_relacionados": [
+    8
+   ],
+   "observacao": "Caso especial 8 só confirma REURB-S; REURB-E ainda não confirmado"
+  },
+  {
+   "id": "N4",
+   "nivel": 4,
+   "nome": "Matrícula OK com ônus",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "CNIB, penhora - baixa/levantamento",
+    "base_citada_no_mapa": "não citada no mapa",
+    "status_conferencia": "pendente",
+    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "custos": {
+    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
+    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "casos_especiais_relacionados": [
+    2,
+    4,
+    7,
+    10,
+    15,
+    16,
+    17,
+    18
+   ]
+  },
+  {
+   "id": "N5",
+   "nivel": 5,
+   "nome": "Terreno de marinha (SPU)",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Alodial/Foreiro/Ocupação/Misto/Acrescido - RIP, CAT, laudêmio",
+    "base_citada_no_mapa": "mapa cita laudêmio 5% - base de cálculo a conferir",
+    "status_conferencia": "pendente",
+    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "orgaos": "SPU (origem: matriz_casos_especiais, caso 6)",
+   "custos": {
+    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
+    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "casos_especiais_relacionados": [
+    6
+   ]
+  },
+  {
+   "id": "N6",
+   "nivel": 6,
+   "nome": "Rural",
+   "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
+   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "CCIR, ITR 5 anos, CAR, Geo SIGEF, FMP",
+    "base_citada_no_mapa": "biblioteca/matrizes/Matriz-Rural.json",
+    "status_conferencia": "pendente",
+    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "orgaos": "INCRA, Receita Federal, CAR (origem: Matriz-Rural.json)",
+   "custos": {
+    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
+    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+   },
+   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "casos_especiais_relacionados": [
+    9,
+    12,
+    13
+   ],
+   "observacao": "Conflito aberto na AUD-2026-09-23 sobre o Decreto 12.689/2025 - decisão da Mesa"
+  }
+ ],
+ "transversais": {
+  "descricao": "Valem para qualquer natureza (pessoas e operação)",
+  "casos_especiais": [
+   1,
+   3,
+   5,
+   10,
+   14,
+   19,
+   20,
+   21,
+   22
+  ]
+ },
+ "lacunas_para_decisao_da_mesa": [
+  {
+   "id": "LAC-LAJE",
+   "tema": "Direito de laje (CC arts. 1.510-A a 1.510-E, Lei 13.465/2017)",
+   "situacao": "Ausente do mapa e das matrizes. Decidir se vira natureza própria ou caso especial.",
+   "status": "RESOLVIDA 23/09/2026 - aprovada por Kenny como natureza específica (matriz_naturezas_especificas.json)"
+  },
+  {
+   "id": "LAC-ADJ",
+   "tema": "Adjudicação compulsória extrajudicial (Lei 14.382/2022)",
+   "situacao": "Pode mudar o caminho do N1",
+   "status": "RESOLVIDA 23/09 - Lei 6.015/73 art. 216-B conferido e incorporado ao N1"
+  },
+  {
+   "id": "LAC-TRIB",
+   "tema": "Tributação por natureza (ITBI na cessão/usucapião, IPTU do possuidor)",
+   "situacao": "Candidatos: STF Tema 1124; CTN art. 34; ITBI municipal por município | ACHADO 23/09: a LC 227/2026 reescreveu o ITBI no CTN (art. 35, III inclui a cessão onerosa de direitos). A ideia de que 'cessão de direitos não paga ITBI' (Tema 1124) precisa ser reavaliada antes de entrar em N1/N2. | CORREÇÃO 23/09: o Tema 1124 não está pacificado - foi reaberto pelo STF em 26/08/2022 (portal STF) para rediscutir a cessão de direitos.",
+   "status": "conferir fonte"
+  }
+ ],
+ "escada": {
+  "estagios": [
+   "N0",
+   "N1",
+   "N2",
+   "N2.5",
+   "N3",
+   "N3.5",
+   "N4",
+   "PLENO"
+  ],
+  "tipos_combinaveis": [
+   "N5 (marinha/SPU)",
+   "N6 (rural)"
+  ],
+  "formato_selo": "<estágio> [· <tipo>] · <natureza específica>  ex.: 'N1 · N6 · cessão de direitos'",
+  "aprovado": "Kenny Wilson, 23/09/2026 (D1, D2, D3)"
+ }
+}

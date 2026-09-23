@@ -1,0 +1,779 @@
+{
+ "_meta": {
+  "titulo": "Naturezas específicas (24) do widget, conciliadas com a escada N0-N6",
+  "origem": "Kenny Wilson - NATUREZA_DOCUMENTAL do widget WordPress, arquivo 'codigo elementor html hoje.txt' (06/09/2026), linhas 733-1006. Conteúdo preservado sem alteração.",
+  "regra": "Os textos de cada natureza são do Kenny e ficam como estão; a coluna 'nivel' é a proposta de conciliação (23/09/2026) e aguarda revisão. Nenhum rótulo de risco (VIS-001 §10).",
+  "correcao_registrada": "Widget linha 1680 diz 'venda nula sem outorga'; correto é ANULÁVEL (CC 1.649, conferido no Planalto 23/09/2026).",
+  "decisoes_aprovadas": [
+   "D1 APROVADA (Kenny, 23/09/2026): topo da escada = PLENO (matrícula registrada em nome do titular, sem ônus).",
+   "D2 APROVADA (Kenny, 23/09/2026): N5 e N6 são TIPO do imóvel e se combinam com o estágio no selo (ex.: 'N6 · N1').",
+   "D3 APROVADA (Kenny, 23/09/2026): 'Título pleno' só quando REGISTRADO; sem registro = N2 (CC 1.245).",
+   "Item 4 APROVADO (23/09/2026): rótulos de risco (Alto/Crítico/Altíssimo) do niveis.json e do PDF de naturezas NÃO vão para o produto (VIS-001 §10).",
+   "Item 3 APROVADO (23/09/2026): widget antigo, linha 1680 - 'nula' deve ser 'anulável' (CC 1.649) quando o código voltar a uso."
+  ]
+ },
+ "naturezas": [
+  {
+   "id": "registro_imobiliario",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "regra_de_nivel": "Registro no RI = propriedade (CC 1.245)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Situação mais segura: o imóvel já está com a matrícula registrada em nome do titular atual no Cartório de Registro de Imóveis (não é só escritura — é o registro em si). É exatamente o que o art. 1.245 do Código Civil exige pra propriedade valer perante terceiros.",
+    "destino": "Conferência PEI — checklist padrão de matrícula, ônus, IPTU e condomínio, sem o alerta de pendência de registro.",
+    "itensExtras": [
+     {
+      "id": "nat_certidao_registro_confirmado",
+      "nome": "Certidão de matrícula ATUALIZADA (30 dias) já em nome do titular atual, comprovando o registro concluído",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     }
+    ]
+   }
+  },
+  {
+   "id": "escritura_compra_venda",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Registrada → pleno; sem registro → N2 (CC 1.245 §1º)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno de propriedade. Apto para conferência direta da matrícula, desde que o registro esteja atualizado.",
+    "destino": "Conferência PEI — checklist padrão de matrícula, ônus, IPTU e condomínio.",
+    "itensExtras": [
+     {
+      "id": "nat_confirmacao_registro",
+      "nome": "Certidão de matrícula ATUALIZADA confirmando o registro desta escritura (art. 1.245 CC) — sem o registro, a propriedade ainda não foi transferida",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_certidao_onus_inteiro_teor",
+      "nome": "Certidão de matrícula com ônus reais, idealmente de inteiro teor",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_estado_civil_titular",
+      "nome": "Documento de identidade, CPF e estado civil do titular atual (já coberto acima, conferir aqui de novo em relação ao título)",
+      "obrigatorio": false,
+      "recomendado": true,
+      "onde_emitir": "-"
+     }
+    ],
+    "gatilhos": [
+     "Confirme se essa escritura já foi REGISTRADA na matrícula do imóvel (art. 1.245 do Código Civil) — a escritura no Cartório de Notas só formaliza o negócio, quem transfere a propriedade de fato é o registro no Cartório de Registro de Imóveis. Sem o registro, o vendedor anterior ainda é o dono legal.",
+     "Se houver construção não averbada: exigir Habite-se + averbação da construção na matrícula.",
+     "Se houver financiamento, hipoteca, usufruto, alienação fiduciária, penhora ou indisponibilidade averbada: exigir instrumento de baixa/autorização específico.",
+     "Se o imóvel vier de loteamento/incorporação: exigir registro do empreendimento e documentos urbanísticos aplicáveis.",
+     "Se o vendedor for PJ: exigir contrato social atualizado e atos de representação."
+    ]
+   }
+  },
+  {
+   "id": "carta_arrematacao_adjudicacao",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Carta registrada → pleno; antes do registro a arrematação não transfere (texto do próprio widget; CPC 901/903 na matriz de casos especiais, caso 7)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno, de origem judicial ou extrajudicial (leilão/execução). Apto para conferência direta da matrícula após o registro da carta.",
+    "destino": "Conferência PEI — atenção especial à modalidade do leilão (judicial, extrajudicial por alienação fiduciária, trabalhista, fiscal ou falimentar), que muda os documentos exigidos.",
+    "itensExtras": [
+     {
+      "id": "nat_confirmacao_registro_carta",
+      "nome": "Certidão de matrícula ATUALIZADA confirmando o REGISTRO da carta de arrematação/adjudicação (art. 1.245 CC) — antes do registro, a arrematação não transferiu a propriedade",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_edital_completo",
+      "nome": "Edital completo do leilão e anexos",
+      "obrigatorio": true,
+      "onde_emitir": "Leiloeiro / processo de execução"
+     },
+     {
+      "id": "nat_auto_arrematacao",
+      "nome": "Auto de arrematação",
+      "obrigatorio": true,
+      "onde_emitir": "Processo de execução"
+     },
+     {
+      "id": "nat_carta_conteudo_cpc901",
+      "nome": "Carta de arrematação/adjudicação com descrição do imóvel, matrícula, auto, prova de ITBI e indicação de ônus (art. 901, §2º, CPC)",
+      "obrigatorio": true,
+      "onde_emitir": "Vara/juízo da execução"
+     }
+    ],
+    "gatilhos": [
+     "Se o imóvel estiver ocupado: exigir mandado de imissão na posse e verificar situação do ocupante/locatário.",
+     "Se houver débitos de condomínio/IPTU: conferir o que o edital/processo prevê sobre responsabilidade pelo débito.",
+     "Se houver ônus registrados: conferir o que permanece, cancela, ou exige baixa posterior ao registro da carta.",
+     "Se envolver alienação fiduciária: conferir notificação, consolidação da propriedade e documentação da instituição credora."
+    ]
+   }
+  },
+  {
+   "id": "formal_partilha_inventario",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Partilha registrada → pleno; formal/escritura sem registro → N2. Sem partilha → ver inventario_sem_partilha (N2.5)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno decorrente de herança ou divórcio. Apto para conferência direta após o registro do formal/escritura na matrícula.",
+    "destino": "Conferência humana — inventário tem mais variáveis (herdeiros, ITCMD, eventual testamento) do que uma compra e venda comum.",
+    "itensExtras": [
+     {
+      "id": "nat_certidao_obito",
+      "nome": "Certidão de óbito",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro Civil"
+     },
+     {
+      "id": "nat_relacao_herdeiros",
+      "nome": "Relação de herdeiros, meeiro(a) e inventariante, com documentos civis de cada um",
+      "obrigatorio": true,
+      "onde_emitir": "Reunir com a família / processo de inventário"
+     },
+     {
+      "id": "nat_registro_partilha_matricula",
+      "nome": "Comprovação de registro da partilha na matrícula (antes disso, nenhum herdeiro é proprietário individual)",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     }
+    ],
+    "gatilhos": [
+     "Se houver testamento: seguir rota própria de inventário testamentário, com certidão específica.",
+     "Se houver menor, incapaz, conflito entre herdeiros, ou herdeiro desconhecido: não tratar como fluxo documental comum — encaminhar ao advogado.",
+     "Antes da partilha registrada: a venda depende de representação regular do espólio — um herdeiro sozinho não pode vender o todo."
+    ]
+   }
+  },
+  {
+   "id": "divorcio_partilha",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Registrada → pleno; sem registro → N2",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno decorrente de partilha de bens em divórcio ou dissolução de união estável, formalizado por escritura pública (se consensual e sem filhos menores) ou por sentença judicial.",
+    "destino": "Conferência PEI se a partilha já está registrada; Conferência humana se ainda está em processo de partilha ou há disputa.",
+    "itensExtras": [
+     {
+      "id": "nat_escritura_sentenca_divorcio",
+      "nome": "Escritura pública de divórcio/partilha (consensual) ou sentença judicial de partilha, já registrada na matrícula",
+      "obrigatorio": true,
+      "onde_emitir": "Tabelionato de Notas ou Vara de Família"
+     },
+     {
+      "id": "nat_registro_partilha_divorcio",
+      "nome": "Registro da partilha na matrícula (antes disso, o imóvel permanece em nome do casal)",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     }
+    ],
+    "gatilhos": [
+     "Se houver filhos menores envolvidos ou disputa sobre a partilha: divórcio deixa de ser consensual/extrajudicial — encaminhar ao advogado.",
+     "Se o imóvel foi adquirido antes do casamento ou por doação/herança a um dos cônjuges: verificar regime de bens antes de presumir que é bem comum."
+    ]
+   }
+  },
+  {
+   "id": "titulo_legitimacao_fundiaria",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N3.5",
+   "regra_de_nivel": "Com CRF registrada → pleno; REURB em curso → N3.5 (caso especial 8)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título emitido pelo Poder Público em procedimento de REURB (Regularização Fundiária Urbana), convertendo posse em propriedade. Sem a Certidão de Regularização Fundiária (CRF) registrada na matrícula, a posse ainda não é propriedade plena.",
+    "destino": "Conferência PEI — verificar se o título já foi registrado na matrícula própria.",
+    "itensExtras": [
+     {
+      "id": "nat_crf_reurb",
+      "nome": "CRF — Certidão de Regularização Fundiária registrada na matrícula",
+      "obrigatorio": true,
+      "motivo": "Sem CRF registrada, a posse não é propriedade plena.",
+      "onde_emitir": "Prefeitura (núcleo REURB) + Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_quitacao_cessao_reurb",
+      "nome": "Se a aquisição foi por cessão/compromisso: prova de quitação das obrigações do cedente perante o REURB",
+      "obrigatorio": true,
+      "onde_emitir": "Núcleo REURB / cedente"
+     }
+    ],
+    "gatilhos": [
+     "Cessão/compromisso só vira título hábil com quitação comprovada e após a CRF (CNNR-AL, art. 244 §único). Confirmado apenas para REURB-S (interesse social); REURB-E (interesse específico) não confirmado neste material."
+    ]
+   }
+  },
+  {
+   "id": "usucapiao_reconhecida",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Sentença/reconhecimento registrado → pleno (CC 1.241 §ún.); não registrado → N2 (título sem registro)",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno reconhecido por sentença judicial transitada em julgado ou por escritura de usucapião extrajudicial já registrada na matrícula. Apto para conferência direta da matrícula.",
+    "destino": "Conferência PEI — confirmar que o registro na matrícula já foi efetivamente concluído, não só a sentença/ata.",
+    "itensExtras": [
+     {
+      "id": "nat_confirmacao_registro_usucapiao",
+      "nome": "Certidão de matrícula ATUALIZADA confirmando o REGISTRO da sentença/ata de usucapião (art. 1.245 CC) — sem o registro, a propriedade ainda não foi transferida formalmente",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     }
+    ]
+   }
+  },
+  {
+   "id": "doacao",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Registrada → pleno (atenção a cláusulas, caso especial 17); sem registro → N2",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno decorrente de doação, formalizado por escritura pública (ou instrumento particular nos casos permitidos em lei) e registrado na matrícula.",
+    "destino": "Conferência PEI — atenção ao ITCMD sobre doação e a eventuais cláusulas restritivas.",
+    "itensExtras": [
+     {
+      "id": "nat_confirmacao_registro_doacao",
+      "nome": "Certidão de matrícula ATUALIZADA confirmando o REGISTRO da escritura de doação (art. 1.245 CC) — sem o registro, a propriedade ainda não foi transferida ao donatário",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_itcmd_doacao",
+      "nome": "Guia de ITCMD sobre a doação, paga",
+      "obrigatorio": true,
+      "motivo": "Doação também é fato gerador de ITCMD, como a herança — imposto estadual, alíquota varia por estado.",
+      "onde_emitir": "Secretaria da Fazenda Estadual"
+     },
+     {
+      "id": "nat_clausulas_doacao",
+      "nome": "Verificar cláusulas de inalienabilidade/impenhorabilidade/incomunicabilidade, se houver",
+      "obrigatorio": false,
+      "recomendado": true,
+      "motivo": "Se presentes, podem restringir ou impedir a venda do imóvel doado.",
+      "onde_emitir": "Escritura de doação / matrícula"
+     }
+    ]
+   }
+  },
+  {
+   "id": "sentenca_judicial_outros",
+   "categoria_widget": "Título pleno",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Registrada → pleno; não registrada → N2",
+   "conteudo_kenny": {
+    "categoria": "Título pleno",
+    "descricao": "Título pleno reconhecido por outra sentença judicial declaratória ou constitutiva de propriedade, fora dos casos já listados (usucapião, adjudicação). Apto para conferência direta da matrícula após o registro da sentença.",
+    "destino": "Conferência humana — cada sentença tem particularidades próprias.",
+    "itensExtras": [
+     {
+      "id": "nat_certidao_transito_julgado",
+      "nome": "Certidão de trânsito em julgado da sentença + registro na matrícula",
+      "obrigatorio": true,
+      "onde_emitir": "Vara que proferiu a sentença + Cartório de Registro de Imóveis"
+     }
+    ]
+   }
+  },
+  {
+   "id": "promessa_compromisso_compra_venda",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "N1",
+   "regra_de_nivel": "Direito pessoal; registrada sem arrependimento = direito real à aquisição (CC 1.417), mas ainda N1",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Direito pessoal (obrigacional) — ainda não é propriedade. Só gera direito real de aquisição se registrado; requer escritura definitiva e quitação total para transferir a propriedade.",
+    "destino": "Conferência PEI, com atenção redobrada à quitação — sem ela, não há como exigir a escritura definitiva.",
+    "itensExtras": [
+     {
+      "id": "nat_escritura_definitiva_pendente",
+      "nome": "Escritura definitiva de compra e venda (ainda pendente de lavrar)",
+      "obrigatorio": true,
+      "motivo": "A promessa/compromisso, por si só, não transfere a propriedade — só gera direito de exigir a escritura definitiva.",
+      "onde_emitir": "Tabelionato de Notas, após quitação total do preço"
+     }
+    ]
+   }
+  },
+  {
+   "id": "cessao_direitos",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "N1",
+   "nivel_alternativo": "N2.5",
+   "regra_de_nivel": "Cessão de contrato/posse → N1; cessão de direitos hereditários → N2.5 (CC 1.793)",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Transferência de posição contratual/possessória, não de propriedade plena. Requer conferência de toda a cadeia de cessões anteriores até a origem do título.",
+    "destino": "Relatório PEI + advogado se a cadeia for longa ou tiver elo duvidoso — cada cessão é um ponto de falha possível.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_cadeia_cessoes",
+      "nome": "Cadeia completa de cessões, promessas de cessão, aditivos e procurações em sequência, até o título de origem",
+      "obrigatorio": true,
+      "motivo": "Cada elo da cadeia precisa ser válido — uma cessão anterior nula compromete todas as seguintes.",
+      "onde_emitir": "Reunir com o vendedor / conferir na matrícula"
+     },
+     {
+      "id": "nat_extrato_financeiro_cessao",
+      "nome": "Comprovantes de pagamento/quitação e extrato financeiro do contrato, quando houver",
+      "obrigatorio": true,
+      "onde_emitir": "Reunir com o vendedor"
+     },
+     {
+      "id": "nat_anuencia_cessao",
+      "nome": "Anuência do vendedor original, incorporador ou credor fiduciário, quando o contrato exigir",
+      "obrigatorio": false,
+      "recomendado": true,
+      "onde_emitir": "Verificar cláusula do contrato original"
+     }
+    ],
+    "gatilhos": [
+     "Se há financiamento/alienação fiduciária na cadeia: exigir saldo devedor e autorização de transferência da instituição financeira.",
+     "Se o vendedor original morreu, desapareceu, é incapaz ou é PJ extinta: o caso pode migrar para adjudicação compulsória, inventário ou via judicial.",
+     "Se a promessa/cessão está registrada: coletar as certidões do registro correspondente.",
+     "Se não está registrada: tratar como cadeia de direitos pessoais, não como propriedade já transferida."
+    ]
+   }
+  },
+  {
+   "id": "recibo_sinal",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "N1",
+   "regra_de_nivel": "Documento particular (CC 108)",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Documento particular, sem formalidade legal para transferir propriedade. Serve apenas como indício de pagamento — requer escritura pública e registro para gerar propriedade.",
+    "destino": "Conferência PEI — o próximo passo obrigatório é a escritura pública, não a continuidade do recibo.",
+    "itensExtras": [
+     {
+      "id": "nat_escritura_ainda_nao_existe",
+      "nome": "Escritura pública ainda não lavrada — recibo não substitui esse passo",
+      "obrigatorio": true,
+      "motivo": "Um recibo particular não tem efeito de transferir propriedade, mesmo com o valor total pago.",
+      "onde_emitir": "Tabelionato de Notas"
+     }
+    ]
+   }
+  },
+  {
+   "id": "permuta_dacao",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "N1",
+   "nivel_alternativo": "N2",
+   "regra_de_nivel": "Contrato particular → N1; escritura sem registro → N2; registrada → pleno (CC 533)",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Troca de imóveis (permuta) ou quitação de dívida com o imóvel (dação em pagamento). Permuta segue as regras da compra e venda (art. 533, Código Civil), com 2 diferenças importantes: ITBI incide sobre AS DUAS transmissões — cada permutante paga imposto sobre o que está recebendo, não só uma pessoa; e se a torna (diferença paga em dinheiro) passar de 50% do valor recebido, deixa de ser permuta e vira compra e venda, com tributação diferente (ganho de capital). Troca de valores desiguais entre pais e filhos é ANULÁVEL sem consentimento do cônjuge e dos outros descendentes.",
+    "destino": "Conferência PEI. Se envolver incorporadora (permuta de terreno por unidades), ver também a categoria 'Incorporação imobiliária' — as duas costumam andar juntas.",
+    "itensExtras": [
+     {
+      "id": "nat_escritura_permuta",
+      "nome": "Escritura pública formalizando a permuta/dação (se ainda não lavrada)",
+      "obrigatorio": true,
+      "onde_emitir": "Tabelionato de Notas"
+     },
+     {
+      "id": "nat_itbi_duplo_permuta",
+      "nome": "Guia de ITBI paga por CADA permutante, sobre o imóvel que está recebendo",
+      "obrigatorio": true,
+      "motivo": "ITBI incide nas duas transmissões da permuta, não só numa — cada parte paga sobre o que recebe.",
+      "onde_emitir": "Prefeitura - Secretaria de Finanças"
+     },
+     {
+      "id": "nat_avaliacao_valores_permuta",
+      "nome": "Avaliação/declaração de valor de cada imóvel envolvido na troca",
+      "obrigatorio": true,
+      "motivo": "Necessário pra saber se há torna e se ela ultrapassa 50% do valor recebido (limite que descaracteriza a permuta).",
+      "onde_emitir": "Avaliação própria ou laudo"
+     }
+    ],
+    "gatilhos": [
+     "Se houver permuta de terreno por unidades construídas dentro de uma incorporação (permuta física): exigir a declaração do incorporador definindo a quota-parte de área das unidades entregues em pagamento do terreno (Lei 4.591/64, art. 32 'l' e art. 39). Sem torna, não há tributação no momento da troca — só quando o dono do terreno vender as unidades recebidas.",
+     "Se o dono do terreno recebe percentual do VGV (Valor Geral de Vendas) em dinheiro, em vez de unidades (permuta financeira): desde a Solução de Consulta Cosit nº 89/2025 (Receita Federal), isso NÃO é mais tratado como permuta pra fins fiscais — é compra e venda parcelada, com ganho de capital tributado a cada parcela recebida. A alíquota de 4% do RET é só da incorporadora, não deve ser descontada do valor do terrenista sem previsão contratual clara.",
+     "Antes de assinar permuta com incorporadora, auditar a empresa: CND federal/estadual/municipal, certidão de distribuidor cível/criminal, certidão de recuperação judicial e falência, certidão de protesto, e confirmar se o empreendimento tem PATRIMÔNIO DE AFETAÇÃO averbado na matrícula (Lei 10.931/2004, arts. 31-A a 31-F) — sem ele, o terreno entregue pode responder por dívidas da incorporadora em OUTROS empreendimentos dela. O tamanho ou nome conhecido da construtora não é garantia: a própria Lei do Patrimônio de Afetação nasceu depois da falência da Encol S/A nos anos 90, uma das maiores construtoras do Brasil na época."
+    ]
+   }
+  },
+  {
+   "id": "adjudicacao_compulsoria",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "CAMINHO do N1",
+   "regra_de_nivel": "Não é natureza de partida: é a saída do N1 (Lei 6.015 art. 216-B); com registro → pleno",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Título obtido por ação de adjudicação compulsória (judicial ou, desde a Lei 14.382/2022 e o Provimento CNJ 150/2023, extrajudicial em cartório), movida quando o vendedor original descumpre a obrigação de outorgar escritura após quitação total do preço. Só vira propriedade plena após o registro da sentença/carta de adjudicação na matrícula.",
+    "destino": "Relatório PEI + advogado — a via extrajudicial exige assistência de advogado por determinação do próprio Provimento CNJ 150/2023, não é 'sem advogado'.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_sentenca_adjudicacao",
+      "nome": "Sentença ou ata notarial de adjudicação compulsória + registro na matrícula (verificar se já concluído)",
+      "obrigatorio": true,
+      "onde_emitir": "Vara ou Tabelionato de Notas (via extrajudicial) + Cartório de Registro de Imóveis"
+     }
+    ]
+   }
+  },
+  {
+   "id": "incorporacao_imobiliaria",
+   "categoria_widget": "Instrumento preparatório",
+   "nivel": "N1",
+   "regra_de_nivel": "Compra na planta = promessa (N1) até a individualização e registro; ver caso especial 14 (Lei 4.591/64)",
+   "conteudo_kenny": {
+    "categoria": "Instrumento preparatório",
+    "descricao": "Unidade em incorporação imobiliária (compra na planta ou em construção), regida pela Lei 4.591/64 e Lei 10.931/2004. Só vira propriedade individualizada após habite-se, averbação da construção e registro da unidade autônoma em matrícula própria.",
+    "destino": "Conferência PEI, com atenção ao andamento da obra e à saúde financeira da incorporadora.",
+    "itensExtras": [
+     {
+      "id": "nat_registro_incorporacao",
+      "nome": "Registro da incorporação no Cartório de Registro de Imóveis",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_individualizacao_matricula",
+      "nome": "Habite-se + individualização da matrícula da unidade (se ainda não emitidos)",
+      "obrigatorio": true,
+      "onde_emitir": "Prefeitura (Habite-se) + Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_patrimonio_afetacao",
+      "nome": "Confirmar se o empreendimento tem PATRIMÔNIO DE AFETAÇÃO averbado na matrícula (Lei 10.931/2004, arts. 31-A a 31-F)",
+      "obrigatorio": false,
+      "recomendado": true,
+      "motivo": "É OPCIONAL, não presuma que existe. Protege o comprador porque separa o terreno e os recursos da obra do resto do patrimônio da incorporadora — mesmo se ela quebrar em outro projeto, isto aqui fica protegido.",
+      "onde_emitir": "Registro de Imóveis / incorporadora"
+     },
+     {
+      "id": "nat_auditoria_construtora",
+      "nome": "CND federal/estadual/municipal + certidão de distribuidor cível/criminal + certidão de recuperação judicial e falência + certidão de protesto, todas em nome da incorporadora (CNPJ)",
+      "obrigatorio": false,
+      "recomendado": true,
+      "motivo": "O tamanho ou nome conhecido da construtora não é garantia — a Lei do Patrimônio de Afetação nasceu depois da falência da Encol S/A, uma das maiores construtoras do Brasil nos anos 90.",
+      "onde_emitir": "Receita Federal, TJ/TRF competente, cartório de protesto"
+     },
+     {
+      "id": "nat_historico_obras_incorporadora",
+      "nome": "Histórico de obras anteriores da mesma incorporadora — prazo cumprido, reclamações públicas",
+      "obrigatorio": false,
+      "recomendado": true,
+      "onde_emitir": "Pesquisa pública (Reclame Aqui, processos por atraso de obra)"
+     }
+    ]
+   }
+  },
+  {
+   "id": "posse_sem_titulo",
+   "categoria_widget": "Situação fática",
+   "nivel": "N0",
+   "regra_de_nivel": "CC 1.196/1.238",
+   "conteudo_kenny": {
+    "categoria": "Situação fática",
+    "descricao": "Sem título de propriedade formal. Depende de ação de usucapião (judicial ou extrajudicial) para converter a posse em propriedade registrável.",
+    "destino": "Encaminhamento jurídico/fundiário — o Oráculo não confirma propriedade nesse caso, só organiza os documentos iniciais.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_exploracao_produtiva_rural",
+      "nome": "Prova de exploração produtiva da terra (fotos georreferenciadas de cultura/criação/benfeitorias, notas fiscais de insumos, declaração de atividade agrícola) — exigência específica da usucapião rural especial, art. 191 CF",
+      "obrigatorio": true,
+      "tipo_imovel": [
+       "rural"
+      ],
+      "motivo": "Sem essa prova, a posse sozinha não configura usucapião rural especial (pro labore) — é o requisito mais frequentemente cobrado nesse tipo de ação.",
+      "onde_emitir": "Reunir com o ocupante / entidade rural / técnico responsável"
+     },
+     {
+      "id": "nat_origem_posse",
+      "nome": "Contratos, recibos ou cessões que expliquem a origem da ocupação",
+      "obrigatorio": true,
+      "onde_emitir": "Reunir com o ocupante"
+     },
+     {
+      "id": "nat_cadeia_cessoes_posse",
+      "nome": "Se a posse veio por cessão: cadeia completa de cessões, procurações e aditivos até o possuidor original, para permitir a soma do tempo de posse dos antecessores (art. 1.243 CC)",
+      "obrigatorio": false,
+      "recomendado": true,
+      "motivo": "Uma cessão anterior nula ou mal documentada compromete a soma do tempo de posse, que costuma ser essencial para completar o prazo mínimo exigido na usucapião.",
+      "onde_emitir": "Reunir com os cedentes / conferir na matrícula"
+     },
+     {
+      "id": "nat_comprovantes_posse_tempo",
+      "nome": "IPTU/ITR, água, energia, fotos e notas de benfeitorias em nome do ocupante, com datas",
+      "obrigatorio": true,
+      "onde_emitir": "Concessionárias / Prefeitura"
+     },
+     {
+      "id": "nat_cronologia_posse",
+      "nome": "Cronologia da posse: quando começou, por quem, como foi transmitida até o ocupante atual",
+      "obrigatorio": true,
+      "onde_emitir": "Reunir com o ocupante"
+     },
+     {
+      "id": "nat_pesquisa_registral_posse",
+      "nome": "Certidões e pesquisa registral para entender se há proprietário conhecido e ônus sobre a área",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     }
+    ],
+    "gatilhos": [
+     "Se a rota for usucapião/regularização: reunir ata notarial, planta e memorial descritivo (com ART/RRT quando aplicável), e notificação dos confrontantes.",
+     "A ata notarial não é título de propriedade — ela só instrui o procedimento de usucapião, não substitui a decisão final.",
+     "Esse caso normalmente exige orientação de advogado antes de qualquer negociação de compra ou venda."
+    ]
+   }
+  },
+  {
+   "id": "locacao_comodato",
+   "categoria_widget": "Situação fática",
+   "nivel": "FORA DA ESCADA",
+   "regra_de_nivel": "Posse direta que reconhece o dono: não leva à propriedade por si (detenção/posse precária). Não recebe nível de domínio",
+   "conteudo_kenny": {
+    "categoria": "Situação fática",
+    "descricao": "Posse direta, sem direito de propriedade — o ocupante reconhece o direito de outra pessoa. Este documento sozinho não gera nenhuma expectativa de propriedade.",
+    "destino": "Encaminhamento — negociar precisa ser com o proprietário real, não com quem está no contrato de locação/comodato.",
+    "itensExtras": [
+     {
+      "id": "nat_identificar_proprietario_real",
+      "nome": "Identificar e qualificar o verdadeiro proprietário do imóvel",
+      "obrigatorio": true,
+      "motivo": "Quem está no contrato de locação/comodato não é o dono — a negociação precisa ser feita com o proprietário real.",
+      "onde_emitir": "Matrícula do imóvel"
+     }
+    ]
+   }
+  },
+  {
+   "id": "comprovantes_cadeia",
+   "categoria_widget": "Situação fática",
+   "nivel": "PROVA AUXILIAR",
+   "regra_de_nivel": "Não é natureza: é evidência de N0/N1 (Lei 6.015 art. 216-A, IV)",
+   "conteudo_kenny": {
+    "categoria": "Situação fática",
+    "descricao": "Não é título de propriedade — é indício probatório de tempo de posse, útil apenas como prova auxiliar em eventual ação de usucapião.",
+    "destino": "Encaminhamento jurídico/fundiário se o objetivo for regularizar via usucapião.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_reunir_comprovantes",
+      "nome": "Reunir todos os comprovantes disponíveis (IPTU, luz, água) em nome do ocupante, com datas",
+      "obrigatorio": true,
+      "motivo": "Servem de prova de tempo de posse para eventual usucapião — sozinhos não transferem propriedade.",
+      "onde_emitir": "Concessionárias / Prefeitura"
+     }
+    ]
+   }
+  },
+  {
+   "id": "ata_notarial_posse",
+   "categoria_widget": "Situação fática",
+   "nivel": "PROVA AUXILIAR",
+   "regra_de_nivel": "Não é natureza: é peça da usucapião extrajudicial (Lei 6.015 art. 216-A, I)",
+   "conteudo_kenny": {
+    "categoria": "Situação fática",
+    "descricao": "Documento lavrado por tabelião que registra o tempo e as características da posse. Peça preparatória para usucapião extrajudicial — ainda não é propriedade registrada.",
+    "destino": "Encaminhamento jurídico/fundiário — dar seguimento ao procedimento de usucapião com um advogado.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_usucapiao_extrajudicial_seguimento",
+      "nome": "Dar seguimento ao procedimento de usucapião extrajudicial no Registro de Imóveis",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis competente"
+     }
+    ]
+   }
+  },
+  {
+   "id": "fracao_ideal_condominio",
+   "categoria_widget": "Situação especial",
+   "nivel": "PLENO (se houver ônus → N4)",
+   "regra_de_nivel": "Copropriedade registrada: pleno para a fração; venda de coisa comum tem regras próprias - conferir",
+   "conteudo_kenny": {
+    "categoria": "Situação especial",
+    "descricao": "Imóvel em fração ideal, copropriedade ou condomínio pro indiviso — vários proprietários sobre o mesmo imóvel, sem divisão física registrada das partes de cada um.",
+    "destino": "Conferência humana — vender fração ideal sem anuência dos demais coproprietários costuma gerar disputa sobre direito de preferência.",
+    "itensExtras": [
+     {
+      "id": "nat_qualificacao_coproprietarios",
+      "nome": "Qualificação de todos os coproprietários e sua fração ideal na matrícula",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_direito_preferencia",
+      "nome": "Verificar exercício do direito de preferência dos demais coproprietários (art. 504 do Código Civil)",
+      "obrigatorio": true,
+      "motivo": "Coproprietário tem preferência para comprar a fração de outro coproprietário, em condições iguais.",
+      "onde_emitir": "Notificar os demais coproprietários"
+     }
+    ]
+   }
+  },
+  {
+   "id": "imovel_publico",
+   "categoria_widget": "Situação especial",
+   "nivel": "FORA DA ESCADA",
+   "nivel_alternativo": "N5",
+   "regra_de_nivel": "Bem público não se usucape (CC 102); terreno de marinha → N5 (SPU)",
+   "conteudo_kenny": {
+    "categoria": "Situação especial",
+    "descricao": "Imóvel de titularidade de ente público (União, Estado ou Município) ainda não alienado ao particular — inclui terrenos de marinha e imóveis administrados pela SPU. Depende de concessão, foro ou alienação formal do Poder Público para virar propriedade privada plena.",
+    "destino": "Encaminhamento especializado — fora do fluxo padrão de compra e venda entre particulares.",
+    "itensExtras": [
+     {
+      "id": "nat_situacao_spu",
+      "nome": "Situação junto à SPU/órgão público competente (RIP, foro, laudêmio, se aplicável)",
+      "obrigatorio": true,
+      "onde_emitir": "Secretaria de Patrimônio da União (SPU) ou órgão estadual/municipal equivalente"
+     },
+     {
+      "id": "nat_processo_alienacao",
+      "nome": "Verificar se há processo de alienação/concessão em andamento",
+      "obrigatorio": true,
+      "onde_emitir": "SPU ou órgão público competente"
+     }
+    ]
+   }
+  },
+  {
+   "id": "concessao_uso",
+   "categoria_widget": "Situação especial",
+   "nivel": "ESPECIAL",
+   "regra_de_nivel": "Direito real de uso (CDRU/CUEM), não propriedade - conferir fontes",
+   "conteudo_kenny": {
+    "categoria": "Situação especial",
+    "descricao": "Concessão de direito real de uso (CDRU) ou concessão de uso especial para fins de moradia (CUEM) — direito real sobre imóvel público ou de terceiro, mas não é propriedade plena.",
+    "destino": "Conferência humana — a transferibilidade da concessão depende do termo específico.",
+    "itensExtras": [
+     {
+      "id": "nat_termo_concessao",
+      "nome": "Termo de concessão registrado na matrícula",
+      "obrigatorio": true,
+      "onde_emitir": "Cartório de Registro de Imóveis"
+     },
+     {
+      "id": "nat_transferibilidade_concessao",
+      "nome": "Verificar se a concessão é transferível a terceiros e sob quais condições",
+      "obrigatorio": true,
+      "onde_emitir": "Termo de concessão / órgão concedente"
+     }
+    ]
+   }
+  },
+  {
+   "id": "inventario_sem_partilha",
+   "categoria_widget": "Situação especial",
+   "nivel": "N2.5",
+   "regra_de_nivel": "CC 1.784/1.791",
+   "conteudo_kenny": {
+    "categoria": "Situação especial",
+    "descricao": "Imóvel integra espólio em inventário ainda não concluído — sem formal de partilha ou escritura de inventário lavrada. Requer conclusão do inventário (ou cessão de direitos hereditários, quitando o próprio inventário) antes de virar propriedade individualizada de qualquer herdeiro.",
+    "destino": "Conferência humana — negociar antes da partilha exige cuidado redobrado com a representação do espólio.",
+    "itensExtras": [
+     {
+      "id": "nat_conclusao_inventario",
+      "nome": "Conclusão do inventário — formal de partilha ou escritura ainda pendente",
+      "obrigatorio": true,
+      "onde_emitir": "Vara de sucessões ou Tabelionato de Notas (inventário extrajudicial)"
+     },
+     {
+      "id": "nat_termo_inventariante",
+      "nome": "Termo de compromisso do inventariante (quem representa o espólio no inventário)",
+      "obrigatorio": true,
+      "onde_emitir": "Vara de sucessões ou Tabelionato de Notas"
+     },
+     {
+      "id": "nat_anuencia_herdeiros",
+      "nome": "Anuência de todos os herdeiros e do cônjuge sobrevivente, se houver",
+      "obrigatorio": true,
+      "onde_emitir": "Reunir com os demais herdeiros"
+     },
+     {
+      "id": "nat_certidao_abertura_inventario",
+      "nome": "Certidão de abertura do inventário + número do processo/escritura",
+      "obrigatorio": true,
+      "onde_emitir": "Vara ou Tabelionato responsável"
+     },
+     {
+      "id": "nat_situacao_itcmd_pendente",
+      "nome": "Situação do ITCMD do espólio (pago, isento ou ainda pendente)",
+      "obrigatorio": true,
+      "motivo": "O ITCMD segue devido mesmo antes da partilha — o Registro de Imóveis não transfere a propriedade sem ele quitado.",
+      "onde_emitir": "Secretaria da Fazenda Estadual"
+     }
+    ]
+   }
+  },
+  {
+   "id": "situacao_empresarial",
+   "categoria_widget": "Situação especial",
+   "nivel": "TRANSVERSAL",
+   "regra_de_nivel": "Soma-se ao nível do imóvel; ex.: recuperação judicial + indisponibilidade (padrão Vale Verde) → N4",
+   "conteudo_kenny": {
+    "categoria": "Situação especial",
+    "descricao": "Imóvel de titularidade de pessoa jurídica em situação societária especial (recuperação judicial, falência, dissolução, fusão ou incorporação societária). Requer verificação adicional antes de qualquer negociação.",
+    "destino": "Relatório PEI + advogado — situações empresariais têm regras próprias de restrição de venda de ativos.",
+    "requerAdvogado": true,
+    "itensExtras": [
+     {
+      "id": "nat_certidoes_falimentar",
+      "nome": "Certidões de distribuição cível/falimentar da empresa vendedora",
+      "obrigatorio": true,
+      "onde_emitir": "Tribunal de Justiça / Justiça Federal competente"
+     },
+     {
+      "id": "nat_anuencia_socios",
+      "nome": "Anuência formal dos sócios/administradores e, se aplicável, do administrador judicial",
+      "obrigatorio": true,
+      "onde_emitir": "Contrato social / processo de recuperação judicial ou falência"
+     },
+     {
+      "id": "nat_restricao_plano_rj",
+      "nome": "Verificar se o imóvel está sujeito a restrição no plano de recuperação judicial ou na massa falida",
+      "obrigatorio": true,
+      "onde_emitir": "Autos do processo de recuperação/falência"
+     }
+    ]
+   }
+  },
+  {
+   "id": "direito_de_laje",
+   "categoria_widget": null,
+   "status": "APROVADA por Kenny em 23/09/2026",
+   "nivel": "PLENO (se em matrícula própria)",
+   "nivel_alternativo": "N1",
+   "regra_de_nivel": "Laje com matrícula própria → pleno (CC 1.510-A §3º); 'venda de laje' por contrato particular sem matrícula própria → N1",
+   "conteudo_proposto": {
+    "descricao": "Unidade autônoma construída sobre ou sob outra construção (a 'laje'), com matrícula própria, sem fração ideal do terreno.",
+    "gatilhos": [
+     "Existe matrícula própria da laje? Sem ela, não há direito real de laje - só contrato.",
+     "Na venda da construção-base ou da laje, os outros titulares têm preferência por 30 dias (CC 1.510-D).",
+     "Nova laje sobre a laje exige autorização expressa da construção-base e das demais lajes (CC 1.510-A §6º).",
+     "O titular da laje paga os tributos da sua unidade (CC 1.510-A §2º)."
+    ],
+    "fontes": [
+     {
+      "norma": "CC arts. 1.510-A (§§1º a 6º) e 1.510-D",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "conferido": "2026-09-23"
+     }
+    ]
+   }
+  }
+ ]
+}
