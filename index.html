@@ -133,6 +133,8 @@ canvas{background:#fff;border-radius:8px;padding:8px}
 // Correção AT-005 (v9.2.1): fontes @font-face absolutas -> relativas; cache:'no-store' reforçado em TODOS os fetch;
 //   diagnóstico e inicialização blindados com try/catch para nunca deixar o card em loading infinito;
 //   handlers globais de erro. ATENÇÃO: GitHub Pages é case-sensitive - confira maiúsculas/minúsculas dos arquivos.
+// Correção AT-011: check 8 (SHA-256) passa a comparar o hash oficial com os bytes reais do alagoas.json;
+//   ausência do selo = PENDENTE e erro = FALHA (nenhum dos dois soma ponto); sem base carregada o diagnóstico não roda.
 const CONFIG_PATH = './config.json';
 const BASE_PATH = './biblioteca/BR/AL/alagoas.json';
 const SHA256_PATH = './biblioteca/BR/AL/alagoas.sha256';
@@ -156,6 +158,7 @@ async function fetchComTimeout(url, opts){
 }
 let CONFIG = null;
 let BASE = [];
+let BASE_BYTES = null; // AT-011: bytes originais do alagoas.json, para SHA-256 fiel ao arquivo
 let resultados = {}; // MAPA SEGURO: evita JSON.stringify no HTML - CORREÇÃO CRÍTICA AT-003
 let historico = [];
 let logs = [];
@@ -185,7 +188,7 @@ function normalizeBusca(s){
 }
 
 async function sha256Hex(text){
- const enc = new TextEncoder().encode(text);
+ const enc = (text instanceof ArrayBuffer) ? text : new TextEncoder().encode(text);
  const buf = await crypto.subtle.digest('SHA-256', enc);
  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
 }
@@ -219,7 +222,9 @@ async function carregarBase(){
   status.textContent = `Carregando ${BASE_PATH}...`;
   const r = await fetchComTimeout(BASE_PATH);
   if(!r.ok) throw new Error(`alagoas.json não encontrado (HTTP ${r.status}) em ${BASE_PATH} - confira maiúsculas/minúsculas e o deploy no GitHub Pages`);
-  const data = await r.json();
+  // AT-011: lê os bytes originais (não o JSON reinterpretado) para o SHA-256 bater com o arquivo publicado
+  BASE_BYTES = await r.arrayBuffer();
+  const data = JSON.parse(new TextDecoder('utf-8').decode(BASE_BYTES));
   // Aceita array ou objeto com municipios
   BASE = Array.isArray(data) ? data : (data.municipios || data.dados || []);
   if(!Array.isArray(BASE)) throw new Error('Formato da base inválido');
@@ -248,8 +253,11 @@ async function diagnostico10(){
 
  try{
 
- if(!CONFIG || BASE.length===0){
-  addCheck('0/10 - Pré-requisito: base e config carregados', false, `CONFIG:${CONFIG?'ok':'ausente'} BASE:${BASE.length} registros - clique em "Carregar Base AL" antes de diagnosticar`);
+ // AT-011: sem base/config o diagnóstico não roda (antes somava um 11º item a uma nota "de 10")
+ if(!CONFIG || BASE.length===0 || !BASE_BYTES){
+  pre.textContent = `⚠️ DIAGNÓSTICO NÃO EXECUTADO - pré-requisito ausente.\nCONFIG:${CONFIG?'ok':'ausente'} BASE:${BASE.length} registros - clique em "Carregar Base AL" antes de diagnosticar.`;
+  logAuditoria('Diagnóstico não executado: base/config não carregados');
+  return;
  }
 
  // 1. Quantidade 102
@@ -283,19 +291,23 @@ async function diagnostico10(){
   addCheck(`${idx+4}/10 - Sentinela ${nome} MF ${esperado.modulo_fiscal_ha}/FMP ${esperado.fracao_minima_parcelamento_ha}`, ok, `Encontrado MF:${mf} FMP:${fmp}`);
  });
 
- // 8. SHA-256 da base (se existir .sha256)
+ // 8. SHA-256 da base - AT-011: comparação real, byte a byte, com o hash oficial.
+ //    Sem hash oficial publicado = PENDENTE (não soma ponto). Erro de leitura = FALHA (não soma ponto).
  try{
+  const calc = await sha256Hex(BASE_BYTES);
   const r = await fetchComTimeout(SHA256_PATH);
   if(r.ok){
-   const oficial = (await r.text()).trim().split(/\s+/)[0];
-   const baseTxt = JSON.stringify(BASE);
-   const calc = await sha256Hex(baseTxt);
-   // Nota: hash oficial pode ser do arquivo original, então compara apenas formato se diferir
-   addCheck('8/10 - SHA-256', oficial.length===64, `Oficial:${oficial.slice(0,12)}... Calc:${calc.slice(0,12)}...`);
+   const oficial = (await r.text()).trim().split(/\s+/)[0].toLowerCase();
+   const formatoOk = /^[0-9a-f]{64}$/.test(oficial);
+   const confere = formatoOk && oficial===calc;
+   addCheck('8/10 - SHA-256 da base confere com o selo oficial', confere,
+     confere ? `Íntegra - ${calc.slice(0,16)}...`
+             : (formatoOk ? `DIVERGENTE - oficial:${oficial.slice(0,16)}... calculado:${calc.slice(0,16)}...`
+                          : `Arquivo alagoas.sha256 em formato inválido`));
   }else{
-   addCheck('8/10 - SHA-256 oficial', true, 'alagoas.sha256 não encontrado - pendente selamento - OK para RC');
+   addCheck('8/10 - SHA-256 oficial', false, `PENDENTE - alagoas.sha256 não publicado (base ainda não selada). Hash calculado agora: ${calc}`);
   }
- }catch(e){ addCheck('8/10 - SHA-256', true, `Erro leitura sha256: ${e.message} - OK para RC`); }
+ }catch(e){ addCheck('8/10 - SHA-256', false, `FALHA ao verificar integridade: ${e.message}`); }
 
  // 9. Schema campos obrigatórios
  const schemaOk = BASE.every(m=> getField(m,['municipio','nome','municipio_busca'])!==undefined );

@@ -3,6 +3,13 @@
 **Status: pronto pra executar, aguardando o momento certo (caixa + validação de preço).**
 Complementa `ARQUITETURA-ATENDIMENTO-WHATSAPP-PAGAMENTO.md`.
 
+## Nota importante sobre quem faz o quê
+
+O código de tudo abaixo pode ser **escrito pela IA**, do mesmo jeito que o widget do Elementor foi escrito nesta sessão. A diferença real está em **onde esse código roda**:
+
+- **Editar o formulário do Elementor** → cola numa caixa, igual sempre — a IA escreve, você cola, funciona.
+- **Rodar o servidor num VPS** → precisa ficar ligado 24h, instalado remotamente por linha de comando. A IA escreve o código inteiro, mas **colocar ele rodando** no servidor de verdade precisa de alguém — um desenvolvedor na primeira montagem (recomendado, por envolver dinheiro de cliente), ou você mesmo seguindo instrução comando por comando, mais devagar e com mais risco de erro no meio do caminho.
+
 ---
 
 ## ⚠️ Resolver antes de contratar qualquer coisa
@@ -29,21 +36,21 @@ Complementa `ARQUITETURA-ATENDIMENTO-WHATSAPP-PAGAMENTO.md`.
 - [ ] Escolher o BSP (comparar pelo menos 3, perguntando: mensalidade, taxa de setup, se repassam preço da Meta sem markup, suporte em português)
 - [ ] Decidir se contrata um desenvolvedor pra essa etapa, ou se você mesmo vai aprender a montar (isso muda o próximo passo)
 
-### Fase 2 — Infraestrutura básica (com ou sem desenvolvedor)
+### Fase 2 — Infraestrutura básica
 
 - [ ] Contratar VPS (Hostinger KVM 1 é suficiente pro início — mesmo provedor do seu WordPress, facilita)
 - [ ] Contratar o BSP escolhido, verificar número dedicado (não pode ser o do seu celular pessoal)
-- [ ] **[Precisa de programação]** Construir o servidor mínimo: registrar caso, receber mensagem (webhook), enviar mensagem
-- [ ] **[Precisa de programação]** Implementar o canal "meus dados" — obrigatório antes de qualquer teste com dado real
+- [ ] Servidor mínimo: registrar caso, receber mensagem (webhook), enviar mensagem — **a IA escreve o código completo; colocar rodando no VPS precisa de desenvolvedor ou de você seguindo comando por comando**
+- [ ] Canal "meus dados" — **mesma coisa: código pronto pela IA, execução no servidor precisa de mão humana**. Obrigatório antes de qualquer teste com dado real
 
 ### Fase 3 — Pagamento
 
 - [ ] Escolher gateway Pix (Mercado Pago, Asaas ou Efí — comparar taxa por transação)
-- [ ] **[Precisa de programação]** Integrar geração de cobrança + webhook de confirmação
+- [ ] Integração de cobrança + webhook de confirmação — **código pronto pela IA; execução no servidor precisa de mão humana**
 
 ### Fase 4 — Conectar ao site
 
-- [ ] **[Precisa de programação]** Alterar o formulário do Elementor pra mandar dados pro servidor, não só montar link `wa.me`
+- [ ] Alterar o formulário do Elementor pra mandar dados pro servidor, não só montar link `wa.me` — **essa parte é igual ao que fizemos hoje: a IA escreve, você cola na caixa do Elementor, sem precisar de servidor remoto pra essa etapa específica**
 
 ### Fase 5 — Portão de saída (obrigatório, não pula)
 
