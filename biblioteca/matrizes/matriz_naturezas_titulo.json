@@ -8,7 +8,8 @@
   "casos_especiais": "índices referem-se à lista 'casos' de biblioteca/matrizes/matriz_casos_especiais.json (ordem atual)",
   "aviso": "Material educacional PEI - Não é PTAM/CNAI nem laudo jurídico - Não substitui certidão oficial - Valide com advogado",
   "selo": "Proposta de Selo de Natureza Documental registrada em docs/ADR-004-PROPOSTA-Selo-Natureza.md - aguarda deliberação da Mesa (VIS-001 §11)",
-  "naturezas_especificas": "24 naturezas do Kenny conciliadas em biblioteca/matrizes/matriz_naturezas_especificas.json"
+  "naturezas_especificas": "24 naturezas do Kenny conciliadas em biblioteca/matrizes/matriz_naturezas_especificas.json",
+  "itbi_municipal": "biblioteca/matrizes/matriz_itbi_municipios_al.json (10 municípios, 9 conferidos em 23/09/2026)"
  },
  "naturezas": [
   {
@@ -83,7 +84,8 @@
        "norma": "STF RE 94.580/RS e CNJ Prov. 149/2023 art. 421, citados em ConJur 02/07/2026",
        "url": "https://www.conjur.com.br/2026-jul-02/itbi-na-usucapiao-problema-nao-e-incidencia-mas-como-enfrentar-cobranca-indevida/"
       }
-     ]
+     ],
+     "exemplo_municipal": "Maragogi (CTM LC 01/2021, art. 148, V): ITBI não incide na usucapião."
     },
     "iptu": {
      "texto": "O possuidor pode ser contribuinte do IPTU. Pagar o IPTU em seu nome ajuda a provar a posse.",
@@ -240,6 +242,10 @@
        "norma": "STF, ARE 1.294.969 (Tema 1124) - reexame reconhecido em 26/08/2022",
        "url": "https://portal.stf.jus.br/noticias/verNoticiaDetalhe.asp?idConteudo=493330&ori=1"
       }
+     ],
+     "exemplos_municipais": [
+      "Arapiraca: fato gerador na lavratura de contrato ou promessa de compra e venda (Lei 3.102/2015).",
+      "Maragogi (CTM art. 148, VII): não incide na promessa de compra e venda."
      ]
     },
     "iptu": {
@@ -404,7 +410,8 @@
      },
      {
       "norma": "Res. CNJ 35/2007, arts. 12-A e 12-B (incluídos pela Res. CNJ 571/2024)",
-      "url": "https://www.legisweb.com.br/legislacao/?id=463871"
+      "url": "https://atos.cnj.jus.br/files/original2309432024083066d251371bc21.pdf",
+      "conferido": "texto oficial CNJ, 24/09/2026"
      },
      {
       "norma": "docs/juridico/RES_571_2024_venda_imovel_inventario.md (base do Kenny)"
@@ -425,8 +432,9 @@
      "status": "PENDENTE - conferir lei municipal e estadual"
     },
     "itcmd": {
-     "texto": "Imposto estadual sobre a herança - alíquota e regras de Alagoas",
-     "status": "PENDENTE - conferir legislação da SEFAZ-AL (Etapa 3)"
+     "texto": "ITCD Alagoas: 4% (óbitos desde 01/04/2017), 2% (antes) e 2% nas doações; base = valor de mercado avaliado pela SEFAZ; prazo de 30 dias após emissão do DAR.",
+     "fonte": "SEFAZ-AL, FAQ ITCD (24/09/2026)",
+     "status": "lei estadual/artigo a identificar"
     },
     "iptu": "CND de IPTU exigida na escritura",
     "emolumentos": "escritura de inventário + registro da partilha - ligar à matriz_emolumentos_al.json - PENDENTE",
@@ -460,7 +468,7 @@
     1,
     3
    ],
-   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto; Res. CNJ 571/2024 via LegisWeb - reconferir em atos.cnj.jus.br) - aguarda revisão de Kenny",
+   "status": "PREENCHIDO v0.2 - Planalto + Res. CNJ 571/2024 reconferida no PDF OFICIAL do CNJ em 24/09/2026 - aguarda revisão de Kenny",
    "regras_da_cessao": [
     {
      "regra": "Cessão de direitos hereditários só vale por ESCRITURA PÚBLICA. Recibo/contrato particular de 'compra de herança' não serve.",
@@ -482,6 +490,11 @@
    "registro_de_leituras": {
     "tema": "CPC art. 610 diz que, havendo testamento ou incapaz, o inventário é judicial; a Res. CNJ 571/2024 passou a permitir escritura nesses casos, com condições.",
     "leitura": "Registrar as duas fontes lado a lado; na prática cartorária vale a Res. 571 com suas condições. Confirmação final com advogado/tabelião (Regra 4)."
+   },
+   "divergencia_doc_kenny": {
+    "arquivo": "docs/juridico/RES_571_2024_venda_imovel_inventario.md",
+    "achado": "O texto oficial do art. 11-A tem 6 incisos: I despesas discriminadas; II vinculação do preço; III sem indisponibilidade dos herdeiros/cônjuge; IV guias dos impostos apresentadas; V valores estimados de emolumentos e as serventias que orçaram; VI garantia do inventariante. A nota do Kenny não traz o inciso V e cita 'prazo máx. 1 ano', que não aparece no caput/incisos conferidos (pode estar em parágrafo - conferir).",
+    "status": "registrado, NÃO alterado - aguarda Kenny"
    }
   },
   {
@@ -489,25 +502,90 @@
    "nivel": 3,
    "nome": "Matrícula com vício",
    "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
-   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "como_reconhecer": {
+    "texto": "O imóvel está registrado, mas a matrícula não bate com a realidade: medidas ou área diferentes do terreno, confrontantes errados ou desatualizados, nome da rua antigo, nome/estado civil do dono errado, ou algum dado copiado errado do título.",
+    "pergunta_chave": "O que está escrito na matrícula (medidas, área, vizinhos, nome do dono) é igual ao que existe no terreno e nos documentos pessoais?"
+   },
+   "o_que_significa": {
+    "texto": "O registro existe, mas está impreciso. Enquanto não for corrigido, pode travar escritura, financiamento, desmembramento e georreferenciamento. Registro que 'não exprime a verdade' pode ser retificado; e registro nulo de pleno direito pode ser invalidado.",
+    "fontes": [
+     {
+      "norma": "CC art. 1.247",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     },
+     {
+      "norma": "Lei 6.015/73, art. 212",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     }
+    ]
+   },
    "caminho_ate_matricula_plena": {
     "previsto_no_mapa": "Retificação",
-    "base_citada_no_mapa": "não citada no mapa",
-    "status_conferencia": "pendente",
-    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "base_citada_no_mapa": "não citada no mapa (niveis.json antigo citava arts. 212/213 - confirmado)",
+    "status_conferencia": "conferido",
+    "passo_a_passo": [
+     "1. Tirar matrícula atualizada (inteiro teor) e comparar com o terreno e os documentos pessoais.",
+     "2. Erro simples: pedir a retificação direto no Cartório de Registro de Imóveis (art. 213, I).",
+     "3. Medida/área: contratar agrimensor/engenheiro (ART), colher assinatura dos confrontantes na planta e protocolar no cartório (art. 213, II).",
+     "4. Confrontante que não assinou é notificado (15 dias).",
+     "5. Retificação averbada → a matrícula volta a 'exprimir a verdade' e o imóvel pode seguir para PLENO/N4.",
+     "A via judicial continua possível (art. 212, caput e parágrafo único)."
+    ],
+    "fontes": [
+     {
+      "norma": "Lei 6.015/73, arts. 212 e 213",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     }
+    ]
    },
-   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "orgaos": [
+    "Cartório de Registro de Imóveis",
+    "Profissional habilitado com ART (medidas)",
+    "Prefeitura (documento oficial de logradouro)",
+    "Poder Judiciário (se houver disputa ou nulidade)"
+   ],
    "custos": {
-    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
-    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "itbi": "Retificação não é transmissão - não se aplica ITBI (CTN art. 35: fato gerador é transmissão/cessão onerosa). Leitura do Oráculo; confirmar se o município cobra algo",
+    "iptu": "Área corrigida pode alterar o cadastro do IPTU - conferir com a prefeitura",
+    "emolumentos": "erro simples: ato 203 (averbação sem valor); retificação de área: atos 205 (processamento) + 206 (averbação por faixa) - códigos TJAL conferidos 24/09/2026, valores a coletar",
+    "outros": "honorários do agrimensor/engenheiro (ART); advogado se judicial"
    },
-   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "riscos": [
+    {
+     "risco": "Comprar imóvel cuja área na matrícula é maior do que existe no chão (ou vice-versa): você paga por uma coisa e recebe outra."
+    },
+    {
+     "risco": "Confrontante que discorda pode transformar a retificação em processo judicial.",
+     "fonte": "Lei 6.015/73, art. 212 e 213 § 2º"
+    },
+    {
+     "risco": "Retificação de medida pode ser pré-requisito do georreferenciamento no rural (ver N6)."
+    }
+   ],
+   "quando_chamar_advogado": "Se algum confrontante discordar, se houver suspeita de nulidade do registro, ou se a diferença de área for grande.",
    "casos_especiais_relacionados": [
     11
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto) - aguarda revisão de Kenny",
+   "tipos_de_vicio": [
+    {
+     "tipo": "Erro simples (sem mexer em medidas)",
+     "exemplos": "erro de digitação ao copiar o título; atualização de confrontantes; novo nome da rua (com documento oficial); coordenadas georreferenciadas sem alterar medidas; conta matemática a partir das medidas já registradas; dados pessoais das partes (com documento oficial)",
+     "como": "o cartório corrige de ofício ou a pedido",
+     "fonte": "Lei 6.015/73, art. 213, I, 'a' a 'g'"
+    },
+    {
+     "tipo": "Mudança de medida ou área",
+     "exemplos": "a cerca não bate com a matrícula; área maior ou menor",
+     "como": "a pedido do interessado, com planta e memorial assinados por profissional com ART e pelos confrontantes; confrontante que não assinou é notificado para se manifestar em 15 dias",
+     "fonte": "Lei 6.015/73, art. 213, II e § 2º"
+    },
+    {
+     "tipo": "Nulidade de pleno direito do registro",
+     "exemplos": "registro feito com vício grave (ex.: título falso)",
+     "como": "provada a nulidade, o registro é invalidado; o juiz ouve os atingidos e pode bloquear a matrícula",
+     "fonte": "Lei 6.015/73, art. 214 e §§ 1º a 3º"
+    }
    ]
   },
   {
@@ -515,101 +593,345 @@
    "nivel": 3.5,
    "nome": "Loteamento irregular",
    "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
-   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "como_reconhecer": {
+    "texto": "O lote faz parte de um loteamento ou desmembramento que NÃO está registrado no Cartório de Registro de Imóveis (ou foi feito sem aprovação da Prefeitura). Sinais: não existe matrícula individual do lote; o contrato cita 'lote X, quadra Y' mas o cartório não encontra; a Prefeitura não reconhece o loteamento.",
+    "pergunta_chave": "O loteamento está registrado no cartório e o lote tem matrícula própria?"
+   },
+   "o_que_significa": {
+    "texto": "A lei PROÍBE vender ou prometer vender lote de loteamento não registrado. Quem compra nessa situação pode suspender o pagamento das parcelas e notificar o loteador para regularizar. Lotear sem autorização é crime. A saída coletiva é a REURB (Regularização Fundiária Urbana).",
+    "fontes": [
+     {
+      "norma": "Lei 6.766/79, art. 37 (vedação de venda)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm"
+     },
+     {
+      "norma": "Lei 6.766/79, art. 38 (comprador suspende pagamentos e notifica)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm"
+     },
+     {
+      "norma": "Lei 6.766/79, art. 50, I (crime)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm"
+     }
+    ]
+   },
    "caminho_ate_matricula_plena": {
     "previsto_no_mapa": "REURB-E",
     "base_citada_no_mapa": "não citada no mapa",
-    "status_conferencia": "pendente",
-    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "status_conferencia": "conferido",
+    "passo_a_passo": [
+     "1. Confirmar no cartório se o loteamento é registrado e se o lote tem matrícula.",
+     "2. Se não for: não pagar mais nada 'por fora' - a lei permite suspender as parcelas e notificar o loteador (depósito no Registro de Imóveis).",
+     "3. Procurar a Prefeitura sobre REURB do núcleo (S ou E).",
+     "4. Com a CRF registrada, cada lote ganha matrícula e o ocupante recebe o título → vai para N2 (título sem registro) ou PLENO (título registrado).",
+     "Se o loteamento for regular mas ainda em implantação, o caminho é o do loteador (registro do loteamento), não REURB."
+    ],
+    "fontes": [
+     {
+      "norma": "Lei 6.766/79, arts. 37-38",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm"
+     },
+     {
+      "norma": "Lei 13.465/2017, arts. 13 e 41",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13465.htm"
+     }
+    ]
    },
-   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "orgaos": [
+    "Cartório de Registro de Imóveis",
+    "Prefeitura (aprovação do loteamento / instauração da REURB)",
+    "Ministério Público (em loteamento clandestino)",
+    "Advogado"
+   ],
    "custos": {
-    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
-    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "itbi": "Depende do título final; na REURB-S há isenção de custas/emolumentos registrais (Lei 13.465, art. 13 §1º). ITBI - conferir lei municipal",
+    "iptu": "conferir cadastro municipal",
+    "emolumentos": "REURB-S: isentos (art. 13 §1º); REURB-E: tabela normal - ligar à matriz_emolumentos_al.json",
+    "outros": "projeto urbanístico e topografia (na REURB-E costumam ser custeados pelos interessados - conferir)"
    },
-   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "riscos": [
+    {
+     "risco": "Comprar lote de loteamento não registrado: a venda é proibida por lei.",
+     "fonte": "Lei 6.766/79, art. 37"
+    },
+    {
+     "risco": "O loteador pode vender o mesmo lote a mais de uma pessoa - sem matrícula, não há registro que dê prioridade."
+    },
+    {
+     "risco": "Área em APP, de risco ou pública pode ter REURB limitada ou negada - conferir com a Prefeitura."
+    }
+   ],
+   "quando_chamar_advogado": "Sempre que o loteamento não estiver registrado, principalmente para a notificação ao loteador e o depósito das parcelas (art. 38).",
    "casos_especiais_relacionados": [
     8
    ],
-   "observacao": "Caso especial 8 só confirma REURB-S; REURB-E ainda não confirmado"
+   "observacao": "REURB-E CONFIRMADA na Lei 13.465/2017, art. 13, II (23/09/2026). O caso especial 8 continua dizendo 'REURB-E não confirmado neste material' porque se referia ao CNNR-AL - registrar isso na próxima pauta.",
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto) - aguarda revisão de Kenny",
+   "reurb": {
+    "o_que_e": "Conjunto de medidas jurídicas, urbanísticas, ambientais e sociais para incorporar núcleos urbanos informais à cidade e titular os ocupantes.",
+    "nucleo_informal": "clandestino, irregular ou onde não foi possível titular os ocupantes",
+    "modalidades": [
+     {
+      "nome": "REURB-S (interesse social)",
+      "para": "núcleos ocupados predominantemente por população de baixa renda, declarados por ato do Executivo municipal",
+      "vantagem": "isenção de custas e emolumentos em atos registrais (art. 13, §1º)"
+     },
+     {
+      "nome": "REURB-E (interesse específico)",
+      "para": "núcleos ocupados por população que não se enquadra na REURB-S"
+     }
+    ],
+    "resultado": "CRF - Certidão de Regularização Fundiária (ato de aprovação que acompanha o projeto), levada a registro",
+    "fontes": [
+     {
+      "norma": "Lei 13.465/2017, arts. 9º, 11 (I e II), 13 (I e II, §1º) e 41",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13465.htm"
+     }
+    ]
+   }
   },
   {
    "id": "N4",
    "nivel": 4,
    "nome": "Matrícula OK com ônus",
    "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
-   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "como_reconhecer": {
+    "texto": "A matrícula está em nome de quem vende, mas tem 'ônus' anotados: hipoteca, alienação fiduciária, penhora, indisponibilidade (CNIB), usufruto, cláusula de inalienabilidade, citação de ação, promessa registrada em nome de outro. Aparecem como 'R.' ou 'AV.' na matrícula.",
+    "como_ler": "Cada ônus tem um número (ex.: AV.3). Ele só deixa de valer quando aparece OUTRA averbação dizendo 'cancelamento da AV.3'. Ônus sem averbação de cancelamento = ATIVO.",
+    "pergunta_chave": "Para cada ônus da matrícula, existe uma averbação posterior de cancelamento?"
+   },
+   "o_que_significa": {
+    "texto": "O dono é o dono, mas o imóvel carrega um peso. Pela 'concentração na matrícula', o que está anotado nela vale contra o comprador - e, em regra, o que NÃO está anotado não pode ser oposto a quem compra de boa-fé. Por isso a matrícula atualizada é o documento central.",
+    "fontes": [
+     {
+      "norma": "Lei 13.097/2015, art. 54, I a IV (citações, constrições, indisponibilidade e outros ônus averbados)",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13097.htm"
+     }
+    ]
+   },
    "caminho_ate_matricula_plena": {
-    "previsto_no_mapa": "CNIB, penhora - baixa/levantamento",
+    "previsto_no_mapa": "CNIB, Penhora",
     "base_citada_no_mapa": "não citada no mapa",
-    "status_conferencia": "pendente",
-    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "status_conferencia": "conferido",
+    "passo_a_passo": [
+     "1. Tirar matrícula atualizada (inteiro teor, validade de 30 dias para escritura - caso especial 4).",
+     "2. Listar cada ônus e procurar a averbação de cancelamento correspondente.",
+     "3. Para cada ônus ativo: obter o documento de baixa/levantamento de quem o criou (banco, juiz, órgão).",
+     "4. Averbar os cancelamentos no cartório.",
+     "5. Sem ônus ativo → PLENO."
+    ],
+    "fontes": [
+     {
+      "norma": "Lei 13.097/2015, art. 54",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13097.htm"
+     },
+     {
+      "norma": "Lei 6.015/73 (registro e averbação)",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     }
+    ]
    },
-   "orgaos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "orgaos": [
+    "Cartório de Registro de Imóveis",
+    "Banco/credor (baixa de garantia)",
+    "Poder Judiciário (penhora, indisponibilidade)",
+    "CNIB - Central Nacional de Indisponibilidade de Bens (consulta)"
+   ],
    "custos": {
-    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
-    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "itbi": "na venda normal, ITBI da tabela municipal (matriz_itbi_municipios_al.json)",
+    "iptu": "CND de IPTU",
+    "emolumentos": "averbação de cada cancelamento - ligar à matriz_emolumentos_al.json - PENDENTE",
+    "outros": "possível quitação da dívida que gerou o ônus"
    },
-   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "riscos": [
+    {
+     "risco": "Vendedor declara 'livre e desembaraçado' e a matrícula mostra o contrário.",
+     "exemplo": "padrão Vale Verde (contrato, cláusula 1ª §2º)"
+    },
+    {
+     "risco": "Pagar sinal alto antes da baixa dos ônus.",
+     "exemplo": "padrão Vale Verde: 81% na assinatura"
+    },
+    {
+     "risco": "Ônus antigo fora da matrícula atual (cadeia dominial) - ver caso especial 11."
+    }
+   ],
+   "quando_chamar_advogado": "Com qualquer penhora, indisponibilidade, ação averbada ou vendedor PJ em recuperação judicial/falência.",
    "casos_especiais_relacionados": [
     2,
     4,
     7,
     10,
+    11,
     15,
     16,
     17,
     18
-   ]
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto) - aguarda revisão de Kenny",
+   "tipos_de_onus": [
+    {
+     "onus": "Hipoteca / alienação fiduciária (financiamento)",
+     "caminho": "quitação + averbação de baixa, ou anuência do credor para transferir",
+     "casos_especiais": [
+      2,
+      4
+     ]
+    },
+    {
+     "onus": "Penhora / citação de ação / execução averbada",
+     "caminho": "levantamento judicial ou acordo; comprar com o ônus ativo = risco de perder o imóvel",
+     "casos_especiais": [
+      4,
+      10
+     ]
+    },
+    {
+     "onus": "Indisponibilidade (CNIB)",
+     "caminho": "cancelamento determinado por quem ordenou (juiz/órgão) e averbado; enquanto ativa, o imóvel NÃO pode ser vendido",
+     "exemplo": "padrão Vale Verde: 3 indisponibilidades sem cancelamento (AV.3, AV.22, AV.23)"
+    },
+    {
+     "onus": "Usufruto",
+     "caminho": "extinção/renúncia averbada, ou comprar só a nua-propriedade sabendo disso",
+     "casos_especiais": [
+      15
+     ]
+    },
+    {
+     "onus": "Inalienabilidade (doação/testamento)",
+     "caminho": "sub-rogação/autorização judicial",
+     "casos_especiais": [
+      17
+     ]
+    },
+    {
+     "onus": "Promessa registrada em nome de terceiro",
+     "caminho": "terceiro tem direito real à aquisição; resolver com ele primeiro",
+     "casos_especiais": [
+      16
+     ]
+    }
+   ],
+   "dono_empresa_em_recuperacao_judicial": {
+    "regra": "Após o pedido de recuperação judicial, a empresa não pode alienar ou onerar bens do ATIVO NÃO CIRCULANTE sem autorização do juiz (ouvido o Comitê de Credores), salvo o que o plano já autorizou.",
+    "fonte": "Lei 11.101/2005, art. 66",
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2004-2006/2005/lei/l11101.htm",
+    "nuance": "Para construtora, unidades à venda costumam ser estoque (ativo circulante) - então o art. 66 pode não se aplicar diretamente; mas indisponibilidades averbadas travam a venda de qualquer forma. Confirmar caso a caso com advogado.",
+    "correcao": "Corrige a afirmação genérica feita na análise do caso Vale Verde (23/09) de que toda venda de bem de empresa em RJ depende de autorização judicial."
+   }
   },
   {
    "id": "N5",
    "nivel": 5,
    "nome": "Terreno de marinha (SPU)",
    "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
-   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "como_reconhecer": {
+    "texto": "Imóvel na faixa de 33 m a partir da linha do preamar-médio de 1831, na costa, OU nas margens de rios e lagoas até onde a maré chega (oscilação de pelo menos 5 cm). Sinais: matrícula/escritura cita 'domínio útil', 'aforamento', 'ocupação', RIP ou laudêmio.",
+    "alerta_regional": "Na Rota dos Milagres (ex.: encontro do Rio Tatuamunha com o mar), terrenos à beira do rio podem estar na faixa de marinha se a maré chega até lá - conferir na SPU.",
+    "fontes": [
+     {
+      "norma": "Decreto-Lei 9.760/46, art. 2º e parágrafo único",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del9760.htm"
+     }
+    ]
+   },
+   "o_que_significa": {
+    "texto": "Terreno de marinha é da União. O particular pode ter o DOMÍNIO ÚTIL (aforamento) ou a OCUPAÇÃO inscrita - nunca a propriedade plena do terreno, e não pode usucapir bem público. Por isso N5 se COMBINA com o estágio (ex.: 'N2 · N5').",
+    "regimes": [
+     {
+      "regime": "Aforamento (foreiro)",
+      "paga": "foro anual de 0,6% do valor do domínio pleno",
+      "fonte": "DL 9.760/46, art. 101"
+     },
+     {
+      "regime": "Ocupação inscrita",
+      "paga": "taxa de ocupação anual de 2% do valor do domínio pleno do terreno, excluídas as benfeitorias",
+      "fonte": "DL 2.398/87, art. 1º"
+     }
+    ],
+    "fontes": [
+     {
+      "norma": "CC art. 102",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+     }
+    ]
+   },
    "caminho_ate_matricula_plena": {
-    "previsto_no_mapa": "Alodial/Foreiro/Ocupação/Misto/Acrescido - RIP, CAT, laudêmio",
-    "base_citada_no_mapa": "mapa cita laudêmio 5% - base de cálculo a conferir",
-    "status_conferencia": "pendente",
-    "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "previsto_no_mapa": "Alodial/Foreiro/Ocupação/Misto/Acrescido - RIP, CAT, Laudêmio 5%",
+    "status_conferencia": "laudêmio e certidão SPU conferidos; 'CAT 90 dias' NÃO conferido",
+    "passo_a_passo": [
+     "1. Consultar na SPU se há RIP e qual o regime.",
+     "2. Na venda, o VENDEDOR recolhe laudêmio de 5% sobre o valor atualizado do domínio pleno do TERRENO, excluídas as benfeitorias.",
+     "3. Obter certidão da SPU (laudêmio pago + transmitente em dia). Sem ela, cartório não lavra nem registra.",
+     "4. Escritura e registro; atualizar o cadastro na SPU."
+    ],
+    "fontes": [
+     {
+      "norma": "DL 2.398/87, art. 3º, caput e § 2º, I, 'a' e 'b'",
+      "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/del2398.htm"
+     }
+    ]
    },
-   "orgaos": "SPU (origem: matriz_casos_especiais, caso 6)",
+   "orgaos": [
+    "SPU",
+    "Tabelionato de Notas",
+    "Cartório de Registro de Imóveis",
+    "Prefeitura (ITBI)"
+   ],
    "custos": {
-    "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-    "emolumentos": "ligar a biblioteca/matrizes/matriz_emolumentos_al.json",
-    "outros": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
+    "laudemio": "5% do domínio pleno do terreno, sem benfeitorias - pago pelo vendedor",
+    "foro_ou_taxa": "0,6%/ano (aforamento) ou 2%/ano (ocupação)",
+    "itbi": "municipal, além do laudêmio - matriz_itbi_municipios_al.json",
+    "emolumentos": "tabela normal"
    },
-   "riscos": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "quando_chamar_advogado": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "riscos": [
+    {
+     "risco": "Comprar sem certidão da SPU: débitos e laudêmio travam a escritura.",
+     "fonte": "DL 2.398, art. 3º §2º"
+    },
+    {
+     "risco": "Terreno que é só 'ocupação' anunciado como propriedade plena."
+    },
+    {
+     "risco": "Não se usucape terreno de marinha.",
+     "fonte": "CC art. 102"
+    }
+   ],
+   "quando_chamar_advogado": "Débito na SPU, divergência de área na faixa, ou acrescido de marinha.",
    "casos_especiais_relacionados": [
     6
-   ]
+   ],
+   "status": "PREENCHIDO v0.2 - conferido em 23/09/2026 (Planalto) - aguarda revisão de Kenny",
+   "tipo_combinavel": true,
+   "numeros_do_niveis_json": {
+    "laudemio_5": "CONFERIDO",
+    "CAT_90d": "NÃO CONFERIDO - não usar"
+   }
   },
   {
    "id": "N6",
    "nivel": 6,
    "nome": "Rural",
    "origem": "docs/MAPA-COMPLETO-8-NIVEIS.md (Kenny Wilson)",
-   "como_reconhecer": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
-   "o_que_significa": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
+   "como_reconhecer": {
+    "texto": "Imóvel em zona rural, com CCIR (INCRA) e ITR (Receita): sítio, fazenda, chácara fora do perímetro urbano."
+   },
+   "o_que_significa": {
+    "texto": "Rural tem regras próprias além da matrícula: CCIR, ITR, CAR, georreferenciamento e FMP (se a área pode ser dividida). N6 se COMBINA com o estágio (ex.: 'N1 · N6' = sítio com contrato de gaveta)."
+   },
    "caminho_ate_matricula_plena": {
     "previsto_no_mapa": "CCIR, ITR 5 anos, CAR, Geo SIGEF, FMP",
     "base_citada_no_mapa": "biblioteca/matrizes/Matriz-Rural.json",
     "status_conferencia": "pendente",
     "passo_a_passo": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)"
    },
-   "orgaos": "INCRA, Receita Federal, CAR (origem: Matriz-Rural.json)",
+   "orgaos": [
+    "INCRA (CCIR, SIGEF)",
+    "Receita Federal (ITR, CND, NIRF)",
+    "CAR / IMA-AL",
+    "Cartório de Registro de Imóveis",
+    "Profissional habilitado (geo)"
+   ],
    "custos": {
     "itbi": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
     "iptu": "PENDENTE - conferir na fonte primária antes de preencher (Regra 5)",
@@ -623,7 +945,29 @@
     12,
     13
    ],
-   "observacao": "Conflito aberto na AUD-2026-09-23 sobre o Decreto 12.689/2025 - decisão da Mesa"
+   "observacao": "Conflito aberto na AUD-2026-09-23 sobre o Decreto 12.689/2025 - decisão da Mesa",
+   "status": "PREENCHIDO v0.2 - checklist da Matriz-Rural.json (Kenny); georreferenciamento conferido no texto do Decreto 12.689/2025 (Planalto, 23/09/2026)",
+   "tipo_combinavel": true,
+   "checklist": "biblioteca/matrizes/Matriz-Rural.json + casos especiais 9, 12 e 13",
+   "fmp": {
+    "texto": "MF e FMP dos 102 municípios de AL estão em alagoas.json.",
+    "fonte_legal": "PENDENTE conferir artigo da Lei 5.868/72"
+   },
+   "georreferenciamento": {
+    "regra_conferida": "Decreto 12.689/2025 alterou o art. 10 do Decreto 4.449/2002: identificação georreferenciada exigida em desmembramento, parcelamento, remembramento e qualquer transferência a partir de 21/10/2029, e REVOGOU os incisos I a VII (escalonamento por área) - prazo ÚNICO para TODAS as áreas.",
+    "atencao": "Adiou a CERTIFICAÇÃO; a descrição precisa continua exigida pela lei (ConJur 28/10/2025).",
+    "fontes": [
+     {
+      "norma": "Decreto 12.689/2025, arts. 1º e 2º",
+      "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/d12689.htm"
+     },
+     {
+      "norma": "ConJur 28/10/2025",
+      "url": "https://conjur.com.br/2025-out-28/georreferenciamento-nao-e-certificacao-o-que-o-decreto-12-689-realmente-prorrogou/"
+     }
+    ],
+    "conflito_com_matriz_rural": "Matriz-Rural.json diz 'suspendeu por 4 anos para imóveis menores'; o decreto mostra prazo único para todas as áreas. Matriz-Rural NÃO alterada - aguarda aprovação de Kenny."
+   }
   }
  ],
  "transversais": {

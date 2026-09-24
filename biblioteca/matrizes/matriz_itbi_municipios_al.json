@@ -1,0 +1,109 @@
+{
+ "_meta": {
+  "titulo": "ITBI por município - Alagoas",
+  "trilha": "A",
+  "conferido_em": "2026-09-23",
+  "regra": "Município fora desta lista = 'não confirmado' (sem alíquota presumida). Alíquota municipal pode mudar: reconferir antes de orientar cliente.",
+  "observacoes": [
+   "LC 227/2026 alterou o ITBI no CTN (cessão onerosa como fato gerador) - leis municipais anteriores podem ser reinterpretadas; ver LAC-TRIB.",
+   "Arapiraca considera fato gerador a promessa de compra e venda; Maragogi declara não incidência na promessa e na usucapião - regras municipais divergem, conferir sempre."
+  ]
+ },
+ "municipios": [
+  {
+   "municipio": "Maceió",
+   "lei": "Lei nº 6.685/2017 (Código Tributário)",
+   "artigo": "art. 162",
+   "aliquota_geral": "3,0%",
+   "sfh": "redução de 2/3 do imposto, só na parte financiada (≈1% sobre o financiado)",
+   "outros": "sentença judicial: desconto de 1/3 do imposto (artigo a identificar)",
+   "fonte": "leis.org (compilação) - https://leis.org/municipais/al/maceio/lei/lei-ordinaria/2017/6685/",
+   "status": "CONFERIDO em fonte secundária - reconferir no Diário Oficial / SEFAZ Maceió",
+   "divergencia_widget": "widget dizia SFH 0,5% financiado + 2% restante; o CTM compilado diz 3% com redução de 2/3 na parte financiada"
+  },
+  {
+   "municipio": "Arapiraca",
+   "lei": "Código Tributário atualizado",
+   "artigo": "art. 212 (numeração a confirmar - PDF em colunas)",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% sobre o financiado + 2,5% sobre o restante",
+   "outros": "fato gerador considerado ocorrido na lavratura de contrato ou PROMESSA de compra e venda (acrescido pela Lei 3.102/2015) - impacto em N1",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO (texto); artigo a confirmar"
+  },
+  {
+   "municipio": "Marechal Deodoro",
+   "lei": "Lei nº 1.216/2017 (CTM)",
+   "artigo": "art. 152",
+   "aliquota_geral": "2% se o boleto for pedido em até 30 dias da lavratura/trânsito em julgado; 3% depois",
+   "sfh": "Minha Casa Minha Vida: 0,5% sobre o valor financiado (parágrafo único)",
+   "outros": "imóvel rural: base mínima de R$ 15.000,00/ha (art. 151 §2º)",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario (PDF escaneado, lido por OCR)",
+   "status": "CONFERIDO (OCR) - confere com o widget"
+  },
+  {
+   "municipio": "Pão de Açúcar",
+   "lei": "Lei nº 601/2021 (CTM)",
+   "artigo": "art. 211",
+   "aliquota_geral": "3%",
+   "sfh": "não prevista",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO - confere com o widget"
+  },
+  {
+   "municipio": "Japaratinga",
+   "lei": "Lei nº 558/2017 (CTM)",
+   "artigo": "art. 212",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% financiado + 2,5% restante",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO - confere com o widget"
+  },
+  {
+   "municipio": "Rio Largo",
+   "lei": "Lei nº 1.776/2017 (CTM)",
+   "artigo": "art. 212",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% financiado + 2,5% restante",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario (PDF escaneado, lido por OCR)",
+   "status": "CONFERIDO (OCR) - confere com o widget"
+  },
+  {
+   "municipio": "São Miguel dos Milagres",
+   "lei": "Lei nº 509/2017 (CTM)",
+   "artigo": "art. 212",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% financiado + 3% restante",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO - confere com o widget"
+  },
+  {
+   "municipio": "Passo de Camaragibe",
+   "lei": "Lei Complementar nº 01/2017 (CTM)",
+   "artigo": "art. 221",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% financiado + 2,5% restante",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO - confere com o widget"
+  },
+  {
+   "municipio": "Roteiro",
+   "lei": "Lei nº 438/2025 (CTM)",
+   "artigo": "art. 56",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% financiado + 2% restante",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
+   "status": "CONFERIDO - NOVO (não estava no widget)"
+  },
+  {
+   "municipio": "Maragogi",
+   "lei": "LC nº 001/2021 (CTM) remete a lei específica do ITBI",
+   "artigo": "—",
+   "aliquota_geral": "NÃO CONFIRMADA",
+   "sfh": "NÃO CONFIRMADA",
+   "outros": "CTM art. 148: ITBI NÃO incide na usucapião (V) nem na promessa de compra e venda (VII)",
+   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario + https://transparencia.maragogi.al.gov.br (CTM)",
+   "status": "PENDENTE - widget cita 'Lei 741/2021, art. 18' (2%); essa lei não foi localizada. Não usar 2% até conferir"
+  }
+ ]
+}
