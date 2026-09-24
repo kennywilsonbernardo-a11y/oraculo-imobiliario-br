@@ -1,0 +1,156 @@
+<title>Calculadora do Caminho</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F3F4F7; --paper:#FFFFFF; --ink:#16223A; --muted:#5C6780; --line:#D9DDE6;
+  --gold:#A9822F; --gold-soft:#F4ECDA; --warn:#9A5B12; --warn-soft:#FBF1E2; --ok:#2F6B4F;
+  --serif:"Fraunces", Georgia, serif; --sans:"IBM Plex Sans", system-ui, sans-serif; --mono:"IBM Plex Mono", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0E1524; --paper:#151E31; --ink:#E8ECF4; --muted:#9AA6BF; --line:#27324A;
+  --gold:#D4AE5C; --gold-soft:#2A2517; --warn:#E3A45A; --warn-soft:#2B2014; --ok:#7CC4A0; color-scheme:dark; } }
+:root[data-theme="dark"]{
+  --bg:#0E1524; --paper:#151E31; --ink:#E8ECF4; --muted:#9AA6BF; --line:#27324A;
+  --gold:#D4AE5C; --gold-soft:#2A2517; --warn:#E3A45A; --warn-soft:#2B2014; --ok:#7CC4A0; color-scheme:dark; }
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:16px;padding-block:28px 48px;display:grid;gap:22px}
+header .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--serif);font-weight:650;font-size:clamp(28px,4.5vw,40px);line-height:1.1;margin:6px 0 8px;text-wrap:balance}
+header p{margin:0;color:var(--muted);max-width:64ch}
+.grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:22px;align-items:start}
+@media (max-width:820px){.grid{grid-template-columns:1fr}}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;display:grid;gap:16px}
+label{display:grid;gap:6px;font-weight:500;font-size:14px}
+.hint{font-weight:400;color:var(--muted);font-size:13px}
+select,input{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:7px;padding:10px 12px;width:100%}
+select:focus,input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:420px){.row2{grid-template-columns:1fr}}
+.check{display:flex;gap:10px;align-items:center;font-weight:400}
+.check input{width:auto}
+.guia h2{font-family:var(--serif);font-weight:500;font-size:20px;margin:0}
+.nat{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;background:var(--gold-soft);color:var(--ink);border:1px solid var(--gold);border-radius:999px;padding:3px 12px;justify-self:start}
+.lines{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:600;padding:6px 8px;border-bottom:1px solid var(--line)}
+td{padding:9px 8px;border-bottom:1px dashed var(--line);vertical-align:top}
+td.code{font-family:var(--mono);color:var(--gold);white-space:nowrap}
+td.v{text-align:right;font-family:var(--mono);white-space:nowrap}
+td small{display:block;color:var(--muted);font-size:12px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:2px solid var(--ink);padding-top:12px;gap:12px;flex-wrap:wrap}
+.total b{font-family:var(--serif);font-size:30px;font-weight:650;font-variant-numeric:tabular-nums}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 12px;border-radius:0 6px 6px 0;font-size:13.5px}
+.others{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.pei{font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:12px}
+a{color:var(--gold)}
+@media (prefers-reduced-motion:no-preference){ .total b{transition:color .2s} }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">KW Oráculo Imobiliário · Alagoas</div>
+    <h1>Calculadora do Caminho</h1>
+    <p>Escolha a situação do documento do imóvel, a cidade e o valor. O Oráculo lista os atos de cartório que esse caminho exige e estima quanto você vai gastar até a matrícula ficar em seu nome.</p>
+  </header>
+
+  <div class="grid">
+    <form class="panel" id="f" autocomplete="off">
+      <label for="cam">Situação do documento
+        <select id="cam"></select>
+        <span class="hint" id="camdesc"></span>
+      </label>
+      <label for="mun">Município do imóvel
+        <select id="mun"></select>
+      </label>
+      <div class="row2">
+        <label for="val">Valor do imóvel (R$)
+          <input id="val" inputmode="numeric" value="300.000">
+        </label>
+        <label for="onus" id="lonus">Ônus a cancelar
+          <input id="onus" type="number" min="1" max="20" value="1">
+        </label>
+      </div>
+      <div class="row2">
+        <label class="check" for="mar"><input id="mar" type="checkbox"> Terreno de marinha (N5)</label>
+        <label class="check" for="rur"><input id="rur" type="checkbox"> Imóvel rural (N6)</label>
+      </div>
+      <label for="ter" id="lter" hidden>Valor só do terreno, sem construção (R$)
+        <input id="ter" inputmode="numeric" value="120.000">
+      </label>
+      <div class="row2">
+        <label class="check" for="iss"><input id="iss" type="checkbox" checked> Incluir ISS de 5%</label>
+        <label class="check" for="md30" id="lmd30" hidden><input id="md30" type="checkbox" checked> Pedir o ITBI em até 30 dias</label>
+      </div>
+    </form>
+
+    <section class="panel guia" aria-live="polite">
+      <h2>Estimativa de custos</h2>
+      <span class="nat" id="selo"></span>
+      <div class="lines"><table>
+        <thead><tr><th>Ato</th><th>Descrição</th><th style="text-align:right">Valor</th></tr></thead>
+        <tbody id="tb"></tbody>
+      </table></div>
+      <div class="total"><span>Total estimado</span><b id="tot"></b></div>
+      <div class="note" id="alert" hidden></div>
+      <div>
+        <strong style="font-size:14px">Outros custos a considerar (fora do total)</strong>
+        <ul class="others" id="oth"></ul>
+      </div>
+      <p class="pei">Estimativa educativa (PEI). Não é orçamento de cartório, PTAM nem parecer jurídico. Emolumentos pela <span id="lei"></span>, tabela coletada do simulador do TJAL em <span id="col"></span>; os valores são reajustados todo janeiro. Confirme no <a href="https://emolumentos.tjal.jus.br/" target="_blank" rel="noopener">simulador oficial do TJAL</a> e com a Prefeitura.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+const D = {"faixas": [{"ate": 2500.0, "ve": 178.62, "tsnr": 46.44, "total_sem_iss": 225.06, "iss_5pct": 8.93, "total_com_iss": 233.99}, {"ate": 5000.0, "ve": 257.21, "tsnr": 66.87, "total_sem_iss": 324.08, "iss_5pct": 12.86, "total_com_iss": 336.94}, {"ate": 7500.0, "ve": 436.86, "tsnr": 113.58, "total_sem_iss": 550.44, "iss_5pct": 21.84, "total_com_iss": 572.28}, {"ate": 15000.0, "ve": 624.12, "tsnr": 162.27, "total_sem_iss": 786.39, "iss_5pct": 31.21, "total_com_iss": 817.6}, {"ate": 25000.0, "ve": 873.8, "tsnr": 227.19, "total_sem_iss": 1100.99, "iss_5pct": 43.69, "total_com_iss": 1144.68}, {"ate": 35000.0, "ve": 1092.27, "tsnr": 283.99, "total_sem_iss": 1376.26, "iss_5pct": 54.61, "total_com_iss": 1430.87}, {"ate": 45000.0, "ve": 1341.95, "tsnr": 348.91, "total_sem_iss": 1690.86, "iss_5pct": 67.1, "total_com_iss": 1757.96}, {"ate": 60000.0, "ve": 1716.47, "tsnr": 446.28, "total_sem_iss": 2162.75, "iss_5pct": 85.82, "total_com_iss": 2248.57}, {"ate": 75000.0, "ve": 2090.99, "tsnr": 543.66, "total_sem_iss": 2634.65, "iss_5pct": 104.55, "total_com_iss": 2739.2}, {"ate": 90000.0, "ve": 2434.3, "tsnr": 632.92, "total_sem_iss": 3067.22, "iss_5pct": 121.72, "total_com_iss": 3188.94}, {"ate": 120000.0, "ve": 3183.34, "tsnr": 827.67, "total_sem_iss": 4011.01, "iss_5pct": 159.17, "total_com_iss": 4170.18}, {"ate": 150000.0, "ve": 3901.17, "tsnr": 1014.3, "total_sem_iss": 4915.47, "iss_5pct": 195.06, "total_com_iss": 5110.53}, {"ate": 200000.0, "ve": 4494.16, "tsnr": 1168.48, "total_sem_iss": 5662.64, "iss_5pct": 224.71, "total_com_iss": 5887.35}, {"ate": 250000.0, "ve": 4900.16, "tsnr": 1274.04, "total_sem_iss": 6174.2, "iss_5pct": 245.01, "total_com_iss": 6419.21}, {"ate": 300000.0, "ve": 5306.11, "tsnr": 1379.59, "total_sem_iss": 6685.7, "iss_5pct": 265.31, "total_com_iss": 6951.01}, {"ate": 450000.0, "ve": 5712.11, "tsnr": 1485.15, "total_sem_iss": 7197.26, "iss_5pct": 285.61, "total_com_iss": 7482.87}, {"ate": 600000.0, "ve": 6118.11, "tsnr": 1590.71, "total_sem_iss": 7708.82, "iss_5pct": 305.91, "total_com_iss": 8014.73}, {"ate": 750000.0, "ve": 6524.11, "tsnr": 1696.27, "total_sem_iss": 8220.38, "iss_5pct": 326.21, "total_com_iss": 8546.59}, {"ate": 1000000.0, "ve": 6930.11, "tsnr": 1801.83, "total_sem_iss": 8731.94, "iss_5pct": 346.51, "total_com_iss": 9078.45}, {"ate": 1500000.0, "ve": 7539.67, "tsnr": 1960.31, "total_sem_iss": 9499.98, "iss_5pct": 376.98, "total_com_iss": 9876.96}, {"ate": 2000000.0, "ve": 8148.11, "tsnr": 2118.51, "total_sem_iss": 10266.62, "iss_5pct": 407.41, "total_com_iss": 10674.03}, {"ate": 4000000.0, "ve": 8960.11, "tsnr": 2329.63, "total_sem_iss": 11289.74, "iss_5pct": 448.01, "total_com_iss": 11737.75}, {"ate": 6000000.0, "ve": 9772.11, "tsnr": 2540.75, "total_sem_iss": 12312.86, "iss_5pct": 488.61, "total_com_iss": 12801.47}, {"ate": 8000000.0, "ve": 10584.11, "tsnr": 2751.87, "total_sem_iss": 13335.98, "iss_5pct": 529.21, "total_com_iss": 13865.19}, {"ate": 10000000.0, "ve": 11396.11, "tsnr": 2962.99, "total_sem_iss": 14359.1, "iss_5pct": 569.81, "total_com_iss": 14928.91}, {"ate": null, "ve": 12208.11, "tsnr": 3174.11, "total_sem_iss": 15382.22, "iss_5pct": 610.41, "total_com_iss": 15992.63}], "atos": {"200": {"nome": "Registro - Com Valor Declarado", "total_com_iss": null, "total_sem_iss": null}, "201": {"nome": "Registro - Sem Valor Declarado (Livro 03)", "total_com_iss": 142.05, "total_sem_iss": 136.63}, "202": {"nome": "Averbação - Com Valor Declarado e Construção", "total_com_iss": null, "total_sem_iss": null}, "203": {"nome": "Averbação - Sem Valor Declarado", "total_com_iss": 142.05, "total_sem_iss": 136.63}, "223": {"nome": "Certidão de Inteiro Teor / Certidão de Ônus / Busca por CPF ou imóvel", "total_com_iss": 116.76, "total_sem_iss": 112.3}, "224": {"nome": "Certidão da Situação Jurídica do Imóvel", "total_com_iss": 181.12, "total_sem_iss": 174.21}, "228": {"nome": "Alienação Fiduciária / Hipoteca / Patrimônio de Afetação / Cédula de Crédito Imobiliário", "total_com_iss": null, "total_sem_iss": null}, "229": {"nome": "Prenotação", "total_com_iss": 90.8, "total_sem_iss": 87.33}, "231": {"nome": "Abertura de Matrícula", "total_com_iss": 42.67, "total_sem_iss": 41.04}, "221": {"nome": "Convenção de Condomínio (1 a 15 unidades, mínimo)", "total_com_iss": 426.59, "total_sem_iss": 410.31}, "219": {"nome": "Registro de Memorial de Incorporação / Instituição de Condomínio (até 10 unidades)", "total_com_iss": 948.18, "total_sem_iss": 911.99}, "207-209": {"nome": "Adjudicação Compulsória Extrajudicial (processamento + deferimento + registro)", "total_com_iss": null, "total_sem_iss": null}, "214-216": {"nome": "Usucapião Extrajudicial (processamento + deferimento + registro)", "total_com_iss": null, "total_sem_iss": null}, "210-213": {"nome": "Execução Extrajudicial de Garantias (alienação fiduciária) - intimação, notificação, consolidação, averbação", "total_com_iss": null, "total_sem_iss": null}, "242": {"nome": "Reconhecimento de firma por autenticidade", "total_com_iss": 12.43, "total_sem_iss": 11.96}, "243": {"nome": "Reconhecimento de firma por semelhança / sinal público", "total_com_iss": 9.5, "total_sem_iss": 9.14}, "246": {"nome": "Procuração - poderes para o foro em geral", "total_com_iss": 59.29, "total_sem_iss": 57.03}, "247": {"nome": "Procuração - sem valor econômico", "total_com_iss": 88.67, "total_sem_iss": 85.29}, "248": {"nome": "Procuração - com valor econômico", "total_com_iss": 177.35, "total_sem_iss": 170.58}, "249": {"nome": "Procuração em causa própria", "total_com_iss": null, "total_sem_iss": null}, "250": {"nome": "Procuração - por outorgante a mais", "total_com_iss": 6.25, "total_sem_iss": 6.01}, "251": {"nome": "Averbação de revogação ou substabelecimento de procuração", "total_com_iss": 31.82, "total_sem_iss": 30.61}, "258": {"nome": "Escritura Pública - Sem conteúdo financeiro (inclusive aditamentos)", "total_com_iss": 185.98, "total_sem_iss": 178.88}, "259": {"nome": "Escritura Pública - Com conteúdo financeiro (valor declarado, inclui 1º traslado)", "total_com_iss": null, "total_sem_iss": null}, "260": {"nome": "Escritura de Divórcio/Separação/Inventário/Partilha - sem bens", "total_com_iss": 257.18, "total_sem_iss": 247.36}, "261": {"nome": "Escritura de Divórcio/Separação/Inventário/Partilha - com bens (valor global)", "total_com_iss": null, "total_sem_iss": null}, "257": {"nome": "Ata notarial constitutiva (usucapião, adjudicação compulsória, prova de transmissão)", "total_com_iss": null, "total_sem_iss": null}, "255-256": {"nome": "Ata notarial - 1ª folha / página excedente", "total_com_iss": null, "total_sem_iss": null}, "264": {"nome": "Certidão ou traslado (a partir da 2ª via)", "total_com_iss": 58.1, "total_sem_iss": 55.88}, "252-254": {"nome": "Testamentos (público com bens / sem bens / aprovação de cerrado)", "total_com_iss": null, "total_sem_iss": null}, "241": {"nome": "Autenticação (por documento ou página)", "total_com_iss": 9.5, "total_sem_iss": 9.14}, "266-267": {"nome": "Diligência para coleta de assinatura (padrão / acima de 10km)", "total_com_iss": null, "total_sem_iss": null}}, "itbi": {"Maceió": {"g": 0.03, "sfh": "redução de 2/3 do imposto na parte financiada", "conf": "fonte secundária (leis.org)", "lei": "Lei nº 6.685/2017 (Código Tributário), art. 162"}, "Arapiraca": {"g": 0.03, "sfh": "0,5% financiado + 2,5% restante", "lei": "Código Tributário atualizado, art. 212 (numeração a confirmar - PDF em colunas)"}, "Marechal Deodoro": {"g": 0.03, "g30": 0.02, "sfh": "MCMV 0,5% sobre o financiado", "lei": "Lei nº 1.216/2017 (CTM), art. 152"}, "Pão de Açúcar": {"g": 0.03, "sfh": "não prevista", "lei": "Lei nº 601/2021 (CTM), art. 211"}, "Japaratinga": {"g": 0.03, "sfh": "0,5% financiado + 2,5% restante", "lei": "Lei nº 558/2017 (CTM), art. 212"}, "Rio Largo": {"g": 0.03, "sfh": "0,5% financiado + 2,5% restante", "lei": "Lei nº 1.776/2017 (CTM), art. 212"}, "São Miguel dos Milagres": {"g": 0.03, "sfh": "0,5% financiado + 3% restante", "lei": "Lei nº 509/2017 (CTM), art. 212"}, "Passo de Camaragibe": {"g": 0.03, "sfh": "0,5% financiado + 2,5% restante", "lei": "Lei Complementar nº 01/2017 (CTM), art. 221"}, "Roteiro": {"g": 0.02, "sfh": "0,5% financiado + 2% restante", "lei": "Lei nº 438/2025 (CTM), art. 56"}}, "mapa": {"PLENO": {"descricao": "Compra e venda de imóvel registrado e sem ônus", "atos": [{"codigo": "223", "qtd": 1, "obs": "certidão de ônus/inteiro teor"}, {"codigo": "259", "faixa_mult": 1.0, "obs": "escritura com valor declarado"}, {"codigo": "200", "faixa_mult": 1.0, "obs": "registro da escritura"}], "itbi": true}, "N0": {"descricao": "Usucapião extrajudicial", "atos": [{"codigo": "257", "faixa_mult": 1.0, "obs": "ata notarial de tempo de posse"}, {"codigo": "214-216", "faixa_mult": 2.0, "obs": "processamento 50% + deferimento 50% + registro 100%"}, {"codigo": "231", "qtd": 1, "obs": "abertura de matrícula (se necessário)"}, {"codigo": "223", "qtd": 1}], "itbi": false, "itbi_obs": "Em regra não incide (aquisição originária); há municípios que cobram - conferir", "outros": ["honorários de advogado (obrigatório)", "planta e memorial com ART", "Notificação em usucapião (ato 235 do TJAL) por confrontante/titular a notificar - valor não coletado"]}, "N1_escritura": {"descricao": "Gaveta → escritura com o dono", "atos": [{"codigo": "223", "qtd": 1}, {"codigo": "259", "faixa_mult": 1.0}, {"codigo": "200", "faixa_mult": 1.0}], "itbi": true}, "N1_adjudicacao": {"descricao": "Gaveta → adjudicação compulsória extrajudicial", "atos": [{"codigo": "257", "faixa_mult": 1.0, "obs": "ata notarial com prova do pagamento"}, {"codigo": "207-209", "faixa_mult": 2.0, "obs": "processamento 50% + deferimento 50% + registro 100%"}, {"codigo": "223", "qtd": 1}], "itbi": true, "itbi_obs": "ITBI pago é documento obrigatório (Lei 6.015, art. 216-B, V)", "outros": ["honorários de advogado (obrigatório)"]}, "N2": {"descricao": "Escritura sem registro → registrar", "atos": [{"codigo": "223", "qtd": 1}, {"codigo": "200", "faixa_mult": 1.0}], "itbi": "se_nao_pago"}, "N2.5": {"descricao": "Herança → inventário extrajudicial + registro da partilha", "atos": [{"codigo": "261", "faixa_mult": 1.0, "obs": "escritura de inventário (valor global)"}, {"codigo": "200", "faixa_mult": 1.0, "obs": "registro da partilha"}, {"codigo": "223", "qtd": 1}], "itbi": false, "itbi_obs": "Herança paga ITCD (estadual), não ITBI. SEFAZ-AL: 4% para óbitos a partir de 01/04/2017 (2% antes); doação 2%. Base = valor de mercado avaliado pela SEFAZ.", "outros": ["ITCMD (SEFAZ-AL) - pendente", "honorários de advogado (obrigatório)"], "itcd": {"obito_desde_2017_04_01": 0.04, "obito_antes": 0.02, "doacao": 0.02, "fonte": "SEFAZ-AL, FAQ do ITCD - https://www.sefaz.al.gov.br/itcd/itcd-faq (consultado em 24/09/2026)", "status": "fonte oficial institucional; lei estadual e artigo a identificar; atenção à progressividade exigida pela EC 132/2023"}}, "N3": {"descricao": "Retificação de matrícula", "atos": [{"codigo": "203", "qtd": 1, "obs": "ERRO SIMPLES (art. 213, I): averbação sem valor declarado"}, {"codigo": "223", "qtd": 1}], "itbi": false, "outros": ["agrimensor/engenheiro com ART (se mudar medida)"], "retificacao_de_area": {"atos": ["205 - Retificações de Área - Processamento", "206 - Retificações de Área - Averbação (por faixa de valor)"], "status": "códigos conferidos na lista do TJAL em 24/09/2026; VALORES ainda não coletados na matriz de emolumentos - calculadora não soma"}}, "N3.5": {"descricao": "Loteamento irregular → REURB", "atos": [], "itbi": false, "itbi_obs": "REURB-S: isenção de custas e emolumentos registrais (Lei 13.465, art. 13 §1º); REURB-E: estimar após definição do projeto", "outros": ["projeto urbanístico e topografia"]}, "N4": {"descricao": "Baixa de ônus + compra e venda", "atos": [{"codigo": "203", "qtd_por_onus": 1, "obs": "averbação de cancelamento de cada ônus"}, {"codigo": "223", "qtd": 1}, {"codigo": "259", "faixa_mult": 1.0}, {"codigo": "200", "faixa_mult": 1.0}], "itbi": true, "outros": ["quitação da dívida que gerou o ônus"]}, "N5": {"descricao": "Marinha: + laudêmio", "soma_com": "estagio", "laudemio": "5% do valor do terreno (sem benfeitorias), pago pelo vendedor", "outros": ["certidão SPU; débitos de foro (0,6%/ano) ou taxa (2%/ano)"]}, "N6": {"descricao": "Rural", "soma_com": "estagio", "outros": ["georreferenciamento (profissional)", "CCIR/ITR em dia"]}}, "lei": "Lei nº 9.778/2025", "coleta": "2026-08-28"};
+const NOMES = {PLENO:"Matrícula em nome do vendedor, sem ônus (compra e venda)",N0:"N0 · Só a posse, sem documento (usucapião)",N1_escritura:"N1 · Contrato de gaveta, dono assina a escritura",N1_adjudicacao:"N1 · Contrato de gaveta, dono não assina (adjudicação)",N2:"N2 · Escritura sem registro",["N2.5"]:"N2.5 · Herança sem partilha (inventário)",N3:"N3 · Matrícula com erro (retificação)",["N3.5"]:"N3.5 · Loteamento irregular (REURB)",N4:"N4 · Matrícula com ônus (baixa + compra)"};
+const $=id=>document.getElementById(id);
+const brl=n=>n.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+const num=s=>Number(String(s).replace(/\./g,"").replace(",","."))||0;
+Object.keys(NOMES).forEach(k=>{const o=document.createElement("option");o.value=k;o.textContent=NOMES[k];$("cam").append(o)});
+Object.keys(D.itbi).concat(["Outro município"]).forEach(m=>{const o=document.createElement("option");o.value=m;o.textContent=m;$("mun").append(o)});
+$("cam").value="N2"; $("mun").value="Maceió";
+$("lei").textContent=D.lei; $("col").textContent=D.coleta.split("-").reverse().join("/");
+const faixa=v=>D.faixas.find(f=>f.ate===null||v<=f.ate);
+function calc(){
+  const c=$("cam").value, m=D.mapa[c], v=num($("val").value), iss=$("iss").checked, key=iss?"total_com_iss":"total_sem_iss";
+  const mun=$("mun").value, r=D.itbi[mun];
+  $("camdesc").textContent=m.descricao; $("lonus").hidden=c!=="N4";
+  $("lter").hidden=!$("mar").checked; $("lmd30").hidden=mun!=="Marechal Deodoro";
+  const rows=[], alerts=[], oth=[...(m.outros||[])]; let t=0;
+  (m.atos||[]).forEach(a=>{
+    let val, desc=(D.atos[a.codigo]||{}).nome||a.codigo;
+    if(a.faixa_mult!==undefined){ val=faixa(v)[key]*a.faixa_mult; }
+    else { const q=a.qtd_por_onus?Math.max(1,num($("onus").value)):(a.qtd||1); val=D.atos[a.codigo][key]*q; if(q>1) desc+=` × ${q}`; }
+    t+=val; rows.push([a.codigo,desc,a.obs||"",val]);
+  });
+  const itbiOn = m.itbi===true || m.itbi==="se_nao_pago";
+  if(itbiOn){
+    if(r){ let al=r.g; if(mun==="Marechal Deodoro"&&$("md30").checked) al=r.g30;
+      const val=v*al; t+=val; rows.push(["ITBI",`ITBI ${mun} · ${(al*100).toLocaleString("pt-BR")}%`,(m.itbi==="se_nao_pago"?"só se não foi pago na escritura · ":"")+(r.lei||"")+(r.conf?" · "+r.conf:""),val]);
+      if(r.sfh) oth.push(`Financiamento (SFH) em ${mun}: ${r.sfh}.`);
+    } else alerts.push(`ITBI de ${mun}: alíquota não confirmada pelo Oráculo. Consulte a lei municipal antes de orçar (não somado ao total).`);
+  }
+  if(m.itbi_obs) alerts.push(m.itbi_obs);
+  if(m.itcd){const it=v*m.itcd.obito_desde_2017_04_01; t+=it; rows.push(["ITCD","ITCD Alagoas · 4% (óbito desde 01/04/2017)","SEFAZ-AL · base = valor de mercado avaliado pela SEFAZ",it]);}
+  if(m.retificacao_de_area) oth.push("Se a retificação mudar medida ou área: atos TJAL 205 + 206 (valores ainda não coletados) e agrimensor com ART.");
+  if($("mar").checked){ const ter=num($("ter").value), l=ter*0.05; t+=l; rows.push(["SPU","Laudêmio de 5% sobre o terreno","pago pelo vendedor · DL 2.398/87, art. 3º",l]); oth.push("Certidão da SPU e débitos de foro (0,6%/ano) ou taxa de ocupação (2%/ano)."); }
+  if($("rur").checked){ oth.push("Georreferenciamento: exigido em desmembramento e transferências a partir de 21/10/2029 (Decreto 12.689/2025).","CCIR e ITR dos últimos 5 anos em dia."); }
+  if(c==="N3.5") alerts.push("REURB-S tem isenção de custas e emolumentos registrais (Lei 13.465/2017, art. 13 §1º). Para REURB-E, a estimativa depende do projeto aprovado.");
+  $("tb").innerHTML=""; rows.forEach(([cd,d,o,vl])=>{const tr=document.createElement("tr");
+    const a=document.createElement("td");a.className="code";a.textContent=cd;
+    const b=document.createElement("td");b.textContent=d;if(o){const s=document.createElement("small");s.textContent=o;b.append(s)}
+    const x=document.createElement("td");x.className="v";x.textContent=brl(vl);tr.append(a,b,x);$("tb").append(tr)});
+  if(!rows.length){const tr=document.createElement("tr");const td=document.createElement("td");td.colSpan=3;td.textContent="Sem atos tabelados para este caminho.";tr.append(td);$("tb").append(tr)}
+  $("tot").textContent=brl(t);
+  let selo=c.startsWith("N1")?"N1":c; if($("mar").checked) selo+=" · N5"; if($("rur").checked) selo+=" · N6"; $("selo").textContent="Caminho "+selo;
+  $("alert").hidden=!alerts.length; $("alert").textContent=alerts.join(" ");
+  $("oth").innerHTML=""; (oth.length?oth:["Nenhum além dos listados."]).forEach(s=>{const li=document.createElement("li");li.textContent=s;$("oth").append(li)});
+}
+["cam","mun","val","onus","mar","rur","ter","iss","md30"].forEach(id=>{$(id).addEventListener("input",calc);$(id).addEventListener("change",calc)});
+["val","ter"].forEach(id=>$(id).addEventListener("blur",e=>{const n=num(e.target.value);e.target.value=n?n.toLocaleString("pt-BR"):""}));
+$("f").addEventListener("submit",e=>e.preventDefault());
+calc();
+</script>

@@ -1,0 +1,232 @@
+{
+ "_meta": {
+  "titulo": "Mapa natureza → atos cartoriais e tributos (Calculadora do Caminho)",
+  "trilha": "A",
+  "versao": "0.1 - 24/09/2026",
+  "regras": [
+   "Valores de emolumentos: matriz_emolumentos_al.json (Lei AL 9.778/2025, coletada do simulador TJAL em 28/08/2026; faixas conferidas iguais ao site em 24/09/2026).",
+   "Multiplicadores de usucapião e adjudicação (50%+50%+100% da faixa) vêm da própria matriz de emolumentos (itens 207-209 e 214-216).",
+   "ITBI: matriz_itbi_municipios_al.json. Município não conferido = 'não confirmado' (sem valor).",
+   "Estimativa educativa (PEI). Confirmar sempre no simulador oficial: https://emolumentos.tjal.jus.br/",
+   "Honorários (advogado, agrimensor), ITCMD e taxas da SPU/INCRA não entram no total - aparecem como 'outros custos a considerar'."
+  ]
+ },
+ "caminhos": {
+  "PLENO": {
+   "descricao": "Compra e venda de imóvel registrado e sem ônus",
+   "atos": [
+    {
+     "codigo": "223",
+     "qtd": 1,
+     "obs": "certidão de ônus/inteiro teor"
+    },
+    {
+     "codigo": "259",
+     "faixa_mult": 1.0,
+     "obs": "escritura com valor declarado"
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0,
+     "obs": "registro da escritura"
+    }
+   ],
+   "itbi": true
+  },
+  "N0": {
+   "descricao": "Usucapião extrajudicial",
+   "atos": [
+    {
+     "codigo": "257",
+     "faixa_mult": 1.0,
+     "obs": "ata notarial de tempo de posse"
+    },
+    {
+     "codigo": "214-216",
+     "faixa_mult": 2.0,
+     "obs": "processamento 50% + deferimento 50% + registro 100%"
+    },
+    {
+     "codigo": "231",
+     "qtd": 1,
+     "obs": "abertura de matrícula (se necessário)"
+    },
+    {
+     "codigo": "223",
+     "qtd": 1
+    }
+   ],
+   "itbi": false,
+   "itbi_obs": "Em regra não incide (aquisição originária); há municípios que cobram - conferir",
+   "outros": [
+    "honorários de advogado (obrigatório)",
+    "planta e memorial com ART",
+    "Notificação em usucapião (ato 235 do TJAL) por confrontante/titular a notificar - valor não coletado"
+   ]
+  },
+  "N1_escritura": {
+   "descricao": "Gaveta → escritura com o dono",
+   "atos": [
+    {
+     "codigo": "223",
+     "qtd": 1
+    },
+    {
+     "codigo": "259",
+     "faixa_mult": 1.0
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0
+    }
+   ],
+   "itbi": true
+  },
+  "N1_adjudicacao": {
+   "descricao": "Gaveta → adjudicação compulsória extrajudicial",
+   "atos": [
+    {
+     "codigo": "257",
+     "faixa_mult": 1.0,
+     "obs": "ata notarial com prova do pagamento"
+    },
+    {
+     "codigo": "207-209",
+     "faixa_mult": 2.0,
+     "obs": "processamento 50% + deferimento 50% + registro 100%"
+    },
+    {
+     "codigo": "223",
+     "qtd": 1
+    }
+   ],
+   "itbi": true,
+   "itbi_obs": "ITBI pago é documento obrigatório (Lei 6.015, art. 216-B, V)",
+   "outros": [
+    "honorários de advogado (obrigatório)"
+   ]
+  },
+  "N2": {
+   "descricao": "Escritura sem registro → registrar",
+   "atos": [
+    {
+     "codigo": "223",
+     "qtd": 1
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0
+    }
+   ],
+   "itbi": "se_nao_pago"
+  },
+  "N2.5": {
+   "descricao": "Herança → inventário extrajudicial + registro da partilha",
+   "atos": [
+    {
+     "codigo": "261",
+     "faixa_mult": 1.0,
+     "obs": "escritura de inventário (valor global)"
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0,
+     "obs": "registro da partilha"
+    },
+    {
+     "codigo": "223",
+     "qtd": 1
+    }
+   ],
+   "itbi": false,
+   "itbi_obs": "Herança paga ITCD (estadual), não ITBI. SEFAZ-AL: 4% para óbitos a partir de 01/04/2017 (2% antes); doação 2%. Base = valor de mercado avaliado pela SEFAZ.",
+   "outros": [
+    "ITCMD (SEFAZ-AL) - pendente",
+    "honorários de advogado (obrigatório)"
+   ],
+   "itcd": {
+    "obito_desde_2017_04_01": 0.04,
+    "obito_antes": 0.02,
+    "doacao": 0.02,
+    "fonte": "SEFAZ-AL, FAQ do ITCD - https://www.sefaz.al.gov.br/itcd/itcd-faq (consultado em 24/09/2026)",
+    "status": "fonte oficial institucional; lei estadual e artigo a identificar; atenção à progressividade exigida pela EC 132/2023"
+   }
+  },
+  "N3": {
+   "descricao": "Retificação de matrícula",
+   "atos": [
+    {
+     "codigo": "203",
+     "qtd": 1,
+     "obs": "ERRO SIMPLES (art. 213, I): averbação sem valor declarado"
+    },
+    {
+     "codigo": "223",
+     "qtd": 1
+    }
+   ],
+   "itbi": false,
+   "outros": [
+    "agrimensor/engenheiro com ART (se mudar medida)"
+   ],
+   "retificacao_de_area": {
+    "atos": [
+     "205 - Retificações de Área - Processamento",
+     "206 - Retificações de Área - Averbação (por faixa de valor)"
+    ],
+    "status": "códigos conferidos na lista do TJAL em 24/09/2026; VALORES ainda não coletados na matriz de emolumentos - calculadora não soma"
+   }
+  },
+  "N3.5": {
+   "descricao": "Loteamento irregular → REURB",
+   "atos": [],
+   "itbi": false,
+   "itbi_obs": "REURB-S: isenção de custas e emolumentos registrais (Lei 13.465, art. 13 §1º); REURB-E: estimar após definição do projeto",
+   "outros": [
+    "projeto urbanístico e topografia"
+   ]
+  },
+  "N4": {
+   "descricao": "Baixa de ônus + compra e venda",
+   "atos": [
+    {
+     "codigo": "203",
+     "qtd_por_onus": 1,
+     "obs": "averbação de cancelamento de cada ônus"
+    },
+    {
+     "codigo": "223",
+     "qtd": 1
+    },
+    {
+     "codigo": "259",
+     "faixa_mult": 1.0
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0
+    }
+   ],
+   "itbi": true,
+   "outros": [
+    "quitação da dívida que gerou o ônus"
+   ]
+  },
+  "N5": {
+   "descricao": "Marinha: + laudêmio",
+   "soma_com": "estagio",
+   "laudemio": "5% do valor do terreno (sem benfeitorias), pago pelo vendedor",
+   "outros": [
+    "certidão SPU; débitos de foro (0,6%/ano) ou taxa (2%/ano)"
+   ]
+  },
+  "N6": {
+   "descricao": "Rural",
+   "soma_com": "estagio",
+   "outros": [
+    "georreferenciamento (profissional)",
+    "CCIR/ITR em dia"
+   ]
+  }
+ }
+}
