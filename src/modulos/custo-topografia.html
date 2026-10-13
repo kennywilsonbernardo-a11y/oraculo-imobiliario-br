@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oráculo BR — Custo de Topografia e Regularização</title>
+<style>
+/* ── Design system: Oráculo Imobiliário BR v9.2 ── */
+:root{
+  --bg:#0f172a;--card:#1e293b;--card2:#0b1220;
+  --accent:#38bdf8;--text:#e2e8f0;--muted:#94a3b8;
+  --ok:#22c55e;--warn:#f59e0b;--err:#ef4444;
+  --border:#334155;--border2:#1f2a3a;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:Inter,system-ui,"Segoe UI",Roboto,Arial;
+  background:var(--bg);color:var(--text);
+  font-size:14px;line-height:1.5;
+  padding:0 16px 56px;
+}
+
+/* header */
+.page-header{
+  max-width:1100px;margin:0 auto;
+  padding:20px 0 16px;
+  border-bottom:1px solid var(--border);
+  margin-bottom:20px;
+  display:flex;align-items:flex-start;gap:12px;
+}
+.back-btn{
+  background:transparent;border:1px solid var(--border);
+  border-radius:8px;color:var(--muted);
+  padding:7px 12px;cursor:pointer;font-size:12px;
+  white-space:nowrap;
+}
+.back-btn:hover{color:var(--text);border-color:var(--accent)}
+.header-text h1{font-size:18px;font-weight:700;margin-bottom:2px}
+.header-text p{font-size:12px;color:var(--muted)}
+.badge{
+  display:inline-block;padding:3px 8px;border-radius:999px;
+  font-size:11px;border:1px solid var(--border);color:var(--muted);
+  white-space:nowrap;
+}
+.badge.ok{color:#dcfce7;border-color:#14532d;background:#052e16}
+.badge.warn{color:#fef3c7;border-color:#78350f;background:#451a03}
+.badge.err{color:#fee2e2;border-color:#7f1d1d;background:#450a0a}
+.badge.info{color:#e0f2fe;border-color:#0c4a6e;background:#082f49}
+
+/* container */
+.container{max-width:1100px;margin:0 auto}
+.grid{display:grid;grid-template-columns:400px 1fr;gap:16px;align-items:start}
+@media(max-width:860px){.grid{grid-template-columns:1fr}}
+
+/* cards */
+.card{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:16px;padding:16px;margin-bottom:16px;
+}
+.card-last{margin-bottom:0}
+.card h3{font-size:14px;font-weight:700;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px}
+.card h3 .num{
+  width:22px;height:22px;border-radius:6px;
+  background:var(--accent);color:#001018;
+  font-size:11px;font-weight:800;
+  display:inline-flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+}
+
+/* form */
+.field{margin-bottom:12px}
+.field label{
+  display:block;font-size:11px;font-weight:600;
+  color:var(--muted);text-transform:uppercase;
+  letter-spacing:.4px;margin-bottom:5px;
+}
+.field label .req{color:var(--accent)}
+input[type="number"],select{
+  width:100%;
+  border-radius:10px;border:1px solid var(--border);
+  background:var(--card2);color:var(--text);
+  padding:10px 12px;font-family:inherit;font-size:13px;outline:none;
+  transition:border-color .15s;
+}
+input[type="number"]:focus,select:focus{border-color:var(--accent)}
+input::placeholder{color:var(--muted);opacity:.6}
+select option{background:var(--card2)}
+
+/* toggle */
+.tgl{
+  display:flex;align-items:center;gap:9px;cursor:pointer;
+  margin-bottom:12px;user-select:none;
+}
+.tgl input[type="checkbox"]{
+  width:15px;height:15px;accent-color:var(--accent);cursor:pointer;
+}
+.tgl span{font-size:12px;font-weight:600;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.4px}
+
+/* sub-block */
+.sub-block{
+  background:var(--card2);border:1px solid var(--border2);
+  border-radius:10px;padding:12px;margin-bottom:12px;
+}
+
+/* flags */
+.flags{display:flex;flex-direction:column;gap:7px}
+.flag-row{
+  display:flex;align-items:flex-start;gap:9px;
+  background:var(--card2);border:1px solid var(--border2);
+  border-radius:10px;padding:9px 11px;cursor:pointer;
+  transition:border-color .15s;
+}
+.flag-row:hover{border-color:var(--accent)}
+.flag-row input[type="checkbox"]{
+  width:14px;height:14px;accent-color:var(--accent);
+  margin-top:2px;flex-shrink:0;cursor:pointer;
+}
+.flag-text{font-size:12px;color:var(--muted);line-height:1.45}
+.flag-text strong{color:var(--text);display:block;font-size:12.5px}
+
+/* button */
+button.primary{
+  width:100%;background:var(--accent);border:none;
+  border-radius:12px;color:#001018;
+  font-family:inherit;font-size:13px;font-weight:700;
+  padding:12px;cursor:pointer;
+  transition:filter .15s,transform .1s;
+}
+button.primary:hover{filter:brightness(1.1);transform:translateY(-1px)}
+button.primary:active{transform:none}
+
+/* ── RESULTS ── */
+.empty-state{
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  min-height:260px;gap:10px;
+  color:var(--muted);font-size:12px;text-align:center;
+}
+
+/* KPI grid */
+.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.kpi{
+  background:var(--card2);border:1px solid var(--border2);
+  border-radius:10px;padding:11px;
+}
+.kpi.span2{
+  grid-column:1/-1;
+  border-color:rgba(56,189,248,.35);
+  background:rgba(56,189,248,.05);
+}
+.kpi-label{
+  font-size:9.5px;font-weight:700;letter-spacing:1px;
+  text-transform:uppercase;color:var(--muted);margin-bottom:4px;
+}
+.kpi-val{
+  font-size:17px;font-weight:800;color:var(--accent);
+  line-height:1.1;font-variant-numeric:tabular-nums;
+}
+.kpi.span2 .kpi-val{font-size:20px}
+.kpi-sub{font-size:10px;color:var(--muted);margin-top:3px}
+
+/* breakdown */
+.bk{display:flex;flex-direction:column;gap:5px;margin-bottom:12px}
+.bk-legend{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.bk-legend span{
+  font-size:10px;color:var(--muted);
+  display:flex;align-items:center;gap:5px;
+}
+.bk-legend span::before{
+  content:'';display:inline-block;
+  width:8px;height:8px;border-radius:2px;
+}
+.bk-legend .l-obg::before{background:var(--err)}
+.bk-legend .l-cond::before{background:var(--warn)}
+.bk-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  gap:8px;padding:7px 10px;
+  background:var(--card2);border-radius:8px;
+  font-size:12px;border-left:3px solid transparent;
+}
+.bk-row.obg{border-left-color:var(--err)}
+.bk-row.cond{border-left-color:var(--warn)}
+.bk-label{color:var(--muted);flex:1;min-width:0}
+.bk-obs{display:block;font-size:10px;color:#475569;margin-top:1px}
+.bk-val{
+  font-weight:700;color:var(--text);white-space:nowrap;
+  font-size:11px;font-family:ui-monospace,Menlo,Consolas,monospace;
+  font-variant-numeric:tabular-nums;
+}
+
+/* alerts */
+.alert{
+  border-radius:10px;padding:10px 12px;
+  font-size:11.5px;line-height:1.55;margin-bottom:8px;
+}
+.alert strong{color:var(--text)}
+.alert.r{background:#450a0a;border:1px solid #7f1d1d;color:#fca5a5}
+.alert.a{background:#451a03;border:1px solid #78350f;color:#fcd34d}
+.alert.g{background:#052e16;border:1px solid #14532d;color:#86efac}
+.alert.b{background:#082f49;border:1px solid #0c4a6e;color:#7dd3fc}
+
+/* prazos */
+.prazos{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.prazo{
+  background:var(--card2);border:1px solid var(--border2);
+  border-radius:8px;padding:6px 10px;font-size:11px;color:var(--muted);
+}
+.prazo strong{color:var(--accent)}
+
+/* area note */
+.area-note{
+  background:rgba(56,189,248,.07);
+  border:1px solid rgba(56,189,248,.2);
+  border-radius:8px;padding:7px 11px;
+  font-size:11px;color:var(--muted);margin-bottom:12px;
+}
+.area-note span{color:var(--accent);font-weight:700}
+
+/* disclaimer */
+.disc{
+  font-size:10.5px;color:var(--muted);line-height:1.6;
+  border-top:1px solid var(--border2);padding-top:11px;
+}
+
+/* section title */
+.stitle{
+  font-size:10px;font-weight:700;letter-spacing:1.2px;
+  text-transform:uppercase;color:var(--accent);margin-bottom:6px;
+}
+
+/* copy row */
+.copy-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.copy-btn{
+  font-family:inherit;font-size:11px;
+  background:transparent;border:1px solid var(--border);
+  border-radius:8px;color:var(--muted);padding:5px 10px;cursor:pointer;
+}
+.copy-btn:hover{color:var(--text);border-color:var(--accent)}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="page-header">
+  <button class="back-btn" onclick="history.back()">← Oráculo</button>
+  <div class="header-text">
+    <h1>Custo de Topografia &amp; Regularização</h1>
+    <p>
+      Estimativa de custo para casos que exigem levantamento topográfico ·
+      <span class="badge info">Módulo auxiliar v1.0</span>
+      <span class="badge">Nordeste / AL · 2026</span>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- ── COLUNA ESQUERDA: FORMULÁRIO ── -->
+    <div>
+
+      <div class="card">
+        <h3><span class="num">1</span> Dados do Imóvel</h3>
+
+        <div class="field">
+          <label>Tipo de imóvel <span class="req">*</span></label>
+          <select id="tipo">
+            <option value="">— selecione —</option>
+            <option value="urbano">Urbano — lote / residencial / comercial</option>
+            <option value="rural">Rural — chácara / sítio / fazenda</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label>Área total do terreno (m²) <span class="req">*</span></label>
+          <input type="number" id="areaTerr" placeholder="Ex: 450" min="1" step="1">
+        </div>
+
+        <label class="tgl" onclick="toggleCons()">
+          <input type="checkbox" id="cbCons">
+          <span>Possui área construída?</span>
+        </label>
+
+        <div id="blocoCons" style="display:none">
+          <div class="sub-block">
+            <div class="field" style="margin-bottom:10px">
+              <label>Área construída (m²)</label>
+              <input type="number" id="areaCons" placeholder="Ex: 120" min="1" step="1">
+            </div>
+            <div class="field" style="margin-bottom:0">
+              <label>Situação da construção</label>
+              <select id="sitCons">
+                <option value="averbada">Averbada no cartório ✓</option>
+                <option value="nao_averbada">Não averbada — precisa regularizar</option>
+                <option value="desconhecida">Desconhecida / a verificar</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Relevo / condição de acesso</label>
+          <select id="relevo">
+            <option value="plano">Plano — acesso fácil</option>
+            <option value="moderado">Moderado — leve declividade ou razoável</option>
+            <option value="acidentado">Acidentado — mata / relevo acentuado / difícil</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="card card-last">
+        <h3><span class="num">2</span> Situações Identificadas</h3>
+        <p style="font-size:11px;color:var(--muted);margin-bottom:10px">
+          Marque o que o levantamento documental já detectou ou suspeita:
+        </p>
+        <div class="flags">
+          <label class="flag-row"><input type="checkbox" class="flag" id="f1"><span class="flag-text"><strong>Sem georreferenciamento INCRA</strong>Imóvel rural sem certificação no SIGEF / SNCR</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f2"><span class="flag-text"><strong>Divergência de medidas</strong>Área do registro diferente da medida real in loco</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f3"><span class="flag-text"><strong>Sem memorial descritivo</strong>Matrícula sem coordenadas ou planta de situação</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f4"><span class="flag-text"><strong>Sobreposição de área</strong>Conflito com CAR, SIGEF ou imóvel confrontante</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f5"><span class="flag-text"><strong>Desmembramento / divisão</strong>Necessidade de separar fração ou partilhar área</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f6"><span class="flag-text"><strong>APP / APA / preservação ambiental</strong>Overlap com área sujeita ao Código Florestal ou SEMARH-AL</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f7"><span class="flag-text"><strong>Usucapião em andamento</strong>Processo extrajudicial ou judicial de usucapião</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f8"><span class="flag-text"><strong>Sem planta aprovada na Prefeitura</strong>Lote urbano sem aprovação / alvará de construção</span></label>
+          <label class="flag-row"><input type="checkbox" class="flag" id="f9"><span class="flag-text"><strong>Faixa de domínio / SPU</strong>Próximo a rio, mar, estrada federal ou área da União</span></label>
+        </div>
+        <div style="margin-top:14px">
+          <button class="primary" onclick="calcular()">Calcular Estimativa</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── COLUNA DIREITA: RESULTADO ── -->
+    <div class="card card-last" id="painel-result">
+      <h3><span class="num">3</span> Estimativa de Custos</h3>
+
+      <div id="empty-state" class="empty-state">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".3">
+          <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 3.5"/>
+        </svg>
+        <div>Preencha os dados ao lado<br>e clique em <strong style="color:var(--accent)">Calcular Estimativa</strong></div>
+      </div>
+
+      <div id="result-content" style="display:none"></div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+// ── Oráculo BR · Módulo: custo-topografia v1.0 ──
+const fmt  = v => v.toLocaleString('pt-BR', {maximumFractionDigits:0});
+const fmtR = (a,b) => `R$ ${fmt(a)} – ${fmt(b)}`;
+const escH = s => String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+
+function toggleCons(){
+  const cb = document.getElementById('cbCons');
+  cb.checked = !cb.checked;
+  document.getElementById('blocoCons').style.display = cb.checked ? 'block' : 'none';
+}
+
+// ── Custo base de topografia por tipo e área ──
+function topoBase(tipo, area, relevo){
+  let mn, mx;
+  if(tipo === 'urbano'){
+    if     (area<=300)  {mn=800;  mx=1400;}
+    else if(area<=600)  {mn=1200; mx=2000;}
+    else if(area<=1200) {mn=1800; mx=3000;}
+    else if(area<=3000) {mn=2800; mx=4500;}
+    else if(area<=6000) {mn=4000; mx=7000;}
+    else                {mn=6000; mx=12000;}
+  } else {
+    const ha = area/10000;
+    if     (ha<=1)   {mn=2500;  mx=5000; }
+    else if(ha<=3)   {mn=4000;  mx=8000; }
+    else if(ha<=10)  {mn=7000;  mx=15000;}
+    else if(ha<=30)  {mn=12000; mx=25000;}
+    else if(ha<=100) {mn=20000; mx=45000;}
+    else             {mn=40000; mx=90000;}
+  }
+  const fat = {plano:1, moderado:1.22, acidentado:1.52}[relevo];
+  return {mn: Math.round(mn*fat), mx: Math.round(mx*fat)};
+}
+
+function calcular(){
+  const tipo   = document.getElementById('tipo').value;
+  const aT     = parseFloat(document.getElementById('areaTerr').value)||0;
+  const temC   = document.getElementById('cbCons').checked;
+  const aC     = temC ? (parseFloat(document.getElementById('areaCons').value)||0) : 0;
+  const sitC   = document.getElementById('sitCons').value;
+  const relevo = document.getElementById('relevo').value;
+  const f = id => document.getElementById(id).checked;
+  const [f1,f2,f3,f4,f5,f6,f7,f8,f9] = [1,2,3,4,5,6,7,8,9].map(i=>`f${i}`).map(f);
+
+  if(!tipo || aT<=0){
+    alert('Selecione o tipo de imóvel e informe a área do terreno.');
+    return;
+  }
+
+  const itens = [];
+  const add = (label, mn, mx, tipo2, obs='') => itens.push({label,mn,mx,tipo2,obs});
+
+  // 1. Topografia base — sempre obrigatória
+  const tb = topoBase(tipo, aT, relevo);
+  add('Levantamento topográfico planialtimétrico', tb.mn, tb.mx, 'obg',
+    tipo==='rural' ? `${(aT/10000).toFixed(2)} ha · rural` : `${fmt(aT)} m² · urbano`);
+
+  // 2. ART — sempre obrigatória
+  add('ART — Anotação de Responsabilidade Técnica (CREA-AL)', 150, 300, 'obg');
+
+  // 3. Memorial descritivo
+  if(f1||f2||f3||f4)
+    add('Memorial descritivo + planta de situação', 300, 700, 'obg', 'Incluso na topo ou adicional');
+
+  // 4. Georreferenciamento INCRA/SIGEF
+  if(tipo==='rural' && f1){
+    const ha = aT/10000;
+    add('Georreferenciamento INCRA / certificação SIGEF',
+      Math.round(Math.max(2500,ha*400)), Math.round(Math.max(6500,ha*900)), 'obg',
+      'Obrigatório para transferência de imóvel rural sem SNCR');
+  }
+
+  // 5. Sobreposição
+  if(f4) add('Levantamento de confrontantes + perícia de limites', 1500, 4500, 'cond',
+    'Pode exigir notificação formal e perícia georreferenciada');
+
+  // 6. Desmembramento
+  if(f5) add('Projeto de desmembramento / parcelamento de solo', 900, 2800, 'cond',
+    'Aprovação Prefeitura + registro CRI');
+
+  // 7. APP/APA
+  if(f6) add('Delimitação e laudo de APP / APA (Código Florestal)', 1200, 4000, 'cond',
+    'SEMARH-AL pode exigir licença ambiental e TAC');
+
+  // 8. Usucapião
+  if(f7) add('Levantamento técnico para usucapião extrajudicial', 1800, 5500, 'cond',
+    'Honorários advocatícios NÃO inclusos nesta estimativa');
+
+  // 9. Planta prefeitura (urbano)
+  if(tipo==='urbano' && f8) add('Aprovação de planta e alvará na Prefeitura / SEPLAN', 350, 1400, 'cond',
+    'Taxa municipal + responsável técnico habilitado');
+
+  // 10. SPU
+  if(f9) add('Regularização SPU / faixa de domínio federal', 1500, 6000, 'cond',
+    'Laudêmio, GRPU ou cessão de uso — via SPU/AL');
+
+  // 11. Emolumentos CRI
+  if(f2||f3||f1||f4) add('Emolumentos CRI — averbação / atualização de área', 400, 2200, 'cond',
+    'Tabela TJAL — varia conforme valor do imóvel');
+
+  // 12. Averbação de construção
+  if(temC && aC>0 && sitC==='nao_averbada'){
+    const lMn = aC<=100?1000: aC<=300?2000:3500;
+    const lMx = aC<=100?2200: aC<=300?4000:7500;
+    add(`Laudo técnico + ART — averbação de construção (${fmt(aC)} m²)`, lMn, lMx, 'cond',
+      'Engenheiro ou arquiteto habilitado CAU/CREA');
+    add('INSS retroativo s/ mão de obra (se não comprovado)',
+      Math.round(aC*55*0.03), Math.round(aC*90*0.045), 'cond',
+      `Base CUB × ${fmt(aC)} m² — regularizar antes da transação`);
+  }
+
+  // Totais
+  const totMn = itens.reduce((s,i)=>s+i.mn,0);
+  const totMx = itens.reduce((s,i)=>s+i.mx,0);
+
+  // Custo/m² topo
+  const cpmMn = (tb.mn/aT).toFixed(2).replace('.',',');
+  const cpmMx = (tb.mx/aT).toFixed(2).replace('.',',');
+  const descArea = tipo==='rural' ? `${(aT/10000).toFixed(2)} ha` : `${fmt(aT)} m²`;
+
+  // Prazos
+  let pT = '5–10 dias úteis';
+  if(aT>5000||tipo==='rural') pT = '10–20 dias úteis';
+  if(relevo==='acidentado')   pT = '15–30 dias úteis';
+  const pGeo = (tipo==='rural'&&f1) ? '30–90 dias (INCRA/SIGEF)' : null;
+  const pTot = f7 ? '6–24 meses (usucapião)' : (tipo==='rural'&&f1) ? '3–6 meses' : '30–90 dias';
+
+  // Alertas
+  const als = [];
+  if(temC&&aC>0&&sitC==='nao_averbada')
+    als.push({t:'r',m:'<strong>Construção não averbada:</strong> bloqueia financiamento bancário, escritura definitiva e pode gerar INSS retroativo. Regularizar antes da transação.'});
+  if(f4)
+    als.push({t:'r',m:'<strong>Sobreposição de área:</strong> custo pode escalar para honorários periciais e advocatícios se houver disputa judicial de limites. Notificação formal recomendada antes do levantamento.'});
+  if(tipo==='rural'&&f1)
+    als.push({t:'a',m:'<strong>Georreferenciamento INCRA obrigatório:</strong> sem certificação SIGEF o imóvel rural não pode ser transferido ou desmembrado. Prazo: 30–90 dias após entrega do laudo.'});
+  if(f6)
+    als.push({t:'a',m:'<strong>APP / APA:</strong> qualquer benfeitoria em área de preservação exige licença ambiental (SEMARH-AL). Verificar se há embargo ou TAC vigente.'});
+  if(f7)
+    als.push({t:'a',m:'<strong>Usucapião:</strong> o levantamento topográfico é requisito técnico do processo, mas custas cartoriais e honorários advocatícios não estão inclusos.'});
+  if(f9)
+    als.push({t:'b',m:'<strong>Faixa de domínio / SPU:</strong> imóveis com testada para rio, mar ou estrada federal podem ter laudêmio ou exigir contrato de cessão de uso com a União (SPU/AL).'});
+  if(!als.length&&totMn<3500)
+    als.push({t:'g',m:'<strong>Caso de baixa complexidade:</strong> levantamento de rotina — custo dentro da faixa usual para regularizações simples em Alagoas.'});
+  if(totMn>18000)
+    als.push({t:'b',m:'<strong>Custo expressivo:</strong> recomenda-se obter 2–3 orçamentos de topógrafos habilitados no CREA-AL antes de firmar contrato.'});
+
+  // ── RENDER ──
+  document.getElementById('empty-state').style.display='none';
+  const el = document.getElementById('result-content');
+  el.style.display='block';
+  el.innerHTML = `
+    <div class="area-note">
+      <span>${descArea}</span> · ${tipo} · custo referencial topo: <span>R$ ${cpmMn}–${cpmMx}/m²</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi">
+        <div class="kpi-label">Topografia base</div>
+        <div class="kpi-val">${fmtR(tb.mn,tb.mx)}</div>
+        <div class="kpi-sub">Planialtimétrico · ${descArea}</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-label">Prazo levantamento</div>
+        <div class="kpi-val" style="font-size:13px;padding-top:5px">${escH(pT)}</div>
+        <div class="kpi-sub">Campo + processamento + ART</div>
+      </div>
+      <div class="kpi span2">
+        <div class="kpi-label">Estimativa total — todos os serviços identificados</div>
+        <div class="kpi-val">${fmtR(totMn,totMx)}</div>
+        <div class="kpi-sub">Prazo completo estimado: ${escH(pTot)} · Referência Nordeste/AL 2026</div>
+      </div>
+    </div>
+
+    <div class="bk">
+      <div class="bk-legend">
+        <span class="l-obg">Obrigatório</span>
+        <span class="l-cond">Condicional (situações detectadas)</span>
+      </div>
+      ${itens.map(i=>`
+        <div class="bk-row ${escH(i.tipo2)}">
+          <div class="bk-label">
+            ${escH(i.label)}
+            ${i.obs ? `<span class="bk-obs">${escH(i.obs)}</span>` : ''}
+          </div>
+          <div class="bk-val">${fmtR(i.mn,i.mx)}</div>
+        </div>
+      `).join('')}
+    </div>
+
+    ${als.map(a=>`<div class="alert ${escH(a.t)}">${a.m}</div>`).join('')}
+
+    <div class="stitle" style="margin-bottom:8px">Prazos estimados</div>
+    <div class="prazos">
+      <div class="prazo"><strong>Levantamento:</strong> ${escH(pT)}</div>
+      ${pGeo ? `<div class="prazo"><strong>INCRA/SIGEF:</strong> ${escH(pGeo)}</div>` : ''}
+      <div class="prazo"><strong>Processo completo:</strong> ${escH(pTot)}</div>
+    </div>
+
+    <div class="disc">
+      ⚠ Valores referenciais para Nordeste/AL (2026), com desconto regional de ~25% sobre tabela
+      CREA-SP (AETESP · NBR 13.133/94). Custo final varia conforme profissional, acesso e complexidade
+      registral. Esta estimativa organiza evidências de custo — não substitui orçamento formal de
+      topógrafo habilitado no CREA-AL. O Oráculo organiza evidências; a decisão de contratar é do cliente.
+    </div>
+  `;
+}
+</script>
+</body>
+</html>
