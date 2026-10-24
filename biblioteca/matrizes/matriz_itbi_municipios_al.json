@@ -2,7 +2,7 @@
  "_meta": {
   "titulo": "ITBI por município - Alagoas",
   "trilha": "A",
-  "conferido_em": "2026-09-23",
+  "conferido_em": "2026-10-24 (Maceió, Arapiraca e Maragogi); 2026-09-23 (demais)",
   "regra": "Município fora desta lista = 'não confirmado' (sem alíquota presumida). Alíquota municipal pode mudar: reconferir antes de orientar cliente.",
   "observacoes": [
    "LC 227/2026 alterou o ITBI no CTN (cessão onerosa como fato gerador) - leis municipais anteriores podem ser reinterpretadas; ver LAC-TRIB.",
@@ -23,13 +23,13 @@
   },
   {
    "municipio": "Arapiraca",
-   "lei": "Código Tributário atualizado",
-   "artigo": "art. 212 (numeração a confirmar - PDF em colunas)",
+   "lei": "Lei nº 2.342/2003 (Código Tributário, texto atualizado)",
+   "artigo": "art. 212",
    "aliquota_geral": "3%",
    "sfh": "0,5% sobre o financiado + 2,5% sobre o restante",
-   "outros": "fato gerador considerado ocorrido na lavratura de contrato ou PROMESSA de compra e venda (acrescido pela Lei 3.102/2015) - impacto em N1",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
-   "status": "CONFERIDO (texto); artigo a confirmar"
+   "outros": "fato gerador considerado ocorrido na lavratura de contrato ou PROMESSA de compra e venda (art. 213, parágrafo único, acrescido pela Lei 2.995/2014) - impacto em N1",
+   "fonte": "Código Tributário atualizado de Arapiraca (PDF 'CdigoTributrioatualizadoII', SHA-256 479c726eb41981caf1f4fa2d2237e88515c798b11f9fc5c4d76054efc72492ea), p. 51 - evidência docs/auditoria/evidencias/2026-10-24_ITBI_Arapiraca_CTM_p51_art212.jpg",
+   "status": "CONFERIDO (texto e artigo) em 24/10/2026"
   },
   {
    "municipio": "Marechal Deodoro",
@@ -97,13 +97,13 @@
   },
   {
    "municipio": "Maragogi",
-   "lei": "LC nº 001/2021 (CTM) remete a lei específica do ITBI",
-   "artigo": "—",
-   "aliquota_geral": "NÃO CONFIRMADA",
-   "sfh": "NÃO CONFIRMADA",
-   "outros": "CTM art. 148: ITBI NÃO incide na usucapião (V) nem na promessa de compra e venda (VII)",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario + https://transparencia.maragogi.al.gov.br (CTM)",
-   "status": "PENDENTE - widget cita 'Lei 741/2021, art. 18' (2%); essa lei não foi localizada. Não usar 2% até conferir"
+   "lei": "Lei Municipal nº 741, de 15/10/2021 (institui o ITBI); LC nº 001/2021 (CTM)",
+   "artigo": "art. 18 (Lei 741/2021)",
+   "aliquota_geral": "2%",
+   "sfh": "1% sobre o valor financiado ou pago com FGTS + 2% sobre o restante",
+   "outros": "CTM (LC 001/2021) art. 148: ITBI NÃO incide na usucapião (V) nem na promessa de compra e venda (VII). Pagamento em até 30 dias do fato gerador (Lei 741/2021, art. 19). Lei 833/2024 alterou o ITBI só na integralização de capital",
+   "fonte": "PDF da Lei 741/2021 publicado pela Câmara Municipal de Maragogi (maragogi.al.leg.br, SHA-256 244277d60616fb15015c15584e87c84d534340eba150f483f60aac0bee677ac1), lido em 24/10/2026 - evidências docs/auditoria/evidencias/2026-10-24_ITBI_Maragogi_Lei741-2021_p1.jpg e _p7_art18.jpg",
+   "status": "CONFERIDO em 24/10/2026 (alterações posteriores de alíquota não localizadas)"
   }
  ]
 }
