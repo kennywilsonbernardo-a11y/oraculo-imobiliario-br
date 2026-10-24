@@ -2,7 +2,7 @@
  "_meta": {
   "titulo": "ITBI por município - Alagoas",
   "trilha": "A",
-  "conferido_em": "2026-10-24 (Maceió, Arapiraca, Maragogi e 8 municípios novos); 2026-09-23 (demais)",
+  "conferido_em": "2026-10-24 (27 municípios conferidos ou atualizados, a maioria no Diário Oficial dos Municípios - AMA); demais conforme cada registro",
   "regra": "Município fora desta lista = 'não confirmado' (sem alíquota presumida). Alíquota municipal pode mudar: reconferir antes de orientar cliente.",
   "observacoes": [
    "LC 227/2026 alterou o ITBI no CTN (cessão onerosa como fato gerador) - leis municipais anteriores podem ser reinterpretadas; ver LAC-TRIB.",
@@ -34,39 +34,41 @@
   {
    "municipio": "Marechal Deodoro",
    "lei": "Lei nº 1.216/2017 (CTM)",
-   "artigo": "art. 152",
-   "aliquota_geral": "2% se o boleto for pedido em até 30 dias da lavratura/trânsito em julgado; 3% depois",
-   "sfh": "Minha Casa Minha Vida: 0,5% sobre o valor financiado (parágrafo único)",
-   "outros": "imóvel rural: base mínima de R$ 15.000,00/ha (art. 151 §2º)",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario (PDF escaneado, lido por OCR)",
-   "status": "CONFERIDO (OCR) - confere com o widget"
+   "artigo": "art. 152, na redação da Lei 1.359/2021",
+   "aliquota_geral": "3%",
+   "sfh": "MCMV 0,5% sobre o financiado",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador 195E2F78 - https://www.diariomunicipal.com.br/ama/materia/195E2F78",
+   "status": "CONFERIDO no texto da lei em 24/10/2026",
+   "outros": "desconto de 1/3 se a guia for pedida em até 30 dias (2%)"
   },
   {
    "municipio": "Pão de Açúcar",
-   "lei": "Lei nº 601/2021 (CTM)",
+   "lei": "Lei nº 601/2021 (Código Tributário)",
    "artigo": "art. 211",
    "aliquota_geral": "3%",
    "sfh": "não prevista",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
-   "status": "CONFERIDO - confere com o widget"
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador CDD49EDA - https://www.diariomunicipal.com.br/ama/materia/CDD49EDA",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
   },
   {
    "municipio": "Japaratinga",
-   "lei": "Lei nº 558/2017 (CTM)",
-   "artigo": "art. 212",
+   "lei": "Lei nº 778/2025 (Código Tributário)",
+   "artigo": "art. 211",
    "aliquota_geral": "3%",
-   "sfh": "0,5% financiado + 2,5% restante",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario",
-   "status": "CONFERIDO - confere com o widget"
+   "sfh": "1% sobre a parcela financiada até R$ 150.000 + 3% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador F7DAF5AE - substitui a Lei 558/2017; em vigor desde 01/01/2026 - https://www.diariomunicipal.com.br/ama/materia/F7DAF5AE",
+   "status": "CONFERIDO no texto da lei em 24/10/2026",
+   "historico": "antes: Lei nº 558/2017 (CTM) art. 212 - 3%; SFH 0,5% financiado + 2,5% restante"
   },
   {
    "municipio": "Rio Largo",
-   "lei": "Lei nº 1.776/2017 (CTM)",
-   "artigo": "art. 212",
+   "lei": "Lei Complementar nº 002/2025 (Código Tributário)",
+   "artigo": "art. 380",
    "aliquota_geral": "3%",
-   "sfh": "0,5% financiado + 2,5% restante",
-   "fonte": "arquivo do Kenny: OneDrive\\Documentos\\Cidades Alagoas Codigo Tributario (PDF escaneado, lido por OCR)",
-   "status": "CONFERIDO (OCR) - confere com o widget"
+   "sfh": "1% sobre a parcela financiada + 2,5% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador E2B9CFB1 - substitui a Lei 1.776/2017; em vigor desde a publicação (dez/2025) - https://www.diariomunicipal.com.br/ama/materia/E2B9CFB1",
+   "status": "CONFERIDO no texto da lei em 24/10/2026",
+   "historico": "antes: Lei nº 1.776/2017 (CTM) art. 212 - 3%; SFH 0,5% financiado + 2,5% restante"
   },
   {
    "municipio": "São Miguel dos Milagres",
@@ -176,6 +178,78 @@
    "sfh": "não informado",
    "fonte": "página de serviços da Prefeitura (jequiadapraia.al.gov.br/itbi), lida em 24/10/2026 - https://jequiadapraia.al.gov.br/itbi",
    "status": "INFORMADO PELA PREFEITURA (site oficial) - texto da lei não conferido"
+  },
+  {
+   "municipio": "Delmiro Gouveia",
+   "lei": "Lei nº 1.382/2022 (Código Tributário)",
+   "artigo": "art. 211",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre a parcela financiada + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador 55EBD798 - https://www.diariomunicipal.com.br/ama/materia/55EBD798",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Olho d'Água das Flores",
+   "lei": "Lei Complementar nº 964/2022 (Código Tributário)",
+   "artigo": "art. 211",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre a parcela financiada até R$ 100.000 + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador 6CE49009 - https://www.diariomunicipal.com.br/ama/materia/6CE49009",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "São José da Tapera",
+   "lei": "Lei nº 880/2025",
+   "artigo": "art. 215 (2% na compra e venda pura e simples; 3% nas demais transmissões)",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre a parcela financiada + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador 0E71985E - https://www.diariomunicipal.com.br/ama/materia/0E71985E",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Inhapi",
+   "lei": "Lei Complementar nº 03/2022 (Código Tributário)",
+   "artigo": "art. 211",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% sobre a parcela financiada até R$ 100.000 + 3% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador D0D32CF5 - https://www.diariomunicipal.com.br/ama/materia/D0D32CF5",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Monteirópolis",
+   "lei": "Lei nº 495/2025 (Código Tributário)",
+   "artigo": "art. 224",
+   "aliquota_geral": "3%",
+   "sfh": "0,5% sobre a parcela financiada + 3% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador 000B4BAC - https://www.diariomunicipal.com.br/ama/materia/000B4BAC",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Porto Real do Colégio",
+   "lei": "Lei nº 139/2015 (Código Tributário)",
+   "artigo": "art. 59",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre a parte financiada + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador C2058C74 - https://www.diariomunicipal.com.br/ama/materia/C2058C74",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Maribondo",
+   "lei": "Lei nº 742/2016 (Código Tributário)",
+   "artigo": "art. 59",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre a parte financiada + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador C0B2BB3D - https://www.diariomunicipal.com.br/ama/materia/C0B2BB3D",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
+  },
+  {
+   "municipio": "Lagoa da Canoa",
+   "lei": "Lei nº 612/2017 (Código Tributário)",
+   "artigo": "art. 32",
+   "aliquota_geral": "2%",
+   "sfh": "0,5% sobre o valor efetivamente financiado + 2% sobre o restante",
+   "fonte": "Diário Oficial dos Municípios de Alagoas (AMA), matéria de código identificador F0BC286D - https://www.diariomunicipal.com.br/ama/materia/F0BC286D",
+   "status": "CONFERIDO no texto da lei em 24/10/2026"
   }
  ]
 }
