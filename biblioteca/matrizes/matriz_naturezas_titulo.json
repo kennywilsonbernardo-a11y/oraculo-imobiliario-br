@@ -459,7 +459,7 @@
     },
     {
      "risco": "Indisponibilidade sobre algum herdeiro impede a venda vinculada da Res. 571.",
-     "fonte": "Res. CNJ 35/2007, art. 11-A (base do Kenny)"
+     "fonte": "Res. CNJ 35/2007, art. 11-A (incluído pela Res. CNJ 571/2024)"
     }
    ],
    "quando_chamar_advogado": "Sempre - inventário (judicial ou extrajudicial) e cessão exigem advogado. Especialmente se houver menor, testamento, herdeiro que discorda ou herdeiro desconhecido.",
@@ -954,7 +954,7 @@
     "fonte_legal": "PENDENTE conferir artigo da Lei 5.868/72"
    },
    "georreferenciamento": {
-    "regra_conferida": "Decreto 12.689/2025 alterou o art. 10 do Decreto 4.449/2002: identificação georreferenciada exigida em desmembramento, parcelamento, remembramento e qualquer transferência a partir de 21/10/2029, e REVOGOU os incisos I a VII (escalonamento por área) - prazo ÚNICO para TODAS as áreas.",
+    "regra_conferida": "Decreto 12.689/2025 alterou o art. 10 do Decreto 4.449/2002: identificação georreferenciada exigida em desmembramento, parcelamento, remembramento e qualquer transferência a partir de 21/10/2029, e REVOGOU os incisos I a VII (escalonamento por área) - prazo ÚNICO para TODAS as áreas. Atualização 24/10/2026: liminar da Justiça Federal do Maranhão (Ação Popular 1086967-47.2025.4.01.3700, maio/2026) suspendeu os efeitos do decreto para imóveis cujo prazo já estava vencido pelo cronograma anterior, mantendo-o provisoriamente para áreas abaixo de 101 ha.",
     "atencao": "Adiou a CERTIFICAÇÃO; a descrição precisa continua exigida pela lei (ConJur 28/10/2025).",
     "fontes": [
      {

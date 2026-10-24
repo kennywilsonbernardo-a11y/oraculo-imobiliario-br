@@ -377,7 +377,7 @@
    "regra_de_nivel": "Contrato particular → N1; escritura sem registro → N2; registrada → pleno (CC 533)",
    "conteudo_kenny": {
     "categoria": "Instrumento preparatório",
-    "descricao": "Troca de imóveis (permuta) ou quitação de dívida com o imóvel (dação em pagamento). Permuta segue as regras da compra e venda (art. 533, Código Civil), com 2 diferenças importantes: ITBI incide sobre AS DUAS transmissões — cada permutante paga imposto sobre o que está recebendo, não só uma pessoa; e se a torna (diferença paga em dinheiro) passar de 50% do valor recebido, deixa de ser permuta e vira compra e venda, com tributação diferente (ganho de capital). Troca de valores desiguais entre pais e filhos é ANULÁVEL sem consentimento do cônjuge e dos outros descendentes.",
+    "descricao": "Troca de imóveis (permuta) ou quitação de dívida com o imóvel (dação em pagamento). Permuta segue as regras da compra e venda (art. 533, Código Civil), com 2 diferenças importantes: ITBI incide sobre AS DUAS transmissões — cada permutante paga imposto sobre o que está recebendo, não só uma pessoa; e, pela doutrina majoritária (não há regra expressa em lei), se a torna (diferença paga em dinheiro) passar de 50% do valor recebido, o negócio costuma ser tratado como compra e venda, com efeitos fiscais diferentes. Troca de valores desiguais entre pais e filhos é ANULÁVEL sem consentimento do cônjuge e dos outros descendentes.",
     "destino": "Conferência PEI. Se envolver incorporadora (permuta de terreno por unidades), ver também a categoria 'Incorporação imobiliária' — as duas costumam andar juntas.",
     "itensExtras": [
      {
@@ -397,7 +397,7 @@
       "id": "nat_avaliacao_valores_permuta",
       "nome": "Avaliação/declaração de valor de cada imóvel envolvido na troca",
       "obrigatorio": true,
-      "motivo": "Necessário pra saber se há torna e se ela ultrapassa 50% do valor recebido (limite que descaracteriza a permuta).",
+      "motivo": "Necessário pra saber se há torna e se ela ultrapassa 50% do valor recebido (limite que, pela doutrina majoritária, descaracteriza a permuta; não há regra expressa em lei).",
       "onde_emitir": "Avaliação própria ou laudo"
      }
     ],

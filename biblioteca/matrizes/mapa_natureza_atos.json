@@ -139,7 +139,7 @@
     }
    ],
    "itbi": false,
-   "itbi_obs": "Herança paga ITCD (estadual), não ITBI. SEFAZ-AL: 4% para óbitos a partir de 01/04/2017 (2% antes); doação 2%. Base = valor de mercado avaliado pela SEFAZ.",
+   "itbi_obs": "Herança paga ITCD (estadual), não ITBI. SEFAZ-AL: 4% para óbitos a partir de 01/04/2017 (2% antes); doação 2% (Lei estadual 5.077/1989, art. 168, na redação da Lei 7.861/2016). Base = valor de mercado avaliado pela SEFAZ.",
    "outros": [
     "ITCMD (SEFAZ-AL) - pendente",
     "honorários de advogado (obrigatório)"
