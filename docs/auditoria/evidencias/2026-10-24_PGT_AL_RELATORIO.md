@@ -60,3 +60,11 @@ Kenny Wilson (Presidente da Mesa) autorizou a correção dos 24 municípios com 
 - SHA-256 de `alagoas.json` antes: `044616f641fbfca8823915390b4cb0819f5e33cd01bb2c3d8eb1ba6b43529441`
 - SHA-256 de `alagoas.json` depois: `f4a33497b6c92e25520645a8f57baa35ad426287ddc314f008c70dd2d3712925`
 - A base continua **não selada** (`alagoas.sha256` não existe). Selar é a decisão D-04, ainda pendente.
+
+## Decisão D-04 (Mesa, 24/10/2026, 14:21): selamento da base
+
+Kenny Wilson (Presidente da Mesa) autorizou selar a base corrigida.
+
+- Publicado `biblioteca/BR/AL/alagoas.sha256` com `f4a33497b6c92e25520645a8f57baa35ad426287ddc314f008c70dd2d3712925`.
+- O check 8 do diagnóstico passa de PENDENTE para "Íntegra" (nota 10/10).
+- Qualquer alteração futura em `alagoas.json` aparece como DIVERGENTE até a Mesa aprovar um novo selo.
