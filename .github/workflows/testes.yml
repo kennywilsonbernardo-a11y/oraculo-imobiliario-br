@@ -1,0 +1,45 @@
+# Roda automaticamente os testes do Oráculo a cada pull request e a cada
+# alteração na main. Não publica nada e não altera arquivos.
+name: Testes
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validar JSON (biblioteca, matrizes, config)
+        run: |
+          for f in biblioteca/BR/AL/*.json biblioteca/matrizes/*.json config.json src/core/*.json src/models/*.json; do
+            node -e "JSON.parse(require('fs').readFileSync(process.argv[1],'utf8'))" "$f" || { echo "JSON inválido: $f"; exit 1; }
+          done
+
+      - name: Testes em Node (AT-007 a AT-010 e casos especiais)
+        run: |
+          for t in docs/tests/*.mjs; do
+            echo "::group::$t"
+            node "$t"
+            echo "::endgroup::"
+          done
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Teste no navegador (AT-011)
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+          python docs/tests/teste_at011.py
