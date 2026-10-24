@@ -8,6 +8,8 @@
     "url_lei": "https://drive.google.com/file/d/1oAgvHrhJDw3mMN7GFlPyd0wV8yVkKTXS/view",
     "data_coleta": "2026-08-28",
     "coletado_por": "Claude (a pedido de Kenny Wilson, CRECI 2468-AL)",
+    "conferido_contra_lei": "2026-10-24: as 26 faixas de valor e os atos do Registro de Imóveis, do Tabelionato de Notas e do Registro Civil desta matriz foram conferidos contra o Anexo I da Lei 9.778/2025 (PDF do TJAL enviado por Kenny, SHA-256 f89e21e4385ae3926eb26ab9ff4c01244ed7e26f03e7c7581ad593bba0cf4b15): todos conferem. Os valores do item 210-213 estão em total (emolumento + TSNR 26% + ISS 5%); na lei: 182,59 / 105,00 / consolidação pela faixa / 19,00.",
+    "valores_complementares_lei": {"notificacao_usucapiao_ou_retificacao": 65.42, "intimacao_alienacao_fiduciaria_ou_adjudicacao": 58.43, "retificacao_area_processamento": 365.18, "certificacao_imovel_rural_sigef": 390.0, "nota_sfh": "Nota explicativa 2 do Registro de Imóveis: redução de 50% dos emolumentos na primeira aquisição residencial financiada pelo SFH (Lei 6.941/81)"},
     "formula_padrao": "Total = VE (Valor do Emolumento) + TSNR (26% do VE) + ISS (opcional, alíquota municipal, geralmente 5%)",
     "observacao_selo": "O Selo de Autenticidade não é mais repassado ao usuário desde a Lei 9.778/2025 — passou a ser custo da própria serventia.",
     "alerta_atencao": "A página antiga cgj.tjal.jus.br/?pag=emolumentos (Tabelas A-P) ainda referencia a Lei 5.763/1995, vigente só até 28/03/2026. A partir de 29/03/2026 a fonte correta é o simulador emolumentos.tjal.jus.br, baseado na Lei 9.778/2025. Reconferir esta matriz periodicamente, pois os valores são reajustados anualmente em janeiro pelo INPC (art. 8º da Lei 9.778/2025).",
