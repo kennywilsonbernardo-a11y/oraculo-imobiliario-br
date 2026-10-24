@@ -36,7 +36,7 @@
     },
     {
       "id": "certidao_estado_civil",
-      "nome": "Certidão de Nascimento ou Casamento atualizada (90 dias)",
+      "nome": "Certidão de Nascimento ou Casamento atualizada (a lei não fixa prazo; em geral o cartório pede emitida há até 90 dias)",
       "obrigatorio": true,
       "condicao": "vendedor_tipo == PF",
       "bloco_relatorio": "B"

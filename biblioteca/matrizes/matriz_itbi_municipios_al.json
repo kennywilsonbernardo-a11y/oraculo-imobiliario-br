@@ -13,13 +13,13 @@
   {
    "municipio": "Maceió",
    "lei": "Lei nº 6.685/2017 (Código Tributário)",
-   "artigo": "art. 162",
+   "artigo": "arts. 162 e 164",
    "aliquota_geral": "3,0%",
-   "sfh": "redução de 2/3 do imposto, só na parte financiada (≈1% sobre o financiado)",
-   "outros": "sentença judicial: desconto de 1/3 do imposto (artigo a identificar)",
-   "fonte": "leis.org (compilação) - https://leis.org/municipais/al/maceio/lei/lei-ordinaria/2017/6685/",
-   "status": "CONFERIDO em fonte secundária - reconferir no Diário Oficial / SEFAZ Maceió",
-   "divergencia_widget": "widget dizia SFH 0,5% financiado + 2% restante; o CTM compilado diz 3% com redução de 2/3 na parte financiada"
+   "sfh": "redução de 2/3 do imposto, só na parte financiada (≈1% sobre o financiado) - art. 164, §2º",
+   "outros": "desconto de 1/3 do imposto se a guia for pedida em até 30 dias da lavratura do instrumento ou do trânsito em julgado da sentença (art. 164, §1º); cumulativo com a redução SFH (art. 164, §3º, incluído pela Lei 6.715/2017)",
+   "fonte": "Código Tributário de Maceió consolidado até a Lei 6.829/2018, PDF publicado pela Secretaria Municipal de Economia (semecmaceio.com/NCTM.pdf), arts. 162 e 164 - lido em 24/10/2026",
+   "status": "CONFERIDO no texto consolidado da Prefeitura (alterações posteriores a 2018 não localizadas) - confirmar na SEMEC antes de orientar",
+   "divergencia_widget": "resolvida em 24/10/2026: 3% com desconto de 1/3 em 30 dias (2%) e redução SFH de 2/3 na parte financiada"
   },
   {
    "municipio": "Arapiraca",

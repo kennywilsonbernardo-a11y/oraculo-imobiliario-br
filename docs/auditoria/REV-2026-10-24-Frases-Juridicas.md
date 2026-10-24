@@ -26,3 +26,19 @@
 - Liminar JFMA — IRIB (14/05/2026) e íntegra publicada pelo Migalhas
 - Decreto 12.689/2025 — Baker McKenzie; Registro de Imóveis do Brasil
 - CC arts. 1.649 e 1.650; Lei AL 7.861/2016 (ALE-AL)
+
+## Complemento (24/10/2026, tarde)
+
+**CNNR-AL conferida.** Cópia oficial da Consolidação Normativa Notarial e Registral (Provimento CGJ/AL 16/2019, atualizada até o Provimento 10/2022), localizada no computador do Kenny (PDF de 310 páginas, SHA-256 `086cf77697faaff44e14ac37862cc888bd988464911bb7d64d79c982532e9735`). O PDF não está mais disponível no site da Corregedoria.
+
+- Art. 224, §1º (usucapião extrajudicial de imóvel rural: CAR, CCIR e certificação do INCRA): **confere**.
+- Arts. 234 a 236 e 244, parágrafo único (REURB: registro da CRF; compromissos e cessões viram título com prova de quitação): **confere**.
+- Arts. 30 a 47 (estrangeiro, imóvel rural; art. 33: até 3 módulos independe de autorização): **confere**.
+- Observação: o art. 177 desta versão fala em laudêmio sobre o terreno e as benfeitorias. A lei federal (Decreto-Lei 2.398/87, art. 3º, na redação da Lei 13.465/2017) exclui as benfeitorias, e é isso que o site diz.
+
+**Corrigido (aprovação pendente junto com o ITBI de Maceió):**
+
+| Tema | Problema | Correção |
+|---|---|---|
+| Certidão de nascimento/casamento | "90 dias" apresentado como prazo | Nenhuma norma fixa esse prazo (nem a CNNR-AL nem o Decreto 93.240/86); passa a dizer que é o que o cartório costuma pedir |
+| Vendedor estrangeiro | "Cartório só lavra a escritura com o DARF já quitado", sem base | Retirado; a obrigação do comprador passa a citar a Lei 10.833/2003, art. 26 (conferido no Planalto) |
