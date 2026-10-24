@@ -49,3 +49,14 @@ Os 102 códigos IBGE batem. **78 municípios conferem** (MF e FMP iguais). **24 
 Nos 24 a base diz, no campo `fonte`, "consulta 2026-08-16" com os valores dela. Esta evidência não prova se o INCRA mudou os números depois de agosto ou se a base foi preenchida errado: prova só o que o PGT mostra hoje.
 
 **Nada foi alterado na base.** alagoas.json é artefato congelado (AL-IBGE-001); corrigir os 24 depende de decisão da Mesa.
+
+## Decisão D-05 (Mesa, 24/10/2026, 14:13)
+
+Kenny Wilson (Presidente da Mesa) autorizou a correção dos 24 municípios com os números desta consulta.
+
+- Cada registro corrigido recebeu `fmp_status: "CORRIGIDO"` e, no campo `fonte`, a data `consulta 2026-10-24` e o arquivo de evidência da página correspondente.
+- Os outros 78 registros não foram alterados.
+- Depois da correção, os 102 registros conferem com o PGT de 24/10/2026.
+- SHA-256 de `alagoas.json` antes: `044616f641fbfca8823915390b4cb0819f5e33cd01bb2c3d8eb1ba6b43529441`
+- SHA-256 de `alagoas.json` depois: `f4a33497b6c92e25520645a8f57baa35ad426287ddc314f008c70dd2d3712925`
+- A base continua **não selada** (`alagoas.sha256` não existe). Selar é a decisão D-04, ainda pendente.
