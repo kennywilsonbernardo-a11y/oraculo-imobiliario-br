@@ -99,7 +99,7 @@ if (require.main === module) {
     cidade: 'Maceió',
     uf: 'AL',
     impostos_alerta: 'ITBI previsto - alíquota Maceió 3% (padrão) - exceção SFH: 0,5% financiado + 2% restante - verificar Prefeitura',
-    alerta_conjuge: 'Vendedor casado comunhão parcial - exige outorga uxória - sem outorga venda nula',
+    alerta_conjuge: 'Vendedor casado comunhão parcial - exige outorga uxória - sem outorga (e sem suprimento judicial) a venda é anulável, não nula - CC art. 1.647 c/c 1.649',
     casos_especiais_lista: 'Nenhum - imóvel padrão urbano',
     hash_auditoria: 'sha256:a1b2c3d4e5f6...',
     hash_auditoria_curto: 'a1b2c3',
