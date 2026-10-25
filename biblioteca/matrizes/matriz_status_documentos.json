@@ -1,0 +1,424 @@
+{
+  "_meta": {
+    "titulo": "Status do documento — o que parece prova de dono, mas é cadastro, protocolo ou caminho",
+    "origem": "Diretriz do Presidente da Mesa, 25/10/2026: 'muitas vezes leva a crer que é documento, onde muitas vezes é um estado inicial de cadastro, ou caminho para regularização... devemos pensar como leigo'. Caso que deu origem: recibo de entrega da Declaração para Cadastro Rural (DCR/SNCR), código do imóvel 'Novo'.",
+    "regra": "Cada item diz, em linguagem de leigo, o que o papel PARECE, o que ele É, o que ele NÃO PROVA e o que falta. Toda afirmação jurídica tem fonte oficial (norma no planalto.gov.br, provimento do TJAL ou texto impresso no próprio documento), conferida em 25/10/2026. Revisão jurídica independente: apto com ajustes; ajustes aplicados.",
+    "complementa": [
+      "matriz_naturezas_titulo.json (escada N0–N6)",
+      "matriz_naturezas_especificas.json (títulos e contratos)"
+    ],
+    "estagios": {
+      "prova_de_dono": "Registro na matrícula do Cartório de Registro de Imóveis. É o que mostra, para todos, quem é o dono.",
+      "titulo_sem_registro": "Documento que serve para registrar (escritura, formal de partilha, sentença, CRF), mas que ainda não foi registrado na matrícula.",
+      "cadastro": "Inscrição num órgão público (INCRA, Receita, Prefeitura, órgão ambiental, SPU). Mostra quem declarou ou quem paga; não mostra quem é o dono.",
+      "protocolo": "Comprovante de que um pedido foi entregue. O pedido ainda vai ser analisado e pode ser negado.",
+      "aprovacao_tecnica": "Aprovação de planta, medição ou obra. Confirma a parte técnica; não transfere nem prova propriedade.",
+      "certidao_de_situacao": "Certidão que mostra dívidas ou processos de uma pessoa ou de um imóvel. Não diz quem é o dono.",
+      "titulo_com_restricao": "Título que existe, mas com proibição de venda por um prazo ou condições a cumprir."
+    },
+    "versao": "1.1",
+    "data": "2026-10-25"
+  },
+  "itens": [
+    {
+      "id": "recibo_dcr_sncr",
+      "nome_popular": "Recibo da declaração do INCRA (DCR) / \"cadastro do sítio no INCRA\"",
+      "estagio": "protocolo",
+      "parece": "Que o imóvel rural já está cadastrado e regularizado no INCRA em nome de quem declarou.",
+      "e": "Só o comprovante de que a pessoa ENVIOU uma declaração ao INCRA pela internet. Quando aparece \"Código do imóvel rural: Novo\", o imóvel ainda nem tem código no cadastro rural: é o começo do caminho.",
+      "nao_prova": "Não prova propriedade nem posse. Nem o CCIR que vier depois prova: documentos do INCRA para fins de cadastro não fazem prova de propriedade.",
+      "falta": "A declaração ser processada pelo INCRA e o CCIR ser emitido; e, para ser dono, o registro na matrícula (compra registrada, usucapião, regularização).",
+      "marcas_no_papel": [
+        "RECIBO DE ENTREGA DA DECLARAÇÃO PARA CADASTRO DE IMÓVEL RURAL",
+        "Sua Declaração Eletrônica foi entregue pela internet",
+        "Código do imóvel rural: Novo",
+        "Sistema de Origem DCR"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 5.868/1972, art. 3º, parágrafo único",
+          "trecho": "Os documentos expedidos pelo INCRA, para fins cadastrais, não fazem prova de propriedade ou de direitos a ela relativos.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5868.htm"
+        }
+      ]
+    },
+    {
+      "id": "ccir",
+      "nome_popular": "CCIR (Certificado de Cadastro de Imóvel Rural)",
+      "estagio": "cadastro",
+      "parece": "O \"documento do sítio\" que prova que a terra é de quem aparece nele.",
+      "e": "O certificado do cadastro rural do INCRA. É obrigatório para vender, dividir, arrendar ou hipotecar imóvel rural, mas mostra o que foi DECLARADO ao INCRA. O próprio CCIR separa a área em \"registrada\", \"posse a justo título\" e \"posse por simples ocupação\".",
+      "nao_prova": "Não prova propriedade nem posse — o próprio CCIR diz que as informações são exclusivamente cadastrais. Quando a área aparece como \"posse a justo título\" ou \"posse por simples ocupação\", foi o próprio declarante quem informou ao INCRA que não tem registro em cartório em seu nome para essa parte.",
+      "falta": "Para ser dono: registro na matrícula. Se a área está como posse, o caminho costuma ser regularização (usucapião ou outro título).",
+      "marcas_no_papel": [
+        "CERTIFICADO DE CADASTRO DE IMÓVEL RURAL - CCIR",
+        "NÃO LEGITIMANDO DIREITO DE DOMÍNIO OU POSSE",
+        "POSSE POR SIMPLES OCUPAÇÃO"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 5.868/1972, art. 3º, parágrafo único",
+          "trecho": "Os documentos expedidos pelo INCRA, para fins cadastrais, não fazem prova de propriedade ou de direitos a ela relativos.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5868.htm"
+        },
+        {
+          "norma": "Texto do próprio CCIR (esclarecimento 3)",
+          "trecho": "As informações deste certificado são exclusivamente cadastrais, não legitimando direito de domínio ou posse."
+        },
+        {
+          "norma": "Texto do próprio CCIR (esclarecimento 1) e Lei 4.947/1966, art. 22, §§ 1º e 2º",
+          "trecho": "Este certificado é documento indispensável para desmembrar, arrendar, hipotecar, vender ou prometer em venda o imóvel rural..."
+        }
+      ]
+    },
+    {
+      "id": "car",
+      "nome_popular": "CAR (Cadastro Ambiental Rural) / recibo do CAR",
+      "estagio": "cadastro",
+      "parece": "Um registro oficial do imóvel em nome de quem fez o cadastro.",
+      "e": "Um cadastro AMBIENTAL: mostra onde estão a vegetação nativa, as áreas de preservação e a reserva legal. Qualquer proprietário ou possuidor faz a inscrição.",
+      "nao_prova": "A própria lei diz que o cadastro não é título para reconhecer propriedade ou posse.",
+      "falta": "Para ser dono: registro na matrícula. O CAR continua necessário para a parte ambiental.",
+      "marcas_no_papel": [
+        "RECIBO DE INSCRIÇÃO DO IMÓVEL RURAL NO CAR",
+        "Registro no CAR"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 12.651/2012, art. 29, caput e § 1º",
+          "trecho": "...registro público eletrônico de âmbito nacional, obrigatório para todos os imóveis rurais... exigirá do proprietário ou possuidor rural...",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+        },
+        {
+          "norma": "Lei 12.651/2012 (Código Florestal), art. 29, § 2º",
+          "trecho": "O cadastramento não será considerado título para fins de reconhecimento do direito de propriedade ou posse...",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2012/lei/l12651.htm"
+        }
+      ]
+    },
+    {
+      "id": "itr_cafir",
+      "nome_popular": "ITR / declaração do ITR / CAFIR (Receita Federal)",
+      "estagio": "cadastro",
+      "parece": "Que quem paga o ITR é o dono da terra.",
+      "e": "Cadastro e declaração de imposto à Receita Federal, feitos pelo próprio contribuinte. O valor da terra declarado é uma autoavaliação.",
+      "nao_prova": "Pagar ou declarar o ITR não transfere nem prova propriedade. Pode servir como mais um indício de posse (por exemplo, numa usucapião).",
+      "falta": "Para ser dono: registro na matrícula.",
+      "marcas_no_papel": [
+        "DIAC",
+        "DIAT",
+        "CAFIR",
+        "NIRF",
+        "CIB"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 9.393/1996, art. 4º",
+          "trecho": "Contribuinte do ITR é o proprietário de imóvel rural, o titular de seu domínio útil ou o seu possuidor a qualquer título.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9393.htm"
+        },
+        {
+          "norma": "Lei 9.393/1996, arts. 6º e 8º (DIAC, CAFIR, DIAT; valor da terra como autoavaliação)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9393.htm"
+        },
+        {
+          "norma": "Código Civil, art. 1.227 (direitos reais só com registro)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        },
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, IV (pagamento de impostos como documento que demonstra a posse)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "iptu_cadastro",
+      "nome_popular": "Carnê do IPTU / ficha cadastral (BCI) / IPTU no meu nome",
+      "estagio": "cadastro",
+      "parece": "Que o imóvel é de quem está no carnê do IPTU.",
+      "e": "Cadastro fiscal da Prefeitura. A lei permite cobrar o IPTU do proprietário, de quem tem o domínio útil ou do possuidor.",
+      "nao_prova": "Nome no IPTU não prova que a pessoa é dona: pode ser só possuidor. Pagar IPTU pode servir como indício de posse.",
+      "falta": "Para ser dono: registro na matrícula. Confira se o nome no IPTU é o mesmo da matrícula.",
+      "marcas_no_papel": [
+        "Contribuinte",
+        "Inscrição Imobiliária",
+        "Ficha cadastral"
+      ],
+      "fontes": [
+        {
+          "norma": "Código Tributário Nacional, art. 34",
+          "trecho": "Contribuinte do imposto é o proprietário do imóvel, o titular do seu domínio útil, ou o seu possuidor a qualquer título.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm"
+        },
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, IV (pagamento de impostos e taxas como documento que demonstra a posse)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "spu_inscricao_ocupacao",
+      "nome_popular": "Inscrição de ocupação na SPU / RIP / \"terreno de marinha no meu nome\"",
+      "estagio": "cadastro",
+      "parece": "Que a pessoa é dona do terreno (de marinha ou da União) porque está no cadastro da SPU.",
+      "e": "Um ato da União que reconhece a pessoa como ocupante e cobra taxa de ocupação. O terreno continua sendo da União.",
+      "nao_prova": "Não faz da pessoa dona: o terreno continua sendo da União, e a lei chama a inscrição de ocupação de ato precário, que pode ser desfeito a qualquer tempo.",
+      "falta": "Ver na matrícula e na SPU qual é o regime (ocupação ou aforamento) e o que a SPU exige para transferir.",
+      "marcas_no_papel": [
+        "Secretaria do Patrimônio da União",
+        "RIP",
+        "inscrição de ocupação",
+        "taxa de ocupação"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 9.636/1998, art. 7º",
+          "trecho": "A inscrição de ocupação... é ato administrativo precário, resolúvel a qualquer tempo...",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9636.htm"
+        },
+        {
+          "norma": "Constituição Federal, art. 20, VII",
+          "trecho": "São bens da União: ... os terrenos de marinha e seus acrescidos",
+          "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+        }
+      ]
+    },
+    {
+      "id": "sigef_certificacao",
+      "nome_popular": "Georreferenciamento certificado no SIGEF / \"planta do INCRA\"",
+      "estagio": "aprovacao_tecnica",
+      "parece": "Que o INCRA reconheceu a terra como sendo de quem mediu.",
+      "e": "A certificação de que a medição (o polígono) não se sobrepõe a outro imóvel no cadastro do INCRA e atende às normas técnicas.",
+      "nao_prova": "A norma diz que a certificação não implica reconhecimento do domínio nem a exatidão dos limites e confrontações indicados.",
+      "falta": "Levar a certificação ao cartório para averbar/registrar na matrícula.",
+      "marcas_no_papel": [
+        "SIGEF",
+        "certificação",
+        "memorial descritivo",
+        "parcela"
+      ],
+      "fontes": [
+        {
+          "norma": "Decreto 4.449/2002, art. 9º, § 1º",
+          "trecho": "Caberá ao INCRA certificar que a poligonal objeto do memorial descritivo não se sobrepõe a nenhuma outra constante de seu cadastro georreferenciado e que o memorial atende às exigências técnicas...",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/2002/d4449.htm"
+        },
+        {
+          "norma": "Decreto 4.449/2002, art. 9º, § 2º",
+          "trecho": "A certificação do memorial descritivo pelo INCRA não implicará reconhecimento do domínio ou a exatidão dos limites e confrontações indicados pelo proprietário.",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/2002/d4449.htm"
+        }
+      ]
+    },
+    {
+      "id": "loteamento_nao_registrado",
+      "nome_popular": "Lote de loteamento \"aprovado na Prefeitura\" / planta aprovada",
+      "estagio": "aprovacao_tecnica",
+      "parece": "Que, se a Prefeitura aprovou o loteamento, o lote já pode ser vendido e escriturado.",
+      "e": "A aprovação do projeto pela Prefeitura é um passo: depois de aprovado, o loteamento ainda precisa ser registrado no Cartório de Registro de Imóveis; antes disso, a lei proíbe vender os lotes.",
+      "nao_prova": "É proibido vender ou prometer vender lote de loteamento ou desmembramento não registrado.",
+      "falta": "Ver na matrícula se o loteamento está registrado e se o lote tem matrícula própria.",
+      "marcas_no_papel": [
+        "aprovação de loteamento",
+        "alvará de loteamento",
+        "planta aprovada"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 6.766/1979, art. 37",
+          "trecho": "É vedado vender ou prometer vender parcela de loteamento ou desmembramento não registrado.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm"
+        }
+      ]
+    },
+    {
+      "id": "protocolo_cartorio",
+      "nome_popular": "Protocolo (prenotação) no cartório / \"já dei entrada no cartório\"",
+      "estagio": "protocolo",
+      "parece": "Que, como o papel deu entrada no cartório, o imóvel já passou para o nome de quem comprou.",
+      "e": "O número de protocolo marca a ordem de chegada do título no cartório, e essa ordem define a prioridade. O cartório ainda vai analisar e pode fazer exigências.",
+      "nao_prova": "Só há transferência depois do registro. Se o título não for registrado em 20 dias, contados da data do protocolo, porque o interessado não atendeu às exigências, os efeitos do protocolo acabam (na REURB social o prazo é de 40 dias).",
+      "falta": "O registro na matrícula. Peça a certidão atualizada depois do registro.",
+      "marcas_no_papel": [
+        "Protocolo nº",
+        "prenotação",
+        "nota de exigência",
+        "nota devolutiva"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, arts. 182 e 186",
+          "trecho": "O número de ordem determinará a prioridade do título...",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+        },
+        {
+          "norma": "Lei 6.015/1973, art. 205",
+          "trecho": "Cessarão automaticamente os efeitos da prenotação se, decorridos 20 (vinte) dias da data do seu lançamento no Protocolo, o título não tiver sido registrado por omissão do interessado em atender às exigências legais.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+        },
+        {
+          "norma": "Código Civil, art. 1.245",
+          "trecho": "Transfere-se entre vivos a propriedade mediante o registro do título translativo no Registro de Imóveis.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "usucapiao_em_andamento",
+      "nome_popular": "Usucapião em andamento (no cartório ou na Justiça)",
+      "estagio": "protocolo",
+      "parece": "Que, com o pedido de usucapião feito, a pessoa já é dona.",
+      "e": "Um pedido. No cartório, o pedido é autuado e o protocolo fica valendo até o pedido ser aceito ou rejeitado.",
+      "nao_prova": "O pedido, sozinho, não prova que a pessoa é dona: ainda vai ser analisado se ela cumpre os requisitos (tempo e tipo de posse). Só depois do acolhimento (ou da sentença) e do registro na matrícula a propriedade aparece no cartório e o imóvel pode ser vendido ou financiado com segurança.",
+      "falta": "Acolhimento do pedido (ou sentença) e registro na matrícula.",
+      "marcas_no_papel": [
+        "reconhecimento extrajudicial de usucapião",
+        "ata notarial",
+        "autuado"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, caput e § 1º",
+          "trecho": "O pedido será autuado pelo registrador, prorrogando-se o prazo da prenotação até o acolhimento ou a rejeição do pedido.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+        },
+        {
+          "norma": "Código Civil, art. 1.238",
+          "trecho": "...adquire-lhe a propriedade, independentemente de título e boa-fé; podendo requerer ao juiz que assim o declare por sentença, a qual servirá de título para o registro no Cartório de Registro de Imóveis.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "reurb_crf",
+      "nome_popular": "REURB / Certidão de Regularização Fundiária (CRF)",
+      "estagio": "titulo_sem_registro",
+      "parece": "Que, com a CRF emitida pela Prefeitura, o morador já tem o imóvel no nome.",
+      "e": "A CRF é o ato que aprova a regularização e lista os ocupantes; ela precisa ser registrada no cartório.",
+      "nao_prova": "Antes do registro da CRF, a matrícula ainda não mostra o morador como titular.",
+      "falta": "Registro da CRF e do projeto no cartório de registro de imóveis.",
+      "marcas_no_papel": [
+        "Certidão de Regularização Fundiária",
+        "CRF",
+        "REURB"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 13.465/2017, arts. 41 e 42",
+          "trecho": "O registro da CRF e do projeto de regularização fundiária aprovado será requerido diretamente ao oficial do cartório de registro de imóveis...",
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2017/lei/l13465.htm"
+        }
+      ]
+    },
+    {
+      "id": "assentamento_incra",
+      "nome_popular": "Lote de assentamento do INCRA (contrato de concessão de uso, título de domínio, CDRU)",
+      "estagio": "titulo_com_restricao",
+      "parece": "Que o lote do assentamento pode ser vendido como qualquer terreno.",
+      "e": "O contrato de concessão de uso é gratuito, inegociável e tem cláusulas resolutivas. O título de domínio e a CDRU também têm cláusulas resolutivas e são inegociáveis por dez anos, contados da data do contrato de concessão de uso (ou instrumento equivalente).",
+      "nao_prova": "O contrato de concessão de uso não pode ser negociado. O título de domínio e a CDRU não podem ser negociados por 10 anos, contados da data do contrato de concessão de uso. Quem paga por um lote nessa situação corre o risco de não conseguir passar nada para o seu nome, e o assentado pode perder o lote se descumprir as cláusulas (como cultivar e não ceder o uso a terceiros).",
+      "falta": "Ver no INCRA e na matrícula qual instrumento existe, a data e se as cláusulas foram cumpridas e liberadas.",
+      "marcas_no_papel": [
+        "Contrato de Concessão de Uso",
+        "CCU",
+        "Título de Domínio",
+        "CDRU",
+        "Projeto de Assentamento"
+      ],
+      "fontes": [
+        {
+          "norma": "Lei 8.629/1993, art. 18, § 1º",
+          "trecho": "Os títulos de domínio e a CDRU são inegociáveis pelo prazo de dez anos, contado da data de celebração do contrato de concessão de uso ou de outro instrumento equivalente...",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8629.htm"
+        },
+        {
+          "norma": "Lei 8.629/1993, art. 18, §§ 2º e 3º (concessão de uso inegociável; cláusulas resolutivas)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8629.htm"
+        },
+        {
+          "norma": "Lei 8.629/1993, art. 21 (cultivar e não ceder o uso a terceiros por 10 anos)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l8629.htm"
+        }
+      ]
+    },
+    {
+      "id": "escritura_sem_registro",
+      "nome_popular": "Escritura no tabelionato (sem registro)",
+      "estagio": "titulo_sem_registro",
+      "parece": "Que, com a escritura assinada, o comprador já é dono.",
+      "e": "A escritura é o título que serve para registrar. Enquanto não for registrada, o vendedor continua sendo considerado dono.",
+      "nao_prova": "Sem registro, a escritura não transfere a propriedade.",
+      "falta": "Registrar a escritura na matrícula, no Cartório de Registro de Imóveis.",
+      "marcas_no_papel": [
+        "Tabelionato de Notas",
+        "Escritura Pública de Compra e Venda",
+        "Livro",
+        "Folhas"
+      ],
+      "fontes": [
+        {
+          "norma": "Código Civil, art. 1.245, caput e § 1º",
+          "trecho": "Transfere-se entre vivos a propriedade mediante o registro do título translativo no Registro de Imóveis. § 1º Enquanto não se registrar o título translativo, o alienante continua a ser havido como dono do imóvel.",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        },
+        {
+          "norma": "Código Civil, art. 1.227",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "certidoes_de_situacao",
+      "nome_popular": "Certidões negativas (IPTU, federal, trabalhista, TJAL)",
+      "estagio": "certidao_de_situacao",
+      "parece": "Que, com as certidões \"limpas\", está tudo certo com o imóvel.",
+      "e": "Mostram se há dívidas ou processos em nome de uma pessoa ou de um imóvel, numa data e dentro do alcance de cada certidão.",
+      "nao_prova": "Não dizem quem é o dono e não substituem a matrícula. Cada certidão cobre só o que nela está escrito (ex.: a certidão cível do TJAL não inclui execução fiscal).",
+      "falta": "Matrícula atualizada + as certidões dentro da validade.",
+      "marcas_no_papel": [
+        "Certidão Negativa",
+        "Certidão Positiva com efeito de negativa",
+        "Válida até"
+      ],
+      "fontes": [
+        {
+          "norma": "Provimento CGJ/AL nº 22/2015, Anexo Único, Modelo I (certidão cível do TJAL)",
+          "trecho": "A pesquisa não abrange as AÇÕES DE EXECUÇÃO FISCAL MUNICIPAL E ESTADUAL, FALÊNCIA, RECUPERAÇÃO JUDICIAL E CONCORDATA",
+          "url": "https://documentos.tjal.jus.br/documentos/download-anexo/23825"
+        }
+      ]
+    },
+    {
+      "id": "matricula_registrada",
+      "nome_popular": "Matrícula com o registro em nome do vendedor",
+      "estagio": "prova_de_dono",
+      "parece": "—",
+      "e": "É o documento que a lei usa para mostrar quem é o dono: os direitos sobre imóveis transmitidos entre vivos só se adquirem com o registro no cartório. Essa prova só cai se o registro for corrigido ou anulado.",
+      "nao_prova": "A certidão mostra a situação até a data em que foi tirada; ônus e bloqueios precisam ser lidos até o último ato.",
+      "falta": "Certidão atualizada (para lavrar a escritura, a certidão de ônus reais vale 30 dias) e leitura de todos os atos.",
+      "marcas_no_papel": [
+        "Registro de Imóveis",
+        "Matrícula",
+        "R-",
+        "AV-",
+        "CNM"
+      ],
+      "fontes": [
+        {
+          "norma": "Código Civil, art. 1.227",
+          "trecho": "Os direitos reais sobre imóveis constituídos, ou transmitidos por atos entre vivos, só se adquirem com o registro no Cartório de Registro de Imóveis dos referidos títulos...",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        },
+        {
+          "norma": "Código Civil, arts. 1.245, § 2º, e 1.247 (registro vale até ser retificado ou anulado)",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        },
+        {
+          "norma": "Decreto 93.240/1986, art. 1º, IV",
+          "trecho": "...a certidão de ações reais e pessoais reipersecutórias, relativas ao imóvel, e a de ônus reais, expedidas pelo Registro de Imóveis competente, cujo prazo de validade, para este fim, será de 30 (trinta) dias",
+          "url": "https://www.planalto.gov.br/ccivil_03/decreto/antigos/d93240.htm"
+        }
+      ]
+    }
+  ]
+}
