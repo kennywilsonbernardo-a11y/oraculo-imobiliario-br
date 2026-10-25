@@ -374,17 +374,16 @@
       "estagio": "prova_de_posse",
       "parece": "Que, com a ata feita no tabelionato, o imóvel já é da pessoa.",
       "e": "O registro, feito pelo tabelião, da posse da pessoa: descrição do imóvel, tempo e tipo de posse, testemunhas e fotos. É um dos documentos do pedido de usucapião no Registro de Imóveis.",
-      "nao_prova": "A própria norma manda o tabelião escrever na ata que ela não tem valor como confirmação ou estabelecimento de propriedade.",
+      "nao_prova": "A norma manda o tabelião registrar na própria ata que ela não tem valor como confirmação ou estabelecimento de propriedade.",
       "falta": "Protocolar o pedido de usucapião no Registro de Imóveis, cumprir notificações e editais e obter o registro na matrícula.",
       "marcas_no_papel": [
         "ATA NOTARIAL",
-        "usucapião extrajudicial",
-        "justificação de posse"
+        "usucapião extrajudicial"
       ],
       "fontes": [
         {
           "norma": "Provimento CNJ nº 149/2023, art. 402, § 3º",
-          "trecho": "...a ata notarial não tem valor como confirmação ou estabelecimento de propriedade, servindo apenas para a instrução de requerimento extrajudicial de usucapião para processamento perante o registrador de imóveis.",
+          "trecho": "Finalizada a lavratura da ata notarial, o tabelião deve cientificar o requerente e consignar no ato que a ata notarial não tem valor como confirmação ou estabelecimento de propriedade, servindo apenas para a instrução de requerimento extrajudicial de usucapião para processamento perante o registrador de imóveis.",
           "url": "https://atos.cnj.jus.br/atos/detalhar/5243"
         }
       ]
@@ -395,7 +394,7 @@
       "estagio": "cadastro",
       "parece": "Um documento oficial do INCRA sobre o imóvel.",
       "e": "A cópia impressa dos formulários que a própria pessoa preencheu na declaração ao INCRA (estrutura, uso, titulares). O rodapé do próprio papel diz que ele não possui valor legal.",
-      "nao_prova": "Não prova propriedade nem posse: é o que foi declarado.",
+      "nao_prova": "Não prova propriedade nem direitos sobre o imóvel (Lei 5.868/1972, art. 3º, parágrafo único); mostra só o que foi declarado.",
       "falta": "O mesmo do CCIR: para ser dono, registro na matrícula.",
       "marcas_no_papel": [
         "DECLARAÇÃO DO IMÓVEL RURAL",
@@ -409,7 +408,8 @@
         },
         {
           "norma": "Lei 5.868/1972, art. 3º, parágrafo único",
-          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5868.htm"
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5868.htm",
+          "trecho": "Os documentos expedidos pelo INCRA, para fins cadastrais, não fazem prova de propriedade ou de direitos a ela relativos."
         }
       ]
     },

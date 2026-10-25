@@ -1,7 +1,7 @@
 {
   "_meta": {
     "titulo": "Roteiro da usucapião extrajudicial (no cartório), passo a passo, em linguagem de leigo",
-    "origem": "Caso real concluído com sucesso (Litoral Norte de Alagoas, 2003–2026), trazido pelo Presidente da Mesa em 25/10/2026 para o Oráculo aprender o processo. Dossiê completo só no repositório privado (oraculo-casos).",
+    "origem": "Caso real concluído com sucesso segundo o corretor que o acompanhou (Litoral Norte de Alagoas, 2003–2026), trazido pelo Presidente da Mesa em 25/10/2026 para o Oráculo aprender o processo. Dossiê completo só no repositório privado (oraculo-casos).",
     "fontes_conferidas": "Lei 6.015/1973, art. 216-A (planalto.gov.br) e Provimento CNJ nº 149/2023 — Código Nacional de Normas do Foro Extrajudicial, arts. 320-E, 398 a 423 (atos.cnj.jus.br), conferidos em 25/10/2026.",
     "versao": "1.0",
     "data": "2026-10-25"
@@ -37,7 +37,7 @@
       "n": 3,
       "titulo": "Medir o imóvel (planta e memorial)",
       "o_que_fazer": "Um profissional habilitado (engenheiro ou agrimensor) faz a planta e o memorial descritivo, com ART. Quem está na matrícula e os vizinhos registrados podem assinar a planta concordando.",
-      "detalhe": "Para imóvel rural, os cartórios costumam pedir também CCIR quitado, ITR, CAR e, quando a lei exigir, georreferenciamento certificado (lista de documentos usada no caso real).",
+      "detalhe": "No caso real, o cartório pediu também CCIR quitado, ITR, CAR e, quando a lei exigir, georreferenciamento certificado (lista de documentos do cartório).",
       "fontes": [
         {
           "norma": "Lei 6.015/1973, art. 216-A, II; Prov. CNJ 149/2023, art. 401, II"
@@ -58,7 +58,7 @@
     {
       "n": 5,
       "titulo": "Tirar as certidões",
-      "o_que_fazer": "Certidão da matrícula (inteiro teor) e certidões negativas dos distribuidores (Justiça) do lugar do imóvel e do domicílio de quem pede.",
+      "o_que_fazer": "Certidões negativas dos distribuidores (Justiça) do lugar do imóvel e do domicílio de quem pede e, em geral, a certidão de inteiro teor da matrícula (o cartório pede).",
       "fontes": [
         {
           "norma": "Lei 6.015/1973, art. 216-A, III; Prov. CNJ 149/2023, art. 401, IV"
@@ -79,18 +79,18 @@
     {
       "n": 7,
       "titulo": "Notificações",
-      "o_que_fazer": "Quem está na matrícula (e os vizinhos registrados) e não assinou a planta é notificado para concordar em 15 dias; ficar em silêncio conta como concordância. Quem mora em outra cidade é notificado pelo Cartório de Títulos e Documentos de lá, e quem pede paga as despesas antes. União, Estado e Município também são avisados.",
-      "dispensa": "A notificação de um titular pode ser dispensada quando há documento que liga quem pede a esse titular — por exemplo, escritura de cessão de direitos hereditários que especifique o imóvel —, com prova de quitação e certidão do distribuidor cível de até 30 dias.",
+      "o_que_fazer": "Quem está na matrícula (e os vizinhos registrados) e não assinou a planta é notificado para concordar em 15 dias; ficar em silêncio conta como concordância. Quem mora em outra comarca é notificado pelo Cartório de Títulos e Documentos de lá, e quem pede paga as despesas antes. União, Estado e Município também são avisados.",
+      "dispensa": "A notificação de um titular pode ser dispensada quando há documento que liga quem pede a esse titular — por exemplo, escritura de cessão de direitos hereditários que especifique o imóvel —, com prova de quitação e certidão do distribuidor cível de até 30 dias; e é preciso justificar por que o documento não pôde ser registrado.",
       "fontes": [
         {
-          "norma": "Lei 6.015/1973, art. 216-A, §§ 2º e 3º; Prov. CNJ 149/2023, arts. 407 e 410, § 1º, VII"
+          "norma": "Lei 6.015/1973, art. 216-A, §§ 2º e 3º; Prov. CNJ 149/2023, arts. 407 e 410, § 1º, VII, e § 2º"
         }
       ]
     },
     {
       "n": 8,
       "titulo": "Edital, se alguém não for encontrado",
-      "o_que_fazer": "Se um notificado não for achado, o cartório certifica isso e publica edital duas vezes em jornal de grande circulação, com 15 dias cada; o silêncio conta como concordância. Há também edital para terceiros interessados.",
+      "o_que_fazer": "Se um notificado não for achado, o cartório certifica isso e publica edital duas vezes em jornal local de grande circulação, com 15 dias cada; o silêncio conta como concordância. Há também edital para terceiros interessados, em jornal de grande circulação, com prazo de 15 dias.",
       "fontes": [
         {
           "norma": "Lei 6.015/1973, art. 216-A, §§ 4º e 13; Prov. CNJ 149/2023, art. 408"
@@ -100,7 +100,7 @@
     {
       "n": 9,
       "titulo": "Resolver bloqueios da matrícula",
-      "o_que_fazer": "Hipoteca, penhora ou outro ônus na matrícula não impede a usucapião. Mas a usucapião não apaga bloqueios judiciais: quem pede tem de pedir o cancelamento à autoridade que deu a ordem. A indisponibilidade só é cancelada pela CNIB (Central Nacional de Indisponibilidade de Bens), não por ofício ou e-mail.",
+      "o_que_fazer": "Hipoteca, penhora ou outro ônus na matrícula não impede a usucapião. Mas a usucapião não apaga bloqueios judiciais: quem pede tem de pedir o cancelamento à autoridade que deu a ordem. A indisponibilidade só é cancelada pela CNIB (Central Nacional de Indisponibilidade de Bens), não por ofício ou e-mail. O cartório pode condicionar o registro a esse cancelamento, como no caso real.",
       "fontes": [
         {
           "norma": "Prov. CNJ 149/2023, arts. 411, 418 e 320-E"
@@ -111,7 +111,7 @@
       "n": 10,
       "titulo": "Registro",
       "o_que_fazer": "Passados os prazos, sem diligências pendentes e com a documentação em ordem, o oficial registra a aquisição do imóvel. Pode ser aberta matrícula nova para a área. Se houver impugnação justificada, o caso vai para a Justiça; se o pedido for rejeitado, ainda é possível entrar com ação de usucapião.",
-      "detalhe": "Não se cobra ITBI no registro da usucapião (aquisição originária). Os emolumentos do registro são cobrados em duas metades: uma pelo processamento e outra se o pedido for deferido.",
+      "detalhe": "O cartório não exige ITBI para registrar a usucapião (aquisição originária). Os emolumentos do registro são cobrados em duas metades: uma pelo processamento e outra se o pedido for deferido. Fora isso, há os custos da ata, das notificações e dos editais.",
       "fontes": [
         {
           "norma": "Lei 6.015/1973, art. 216-A, §§ 6º, 8º, 9º e 10; Prov. CNJ 149/2023, arts. 421 e 423"
@@ -147,8 +147,8 @@
     },
     {
       "papel": "Decisão que cancela a indisponibilidade",
-      "status": "certidao_de_situacao",
-      "comentario": "Tira o bloqueio; a própria decisão diz que não reconhece propriedade."
+      "status": "ordem_judicial",
+      "comentario": "Ordem do juiz que tira o bloqueio; a própria decisão diz que não reconhece propriedade."
     },
     {
       "papel": "Registro da usucapião na matrícula",
