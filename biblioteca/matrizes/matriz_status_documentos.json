@@ -14,9 +14,10 @@
       "protocolo": "Comprovante de que um pedido foi entregue. O pedido ainda vai ser analisado e pode ser negado.",
       "aprovacao_tecnica": "Aprovação de planta, medição ou obra. Confirma a parte técnica; não transfere nem prova propriedade.",
       "certidao_de_situacao": "Certidão que mostra dívidas ou processos de uma pessoa ou de um imóvel. Não diz quem é o dono.",
-      "titulo_com_restricao": "Título que existe, mas com proibição de venda por um prazo ou condições a cumprir."
+      "titulo_com_restricao": "Título que existe, mas com proibição de venda por um prazo ou condições a cumprir.",
+      "prova_de_posse": "Documento que ajuda a provar a posse num pedido de usucapião ou regularização. Não prova que a pessoa é dona."
     },
-    "versao": "1.1",
+    "versao": "1.2",
     "data": "2026-10-25"
   },
   "itens": [
@@ -364,6 +365,51 @@
         {
           "norma": "Código Civil, art. 1.227",
           "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm"
+        }
+      ]
+    },
+    {
+      "id": "ata_notarial_usucapiao",
+      "nome_popular": "Ata notarial de usucapião",
+      "estagio": "prova_de_posse",
+      "parece": "Que, com a ata feita no tabelionato, o imóvel já é da pessoa.",
+      "e": "O registro, feito pelo tabelião, da posse da pessoa: descrição do imóvel, tempo e tipo de posse, testemunhas e fotos. É um dos documentos do pedido de usucapião no Registro de Imóveis.",
+      "nao_prova": "A norma manda o tabelião registrar na própria ata que ela não tem valor como confirmação ou estabelecimento de propriedade.",
+      "falta": "Protocolar o pedido de usucapião no Registro de Imóveis, cumprir notificações e editais e obter o registro na matrícula.",
+      "marcas_no_papel": [
+        "ATA NOTARIAL",
+        "usucapião extrajudicial"
+      ],
+      "fontes": [
+        {
+          "norma": "Provimento CNJ nº 149/2023, art. 402, § 3º",
+          "trecho": "Finalizada a lavratura da ata notarial, o tabelião deve cientificar o requerente e consignar no ato que a ata notarial não tem valor como confirmação ou estabelecimento de propriedade, servindo apenas para a instrução de requerimento extrajudicial de usucapião para processamento perante o registrador de imóveis.",
+          "url": "https://atos.cnj.jus.br/atos/detalhar/5243"
+        }
+      ]
+    },
+    {
+      "id": "declaracao_imovel_rural_incra",
+      "nome_popular": "\"Declaração do imóvel rural\" impressa do sistema do INCRA",
+      "estagio": "cadastro",
+      "parece": "Um documento oficial do INCRA sobre o imóvel.",
+      "e": "A cópia impressa dos formulários que a própria pessoa preencheu na declaração ao INCRA (estrutura, uso, titulares). O rodapé do próprio papel diz que ele não possui valor legal.",
+      "nao_prova": "Não prova propriedade nem direitos sobre o imóvel (Lei 5.868/1972, art. 3º, parágrafo único); mostra só o que foi declarado.",
+      "falta": "O mesmo do CCIR: para ser dono, registro na matrícula.",
+      "marcas_no_papel": [
+        "DECLARAÇÃO DO IMÓVEL RURAL",
+        "Formulário de Estrutura",
+        "Este documento não possui valor legal."
+      ],
+      "fontes": [
+        {
+          "norma": "Texto impresso no próprio formulário",
+          "trecho": "Este documento não possui valor legal."
+        },
+        {
+          "norma": "Lei 5.868/1972, art. 3º, parágrafo único",
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l5868.htm",
+          "trecho": "Os documentos expedidos pelo INCRA, para fins cadastrais, não fazem prova de propriedade ou de direitos a ela relativos."
         }
       ]
     },

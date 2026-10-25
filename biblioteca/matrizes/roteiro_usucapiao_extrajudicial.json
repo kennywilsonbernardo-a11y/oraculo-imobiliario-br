@@ -1,0 +1,159 @@
+{
+  "_meta": {
+    "titulo": "Roteiro da usucapião extrajudicial (no cartório), passo a passo, em linguagem de leigo",
+    "origem": "Caso real concluído com sucesso segundo o corretor que o acompanhou (Litoral Norte de Alagoas, 2003–2026), trazido pelo Presidente da Mesa em 25/10/2026 para o Oráculo aprender o processo. Dossiê completo só no repositório privado (oraculo-casos).",
+    "fontes_conferidas": "Lei 6.015/1973, art. 216-A (planalto.gov.br) e Provimento CNJ nº 149/2023 — Código Nacional de Normas do Foro Extrajudicial, arts. 320-E, 398 a 423 (atos.cnj.jus.br), conferidos em 25/10/2026.",
+    "versao": "1.0",
+    "data": "2026-10-25"
+  },
+  "o_que_e": "Usucapião é o reconhecimento de que quem tem a posse de um imóvel, do jeito e pelo tempo que a lei exige, adquiriu a propriedade. Pode ser pedida na Justiça ou direto no Cartório de Registro de Imóveis — este é o caminho extrajudicial.",
+  "quando_faz_sentido": [
+    "A pessoa tem a posse há muitos anos, mas o papel que tem (contrato, cessão de direitos, recibo) não consegue ser registrado.",
+    "O dono que está na matrícula morreu, sumiu ou não tem como assinar a escritura."
+  ],
+  "passos": [
+    {
+      "n": 1,
+      "titulo": "Juntar a história da posse",
+      "o_que_fazer": "Reunir tudo que mostre desde quando e como a pessoa está no imóvel: contrato ou escritura de cessão, contas de energia e água, impostos pagos, cadastro rural (CCIR/CAR), fotos, testemunhas.",
+      "detalhe": "O cartório pede documentos que mostrem a origem, a continuidade e o tempo da posse, como o pagamento de impostos e taxas.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, IV; Prov. CNJ 149/2023, art. 401, III"
+        }
+      ]
+    },
+    {
+      "n": 2,
+      "titulo": "Contratar advogado",
+      "o_que_fazer": "O pedido no cartório é feito por advogado (ou defensor público).",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, caput; Prov. CNJ 149/2023, art. 399"
+        }
+      ]
+    },
+    {
+      "n": 3,
+      "titulo": "Medir o imóvel (planta e memorial)",
+      "o_que_fazer": "Um profissional habilitado (engenheiro ou agrimensor) faz a planta e o memorial descritivo, com ART. Quem está na matrícula e os vizinhos registrados podem assinar a planta concordando.",
+      "detalhe": "No caso real, o cartório pediu também CCIR quitado, ITR, CAR e, quando a lei exigir, georreferenciamento certificado (lista de documentos do cartório).",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, II; Prov. CNJ 149/2023, art. 401, II"
+        }
+      ]
+    },
+    {
+      "n": 4,
+      "titulo": "Fazer a ata notarial no tabelionato",
+      "o_que_fazer": "O tabelião do município do imóvel registra, num documento chamado ata notarial, a descrição do imóvel, o tempo e o tipo de posse, como ela começou, a modalidade de usucapião e o valor. Ele pode ir ao imóvel e ouvir testemunhas.",
+      "atencao": "A própria ata avisa: ela NÃO prova que a pessoa é dona. Serve só para instruir o pedido no Registro de Imóveis.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, I; Prov. CNJ 149/2023, arts. 401, I, e 402, §§ 1º a 3º"
+        }
+      ]
+    },
+    {
+      "n": 5,
+      "titulo": "Tirar as certidões",
+      "o_que_fazer": "Certidões negativas dos distribuidores (Justiça) do lugar do imóvel e do domicílio de quem pede e, em geral, a certidão de inteiro teor da matrícula (o cartório pede).",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, III; Prov. CNJ 149/2023, art. 401, IV"
+        }
+      ]
+    },
+    {
+      "n": 6,
+      "titulo": "Protocolar o pedido no Registro de Imóveis",
+      "o_que_fazer": "O advogado entrega o requerimento com todos os documentos no cartório de registro de imóveis da região do imóvel. O pedido recebe número de protocolo e é autuado.",
+      "detalhe": "O protocolo fica valendo até o pedido ser aceito ou rejeitado.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, caput e § 1º"
+        }
+      ]
+    },
+    {
+      "n": 7,
+      "titulo": "Notificações",
+      "o_que_fazer": "Quem está na matrícula (e os vizinhos registrados) e não assinou a planta é notificado para concordar em 15 dias; ficar em silêncio conta como concordância. Quem mora em outra comarca é notificado pelo Cartório de Títulos e Documentos de lá, e quem pede paga as despesas antes. União, Estado e Município também são avisados.",
+      "dispensa": "A notificação de um titular pode ser dispensada quando há documento que liga quem pede a esse titular — por exemplo, escritura de cessão de direitos hereditários que especifique o imóvel —, com prova de quitação e certidão do distribuidor cível de até 30 dias; e é preciso justificar por que o documento não pôde ser registrado.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, §§ 2º e 3º; Prov. CNJ 149/2023, arts. 407 e 410, § 1º, VII, e § 2º"
+        }
+      ]
+    },
+    {
+      "n": 8,
+      "titulo": "Edital, se alguém não for encontrado",
+      "o_que_fazer": "Se um notificado não for achado, o cartório certifica isso e publica edital duas vezes em jornal local de grande circulação, com 15 dias cada; o silêncio conta como concordância. Há também edital para terceiros interessados, em jornal de grande circulação, com prazo de 15 dias.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, §§ 4º e 13; Prov. CNJ 149/2023, art. 408"
+        }
+      ]
+    },
+    {
+      "n": 9,
+      "titulo": "Resolver bloqueios da matrícula",
+      "o_que_fazer": "Hipoteca, penhora ou outro ônus na matrícula não impede a usucapião. Mas a usucapião não apaga bloqueios judiciais: quem pede tem de pedir o cancelamento à autoridade que deu a ordem. A indisponibilidade só é cancelada pela CNIB (Central Nacional de Indisponibilidade de Bens), não por ofício ou e-mail. O cartório pode condicionar o registro a esse cancelamento, como no caso real.",
+      "fontes": [
+        {
+          "norma": "Prov. CNJ 149/2023, arts. 411, 418 e 320-E"
+        }
+      ]
+    },
+    {
+      "n": 10,
+      "titulo": "Registro",
+      "o_que_fazer": "Passados os prazos, sem diligências pendentes e com a documentação em ordem, o oficial registra a aquisição do imóvel. Pode ser aberta matrícula nova para a área. Se houver impugnação justificada, o caso vai para a Justiça; se o pedido for rejeitado, ainda é possível entrar com ação de usucapião.",
+      "detalhe": "O cartório não exige ITBI para registrar a usucapião (aquisição originária). Os emolumentos do registro são cobrados em duas metades: uma pelo processamento e outra se o pedido for deferido. Fora isso, há os custos da ata, das notificações e dos editais.",
+      "fontes": [
+        {
+          "norma": "Lei 6.015/1973, art. 216-A, §§ 6º, 8º, 9º e 10; Prov. CNJ 149/2023, arts. 421 e 423"
+        }
+      ]
+    }
+  ],
+  "papeis_do_caminho_e_o_que_cada_um_e": [
+    {
+      "papel": "Escritura de cessão de direitos hereditários",
+      "status": "titulo_sem_registro",
+      "comentario": "Mostra a origem da posse; sozinha não foi registrada."
+    },
+    {
+      "papel": "Recibo da declaração ao INCRA e CCIR",
+      "status": "cadastro",
+      "comentario": "Cadastro rural; não prova propriedade."
+    },
+    {
+      "papel": "Ata notarial",
+      "status": "prova_de_posse",
+      "comentario": "Prova a posse para o pedido; não prova propriedade."
+    },
+    {
+      "papel": "Protocolo do pedido no cartório",
+      "status": "protocolo",
+      "comentario": "Pedido em andamento."
+    },
+    {
+      "papel": "Editais e notificações",
+      "status": "protocolo",
+      "comentario": "Etapas do procedimento."
+    },
+    {
+      "papel": "Decisão que cancela a indisponibilidade",
+      "status": "ordem_judicial",
+      "comentario": "Ordem do juiz que tira o bloqueio; a própria decisão diz que não reconhece propriedade."
+    },
+    {
+      "papel": "Registro da usucapião na matrícula",
+      "status": "prova_de_dono",
+      "comentario": "Fim do caminho."
+    }
+  ]
+}
