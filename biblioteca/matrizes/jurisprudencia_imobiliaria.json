@@ -1,0 +1,1976 @@
+{
+  "_meta": {
+    "titulo": "Biblioteca de jurisprudência imobiliária — o que os tribunais já decidiram, em linguagem de leigo",
+    "metodo": "Método do caso (case method): para cada precedente, a situação concreta, a pergunta, o que o tribunal decidiu, por quê, e o que conferir no seu caso. O texto oficial vem transcrito em 'texto_oficial'; a explicação em linguagem simples nunca vai além dele.",
+    "fontes": {
+      "sumulas_stj": "Arquivo oficial 'Súmulas do STJ' (www.stj.jus.br/docs_internet/SumulasSTJ.pdf, 2.847 páginas), lido em 25/10/2026. O arquivo vai até a Súmula 648.",
+      "temas_stj": "Página oficial de Precedentes Qualificados do STJ (processo.stj.jus.br/repetitivos), lida em 25/10/2026 — 1.400 temas varridos; 108 sobre imóveis; 18 cancelados descartados.",
+      "temas_stf": "Portal do STF (portal.stf.jus.br/jurisprudenciaRepercussao), situação lida em 25/10/2026. O portal não mostra o texto das teses: só a situação é citada.",
+      "leis": "planalto.gov.br, texto compilado, lido em 25/10/2026."
+    },
+    "regra_de_uso": "Precedente explica como os tribunais costumam decidir; não substitui a análise do caso concreto por advogado. Temas 'afetado', 'em julgamento' ou 'em revisão' ainda podem mudar: o Oráculo mostra o aviso.",
+    "versao": "1.1",
+    "data": "2026-10-25",
+    "conferencia_automatica": "Em 25/10/2026, cada 'texto_oficial' (e cada anotação ou modulação transcrita) foi comparado por computador com a fonte oficial, normalizando só espaços, aspas e as notas de redação do planalto: 26/26 súmulas, 36/36 temas do STJ e 16/16 dispositivos de lei idênticos. Os 2 temas do STF citam só o título e a situação mostrados no portal.",
+    "revisao_independente": "Revisão jurídica independente em 25/10/2026: apto com ajustes; os 30 ajustes foram aplicados e os textos oficiais novos ou alterados foram reconferidos na fonte."
+  },
+  "categorias": {
+    "registro": "Registro, matrícula e quem é o dono",
+    "compra_segura": "Comprar sem herdar problemas do vendedor",
+    "contrato": "Promessa, contrato e escritura",
+    "planta": "Imóvel na planta: atraso, distrato e hipoteca da construtora",
+    "financiamento": "Financiamento, alienação fiduciária e SFH",
+    "condominio": "Condomínio e associação de moradores",
+    "tributos": "IPTU, ITBI e ITR",
+    "penhora": "Bem de família e penhora",
+    "posse": "Posse, usucapião e regularização",
+    "publico": "Terreno de marinha e bem público",
+    "rural_ambiental": "Imóvel rural e obrigações ambientais",
+    "locacao": "Locação",
+    "familia": "Família e herança",
+    "corretagem": "Corretagem e o papel do corretor"
+  },
+  "precedentes": [
+    {
+      "id": "LEI-CC-1245",
+      "categoria": "registro",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.245, caput e § 1º; art. 1.227",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 1.245. Transfere-se entre vivos a propriedade mediante o registro do título translativo no Registro de Imóveis. § 1º Enquanto não se registrar o título translativo, o alienante continua a ser havido como dono do imóvel.",
+      "pergunta": "Paguei e assinei a escritura. Já sou dono?",
+      "decisao_leigo": "Ainda não. A propriedade só passa quando a escritura é registrada na matrícula. Até lá, para a lei, o vendedor continua sendo o dono.",
+      "por_que_importa": "Enquanto o imóvel está no nome do vendedor, uma dívida dele pode chegar ao imóvel, e ele pode até vendê-lo de novo.",
+      "o_que_conferir": [
+        "Registrar a escritura logo depois de assinar.",
+        "Pedir a certidão da matrícula já com o registro em seu nome."
+      ],
+      "ligado_a": {
+        "status_d10": [
+          "escritura_sem_registro",
+          "matricula_registrada"
+        ],
+        "achados": [
+          "Nenhum documento apresentado prova quem é o dono"
+        ]
+      }
+    },
+    {
+      "id": "LEI-13097-54",
+      "categoria": "registro",
+      "tipo": "lei",
+      "referencia": "Lei 13.097/2015, art. 54, §§ 1º e 2º",
+      "situacao": "em vigor (redação da Lei 14.382/2022)",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2015/lei/l13097.htm",
+      "texto_oficial": "§ 1º Não poderão ser opostas situações jurídicas não constantes da matrícula no registro de imóveis, inclusive para fins de evicção, ao terceiro de boa-fé que adquirir ou receber em garantia direitos reais sobre o imóvel, ressalvados o disposto nos arts. 129 e 130 da Lei nº 11.101, de 9 de fevereiro de 2005, e as hipóteses de aquisição e extinção da propriedade que independam de registro de título de imóvel. § 2º Para a validade ou eficácia dos negócios jurídicos a que se refere o caput deste artigo ou para a caracterização da boa-fé do terceiro adquirente de imóvel ou beneficiário de direito real, não serão exigidas: I - a obtenção prévia de quaisquer documentos ou certidões além daqueles requeridos nos termos do § 2º do art. 1º da Lei nº 7.433, de 18 de dezembro de 1985; e II - a apresentação de certidões forenses ou de distribuidores judiciais.",
+      "pergunta": "Se um processo ou bloqueio contra o vendedor não está na matrícula, ele pode me atingir?",
+      "decisao_leigo": "Em regra, não: o que não está na matrícula não pode ser usado contra quem compra de boa-fé. A lei tem exceções: a falência do vendedor (arts. 129 e 130 da Lei de Falências) e os casos em que a propriedade se ganha ou se perde sem registro, como a usucapião. A lei também diz que certidões forenses não são exigidas para a validade do negócio nem para caracterizar a boa-fé.",
+      "por_que_importa": "A matrícula é o centro de tudo. Mas há dívidas que pesam mesmo fora dela: as tributárias inscritas em dívida ativa (CTN, art. 185, e Tema 290). Por isso, mesmo sem a lei exigir, as certidões do vendedor continuam sendo uma boa prática.",
+      "o_que_conferir": [
+        "Ler a matrícula atualizada até o último ato.",
+        "Mesmo assim, pedir as certidões de dívida tributária do vendedor (federal, estadual e municipal)."
+      ],
+      "relacionados": [
+        "LEI-CTN-185",
+        "STJ-T290",
+        "STJ-T243"
+      ],
+      "ligado_a": {
+        "achados": [
+          "Confira o dono e os ônus na matrícula",
+          "Consultar a CNIB"
+        ]
+      }
+    },
+    {
+      "id": "STJ-T39",
+      "categoria": "registro",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 39,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 990507/DF"
+      ],
+      "julgado_em": "10/11/2010",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=39&cod_tema_final=39",
+      "texto_oficial": "A mera existência de ação tendo por objeto a declaração de nulidade de registro imobiliário não é suficiente para se concluir pela ilegitimidade ativa daquele que, com base nesse mesmo registro, ajuíza ação reivindicatória.",
+      "pergunta": "Alguém entrou com ação dizendo que o registro do meu terreno é nulo. Perdi o direito de pedir o terreno de volta de quem o ocupa?",
+      "decisao_leigo": "Não. Enquanto o registro não for anulado, quem está registrado como dono pode pedir o imóvel de volta, mesmo com uma ação discutindo o registro.",
+      "por_que_importa": "O registro vale até ser cancelado. Mas uma ação contra o registro é um risco sério para quem compra: precisa estar no radar.",
+      "o_que_conferir": [
+        "Certidão de ações reais e pessoais reipersecutórias do imóvel.",
+        "Se houver ação contra o registro, não feche sem parecer de advogado."
+      ]
+    },
+    {
+      "id": "STJ-S375",
+      "categoria": "compra_segura",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 375,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "18/03/2009",
+      "processos": [
+        "EREsp 114415/MG",
+        "EREsp 144190/SP",
+        "REsp 66180/PR"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O reconhecimento da fraude à execução depende do registro da penhora do bem alienado ou da prova de má-fé do terceiro adquirente.",
+      "pergunta": "Comprei de alguém que estava sendo cobrado na Justiça. A venda pode ser desfeita?",
+      "decisao_leigo": "Em regra, só se a penhora já estava registrada na matrícula ou se ficar provado que o comprador sabia do problema (má-fé). Sem isso, presume-se a boa-fé do comprador. O Tema 243 acrescenta: se a execução já estava averbada na matrícula, a venda feita depois presume-se fraudulenta.",
+      "por_que_importa": "Quem consulta a matrícula e não encontra penhora está mais protegido. Quem sabia da dívida e comprou assim mesmo, não.",
+      "o_que_conferir": [
+        "Matrícula atualizada, sem penhora nem averbação de execução.",
+        "Guardar as certidões e a matrícula consultadas na data da compra."
+      ],
+      "relacionados": [
+        "STJ-T243",
+        "LEI-13097-54",
+        "STJ-T290"
+      ],
+      "nota": "Não vale para dívida tributária inscrita em dívida ativa (veja Tema 290)."
+    },
+    {
+      "id": "STJ-T243",
+      "categoria": "compra_segura",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 243,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 956943/PR"
+      ],
+      "julgado_em": "20/08/2014",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=243&cod_tema_final=243",
+      "texto_oficial": "1.1. É indispensável citação válida para configuração da fraude de execução, ressalvada a hipótese prevista no § 3º do art. 615-A do CPC. 1.2. O reconhecimento da fraude de execução depende do registro da penhora do bem alienado ou da prova de má-fé do terceiro adquirente (Súmula n. 375/STJ). 1.3. A presunção de boa-fé é princípio geral de direito universalmente aceito, sendo milenar parêmia: a boa-fé se presume; a má-fé se prova. 1.4. Inexistindo registro da penhora na matrícula do imóvel, é do credor o ônus da prova de que o terceiro adquirente tinha conhecimento de demanda capaz de levar o alienante à insolvência, sob pena de torna-se letra morta o disposto no art. 659, § 4º, do CPC. 1.5. Conforme previsto no § 3º do art. 615-A do CPC, presume-se em fraude de execução a alienação ou oneração de bens realizada após averbação referida no dispositivo.",
+      "pergunta": "Quem tem de provar que o comprador sabia da dívida do vendedor?",
+      "decisao_leigo": "O credor. Se não havia penhora registrada na matrícula, cabe a ele provar que o comprador sabia do processo capaz de deixar o vendedor sem bens. Mas, se a execução já estava averbada na matrícula, a venda feita depois presume-se fraudulenta. Para dívida tributária inscrita em dívida ativa vale outra regra (CTN, art. 185, e Tema 290).",
+      "por_que_importa": "A averbação na matrícula muda tudo: antes dela, o comprador de boa-fé está protegido; depois, a compra corre risco.",
+      "o_que_conferir": [
+        "Averbações de execução, penhora ou indisponibilidade na matrícula.",
+        "Certidão de ações do imóvel e do vendedor, para o seu próprio conhecimento."
+      ],
+      "relacionados": [
+        "STJ-S375",
+        "STJ-T290"
+      ]
+    },
+    {
+      "id": "LEI-CTN-185",
+      "categoria": "compra_segura",
+      "tipo": "lei",
+      "referencia": "Código Tributário Nacional, art. 185",
+      "situacao": "em vigor (redação da LC 118/2005)",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+      "texto_oficial": "Art. 185. Presume-se fraudulenta a alienação ou oneração de bens ou rendas, ou seu comêço, por sujeito passivo em débito para com a Fazenda Pública, por crédito tributário regularmente inscrito como dívida ativa. Parágrafo único. O disposto neste artigo não se aplica na hipótese de terem sido reservados, pelo devedor, bens ou rendas suficientes ao total pagamento da dívida inscrita.",
+      "pergunta": "O vendedor tem dívida de imposto inscrita em dívida ativa. Isso afeta minha compra?",
+      "decisao_leigo": "Pode afetar. A lei presume fraudulenta a venda feita por quem tem dívida tributária inscrita em dívida ativa, salvo se ele guardou bens suficientes para pagar.",
+      "por_que_importa": "Aqui não é preciso penhora registrada na matrícula: basta a inscrição em dívida ativa. É uma exceção importante à proteção da matrícula.",
+      "o_que_conferir": [
+        "Certidão de débitos federais (Receita/PGFN) do vendedor.",
+        "Certidões de débitos estaduais e municipais do vendedor."
+      ],
+      "relacionados": [
+        "STJ-T290"
+      ],
+      "ligado_a": {
+        "checklist": [
+          "cnd_federal"
+        ],
+        "achados": [
+          "Certidão positiva"
+        ]
+      }
+    },
+    {
+      "id": "STJ-T290",
+      "categoria": "compra_segura",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 290,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1141990/PR"
+      ],
+      "julgado_em": "10/11/2010",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=290&cod_tema_final=290",
+      "texto_oficial": "Se o ato translativo foi praticado a partir de 09.06.2005, data de início da vigência da Lei Complementar n.º 118/2005, basta a efetivação da inscrição em dívida ativa para a configuração da figura da fraude.",
+      "pergunta": "A Súmula 375 (boa-fé do comprador) me protege contra dívida de imposto do vendedor?",
+      "decisao_leigo": "Não. Para vendas feitas desde 09/06/2005, basta a dívida tributária estar inscrita em dívida ativa para configurar a fraude, mesmo sem penhora registrada e mesmo que o comprador não soubesse — salvo se o vendedor guardou bens suficientes para pagar a dívida.",
+      "por_que_importa": "É por isso que a certidão de débitos tributários do vendedor continua indispensável, mesmo com a matrícula limpa.",
+      "o_que_conferir": [
+        "CND federal do vendedor.",
+        "Certidões estadual e municipal do vendedor.",
+        "Se positiva, exigir quitação ou garantia antes do negócio."
+      ],
+      "relacionados": [
+        "LEI-CTN-185",
+        "STJ-S375"
+      ]
+    },
+    {
+      "id": "LEI-CTN-130",
+      "categoria": "tributos",
+      "tipo": "lei",
+      "referencia": "Código Tributário Nacional, art. 130",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l5172compilado.htm",
+      "texto_oficial": "Art. 130. Os créditos tributários relativos a impostos cujo fato gerador seja a propriedade, o domínio útil ou a posse de bens imóveis, e bem assim os relativos a taxas pela prestação de serviços referentes a tais bens, ou a contribuições de melhoria, sub-rogam-se na pessoa dos respectivos adquirentes, salvo quando conste do título a prova de sua quitação. Parágrafo único. No caso de arrematação em hasta pública, a sub-rogação ocorre sôbre o respectivo preço.",
+      "pergunta": "Se o vendedor deixou IPTU atrasado, quem paga depois da venda?",
+      "decisao_leigo": "O comprador passa a responder pelo IPTU e pelas taxas do imóvel deixados pelo vendedor, a não ser que a escritura traga a prova de que estava tudo pago. Em leilão judicial, a dívida sai do valor da arrematação.",
+      "por_que_importa": "A dívida de IPTU acompanha o imóvel.",
+      "o_que_conferir": [
+        "Certidão negativa de IPTU do imóvel.",
+        "Fazer constar a quitação na escritura."
+      ],
+      "relacionados": [
+        "STJ-T1134"
+      ],
+      "ligado_a": {
+        "checklist": [
+          "cnd_iptu"
+        ],
+        "achados": [
+          "Dívida ativa de IPTU",
+          "Débito protestado"
+        ]
+      }
+    },
+    {
+      "id": "STJ-T1134",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1134,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1914902/SP",
+        "REsp 1944757/SP"
+      ],
+      "julgado_em": "09/10/2024",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1134&cod_tema_final=1134",
+      "texto_oficial": "Diante do disposto no art. 130, parágrafo único, do Código Tributário Nacional, é inválida a previsão em edital de leilão atribuindo responsabilidade ao arrematante pelos débitos tributários que já incidiam sobre o imóvel na data de sua alienação.",
+      "pergunta": "O edital do leilão diz que o arrematante paga o IPTU atrasado. Isso vale?",
+      "decisao_leigo": "Não vale para os tributos que já existiam quando o imóvel foi alienado no leilão: eles são pagos com o valor da arrematação, mesmo que o edital diga o contrário.",
+      "por_que_importa": "Muda a conta de quem compra em leilão.",
+      "o_que_conferir": [
+        "Ler o edital e comparar com a tese.",
+        "A tese vale para editais publicados depois do julgamento, ressalvados ações e pedidos administrativos que já estavam pendentes: confira a data do edital.",
+        "A tese fala de débitos tributários; condomínio segue outras regras."
+      ],
+      "modulacao_oficial": "(...) a tese repetitiva ora fixada seja observada pelos editais de leilão publicizados após a publicação da ata de julgamento do presente recurso, ressalvadas as ações judiciais e/ou pedidos administrativos pendentes de apreciação, para os quais a tese se aplica de imediato."
+    },
+    {
+      "id": "STJ-T122",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 122,
+      "situacao": "Trânsito em julgado (deu origem à Súmula 399)",
+      "processos": [
+        "REsp 1111202/SP",
+        "REsp 1110551/SP"
+      ],
+      "julgado_em": "10/06/2009",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=122&cod_tema_final=122",
+      "texto_oficial": "1-Tanto o promitente comprador (possuidor a qualquer título) do imóvel quanto seu proprietário/promitente vendedor (aquele que tem a propriedade registrada no Registro de Imóveis) são contribuintes responsáveis pelo pagamento do IPTU; 2-cabe à legislação municipal estabelecer o sujeito passivo do IPTU.",
+      "pergunta": "Vendi por contrato de promessa e o comprador não pagou o IPTU. A Prefeitura pode me cobrar?",
+      "decisao_leigo": "Pode. Enquanto o imóvel estiver registrado no seu nome, você e o comprador respondem pelo IPTU. É a lei do município que define de quem cobrar.",
+      "por_que_importa": "Contrato de gaveta não tira o vendedor da cobrança.",
+      "o_que_conferir": [
+        "Registrar a venda.",
+        "Atualizar o cadastro do IPTU na Prefeitura."
+      ],
+      "relacionados": [
+        "STJ-S399",
+        "STJ-T209"
+      ]
+    },
+    {
+      "id": "STJ-S399",
+      "categoria": "tributos",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 399,
+      "situacao": "em vigor",
+      "orgao": "Primeira Seção",
+      "data": "23/09/2009",
+      "processos": [
+        "REsp 1111202/SP",
+        "REsp 475078/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "Cabe à legislação municipal estabelecer o sujeito passivo do IPTU.",
+      "pergunta": "Quem a Prefeitura pode cobrar pelo IPTU?",
+      "decisao_leigo": "Quem a lei do município indicar, dentro do que o Código Tributário permite (dono, quem tem o domínio útil ou o possuidor).",
+      "por_que_importa": "As regras de Maceió podem ser diferentes das de outro município.",
+      "o_que_conferir": [
+        "Ver o cadastro do IPTU e quem aparece como contribuinte."
+      ],
+      "relacionados": [
+        "STJ-T122"
+      ]
+    },
+    {
+      "id": "STJ-T209",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 209,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1073846/SP"
+      ],
+      "julgado_em": "25/11/2009",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=209&cod_tema_final=209",
+      "texto_oficial": "O promitente vendedor é parte legítima para figurar no pólo passivo da execução fiscal que busca a cobrança de ITR nas hipóteses em que não há registro imobiliário do ato translativo de propriedade.",
+      "pergunta": "Vendi o sítio sem registrar. O ITR ainda pode ser cobrado de mim?",
+      "decisao_leigo": "Pode. Sem o registro da venda, o vendedor continua podendo ser cobrado do ITR.",
+      "por_que_importa": "No imóvel rural, a venda sem registro deixa o vendedor exposto.",
+      "o_que_conferir": [
+        "Registrar a venda.",
+        "Atualizar o CAFIR/ITR e o CCIR."
+      ]
+    },
+    {
+      "id": "STJ-T174",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 174,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1112646/SP"
+      ],
+      "julgado_em": "26/08/2009",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=174&cod_tema_final=174",
+      "texto_oficial": "Não incide IPTU, mas ITR, sobre imóvel localizado na área urbana do Município, desde que comprovadamente utilizado em exploração extrativa, vegetal, agrícola, pecuária ou agroindustrial (art. 15 do DL 57/1966).",
+      "pergunta": "Meu sítio fica dentro da área urbana. Pago IPTU ou ITR?",
+      "decisao_leigo": "Se ficar provado que o imóvel é usado em atividade agrícola, pecuária, extrativa ou agroindustrial, incide o ITR, e não o IPTU, mesmo na área urbana.",
+      "por_que_importa": "Afeta quais certidões pedir (IPTU ou ITR) e o custo do imóvel.",
+      "o_que_conferir": [
+        "Ver se o imóvel tem cadastro no INCRA (CCIR) e na Receita (ITR), ou na Prefeitura (IPTU).",
+        "Guardar prova do uso rural."
+      ]
+    },
+    {
+      "id": "STJ-T1113",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1113,
+      "situacao": "Acórdão publicado — recurso extraordinário pendente no STF",
+      "processos": [
+        "REsp 1937821/SP"
+      ],
+      "julgado_em": "24/02/2022",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1113&cod_tema_final=1113",
+      "texto_oficial": "a) a base de cálculo do ITBI é o valor do imóvel transmitido em condições normais de mercado, não estando vinculada à base de cálculo do IPTU, que nem sequer pode ser utilizada como piso de tributação; b) o valor da transação declarado pelo contribuinte goza da presunção de que é condizente com o valor de mercado, que somente pode ser afastada pelo fisco mediante a regular instauração de processo administrativo próprio (art. 148 do CTN); c) o Município não pode arbitrar previamente a base de cálculo do ITBI com respaldo em valor de referência por ele estabelecido unilateralmente.",
+      "pergunta": "A Prefeitura calculou o ITBI por um 'valor de referência' maior que o preço que paguei. Pode?",
+      "decisao_leigo": "Segundo o STJ, não pode fixar antes um valor de referência por conta própria. Vale o valor declarado do negócio, que só pode ser contestado pela Prefeitura em processo administrativo. E o valor do IPTU não serve nem como piso.",
+      "por_que_importa": "Pode reduzir o ITBI. Mas atenção: há recurso pendente no STF.",
+      "o_que_conferir": [
+        "Comparar a base do ITBI com o preço declarado.",
+        "Se houver diferença, conversar com advogado antes de pagar."
+      ],
+      "aviso": "Ainda há recurso extraordinário pendente no STF."
+    },
+    {
+      "id": "STF-T1124",
+      "categoria": "tributos",
+      "tipo": "tema_repercussao_geral",
+      "tribunal": "STF",
+      "numero": 1124,
+      "situacao": "Repercussão geral reconhecida em 31/08/2022 — mérito pendente",
+      "processos": [
+        "ARE 1294969"
+      ],
+      "fonte_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=1124",
+      "texto_oficial": "Título: Incidência do Imposto de Transmissão de Bens Imóveis (ITBI) na cessão de direitos de compra e venda, ausente a transferência de propriedade pelo registro imobiliário.",
+      "pergunta": "Na cessão de um contrato de compra e venda (sem registro), incide ITBI?",
+      "decisao_leigo": "A repercussão geral foi reconhecida em 31/08/2022 e o mérito ainda espera julgamento no STF.",
+      "por_que_importa": "Quem compra 'direitos' de um contrato precisa saber que a cobrança do ITBI nessa situação ainda está em discussão.",
+      "o_que_conferir": [
+        "Consultar a regra do município e um advogado antes de recolher ou contestar."
+      ],
+      "aviso": "Tema pendente de julgamento no STF."
+    },
+    {
+      "id": "STJ-T1158",
+      "categoria": "tributos",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1158,
+      "situacao": "Acórdão publicado",
+      "processos": [
+        "REsp 1949182/SP",
+        "REsp 1959212/SP"
+      ],
+      "julgado_em": "12/03/2025",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1158&cod_tema_final=1158",
+      "texto_oficial": "O credor fiduciário, antes da consolidação da propriedade e da imissão na posse no imóvel objeto da alienação fiduciária, não pode ser considerado sujeito passivo do IPTU, uma vez que não se enquadra em nenhuma das hipóteses previstas no art. 34 do CTN.",
+      "pergunta": "O imóvel está financiado com alienação fiduciária. O banco paga o IPTU?",
+      "decisao_leigo": "Não. Antes de consolidar a propriedade e tomar posse, o banco não é contribuinte do IPTU. Quem é o contribuinte, quem define é a lei do município; em regra, é quem comprou com o financiamento.",
+      "por_que_importa": "Na compra de imóvel financiado, a dívida de IPTU é do devedor, não do banco.",
+      "o_que_conferir": [
+        "Certidão de IPTU do imóvel antes de assumir o financiamento."
+      ],
+      "aviso": "Acórdão publicado, ainda sem trânsito em julgado: pode haver recurso."
+    },
+    {
+      "id": "STJ-S397",
+      "categoria": "tributos",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 397,
+      "situacao": "em vigor",
+      "orgao": "Primeira Seção",
+      "data": "23/09/2009",
+      "processos": [
+        "REsp 1111124",
+        "REsp 168.035/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O contribuinte do IPTU é notificado do lançamento pelo envio do carnê ao seu endereço.",
+      "pergunta": "Nunca recebi aviso da Prefeitura. Posso dizer que não sabia do IPTU?",
+      "decisao_leigo": "Em regra, não: o envio do carnê ao endereço já conta como aviso do lançamento.",
+      "por_que_importa": "Mantenha o endereço atualizado: o carnê enviado ao endereço do cadastro já vale como aviso.",
+      "o_que_conferir": [
+        "Manter o endereço do cadastro do IPTU atualizado."
+      ]
+    },
+    {
+      "id": "STJ-S626",
+      "categoria": "tributos",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 626,
+      "situacao": "em vigor",
+      "orgao": "Primeira Seção",
+      "data": "12/12/2018",
+      "processos": [
+        "REsp 433.907/DF",
+        "REsp 1.112.646/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A incidência do IPTU sobre imóvel situado em área considerada pela lei local como urbanizável ou de expansão urbana não está condicionada à existência dos melhoramentos elencados no art. 32, § 1º, do CTN.",
+      "pergunta": "Meu lote fica em área de expansão urbana, sem asfalto nem esgoto. Pago IPTU?",
+      "decisao_leigo": "Pode pagar: se a lei do município considera a área urbanizável ou de expansão urbana, o IPTU pode ser cobrado mesmo sem esses melhoramentos.",
+      "por_que_importa": "Lotes em áreas novas podem ter IPTU antes de ter infraestrutura.",
+      "o_que_conferir": [
+        "Consultar a Prefeitura sobre a situação do lote e o IPTU lançado."
+      ]
+    },
+    {
+      "id": "STJ-S239",
+      "categoria": "contrato",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 239,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "28/06/2000",
+      "processos": [
+        "REsp 204784/SE",
+        "REsp 184474/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O direito à adjudicação compulsória não se condiciona ao registro do compromisso de compra e venda no cartório de imóveis.",
+      "pergunta": "Paguei tudo, o vendedor não quer assinar a escritura e meu contrato nunca foi registrado. Posso exigir?",
+      "decisao_leigo": "A falta de registro do compromisso não impede o pedido de adjudicação compulsória; os outros requisitos continuam valendo.",
+      "por_que_importa": "O contrato quitado é um caminho para chegar à matrícula, mesmo sem registro. Desde 2022, a adjudicação compulsória também pode ser feita no cartório (Lei 6.015/1973, art. 216-B).",
+      "o_que_conferir": [
+        "Contrato assinado e comprovantes de que tudo foi pago.",
+        "Matrícula atual para ver quem é o dono registrado."
+      ],
+      "relacionados": [
+        "LEI-CC-1418",
+        "LEI-6015-216B"
+      ]
+    },
+    {
+      "id": "LEI-CC-1418",
+      "categoria": "contrato",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.418",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 1.418. O promitente comprador, titular de direito real, pode exigir do promitente vendedor, ou de terceiros, a quem os direitos deste forem cedidos, a outorga da escritura definitiva de compra e venda, conforme o disposto no instrumento preliminar; e, se houver recusa, requerer ao juiz a adjudicação do imóvel.",
+      "pergunta": "O que ganho registrando a promessa de compra e venda?",
+      "decisao_leigo": "Com a promessa registrada, o comprador tem direito real: pode exigir a escritura do vendedor ou de quem recebeu os direitos dele, e, se houver recusa, pedir a adjudicação do imóvel.",
+      "por_que_importa": "Registrar a promessa protege o comprador também contra terceiros.",
+      "o_que_conferir": [
+        "Registrar a promessa na matrícula."
+      ],
+      "relacionados": [
+        "STJ-S239"
+      ]
+    },
+    {
+      "id": "STJ-S76",
+      "categoria": "contrato",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 76,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "28/04/1993",
+      "processos": [
+        "REsp 11231/PR",
+        "REsp 9695/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A FALTA DE REGISTRO DO COMPROMISSO DE COMPRA E VENDA DE IMOVEL NÃO DISPENSA A PREVIA INTERPELAÇÃO PARA CONSTITUIR EM MORA O DEVEDOR.",
+      "pergunta": "O comprador parou de pagar e o contrato não é registrado. Posso desfazer direto?",
+      "decisao_leigo": "Não direto: mesmo sem registro, é preciso antes notificar o comprador para colocá-lo em mora.",
+      "por_que_importa": "Pular a notificação pode atrasar ou derrubar o desfazimento.",
+      "o_que_conferir": [
+        "Notificar o devedor por escrito e guardar a prova."
+      ]
+    },
+    {
+      "id": "STJ-S84",
+      "categoria": "contrato",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 84,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "18/06/1993",
+      "processos": [
+        "REsp 9448/SP",
+        "REsp 8598/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "E ADMISSIVEL A OPOSIÇÃO DE EMBARGOS DE TERCEIRO FUNDADOS EM ALEGAÇÃO DE POSSE ADVINDA DO COMPROMISSO DE COMPRA E VENDA DE IMOVEL, AINDA QUE DESPROVIDO DO REGISTRO.",
+      "pergunta": "Comprei por contrato não registrado e o imóvel foi penhorado por dívida do vendedor. Posso me defender?",
+      "decisao_leigo": "Pode: quem tem a posse por um compromisso de compra e venda, mesmo não registrado, pode entrar com embargos de terceiro para defender o imóvel.",
+      "por_que_importa": "É uma defesa, não uma garantia: o melhor é registrar e evitar a briga.",
+      "o_que_conferir": [
+        "Guardar contrato, comprovantes de pagamento e provas da posse.",
+        "Registrar a promessa ou a escritura."
+      ],
+      "relacionados": []
+    },
+    {
+      "id": "STJ-T520",
+      "categoria": "financiamento",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 520,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1150429/CE"
+      ],
+      "julgado_em": "25/04/2013",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=520&cod_tema_final=520",
+      "texto_oficial": "Tratando-se de contrato de mútuo para aquisição de imóvel garantido pelo FCVS, avençado até 25/10/96 e transferido sem a interveniência da instituição financeira, o cessionário possui legitimidade para discutir e demandar em juízo questões pertinentes às obrigações assumidas e aos direitos adquiridos.",
+      "pergunta": "Comprei por 'contrato de gaveta' um imóvel financiado pelo SFH. Posso discutir o financiamento com o banco?",
+      "decisao_leigo": "A tese reconhece esse direito em um caso específico: financiamento com cobertura do FCVS, assinado até 25/10/1996 e transferido sem o banco participar. Nesse caso, quem comprou pode discutir o contrato na Justiça.",
+      "por_que_importa": "Para outras situações de contrato de gaveta, consulte advogado.",
+      "o_que_conferir": [
+        "Data do financiamento original e se tem cobertura do FCVS.",
+        "Se o banco concordou com a transferência."
+      ]
+    },
+    {
+      "id": "STJ-S543",
+      "categoria": "planta",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 543,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "26/08/2015",
+      "processos": [
+        "AgRg no REsp 677177/PR",
+        "AgRg no REsp 997956/SC"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "Na hipótese de resolução de contrato de promessa de compra e venda de imóvel submetido ao Código de Defesa do Consumidor, deve ocorrer a imediata restituição das parcelas pagas pelo promitente comprador - integralmente, em caso de culpa exclusiva do promitente vendedor/construtor, ou parcialmente, caso tenha sido o comprador quem deu causa ao desfazimento.",
+      "pergunta": "Desisti do apartamento na planta (ou a construtora atrasou). Quanto recebo de volta, e quando?",
+      "decisao_leigo": "Em contrato com consumidor, a súmula diz que a devolução é imediata: integral se a culpa for só da construtora, parcial se foi o comprador quem deu causa ao desfazimento.",
+      "por_que_importa": "A súmula é anterior à Lei 13.786/2018 (Lei do Distrato). Para contratos assinados depois dela, a lei tem regras próprias de retenção e de prazo de devolução: consulte advogado.",
+      "o_que_conferir": [
+        "Data do contrato (antes ou depois de 2018).",
+        "Cláusulas de distrato e de retenção."
+      ],
+      "relacionados": [
+        "STJ-T577",
+        "STJ-T1002"
+      ]
+    },
+    {
+      "id": "STJ-T577",
+      "categoria": "planta",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 577,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1300418/SC"
+      ],
+      "julgado_em": "13/11/2013",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=577&cod_tema_final=577",
+      "texto_oficial": "Em contratos submetidos ao Código de Defesa do Consumidor, é abusiva a cláusula contratual que determina a restituição dos valores devidos somente ao término da obra ou de forma parcelada, na hipótese de resolução de contato de promessa de compra e venda de imóvel, por culpa de qualquer dos contratantes.",
+      "pergunta": "O contrato diz que só devolvem meu dinheiro quando a obra terminar, em parcelas. Vale?",
+      "decisao_leigo": "Não vale em contrato com consumidor: é abusiva a cláusula que adia a devolução para o fim da obra ou a parcela, seja de quem for a culpa.",
+      "por_que_importa": "Ajuda a negociar o distrato.",
+      "o_que_conferir": [
+        "Cláusula de devolução no contrato."
+      ],
+      "relacionados": [
+        "STJ-S543"
+      ],
+      "aviso": "Tese firmada antes da Lei 13.786/2018. Em contratos posteriores a ela, os prazos de devolução podem ser outros."
+    },
+    {
+      "id": "STJ-T1002",
+      "categoria": "planta",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1002,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1740911/DF"
+      ],
+      "julgado_em": "14/08/2019",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1002&cod_tema_final=1002",
+      "texto_oficial": "Nos compromissos de compra e venda de unidades imobiliárias anteriores à Lei nº 13.786/2018, em que é pleiteada a resolução do contrato por iniciativa do promitente comprador de forma diversa da cláusula penal convencionada, os juros de mora incidem a partir do trânsito em julgado da decisão.",
+      "pergunta": "Desisti e fui à Justiça discutir a multa. De quando contam os juros sobre o que vão me devolver?",
+      "decisao_leigo": "Nos contratos anteriores à Lei 13.786/2018, quando o comprador pede o desfazimento discutindo a multa do contrato, os juros só contam a partir da decisão final do processo.",
+      "por_que_importa": "Muda o valor final a receber.",
+      "o_que_conferir": [
+        "Data do contrato."
+      ]
+    },
+    {
+      "id": "STJ-T970",
+      "categoria": "planta",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 970,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1635428/SC",
+        "REsp 1498484/DF"
+      ],
+      "julgado_em": "22/05/2019",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=970&cod_tema_final=970",
+      "texto_oficial": "A cláusula penal moratória tem a finalidade de indenizar pelo adimplemento tardio da obrigação, e, em regra, estabelecida em valor equivalente ao locativo, afasta-se sua cumulação com lucros cessantes.",
+      "pergunta": "A obra atrasou. Recebo a multa do contrato e também o aluguel que deixei de ganhar?",
+      "decisao_leigo": "Em regra, não os dois: se a multa por atraso equivale a um aluguel, ela já indeniza o atraso e não se soma aos lucros cessantes.",
+      "por_que_importa": "Evita expectativa errada sobre a indenização.",
+      "o_que_conferir": [
+        "Valor da multa por atraso no contrato."
+      ],
+      "relacionados": [
+        "STJ-T971",
+        "STJ-T996"
+      ]
+    },
+    {
+      "id": "STJ-T971",
+      "categoria": "planta",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 971,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1614721/DF",
+        "REsp 1631485/DF"
+      ],
+      "julgado_em": "22/05/2019",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=971&cod_tema_final=971",
+      "texto_oficial": "No contrato de adesão firmado entre o comprador e a construtora/incorporadora, havendo previsão de cláusula penal apenas para o inadimplemento do adquirente, deverá ela ser considerada para a fixação da indenização pelo inadimplemento do vendedor. As obrigações heterogêneas (obrigações de fazer e de dar) serão convertidas em dinheiro, por arbitramento judicial.",
+      "pergunta": "O contrato só prevê multa contra o comprador. E se quem atrasou foi a construtora?",
+      "decisao_leigo": "Em contrato de adesão com a construtora, a multa prevista só contra o comprador serve de base para indenizá-lo quando a construtora descumpre; o juiz converte o valor em dinheiro.",
+      "por_que_importa": "A multa prevista contra o comprador também pesa contra a construtora.",
+      "o_que_conferir": [
+        "Cláusulas de multa no contrato."
+      ]
+    },
+    {
+      "id": "STJ-T996",
+      "categoria": "planta",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 996,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1729593/SP"
+      ],
+      "julgado_em": "11/09/2019",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=996&cod_tema_final=996",
+      "texto_oficial": "As teses firmadas, para os fins do artigo 1.036 do CPC/2015, em contrato de promessa de compra e venda de imóvel na planta, no âmbito do Programa Minha Casa, Minha Vida, para os beneficiários das faixas de renda 1, 5, 2 e 3, foram as seguintes:1.1. Na aquisição de unidades autônomas em construção, o contrato deverá estabelecer, de forma clara, expressa e inteligível, o prazo certo para a entrega do imóvel, o qual não poderá estar vinculado à concessão do financiamento, ou a nenhum outro negócio jurídico, exceto o acréscimo do prazo de tolerância; 1.2. No caso de descumprimento do prazo para a entrega do imóvel, incluído o período de tolerância, o prejuízo do comprador é presumido, consistente na injusta privação do uso do bem, a ensejar o pagamento de indenização, na forma de aluguel mensal, com base no valor locatício de imóvel assemelhado, com termo final na data da disponibilização da posse direta ao adquirente da unidade autônoma.",
+      "pergunta": "No Minha Casa, Minha Vida, o prazo de entrega pode depender da liberação do financiamento?",
+      "decisao_leigo": "Não. O contrato precisa trazer um prazo certo de entrega, que não pode depender do financiamento nem de outro negócio, só somado à tolerância. Se atrasar além disso, o prejuízo do comprador é presumido e ele recebe um aluguel mensal até receber as chaves.",
+      "por_que_importa": "O próprio STJ delimitou a tese aos contratos de imóvel na planta do Programa Minha Casa, Minha Vida, para as faixas de renda indicadas no texto oficial.",
+      "o_que_conferir": [
+        "Cláusula de prazo de entrega e de tolerância.",
+        "Se o contrato é do Minha Casa, Minha Vida."
+      ]
+    },
+    {
+      "id": "STJ-S308",
+      "categoria": "planta",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 308,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "30/03/2005",
+      "processos": [
+        "REsp 557369/GO",
+        "EREsp 187940/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A hipoteca firmada entre a construtora e o agente financeiro, anterior ou posterior à celebração da promessa de compra e venda, não tem eficácia perante os adquirentes do imóvel.",
+      "pergunta": "A construtora deu o prédio em hipoteca ao banco e não pagou. Perco meu apartamento?",
+      "decisao_leigo": "Não por isso: a hipoteca feita entre a construtora e o banco não vale contra quem comprou a unidade, seja ela anterior ou posterior à promessa.",
+      "por_que_importa": "Protege quem compra na planta, mas a baixa da hipoteca na matrícula ainda precisa ser feita.",
+      "o_que_conferir": [
+        "Hipotecas da construtora na matrícula da unidade.",
+        "Pedir a baixa da hipoteca para registrar a compra."
+      ]
+    },
+    {
+      "id": "STJ-T1095",
+      "categoria": "financiamento",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1095,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1891498/SP",
+        "REsp 1894504/SP"
+      ],
+      "julgado_em": "25/10/2022",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1095&cod_tema_final=1095",
+      "texto_oficial": "Em contrato de compra e venda de imóvel com garantia de alienação fiduciária devidamente registrado em cartório, a resolução do pacto, na hipótese de inadimplemento do devedor, devidamente constituído em mora, deverá observar a forma prevista na Lei nº 9.514/97, por se tratar de legislação específica, afastando-se, por conseguinte, a aplicação do Código de Defesa do Consumidor.",
+      "pergunta": "Comprei com alienação fiduciária e não consigo pagar. Recebo de volta o que paguei, como no distrato?",
+      "decisao_leigo": "Se a alienação fiduciária está registrada e o devedor foi constituído em mora, vale a Lei 9.514/97 (leilão do imóvel e devolução do que sobrar, se sobrar), e não as regras de devolução do Código do Consumidor.",
+      "por_que_importa": "Atrasar o financiamento pode levar o imóvel a leilão.",
+      "o_que_conferir": [
+        "Se a alienação fiduciária está registrada na matrícula.",
+        "Negociar com o banco antes da consolidação da propriedade."
+      ],
+      "relacionados": [
+        "STJ-T1348"
+      ]
+    },
+    {
+      "id": "STJ-T1348",
+      "categoria": "financiamento",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1348,
+      "situacao": "Afetado — aguardando julgamento",
+      "processos": [
+        "REsp 2154187/SP",
+        "REsp 2155886/SP"
+      ],
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1348&cod_tema_final=1348",
+      "texto_oficial": "Questão: Definir a legislação aplicável para situações de rescisão de contratos de compra e venda de imóveis garantidos por alienação fiduciária, na eventualidade de desistência do adquirente, sem que tenha havido a sua constituição em mora.",
+      "pergunta": "E se eu desistir do imóvel com alienação fiduciária antes de atrasar qualquer parcela?",
+      "decisao_leigo": "O STJ ainda vai decidir qual lei se aplica nesse caso.",
+      "por_que_importa": "Situação em aberto: decisão pode mudar o valor a receber.",
+      "o_que_conferir": [
+        "Acompanhar o Tema 1348."
+      ],
+      "aviso": "Tema pendente de julgamento."
+    },
+    {
+      "id": "STJ-S473",
+      "categoria": "financiamento",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 473,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "13/06/2012",
+      "processos": [
+        "REsp 969129/MG"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O mutuário do SFH não pode ser compelido a contratar o seguro habitacional obrigatório com a instituição financeira mutuante ou com a seguradora por ela indicada.",
+      "pergunta": "O banco exige que eu faça o seguro do financiamento com a seguradora dele. Precisa?",
+      "decisao_leigo": "O seguro habitacional é obrigatório no SFH, mas o mutuário não é obrigado a contratá-lo com o próprio banco ou com a seguradora que ele indicar.",
+      "por_que_importa": "Pode baratear o financiamento.",
+      "o_que_conferir": [
+        "Cotar o seguro em outras seguradoras."
+      ]
+    },
+    {
+      "id": "LEI-CC-1345",
+      "categoria": "condominio",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.345",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 1.345. O adquirente de unidade responde pelos débitos do alienante, em relação ao condomínio, inclusive multas e juros moratórios.",
+      "pergunta": "O vendedor deixou condomínio atrasado. Quem paga?",
+      "decisao_leigo": "Quem compra passa a responder pelas dívidas de condomínio deixadas pelo vendedor, inclusive multas e juros.",
+      "por_que_importa": "A dívida de condomínio acompanha o apartamento.",
+      "o_que_conferir": [
+        "Declaração de quitação do condomínio, assinada pelo síndico ou pela administradora."
+      ],
+      "relacionados": [
+        "STJ-T886",
+        "STJ-S478",
+        "STJ-T949"
+      ],
+      "ligado_a": {
+        "checklist": [
+          "condominio"
+        ]
+      }
+    },
+    {
+      "id": "STJ-T886",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 886,
+      "situacao": "Trânsito em julgado — em revisão pelo Tema 1349",
+      "processos": [
+        "REsp 1345331/RS"
+      ],
+      "julgado_em": "08/04/2015",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=886&cod_tema_final=886",
+      "texto_oficial": "a) O que define a responsabilidade pelo pagamento das obrigações condominiais não é o registro do compromisso de venda e compra, mas a relação jurídica material com o imóvel, representada pela imissão na posse pelo promissário comprador e pela ciência inequívoca do Condomínio acerca da transação; b) Havendo compromisso de compra e venda não levado a registro, a responsabilidade pelas despesas de condomínio pode recair tanto sobre o promitente vendedor quanto sobre o promissário comprador, dependendo das circunstâncias de cada caso concreto; c) Se restar comprovado: (i) que o promissário comprador imitira-se na posse; e (ii) o Condomínio teve ciência inequívoca da transação, afasta-se a legitimidade passiva do promitente vendedor para responder por despesas condominiais relativas a período em que a posse foi exercida pelo promissário comprador.",
+      "pergunta": "Vendi por promessa não registrada. O condomínio pode me cobrar o que o comprador deixou de pagar?",
+      "decisao_leigo": "Pela tese atual (em revisão): o que conta não é o registro, e sim a posse do comprador e se o condomínio sabia da venda. Se o comprador já tinha recebido a posse e o condomínio sabia, o vendedor não responde por esse período.",
+      "por_que_importa": "Avisar o condomínio da venda, por escrito, protege o vendedor.",
+      "o_que_conferir": [
+        "Comunicar a venda ao condomínio e guardar o protocolo.",
+        "Data da entrega das chaves."
+      ],
+      "aviso": "Esta tese está em revisão no STJ (Tema 1349): o tribunal vai definir se vendedor e comprador podem ser cobrados juntos, mesmo sem o condomínio saber da venda.",
+      "relacionados": [
+        "STJ-T1349",
+        "LEI-CC-1345"
+      ]
+    },
+    {
+      "id": "STJ-T1349",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1349,
+      "situacao": "Afetado — aguardando julgamento",
+      "processos": [
+        "REsp 2015740/SP",
+        "REsp 2100395/SP"
+      ],
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1349&cod_tema_final=1349",
+      "texto_oficial": "Questão: Proposta de revisão do Tema Repetitivo nº 886/STJ para definir se há legitimidade concorrente entre o promitente vendedor, titular do direito de propriedade, e o promitente comprador para figurar no polo passivo da ação de cobrança de débitos condominiais posteriores à imissão do comprador na posse, independentemente de haver ciência inequívoca da transação pelo condomínio.",
+      "pergunta": "O STJ vai mudar a regra sobre quem paga o condomínio depois da venda?",
+      "decisao_leigo": "Pode mudar. O STJ vai decidir se vendedor e comprador podem ser cobrados juntos pelas dívidas posteriores à entrega das chaves, mesmo que o condomínio não soubesse da venda.",
+      "por_que_importa": "Até a decisão, o mais seguro é registrar a venda e avisar o condomínio.",
+      "o_que_conferir": [
+        "Acompanhar o Tema 1349."
+      ],
+      "aviso": "Tema pendente de julgamento."
+    },
+    {
+      "id": "STJ-S478",
+      "categoria": "condominio",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 478,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "13/06/2012",
+      "processos": [
+        "AgRg no REsp 698105/RJ",
+        "AgRg no REsp 773285/RJ"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "Na execução de crédito relativo a cotas condominiais, este tem preferência sobre o hipotecário.",
+      "pergunta": "O apartamento tem hipoteca e dívida de condomínio. Quem recebe primeiro se for leiloado?",
+      "decisao_leigo": "O condomínio recebe antes do credor da hipoteca.",
+      "por_que_importa": "Dívida de condomínio é das mais fortes que um imóvel pode ter.",
+      "o_que_conferir": [
+        "Declaração de quitação do condomínio."
+      ]
+    },
+    {
+      "id": "STJ-T949",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 949,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1483930/DF"
+      ],
+      "julgado_em": "23/11/2016",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=949&cod_tema_final=949",
+      "texto_oficial": "Na vigência do Código Civil de 2002, é quinquenal o prazo prescricional para que o condomínio geral ou edilício (horizontal ou vertical) exercite a pretensão de cobrança da taxa condominial ordinária ou extraordinária constante em instrumento público ou particular, a contar do dia seguinte ao vencimento da prestação.",
+      "pergunta": "Até quantos anos para trás o condomínio pode cobrar?",
+      "decisao_leigo": "Cinco anos, contados do dia seguinte ao vencimento de cada taxa.",
+      "por_que_importa": "Ajuda a dimensionar a dívida que pode acompanhar o imóvel.",
+      "o_que_conferir": [
+        "Pedir ao condomínio o extrato dos últimos cinco anos."
+      ]
+    },
+    {
+      "id": "STJ-S260",
+      "categoria": "condominio",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 260,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "28/11/2001",
+      "processos": [
+        "REsp 270232/SP",
+        "REsp 180838/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A convenção de condomínio aprovada, ainda que sem registro, é eficaz para regular as relações entre os condôminos.",
+      "pergunta": "A convenção do condomínio nunca foi registrada. Ela vale?",
+      "decisao_leigo": "Vale entre os condôminos, mesmo sem registro.",
+      "por_que_importa": "As regras do condomínio (uso, animais, obras, rateio) se aplicam a quem compra.",
+      "o_que_conferir": [
+        "Pedir a convenção e o regimento interno antes de comprar."
+      ]
+    },
+    {
+      "id": "STJ-T882",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 882,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1280871/SP"
+      ],
+      "julgado_em": "11/03/2015",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=882&cod_tema_final=882",
+      "texto_oficial": "As taxas de manutenção criadas por associações de moradores não obrigam os não associados ou que a elas não anuíram.",
+      "pergunta": "Comprei um lote num loteamento com associação de moradores. Sou obrigado a pagar a taxa?",
+      "decisao_leigo": "Pela tese do STJ, a taxa criada por associação de moradores não obriga quem não é associado nem concordou com ela.",
+      "por_que_importa": "Associação de moradores não é condomínio. A tese é anterior à Lei 13.465/2017, que incluiu regra nova sobre essas associações (Lei 6.766/1979, art. 36-A), e há outro tema pendente (Tema 1183): consulte advogado.",
+      "o_que_conferir": [
+        "Se é condomínio ou associação.",
+        "Se o vendedor aderiu à associação e se há algo registrado na matrícula."
+      ],
+      "relacionados": [
+        "STJ-T1183",
+        "LEI-6766-36A"
+      ],
+      "aviso": "Tese anterior à Lei 13.465/2017; confira a regra atual para o seu loteamento."
+    },
+    {
+      "id": "STJ-T1183",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1183,
+      "situacao": "Em julgamento",
+      "processos": [
+        "REsp 1995213/SP",
+        "REsp 2023451/SP"
+      ],
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1183&cod_tema_final=1183",
+      "texto_oficial": "Questão: Definir qual a natureza do crédito oriundo do rateio de despesas e cobrado por associações de moradores, se propter rem ou pessoal, a fim de viabilizar, ou não, a penhora do bem de família.",
+      "pergunta": "Dívida com associação de moradores pode levar à penhora da casa da família?",
+      "decisao_leigo": "O STJ ainda está julgando.",
+      "por_que_importa": "Tema em aberto.",
+      "o_que_conferir": [
+        "Acompanhar o Tema 1183."
+      ],
+      "aviso": "Tema em julgamento."
+    },
+    {
+      "id": "STJ-T1266",
+      "categoria": "condominio",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1266,
+      "situacao": "Afetado — aguardando julgamento",
+      "processos": [
+        "REsp 1874133/SP",
+        "REsp 1883871/SP"
+      ],
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1266&cod_tema_final=1266",
+      "texto_oficial": "Questão: Definir se é possível penhorar o imóvel alienado fiduciariamente em decorrência de dívida condominial.",
+      "pergunta": "Apartamento financiado com alienação fiduciária pode ser penhorado por dívida de condomínio?",
+      "decisao_leigo": "O STJ ainda vai decidir.",
+      "por_que_importa": "Tema em aberto, relevante para quem compra imóvel financiado com condomínio atrasado.",
+      "o_que_conferir": [
+        "Declaração de quitação do condomínio antes de assumir o imóvel."
+      ],
+      "aviso": "Tema pendente de julgamento."
+    },
+    {
+      "id": "STJ-S364",
+      "categoria": "penhora",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 364,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "15/10/2008",
+      "processos": [
+        "EREsp 182223/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O conceito de impenhorabilidade de bem de família abrange também o imóvel pertencente a pessoas solteiras, separadas e viúvas.",
+      "pergunta": "Moro sozinho. Minha casa também é bem de família?",
+      "decisao_leigo": "Sim: a proteção vale também para quem é solteiro, separado ou viúvo.",
+      "por_que_importa": "A proteção é da moradia, não do tamanho da família.",
+      "o_que_conferir": [
+        "Algumas exceções da Lei 8.009/1990, art. 3º (por exemplo, fiança de locação; hipoteca dada em benefício da família, ver Tema 1261)."
+      ],
+      "relacionados": [
+        "LEI-8009-3",
+        "STJ-T1261"
+      ]
+    },
+    {
+      "id": "STJ-S486",
+      "categoria": "penhora",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 486,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "28/06/2012",
+      "processos": [
+        "EREsp 339766/SP",
+        "REsp 243285/RS"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "É impenhorável o único imóvel residencial do devedor que esteja locado a terceiros, desde que a renda obtida com a locação seja revertida para a subsistência ou a moradia da sua família.",
+      "pergunta": "Meu único imóvel está alugado e eu moro de aluguel com essa renda. Ele é protegido?",
+      "decisao_leigo": "Sim, se a renda do aluguel serve para o sustento ou a moradia da família.",
+      "por_que_importa": "A proteção acompanha a finalidade da renda.",
+      "o_que_conferir": [
+        "Provas de que a renda vai para a moradia ou o sustento."
+      ]
+    },
+    {
+      "id": "STJ-S449",
+      "categoria": "penhora",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 449,
+      "situacao": "em vigor — tema relacionado afetado (Tema 1330)",
+      "orgao": "Corte Especial",
+      "data": "02/06/2010",
+      "processos": [
+        "REsp 1057511/SC",
+        "EREsp 595099/RS"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A vaga de garagem que possui matrícula própria no registro de imóveis não constitui bem de família para efeito de penhora.",
+      "pergunta": "A vaga de garagem com matrícula própria é protegida como o apartamento?",
+      "decisao_leigo": "Pela súmula, não: a vaga com matrícula própria pode ser penhorada.",
+      "por_que_importa": "Vaga com matrícula própria é um imóvel separado: confira a matrícula dela também.",
+      "o_que_conferir": [
+        "Pedir a certidão da matrícula da vaga, se ela tiver matrícula própria."
+      ],
+      "aviso": "O STJ afetou o Tema 1330 para decidir de novo essa questão, à luz do art. 1.331, § 1º, do Código Civil.",
+      "relacionados": [
+        "STJ-T1330"
+      ]
+    },
+    {
+      "id": "STJ-T1330",
+      "categoria": "penhora",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1330,
+      "situacao": "Afetado — aguardando julgamento",
+      "processos": [
+        "REsp 2163773/SP",
+        "REsp 2163777/SP"
+      ],
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1330&cod_tema_final=1330",
+      "texto_oficial": "Questão: Definir se a vaga de garagem com matrícula própria constitui bem de família para fins de penhora, à luz do artigo 1.331, § 1º, do Código Civil.",
+      "pergunta": "A regra da vaga de garagem pode mudar?",
+      "decisao_leigo": "Pode: o STJ vai decidir de novo se a vaga com matrícula própria é bem de família.",
+      "por_que_importa": "Tema em aberto.",
+      "o_que_conferir": [
+        "Acompanhar o Tema 1330."
+      ],
+      "aviso": "Tema pendente de julgamento."
+    },
+    {
+      "id": "STJ-T1091",
+      "categoria": "penhora",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1091,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1822033/PR",
+        "REsp 1822040/PR"
+      ],
+      "julgado_em": "08/06/2022",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1091&cod_tema_final=1091",
+      "texto_oficial": "É válida a penhora do bem de família de fiador apontado em contrato de locação de imóvel, seja residencial, seja comercial, nos termos do inciso VII do art. 3º da Lei n. 8.009/1990.",
+      "pergunta": "Fui fiador de um aluguel. Minha casa pode ser penhorada?",
+      "decisao_leigo": "Pode. A casa do fiador de contrato de locação pode ser penhorada, seja o aluguel residencial ou comercial.",
+      "por_que_importa": "Ser fiador de aluguel põe em risco a própria casa. O STF também julgou o tema (Tema 1127, trânsito em julgado em 06/08/2022).",
+      "o_que_conferir": [
+        "Antes de comprar, ver se o vendedor é fiador em locação com dívida (certidões cíveis)."
+      ],
+      "relacionados": [
+        "STJ-S549",
+        "STJ-T708",
+        "STF-T1127"
+      ]
+    },
+    {
+      "id": "STJ-S549",
+      "categoria": "penhora",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 549,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "14/10/2015",
+      "processos": [
+        "REsp 1363368/MS"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "É válida a penhora de bem de família pertencente a fiador de contrato de locação.",
+      "pergunta": "A casa do fiador do aluguel é protegida?",
+      "decisao_leigo": "Não: pode ser penhorada.",
+      "por_que_importa": "Veja o Tema 1091, que deixou claro que a regra vale também para locação comercial.",
+      "o_que_conferir": [
+        "Pensar bem antes de ser fiador."
+      ],
+      "relacionados": [
+        "STJ-T1091",
+        "STJ-T708"
+      ]
+    },
+    {
+      "id": "STJ-T708",
+      "categoria": "penhora",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 708,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1363368/MS"
+      ],
+      "julgado_em": "12/11/2014",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=708&cod_tema_final=708",
+      "texto_oficial": "É legítima a penhora de apontado bem de família pertencente a fiador de contrato de locação, ante o que dispõe o art. 3º, inciso VII, da Lei n. 8.009/1990",
+      "pergunta": "De onde vem a regra do fiador?",
+      "decisao_leigo": "Da própria Lei do Bem de Família (Lei 8.009/1990, art. 3º, VII), que abre essa exceção.",
+      "por_que_importa": "É lei, não interpretação isolada.",
+      "o_que_conferir": [
+        "—"
+      ],
+      "relacionados": [
+        "STJ-S549",
+        "STJ-T1091"
+      ]
+    },
+    {
+      "id": "STF-T1127",
+      "categoria": "penhora",
+      "tipo": "tema_repercussao_geral",
+      "tribunal": "STF",
+      "numero": 1127,
+      "situacao": "Trânsito em julgado — 06/08/2022",
+      "processos": [
+        "RE 1307334"
+      ],
+      "fonte_url": "https://portal.stf.jus.br/jurisprudenciaRepercussao/tema.asp?num=1127",
+      "texto_oficial": "Título: Penhorabilidade de bem de família de fiador em contrato de locação comercial.",
+      "pergunta": "O STF também decidiu sobre o fiador de locação comercial?",
+      "decisao_leigo": "Sim, o tema foi julgado e transitou em julgado em 06/08/2022. O conteúdo da regra aplicada pelo STJ está no Tema 1091.",
+      "por_que_importa": "Os dois tribunais trataram do assunto.",
+      "o_que_conferir": [
+        "—"
+      ],
+      "relacionados": [
+        "STJ-T1091"
+      ]
+    },
+    {
+      "id": "STJ-T1261",
+      "categoria": "penhora",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1261,
+      "situacao": "Acórdão publicado",
+      "processos": [
+        "REsp 2093929/MG",
+        "REsp 2105326/SP"
+      ],
+      "julgado_em": "05/06/2025",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1261&cod_tema_final=1261",
+      "texto_oficial": "I) a exceção à impenhorabilidade do bem de família nos casos de execução de hipoteca sobre o imóvel, oferecido como garantia real pelo casal ou pela entidade familiar, prevista no art. 3º, V, da Lei n. 8.009/1990, restringe-se às hipóteses em que a dívida foi constituída em benefício da entidade familiar: II) em relação ao ônus da prova, a) se o bem for dado em garantia real por um dos sócios de pessoa jurídica, é, em regra, impenhorável, cabendo ao credor o ônus de comprovar que o débito da pessoa jurídica se reverteu em benefício da entidade familiar; e b) caso os únicos sócios da sociedade sejam os titulares do imóvel hipotecado, a regra é da penhorabilidade do bem de família, competindo aos proprietários demonstrar que o débito da pessoa jurídica não se reverteu em benefício da entidade familiar.",
+      "pergunta": "Dei minha casa em hipoteca para garantir dívida da empresa. Ela pode ser tomada?",
+      "decisao_leigo": "Depende de a dívida ter beneficiado a família. Se só um dos sócios deu a casa em garantia, em regra ela é protegida e o credor tem de provar o benefício à família. Se os únicos sócios são os donos da casa, a regra se inverte: em regra pode ser penhorada, e eles é que têm de provar que a família não se beneficiou.",
+      "por_que_importa": "Hipoteca na matrícula é sinal de alerta para quem compra.",
+      "o_que_conferir": [
+        "Hipotecas na matrícula e se foram canceladas."
+      ],
+      "aviso": "Acórdão publicado, ainda sem trânsito em julgado: pode haver recurso."
+    },
+    {
+      "id": "STJ-S451",
+      "categoria": "penhora",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 451,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "02/06/2010",
+      "processos": [
+        "REsp 1114767/RS"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "É legítima a penhora da sede do estabelecimento comercial.",
+      "pergunta": "O imóvel onde funciona a empresa pode ser penhorado?",
+      "decisao_leigo": "Pode. A anotação oficial do Tema 287, que deu origem à súmula, explica: excepcionalmente, quando não houver outros bens penhoráveis e desde que o imóvel não sirva de residência da família.",
+      "por_que_importa": "Imóvel comercial de empresa com dívida exige mais cuidado.",
+      "o_que_conferir": [
+        "Certidões da empresa vendedora."
+      ],
+      "relacionados": [
+        "STJ-T287"
+      ],
+      "anotacao_oficial": "A penhora de imóvel no qual se localiza o estabelecimento da empresa é, excepcionalmente, permitida, quando inexistentes outros bens passíveis de penhora e desde que não seja servil à residência da família.",
+      "anotacao_fonte": "Anotações NUGEPNAC do Tema 287, página oficial do STJ"
+    },
+    {
+      "id": "STJ-T287",
+      "categoria": "penhora",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 287,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1114767/RS"
+      ],
+      "julgado_em": "02/12/2009",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=287&cod_tema_final=287",
+      "texto_oficial": "É legítima a penhora da sede do estabelecimento comercial.",
+      "pergunta": "Em que condições a sede da empresa pode ser penhorada?",
+      "decisao_leigo": "Segundo a anotação oficial do tema: excepcionalmente, quando não houver outros bens penhoráveis e desde que o imóvel não sirva de residência da família.",
+      "por_que_importa": "—",
+      "o_que_conferir": [
+        "—"
+      ],
+      "relacionados": [
+        "STJ-S451"
+      ],
+      "anotacao_oficial": "A penhora de imóvel no qual se localiza o estabelecimento da empresa é, excepcionalmente, permitida, quando inexistentes outros bens passíveis de penhora e desde que não seja servil à residência da família.",
+      "anotacao_fonte": "Anotações NUGEPNAC do Tema 287, página oficial do STJ"
+    },
+    {
+      "id": "STJ-S134",
+      "categoria": "familia",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 134,
+      "situacao": "em vigor",
+      "orgao": "Segunda Seção",
+      "data": "26/04/1995",
+      "processos": [
+        "REsp 39703/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "EMBORA INTIMADO DA PENHORA EM IMOVEL DO CASAL, O CONJUGE DO EXECUTADO PODE OPOR EMBARGOS DE TERCEIRO PARA DEFESA DE SUA MEAÇÃO.",
+      "pergunta": "Penhoraram o imóvel do casal por dívida só do meu marido. Posso defender a minha parte?",
+      "decisao_leigo": "Pode: o cônjuge pode entrar com embargos de terceiro para defender a sua metade, mesmo tendo sido intimado da penhora.",
+      "por_que_importa": "No imóvel do casal, os dois contam.",
+      "o_que_conferir": [
+        "Estado civil e regime de bens de quem vende."
+      ]
+    },
+    {
+      "id": "STJ-S332",
+      "categoria": "familia",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 332,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "05/03/2008",
+      "processos": [
+        "REsp 832669/SP",
+        "REsp 772419/SP"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A fiança prestada sem autorização de um dos cônjuges implica a ineficácia total da garantia.",
+      "pergunta": "Meu marido foi fiador sem eu assinar. A fiança vale?",
+      "decisao_leigo": "Não: a fiança dada sem a autorização do cônjuge é totalmente ineficaz.",
+      "por_que_importa": "Mostra o peso da assinatura do cônjuge, que também é exigida para vender imóvel (CC, art. 1.647).",
+      "o_que_conferir": [
+        "Assinatura do cônjuge nos documentos."
+      ],
+      "relacionados": [
+        "LEI-CC-1647"
+      ]
+    },
+    {
+      "id": "LEI-CC-1647",
+      "categoria": "familia",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.647, I",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 1.647. Ressalvado o disposto no art. 1.648, nenhum dos cônjuges pode, sem autorização do outro, exceto no regime da separação absoluta: I - alienar ou gravar de ônus real os bens imóveis;",
+      "pergunta": "O vendedor é casado. Basta ele assinar?",
+      "decisao_leigo": "Não, salvo no regime de separação absoluta de bens: para vender ou hipotecar imóvel, é preciso a autorização do cônjuge.",
+      "por_que_importa": "Sem essa assinatura, a venda pode ser anulada.",
+      "o_que_conferir": [
+        "Certidão de casamento atualizada e regime de bens do vendedor.",
+        "Assinatura do cônjuge na escritura."
+      ]
+    },
+    {
+      "id": "LEI-CC-496",
+      "categoria": "familia",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 496",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 496. É anulável a venda de ascendente a descendente, salvo se os outros descendentes e o cônjuge do alienante expressamente houverem consentido. Parágrafo único. Em ambos os casos, dispensa-se o consentimento do cônjuge se o regime de bens for o da separação obrigatória.",
+      "pergunta": "Posso comprar o imóvel do meu pai?",
+      "decisao_leigo": "Pode, mas os outros filhos e o cônjuge do pai precisam concordar expressamente; sem isso, a venda pode ser anulada. O consentimento do cônjuge é dispensado se o casamento for no regime da separação obrigatória.",
+      "por_que_importa": "Vendas dentro da família pedem atenção redobrada, inclusive para quem compra depois.",
+      "o_que_conferir": [
+        "Na cadeia de proprietários, vendas de pai para filho e se houve o consentimento."
+      ]
+    },
+    {
+      "id": "LEI-CC-504",
+      "categoria": "familia",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 504",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 504. Não pode um condômino em coisa indivisível vender a sua parte a estranhos, se outro consorte a quiser, tanto por tanto. O condômino, a quem não se der conhecimento da venda, poderá, depositando o preço, haver para si a parte vendida a estranhos, se o requerer no prazo de cento e oitenta dias, sob pena de decadência.",
+      "pergunta": "Vou comprar a parte de um dos donos de um imóvel que é de vários. Os outros podem tomar a compra?",
+      "decisao_leigo": "Se o imóvel for indivisível, os outros donos têm preferência pelo mesmo preço. Quem não for avisado pode, em 180 dias, depositar o preço e ficar com a parte.",
+      "por_que_importa": "Comprar fração ideal sem avisar os outros donos é arriscado.",
+      "o_que_conferir": [
+        "Matrícula: quantos donos e em que frações.",
+        "Notificar os demais donos e guardar a prova."
+      ]
+    },
+    {
+      "id": "LEI-CC-1793",
+      "categoria": "familia",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.793, §§ 2º e 3º",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "§ 2º É ineficaz a cessão, pelo co-herdeiro, de seu direito hereditário sobre qualquer bem da herança considerado singularmente. § 3º Ineficaz é a disposição, sem prévia autorização do juiz da sucessão, por qualquer herdeiro, de bem componente do acervo hereditário, pendente a indivisibilidade.",
+      "pergunta": "Comprei de um herdeiro um terreno da herança, antes da partilha. Está garantido?",
+      "decisao_leigo": "Não. Enquanto a herança não é partilhada, a cessão de um bem específico por um herdeiro é ineficaz, e vender bem da herança sem autorização do juiz também é.",
+      "por_que_importa": "É comum no interior e explica por que muitos desses negócios acabam precisando de usucapião ou de inventário para chegar à matrícula (veja o caso de ensino CE-03 e o caso real nº 2 da Biblioteca de casos).",
+      "o_que_conferir": [
+        "Se o imóvel ainda está em nome de quem morreu.",
+        "Inventário e formal de partilha registrados."
+      ]
+    },
+    {
+      "id": "LEI-CC-1238",
+      "categoria": "posse",
+      "tipo": "lei",
+      "referencia": "Código Civil, art. 1.238",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
+      "texto_oficial": "Art. 1.238. Aquele que, por quinze anos, sem interrupção, nem oposição, possuir como seu um imóvel, adquire-lhe a propriedade, independentemente de título e boa-fé; podendo requerer ao juiz que assim o declare por sentença, a qual servirá de título para o registro no Cartório de Registro de Imóveis. Parágrafo único. O prazo estabelecido neste artigo reduzir-se-á a dez anos se o possuidor houver estabelecido no imóvel a sua moradia habitual, ou nele realizado obras ou serviços de caráter produtivo.",
+      "pergunta": "Moro há muitos anos num imóvel sem escritura. Posso virar dono?",
+      "decisao_leigo": "Pela usucapião extraordinária: 15 anos de posse como dono, sem interrupção nem oposição, ou 10 anos se a pessoa mora no imóvel ou fez nele obras ou serviços produtivos. Não precisa de título nem de boa-fé.",
+      "por_que_importa": "Pode ser pedida na Justiça ou no cartório (Lei 6.015/1973, art. 216-A; veja o roteiro da usucapião).",
+      "o_que_conferir": [
+        "Provas do tempo e do tipo de posse.",
+        "Lembrar: caseiro é detentor, não possuidor."
+      ]
+    },
+    {
+      "id": "STJ-T985",
+      "categoria": "posse",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 985,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1667842/SC",
+        "REsp 1667843/SC"
+      ],
+      "julgado_em": "03/12/2020",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=985&cod_tema_final=985",
+      "texto_oficial": "O reconhecimento da usucapião extraordinária, mediante o preenchimento dos requisitos específicos, não pode ser obstado em razão de a área usucapienda ser inferior ao módulo estabelecido em lei municipal.",
+      "pergunta": "Meu terreno é menor que o tamanho mínimo de lote da lei do município. Posso pedir usucapião?",
+      "decisao_leigo": "Pode: cumpridos os requisitos, a usucapião extraordinária não pode ser negada só porque a área é menor que o módulo da lei municipal.",
+      "por_que_importa": "A tese fala do módulo de lei municipal. Para a fração mínima de parcelamento rural (FMP do INCRA), não há tese repetitiva conferida aqui: consulte advogado.",
+      "o_que_conferir": [
+        "Área do terreno e o tamanho mínimo de lote do município."
+      ]
+    },
+    {
+      "id": "STJ-T1025",
+      "categoria": "posse",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1025,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1818564/DF"
+      ],
+      "julgado_em": "09/06/2021",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1025&cod_tema_final=1025",
+      "texto_oficial": "É cabível a aquisição de imóveis particulares situados no Setor Tradicional de Planaltina/DF, por usucapião, ainda que pendente o processo de regularização urbanística.",
+      "pergunta": "Loteamento irregular impede a usucapião?",
+      "decisao_leigo": "No caso julgado (um setor de Planaltina/DF), o STJ admitiu a usucapião de imóvel particular mesmo com a regularização urbanística pendente.",
+      "por_que_importa": "A tese é sobre aquele local específico; serve de referência, não de regra geral.",
+      "o_que_conferir": [
+        "Se o imóvel é particular (não público) e a situação do loteamento."
+      ]
+    },
+    {
+      "id": "STJ-S496",
+      "categoria": "publico",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 496,
+      "situacao": "em vigor (também Tema 419)",
+      "orgao": "Primeira Seção",
+      "data": "08/08/2012",
+      "processos": [
+        "REsp 1183546/ES",
+        "REsp 1241554/SC"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "Os registros de propriedade particular de imóveis situados em terrenos de marinha não são oponíveis à União.",
+      "pergunta": "O imóvel na praia tem matrícula em nome do vendedor. Então não é terreno de marinha?",
+      "decisao_leigo": "Não dá para concluir isso. Mesmo com matrícula em nome de particular, se o imóvel estiver em terreno de marinha, o registro não vale contra a União.",
+      "por_que_importa": "Imóveis à beira-mar e às margens de rios e lagoas com influência de maré podem estar em terreno de marinha, sujeitos a taxas e laudêmio à União.",
+      "o_que_conferir": [
+        "Consultar a SPU (RIP) se o imóvel fica perto do mar, de rios ou lagoas com maré.",
+        "Certidão de situação na SPU."
+      ],
+      "ligado_a": {
+        "status_d10": [
+          "spu_inscricao_ocupacao"
+        ]
+      }
+    },
+    {
+      "id": "STJ-S619",
+      "categoria": "publico",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 619,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "24/10/2018",
+      "processos": [
+        "REsp 1.183.266/PR",
+        "REsp 808.708/RJ"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "A ocupação indevida de bem público configura mera detenção, de natureza precária, insuscetível de retenção ou indenização por acessões e benfeitorias.",
+      "pergunta": "Construí numa área pública. Tenho direito a indenização se tiver de sair?",
+      "decisao_leigo": "Não. Ocupar bem público indevidamente é só detenção: não dá direito a ficar nem a indenização pelo que foi construído.",
+      "por_que_importa": "Bem público não pode ser usucapido, e comprar 'posse' em área pública é muito arriscado.",
+      "o_que_conferir": [
+        "Se a área é pública (Prefeitura, Estado, União)."
+      ]
+    },
+    {
+      "id": "STJ-S637",
+      "categoria": "publico",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 637,
+      "situacao": "em vigor",
+      "orgao": "Corte Especial",
+      "data": "06/11/2019",
+      "processos": [
+        "REsp 780401/DF"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O ente público detém legitimidade e interesse para intervir, incidentalmente, na ação possessória entre particulares, podendo deduzir qualquer matéria defensiva, inclusive, se for o caso, o domínio.",
+      "pergunta": "Numa briga de posse entre vizinhos, o poder público pode entrar no processo?",
+      "decisao_leigo": "Pode, e pode até alegar que a área é dele.",
+      "por_que_importa": "Áreas com dúvida sobre serem públicas podem ter surpresas.",
+      "o_que_conferir": [
+        "Situação da área junto à Prefeitura, ao Estado e à SPU."
+      ]
+    },
+    {
+      "id": "STJ-T1199",
+      "categoria": "publico",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1199,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 2015301/MA",
+        "REsp 2036429/MA"
+      ],
+      "julgado_em": "13/09/2023",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1199&cod_tema_final=1199",
+      "texto_oficial": "Nos procedimentos de demarcação de terrenos de marinha, é válido o ato jurídico de chamamento de interessados certos ou incertos à participação colaborativa com a Administração formalizado exclusivamente por meio de edital, desde que o ato tenha sido praticado no período de 31/05/2007 até 28/03/2011, em que produziu efeitos jurídicos a alteração legislativa do art. 11 do Decreto-lei 9.760/46 promovida pelo art. 5º da Lei 11.481/2007.",
+      "pergunta": "A demarcação de terreno de marinha feita só por edital vale?",
+      "decisao_leigo": "Vale se o chamamento por edital foi feito entre 31/05/2007 e 28/03/2011.",
+      "por_que_importa": "A data da demarcação pode influir na discussão com a União.",
+      "o_que_conferir": [
+        "Data e forma da demarcação da área na SPU."
+      ]
+    },
+    {
+      "id": "STJ-S623",
+      "categoria": "rural_ambiental",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 623,
+      "situacao": "em vigor",
+      "orgao": "Primeira Seção",
+      "data": "12/12/2018",
+      "processos": [
+        "REsp 865.309/MG",
+        "REsp 1276114/MG"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "As obrigações ambientais possuem natureza propter rem, sendo admissível cobrá-las do proprietário ou possuidor atual e/ou dos anteriores, à escolha do credor.",
+      "pergunta": "O dono anterior desmatou a reserva legal. Isso vira problema meu?",
+      "decisao_leigo": "Pode virar. As obrigações ambientais acompanham o imóvel e podem ser cobradas do dono ou possuidor atual e/ou dos anteriores, à escolha de quem cobra.",
+      "por_que_importa": "Comprar sítio com passivo ambiental é comprar a obrigação de recuperar.",
+      "o_que_conferir": [
+        "Recibo e situação do CAR (APP, reserva legal, vegetação nativa).",
+        "Embargos ou autos de infração ambiental na área."
+      ],
+      "ligado_a": {
+        "checklist": [
+          "car"
+        ],
+        "status_d10": [
+          "car"
+        ]
+      }
+    },
+    {
+      "id": "LEI-8245-27-33",
+      "categoria": "locacao",
+      "tipo": "lei",
+      "referencia": "Lei 8.245/1991, arts. 27 e 33",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l8245.htm",
+      "texto_oficial": "Art. 27. No caso de venda, promessa de venda, cessão ou promessa de cessão de direitos ou dação em pagamento, o locatário tem preferência para adquirir o imóvel locado, em igualdade de condições com terceiros, devendo o locador dar - lhe conhecimento do negócio mediante notificação judicial, extrajudicial ou outro meio de ciência inequívoca. Art. 33. O locatário preterido no seu direito de preferência poderá reclamar do alienante as perdas e danos ou, depositando o preço e demais despesas do ato de transferência, haver para si o imóvel locado, se o requerer no prazo de seis meses, a contar do registro do ato no cartório de imóveis, desde que o contrato de locação esteja averbado pelo menos trinta dias antes da alienação junto à matrícula do imóvel.",
+      "pergunta": "Vou comprar um imóvel alugado. O inquilino pode tomar a compra?",
+      "decisao_leigo": "O inquilino tem preferência para comprar em igualdade de condições e precisa ser avisado com todas as condições do negócio. Se não for avisado, pode pedir perdas e danos ao vendedor; e, se o contrato de locação estava averbado na matrícula pelo menos 30 dias antes, pode depositar o preço e ficar com o imóvel em até seis meses do registro.",
+      "por_que_importa": "Imóvel alugado exige a notificação do inquilino antes da venda.",
+      "o_que_conferir": [
+        "Se há locação e se está averbada na matrícula.",
+        "Notificação ao inquilino com preço e condições."
+      ]
+    },
+    {
+      "id": "STJ-S335",
+      "categoria": "locacao",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 335,
+      "situacao": "em vigor",
+      "orgao": "Terceira Seção",
+      "data": "25/04/2007",
+      "processos": [
+        "REsp 276153/GO"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "Nos contratos de locação, é válida a cláusula de renúncia à indenização das benfeitorias e ao direito de retenção.",
+      "pergunta": "Fiz melhorias no imóvel alugado. Posso cobrar do dono?",
+      "decisao_leigo": "Se o contrato tiver cláusula de renúncia, não: ela é válida.",
+      "por_que_importa": "Ler o contrato antes de reformar.",
+      "o_que_conferir": [
+        "Cláusula de benfeitorias no contrato de locação."
+      ]
+    },
+    {
+      "id": "STJ-S214",
+      "categoria": "locacao",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 214,
+      "situacao": "em vigor",
+      "orgao": "Terceira Seção",
+      "data": "23/09/1998",
+      "processos": [
+        "REsp 151071/MG"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O fiador na locação não responde por obrigações resultantes de aditamento ao qual não anuiu.",
+      "pergunta": "Mudaram o contrato de aluguel sem eu, fiador, assinar. Respondo pelo aumento?",
+      "decisao_leigo": "Não pelas obrigações criadas no aditamento que você não assinou.",
+      "por_que_importa": "—",
+      "o_que_conferir": [
+        "Assinatura do fiador nos aditamentos."
+      ]
+    },
+    {
+      "id": "STJ-S614",
+      "categoria": "locacao",
+      "tipo": "sumula",
+      "tribunal": "STJ",
+      "numero": 614,
+      "situacao": "em vigor",
+      "orgao": "Primeira Seção",
+      "data": "09/05/2018",
+      "processos": [
+        "REsp 1073846/SP",
+        "REsp 903394/AL"
+      ],
+      "fonte_url": "https://www.stj.jus.br/docs_internet/SumulasSTJ.pdf",
+      "texto_oficial": "O locatário não possui legitimidade ativa para discutir a relação jurídico-tributária de IPTU e de taxas referentes ao imóvel alugado nem para repetir indébito desses tributos.",
+      "pergunta": "Pago o IPTU no aluguel. Posso contestar o imposto na Prefeitura?",
+      "decisao_leigo": "Não: o inquilino não pode discutir o IPTU nem pedir devolução; isso cabe ao contribuinte.",
+      "por_que_importa": "—",
+      "o_que_conferir": [
+        "—"
+      ]
+    },
+    {
+      "id": "STJ-T938",
+      "categoria": "corretagem",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 938,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1551956/SP",
+        "REsp 1599511/SP"
+      ],
+      "julgado_em": "24/08/2016",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=938&cod_tema_final=938",
+      "texto_oficial": "(i) Incidência da prescrição trienal sobre a pretensão de restituição dos valores pagos a título de comissão de corretagem ou de serviço de assistência técnico-imobiliária (SATI), ou atividade congênere (artigo 206, § 3º, IV, CC). (vide REsp n. 1.551.956/SP) (ii) Validade da cláusula contratual que transfere ao promitente-comprador a obrigação de pagar a comissão de corretagem nos contratos de promessa de compra e venda de unidade autônoma em regime de incorporação imobiliária, desde que previamente informado o preço total da aquisição da unidade autônoma, com o destaque do valor da comissão de corretagem; (vide REsp n. 1.599.511/SP) (ii, parte final) Abusividade da cobrança pelo promitente-vendedor do serviço de assessoria técnico-imobiliária (SATI), ou atividade congênere, vinculado à celebração de promessa de compra e venda de imóvel. (vide REsp n. 1.599.511/SP)",
+      "pergunta": "Na compra na planta, o comprador pode pagar a comissão de corretagem?",
+      "decisao_leigo": "Na venda de imóvel na planta, pode, desde que o preço total da unidade tenha sido informado antes, com a comissão destacada. A taxa de 'assessoria técnico-imobiliária' (SATI) cobrada pela vendedora é abusiva. Para pedir de volta a comissão ou a taxa SATI, o prazo é, em regra, de três anos (ver Tema 1099 para o caso de atraso da obra).",
+      "por_que_importa": "Transparência na comissão protege o corretor e o cliente.",
+      "o_que_conferir": [
+        "Proposta e contrato com o preço total e a comissão destacada."
+      ],
+      "relacionados": [
+        "STJ-T939",
+        "STJ-T960",
+        "STJ-T1099"
+      ]
+    },
+    {
+      "id": "STJ-T939",
+      "categoria": "corretagem",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 939,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1551951/SP",
+        "REsp 1551968/SP"
+      ],
+      "julgado_em": "24/08/2016",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=939&cod_tema_final=939",
+      "texto_oficial": "Legitimidade passiva 'ad causam' da incorporadora, na condição de promitente-vendedora, para responder pela restituição ao consumidor dos valores pagos a título de comissão de corretagem e de taxa de assessoria técnico-imobiliária, nas demandas em que se alega prática abusiva na transferência desses encargos ao consumidor.",
+      "pergunta": "Se a comissão foi cobrada de forma abusiva, de quem o comprador cobra?",
+      "decisao_leigo": "A incorporadora (a vendedora) pode ser processada para devolver a comissão e a taxa SATI quando a cobrança for abusiva.",
+      "por_que_importa": "—",
+      "o_que_conferir": [
+        "—"
+      ],
+      "relacionados": [
+        "STJ-T938"
+      ]
+    },
+    {
+      "id": "STJ-T960",
+      "categoria": "corretagem",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 960,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 1601149/RS",
+        "REsp 1602042/RS"
+      ],
+      "julgado_em": "13/06/2018",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=960&cod_tema_final=960",
+      "texto_oficial": "Ressalvada a denominada Faixa 1, em que não há intermediação imobiliária, é válida a cláusula contratual que transfere ao promitente-comprador a obrigação de pagar a comissão de corretagem nos contratos de promessa de compra e venda do Programa Minha Casa, Minha Vida, desde que previamente informado o preço total da aquisição da unidade autônoma, com o destaque do valor da comissão de corretagem.",
+      "pergunta": "E no Minha Casa, Minha Vida?",
+      "decisao_leigo": "Vale a mesma regra (preço total informado antes, com a comissão destacada), menos na Faixa 1, em que não há intermediação imobiliária.",
+      "por_que_importa": "—",
+      "o_que_conferir": [
+        "Faixa do programa e destaque da comissão."
+      ],
+      "relacionados": [
+        "STJ-T938"
+      ]
+    },
+    {
+      "id": "STJ-T1099",
+      "categoria": "corretagem",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1099,
+      "situacao": "Acórdão publicado",
+      "processos": [
+        "REsp 1897867/CE"
+      ],
+      "julgado_em": "13/08/2025",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1099&cod_tema_final=1099",
+      "texto_oficial": "Prescrição decenal (art. 205, CC/2002) da pretensão de restituição dos valores pagos a título de comissão de corretagem, quando o pedido de repetição dirigido contra a incorporadora/construtora tiver por fundamento a resolução do contrato em virtude de atraso na entrega do imóvel, contando-se o prazo desde a data em que o adquirente tiver ciência da recusa da restituição integral das parcelas pagas.",
+      "pergunta": "A obra atrasou e o contrato foi desfeito. Ainda posso pedir a comissão de volta da construtora?",
+      "decisao_leigo": "Nesse caso o prazo é de dez anos, contados de quando o comprador soube que a construtora recusou devolver tudo o que ele pagou.",
+      "por_que_importa": "É diferente do prazo de três anos do Tema 938, que vale quando se discute a abusividade da cobrança.",
+      "o_que_conferir": [
+        "Motivo do desfazimento e data da recusa da construtora."
+      ],
+      "relacionados": [
+        "STJ-T938"
+      ],
+      "aviso": "Acórdão publicado, ainda sem trânsito em julgado: pode haver recurso."
+    },
+    {
+      "id": "STJ-T1173",
+      "categoria": "corretagem",
+      "tipo": "tema_repetitivo",
+      "tribunal": "STJ",
+      "numero": 1173,
+      "situacao": "Trânsito em julgado",
+      "processos": [
+        "REsp 2008542/RJ",
+        "REsp 2008545/DF"
+      ],
+      "julgado_em": "08/10/2025",
+      "fonte_url": "https://processo.stj.jus.br/repetitivos/temas_repetitivos/pesquisa.jsp?novaConsulta=true&tipo_pesquisa=T&cod_tema_inicial=1173&cod_tema_final=1173",
+      "texto_oficial": "O corretor de imóveis, pessoa física ou jurídica, não é, normalmente, responsável por danos causados ao consumidor, em razão do descumprimento, pela construtora ou incorporadora, de obrigações relativas ao empreendimento imobiliário, previstas no contrato de promessa de compra e venda, salvo se demonstrado: (i) envolvimento do corretor nas atividades de incorporação e construção; (ii) que o corretor integra o mesmo grupo econômico da incorporadora ou construtora; ou (iii) haver confusão ou desvio patrimonial das responsáveis pela construção em benefício do corretor.",
+      "pergunta": "A construtora não entregou. O corretor que vendeu responde?",
+      "decisao_leigo": "Normalmente não. O corretor só responde se participou da incorporação ou da construção, se é do mesmo grupo econômico da construtora, ou se houve confusão ou desvio de patrimônio da construtora em benefício dele.",
+      "por_que_importa": "Define o papel do corretor: intermediar com informação correta, sem assumir o risco da obra.",
+      "o_que_conferir": [
+        "Para o corretor: manter-se independente da incorporadora e documentar as informações passadas ao cliente."
+      ]
+    },
+    {
+      "id": "LEI-6766-36A",
+      "categoria": "condominio",
+      "tipo": "lei",
+      "referencia": "Lei 6.766/1979, art. 36-A (incluído pela Lei 13.465/2017)",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l6766.htm",
+      "texto_oficial": "Parágrafo único. A administração de imóveis na forma do caput deste artigo sujeita seus titulares à normatização e à disciplina constantes de seus atos constitutivos, cotizando-se na forma desses atos para suportar a consecução dos seus objetivos.",
+      "pergunta": "Desde 2017 a lei mudou algo sobre as associações de loteamento?",
+      "decisao_leigo": "Sim. A Lei 13.465/2017 incluiu na Lei de Loteamentos uma regra dizendo que a administração feita por essas associações sujeita os titulares aos atos constitutivos da associação, cotizando-se na forma desses atos.",
+      "por_que_importa": "Até onde essa regra alcança quem nunca aderiu à associação é questão que depende do caso: consulte advogado antes de comprar lote em loteamento com associação.",
+      "o_que_conferir": [
+        "Atos constitutivos da associação e se há algo registrado na matrícula do lote.",
+        "Se o vendedor é associado e se há taxas em atraso."
+      ],
+      "relacionados": [
+        "STJ-T882",
+        "STJ-T1183"
+      ]
+    },
+    {
+      "id": "LEI-9636-7",
+      "categoria": "publico",
+      "tipo": "lei",
+      "referencia": "Lei 9.636/1998, art. 7º, caput",
+      "situacao": "em vigor (redação da Lei 11.481/2007)",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l9636.htm",
+      "texto_oficial": "Art. 7º A inscrição de ocupação, a cargo da Secretaria do Patrimônio da União, é ato administrativo precário, resolúvel a qualquer tempo, que pressupõe o efetivo aproveitamento do terreno pelo ocupante, nos termos do regulamento, outorgada pela administração depois de analisada a conveniência e oportunidade, e gera obrigação de pagamento anual da taxa de ocupação.",
+      "pergunta": "Tenho inscrição de ocupação na SPU. Sou dono?",
+      "decisao_leigo": "Não. A inscrição de ocupação é um ato precário da União, que pode ser desfeito a qualquer tempo e gera a taxa anual de ocupação.",
+      "por_que_importa": "O terreno continua sendo da União.",
+      "o_que_conferir": [
+        "Certidão de situação do imóvel na SPU (RIP).",
+        "Taxas de ocupação em dia."
+      ],
+      "ligado_a": {
+        "status_d10": [
+          "spu_inscricao_ocupacao"
+        ]
+      }
+    },
+    {
+      "id": "LEI-6015-216B",
+      "categoria": "contrato",
+      "tipo": "lei",
+      "referencia": "Lei 6.015/1973, art. 216-B, caput (incluído pela Lei 14.382/2022)",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm",
+      "texto_oficial": "Art. 216-B. Sem prejuízo da via jurisdicional, a adjudicação compulsória de imóvel objeto de promessa de venda ou de cessão poderá ser efetivada extrajudicialmente no serviço de registro de imóveis da situação do imóvel, nos termos deste artigo.",
+      "pergunta": "Preciso ir à Justiça para conseguir a escritura que o vendedor não assina?",
+      "decisao_leigo": "Não necessariamente: desde 2022 a adjudicação compulsória também pode ser feita no próprio cartório de registro de imóveis, com advogado, seguindo os requisitos da lei.",
+      "por_que_importa": "Pode ser mais rápido que o processo judicial.",
+      "o_que_conferir": [
+        "Contrato de promessa ou cessão e prova de pagamento.",
+        "Os documentos exigidos no § 1º do artigo (notificação, ata notarial, entre outros)."
+      ],
+      "relacionados": [
+        "STJ-S239",
+        "LEI-CC-1418"
+      ]
+    },
+    {
+      "id": "LEI-8009-3",
+      "categoria": "penhora",
+      "tipo": "lei",
+      "referencia": "Lei 8.009/1990, art. 3º, incisos IV, V e VII",
+      "situacao": "em vigor",
+      "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/l8009.htm",
+      "texto_oficial": "IV - para cobrança de impostos, predial ou territorial, taxas e contribuições devidas em função do imóvel familiar; V - para execução de hipoteca sobre o imóvel oferecido como garantia real pelo casal ou pela entidade familiar;",
+      "pergunta": "Quando o bem de família pode ser penhorado?",
+      "decisao_leigo": "A lei traz exceções. Entre elas: cobrança de IPTU, ITR, taxas e contribuições do próprio imóvel; execução de hipoteca dada pelo casal ou pela família sobre o imóvel (limitada pelo Tema 1261); e fiança em contrato de locação (inciso VII).",
+      "por_que_importa": "Dívidas do próprio imóvel chegam à casa da família.",
+      "o_que_conferir": [
+        "Débitos de IPTU e hipotecas na matrícula."
+      ],
+      "relacionados": [
+        "STJ-T1261",
+        "STJ-T1091",
+        "STJ-S364"
+      ]
+    }
+  ],
+  "casos_de_ensino": [
+    {
+      "id": "CE-01",
+      "titulo": "A matrícula limpa e a dívida que não estava nela",
+      "situacao": "Uma família compra uma casa. A matrícula não tem penhora nem averbação de processo. Um ano depois, a Fazenda Nacional pede que a venda seja declarada fraudulenta: o vendedor tinha dívida de imposto inscrita em dívida ativa antes da venda e não deixou outros bens.",
+      "perguntas_para_discussao": [
+        "A boa-fé da família protege a compra?",
+        "Que documento teria mostrado o risco antes da compra?"
+      ],
+      "o_que_os_precedentes_dizem": "Para dívida tributária inscrita em dívida ativa, a venda presume-se fraudulenta, salvo se o vendedor guardou bens suficientes para pagar (CTN, art. 185); para vendas desde 09/06/2005, basta a inscrição (Tema 290). Essa regra não depende de penhora registrada na matrícula; por isso a Súmula 375 e a matrícula limpa não devem ser tomadas como garantia nesse caso.",
+      "licao": "Matrícula limpa não basta: pedir as certidões de débitos tributários do vendedor.",
+      "precedentes": [
+        "LEI-CTN-185",
+        "STJ-T290",
+        "LEI-13097-54",
+        "STJ-S375",
+        "STJ-T243"
+      ]
+    },
+    {
+      "id": "CE-02",
+      "titulo": "O contrato de gaveta e o IPTU que voltou para o vendedor",
+      "situacao": "Um vendedor passou o apartamento por contrato particular há oito anos e nunca registrou. O comprador não pagou IPTU nem condomínio. A Prefeitura cobra o vendedor; o condomínio também.",
+      "perguntas_para_discussao": [
+        "A Prefeitura pode cobrar o vendedor?",
+        "E o condomínio?"
+      ],
+      "o_que_os_precedentes_dizem": "Enquanto o imóvel está registrado no nome do vendedor, ele e o comprador podem responder pelo IPTU, conforme a lei do município (Tema 122; Súmula 399). Para o condomínio, o que conta é a posse do comprador e se o condomínio sabia da venda (Tema 886), regra que está em revisão (Tema 1349).",
+      "licao": "Registrar a venda e avisar o condomínio por escrito.",
+      "precedentes": [
+        "STJ-T122",
+        "STJ-S399",
+        "STJ-T886",
+        "STJ-T1349",
+        "LEI-CC-1245"
+      ]
+    },
+    {
+      "id": "CE-03",
+      "titulo": "O terreno comprado de um herdeiro",
+      "situacao": "No interior, um comprador paga a um dos herdeiros por um terreno que ainda está em nome do pai falecido. Não houve inventário. Anos depois, ele quer a escritura.",
+      "perguntas_para_discussao": [
+        "O papel assinado pelo herdeiro transfere o terreno?",
+        "Que caminhos levam à matrícula?"
+      ],
+      "o_que_os_precedentes_dizem": "Antes da partilha, a cessão de um bem específico por um herdeiro é ineficaz (CC, art. 1.793, § 2º). Os caminhos usuais são o inventário com partilha registrada ou, havendo posse longa, a usucapião (CC, art. 1.238), que também pode ser pedida no cartório (Lei 6.015/1973, art. 216-A).",
+      "licao": "Escritura de cessão de direitos hereditários não é registro; veja o caso real nº 2 da Biblioteca de casos.",
+      "precedentes": [
+        "LEI-CC-1793",
+        "LEI-CC-1238",
+        "LEI-CC-1245"
+      ]
+    },
+    {
+      "id": "CE-04",
+      "titulo": "O apartamento na planta e a hipoteca do banco",
+      "situacao": "A construtora quebrou. O comprador pagou tudo, mas a matrícula da unidade mostra hipoteca em favor do banco que financiou a obra.",
+      "perguntas_para_discussao": [
+        "O banco pode tomar o apartamento?",
+        "O que o comprador precisa fazer para registrar?"
+      ],
+      "o_que_os_precedentes_dizem": "A hipoteca entre construtora e banco não tem eficácia perante quem comprou a unidade (Súmula 308). Ainda assim, é preciso obter a baixa da hipoteca para registrar a compra.",
+      "licao": "Ver as hipotecas da matrícula antes de comprar na planta.",
+      "precedentes": [
+        "STJ-S308",
+        "STJ-S239"
+      ]
+    },
+    {
+      "id": "CE-05",
+      "titulo": "A casa na praia com matrícula particular",
+      "situacao": "Um comprador vê matrícula em nome do vendedor de uma casa a poucos metros do mar e conclui que não há nada com a União.",
+      "perguntas_para_discussao": [
+        "A matrícula afasta a União?",
+        "Que documento conferir?"
+      ],
+      "o_que_os_precedentes_dizem": "O registro particular de imóvel em terreno de marinha não vale contra a União (Súmula 496). A inscrição de ocupação na SPU é ato precário, que pode ser desfeito a qualquer tempo (Lei 9.636/1998, art. 7º). Já a ocupação indevida de bem público é mera detenção (Súmula 619).",
+      "licao": "Perto do mar, consultar a SPU antes de fechar.",
+      "precedentes": [
+        "STJ-S496",
+        "LEI-9636-7",
+        "STJ-T1199",
+        "STJ-S619"
+      ]
+    },
+    {
+      "id": "CE-06",
+      "titulo": "O sítio com reserva legal desmatada",
+      "situacao": "Um comprador adquire um sítio e, depois, recebe cobrança para recuperar área de reserva legal desmatada pelo dono anterior.",
+      "perguntas_para_discussao": [
+        "Ele responde por algo que não fez?",
+        "O que o CAR teria mostrado?"
+      ],
+      "o_que_os_precedentes_dizem": "As obrigações ambientais acompanham o imóvel e podem ser cobradas do dono atual e/ou dos anteriores (Súmula 623).",
+      "licao": "Ler o CAR (reserva legal, APP, vegetação nativa) e procurar embargos ambientais antes de comprar.",
+      "precedentes": [
+        "STJ-S623"
+      ]
+    },
+    {
+      "id": "CE-07",
+      "titulo": "O imóvel alugado vendido sem avisar o inquilino",
+      "situacao": "Um proprietário vende uma sala alugada sem oferecer ao inquilino. O contrato de locação estava averbado na matrícula havia um ano.",
+      "perguntas_para_discussao": [
+        "O inquilino pode ficar com o imóvel?",
+        "Em que prazo?"
+      ],
+      "o_que_os_precedentes_dizem": "Com o contrato averbado pelo menos 30 dias antes da venda, o inquilino preterido pode depositar o preço e ficar com o imóvel em até seis meses do registro (Lei 8.245/1991, art. 33).",
+      "licao": "Notificar o inquilino com todas as condições antes de vender.",
+      "precedentes": [
+        "LEI-8245-27-33"
+      ]
+    },
+    {
+      "id": "CE-08",
+      "titulo": "O corretor e a obra que não saiu",
+      "situacao": "Compradores de um lançamento processam o corretor que vendeu as unidades, porque a incorporadora não entregou.",
+      "perguntas_para_discussao": [
+        "O corretor responde?",
+        "Em que casos responderia?"
+      ],
+      "o_que_os_precedentes_dizem": "Normalmente não responde, salvo envolvimento na incorporação ou construção, mesmo grupo econômico, ou confusão ou desvio patrimonial em seu favor (Tema 1173). Na venda de imóvel na planta (incorporação), a comissão pode ser paga pelo comprador se o preço total e a comissão forem informados antes (Tema 938).",
+      "licao": "Corretor independente, informação documentada e comissão destacada.",
+      "precedentes": [
+        "STJ-T1173",
+        "STJ-T938",
+        "STJ-T939"
+      ]
+    }
+  ]
+}
