@@ -465,6 +465,26 @@
           "url": "https://www.planalto.gov.br/ccivil_03/decreto/antigos/d93240.htm"
         }
       ]
+    },
+    {
+      "id": "memorial_itcd_al",
+      "nome_popular": "Memória de cálculo do ITCD (SEFAZ-AL) / \"o imposto do inventário\"",
+      "estagio": "calculo_de_imposto",
+      "parece": "Que o inventário está resolvido e os herdeiros já são donos dos imóveis.",
+      "e": "O cálculo do imposto de herança (ITCD) feito pela Secretaria da Fazenda num processo de inventário: lista os bens (com matrícula), a avaliação de cada um, o imposto e, quando o inventário atrasou, a multa. É um passo do caminho.",
+      "nao_prova": "Não prova propriedade, não prova que o imposto foi pago e não mostra que o inventário terminou ou como os bens foram divididos.",
+      "falta": "Guia do imposto paga, escritura ou formal de partilha, e o registro da partilha na matrícula, em nome dos herdeiros.",
+      "marcas_no_papel": [
+        "MEMÓRIA DE CÁLCULO ITCD CAUSA MORTIS (INVENTÁRIO)",
+        "SECRETARIA DE ESTADO DA FAZENDA - Chefia de ITCD",
+        "MULTA 20%"
+      ],
+      "fontes": [
+        {
+          "norma": "Texto do próprio documento (cabeçalho e linhas de multa)",
+          "trecho": "Artigos 162 a 183 da Lei nº 5.077/95 e anexo do Decreto nº 10.306/2011; multa de 20% com base no art. 177 §1º da Lei 5.077/89."
+        }
+      ]
     }
   ]
 }
