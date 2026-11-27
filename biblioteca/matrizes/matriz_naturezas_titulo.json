@@ -968,6 +968,75 @@
     ],
     "conflito_com_matriz_rural": "Matriz-Rural.json diz 'suspendeu por 4 anos para imóveis menores'; o decreto mostra prazo único para todas as áreas. Matriz-Rural NÃO alterada - aguarda aprovação de Kenny."
    }
+  },
+  {
+   "id": "N7",
+   "nivel": 7,
+   "nome": "Construção que não está na matrícula",
+   "origem": "ADR-005 (caminho N7 na calculadora) e ADR-007 (nível no Raio-X), 27/11/2026",
+   "como_reconhecer": {
+    "texto": "A matrícula está em nome de quem vende, mas só descreve o terreno (ou uma casa menor): a casa, o prédio, os andares ou a ampliação que existem hoje não aparecem nela. Sinais: a matrícula fala em \"terreno\" ou \"lote\"; não há \"AV.\" de construção; a área construída do IPTU é diferente da que existe.",
+    "pergunta_chave": "Existe na matrícula uma averbação (\"AV.\") da construção, com a mesma área que existe hoje?"
+   },
+   "o_que_significa": {
+    "texto": "Para o cartório, o imóvel é o que está escrito na matrícula. A construção precisa ser averbada (anotada) na matrícula, e para averbar a obra a lei exige a certidão negativa da obra na Receita. Enquanto isso não for feito, a escritura e o registro tratam do que está na matrícula, e os bancos, em regra, não financiam.",
+    "fontes": [
+     {
+      "norma": "Lei 6.015/1973, art. 167, II, 4 (averbação \"da mudança de denominação e de numeração dos prédios, da edificação, da reconstrução, da demolição, do desmembramento e do loteamento de imóveis\")",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l6015compilada.htm"
+     },
+     {
+      "norma": "Lei 8.212/1991, art. 47, II (CND exigida \"do proprietário, pessoa física ou jurídica, de obra de construção civil, quando de sua averbação no registro de imóveis\")",
+      "url": "https://www.planalto.gov.br/ccivil_03/leis/l8212cons.htm"
+     }
+    ]
+   },
+   "caminho_ate_matricula_plena": {
+    "previsto_no_mapa": "Averbação da construção",
+    "status_conferencia": "conferido (Planalto, 27/11/2026)",
+    "passo_a_passo": [
+     "1. Tirar a certidão de inteiro teor da matrícula e ver o que está descrito (só terreno? casa de quantos m²?).",
+     "2. Contratar engenheiro ou arquiteto para medir a construção como ela existe hoje (com ART ou RRT).",
+     "3. Na Prefeitura: aprovar ou regularizar a obra e tirar o habite-se (o nome muda de cidade para cidade). Conferir também a área construída no cadastro do IPTU.",
+     "4. Na Receita Federal: regularizar a obra e tirar a certidão negativa da obra (o valor depende da área e do tipo de obra; dá para simular antes no sistema da Receita).",
+     "5. No Cartório de Registro de Imóveis: pedir a averbação da construção na matrícula, com o habite-se e a certidão da obra.",
+     "6. Averbada a construção, o imóvel volta para o caminho normal de venda (PLENO ou N4, se houver ônus)."
+    ]
+   },
+   "orgaos": [
+    "Profissional habilitado com ART ou RRT",
+    "Prefeitura (aprovação da obra, habite-se e cadastro do IPTU)",
+    "Receita Federal (certidão negativa da obra)",
+    "Cartório de Registro de Imóveis (averbação)"
+   ],
+   "custos": {
+    "itbi": "Averbar a construção não é transmissão: sem ITBI. Na venda, ITBI normal sobre o imóvel.",
+    "emolumentos": "ato 202 (averbação com valor declarado e construção), base = valor da construção",
+    "outros": "projeto ou levantamento com ART/RRT; habite-se (taxa municipal); INSS da obra pela aferição da IN RFB 2.021/2021 (zero se a obra tiver mais de 5 anos e houver prova)"
+   },
+   "riscos": [
+    {
+     "risco": "Comprar pelo preço da construção e receber, no papel, só o terreno: a escritura descreve o que está na matrícula.",
+     "fonte": "Lei 6.015/1973, art. 167, II, 4 (averbação \"da mudança de denominação e de numeração dos prédios, da edificação, da reconstrução, da demolição, do desmembramento e do loteamento de imóveis\")"
+    },
+    {
+     "risco": "A dispensa de habite-se da lei vale só para casa residencial de um pavimento, pronta há mais de 5 anos, em área predominantemente de baixa renda. Pousada, comércio e sobrado não entram.",
+     "fonte": "Lei 6.015/1973, art. 247-A (redação da Lei 13.865/2019)"
+    },
+    {
+     "risco": "Construção maior que o projeto aprovado, ou sobre a divisa, recuo, área de preservação ou terreno de marinha, pode não ser regularizável do jeito que está: confirme na Prefeitura antes de fechar o preço."
+    },
+    {
+     "risco": "A certidão da obra é do proprietário: se a obra foi feita por outra pessoa ou empresa, combine por escrito quem paga a regularização."
+    }
+   ],
+   "quando_chamar_advogado": "Normalmente não precisa: é trabalho de engenheiro ou arquiteto, Prefeitura e cartório. Precisa se a Prefeitura negar a regularização, se houver disputa com vizinho ou se a construção estiver em área pública ou de preservação.",
+   "casos_especiais_relacionados": [
+    23,
+    24,
+    6,
+    4
+   ]
   }
  ],
  "transversais": {
@@ -1020,6 +1089,7 @@
    "N6 (rural)"
   ],
   "formato_selo": "<estágio> [· <tipo>] · <natureza específica>  ex.: 'N1 · N6 · cessão de direitos'",
-  "aprovado": "Kenny Wilson, 23/09/2026 (D1, D2, D3)"
+  "aprovado": "Kenny Wilson, 23/09/2026 (D1, D2, D3)",
+  "n7": "N7 (construção fora da matrícula, ADR-005/ADR-007): a matrícula do terreno pode estar em ordem e faltar a averbação da obra; depois de averbar, o imóvel segue para PLENO ou N4. Lista 'estagios' acima mantida como aprovada em 23/09/2026."
  }
 }

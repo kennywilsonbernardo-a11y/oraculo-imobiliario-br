@@ -9,7 +9,8 @@
    "D2 APROVADA (Kenny, 23/09/2026): N5 e N6 são TIPO do imóvel e se combinam com o estágio no selo (ex.: 'N6 · N1').",
    "D3 APROVADA (Kenny, 23/09/2026): 'Título pleno' só quando REGISTRADO; sem registro = N2 (CC 1.245).",
    "Item 4 APROVADO (23/09/2026): rótulos de risco (Alto/Crítico/Altíssimo) do niveis.json e do PDF de naturezas NÃO vão para o produto (VIS-001 §10).",
-   "Item 3 APROVADO (23/09/2026): widget antigo, linha 1680 - 'nula' deve ser 'anulável' (CC 1.649) quando o código voltar a uso."
+   "Item 3 APROVADO (23/09/2026): widget antigo, linha 1680 - 'nula' deve ser 'anulável' (CC 1.649) quando o código voltar a uso.",
+   "ADR-006 APROVADO NA DIREÇÃO (Kenny, 25/11/2026): 5 naturezas novas (escritura de posse, transcrição antiga, título do INCRA/ITERAL, procuração em causa própria, contrato de financiamento do banco). Levadas a esta matriz em 27/11/2026 a partir do site; conteúdo em 'conteudo_oraculo' (não é texto do widget antigo)."
   ]
  },
  "naturezas": [
@@ -772,6 +773,264 @@
       "url": "https://www.planalto.gov.br/ccivil_03/leis/2002/l10406compilada.htm",
       "conferido": "2026-09-23"
      }
+    ]
+   }
+  },
+  {
+   "id": "escritura_posse",
+   "categoria_widget": "Tenho só a posse ou provas de que moro lá",
+   "nivel": "N0 / N1_escritura (conforme a resposta)",
+   "regra_de_nivel": "Posse, não propriedade: N0 (usucapião); N1 se o dono da matrícula for quem passou a posse",
+   "conteudo_oraculo": {
+    "origem": "Site kenny-corretor-imoveis, data/oraculo-raiox.json e data/oraculo-calculadora.json (PR #121, ADR-006, 25/11/2026)",
+    "label": "Escritura de cessão de posse (a \"escritura de posse\" feita no cartório)",
+    "descricao": "Escritura pública em que alguém declara passar a você a posse de um imóvel. Ela prova a posse e a data em que você a recebeu, mas não transfere a propriedade: pela lei, a propriedade passa com o registro de um título translativo na matrícula (Código Civil, art. 1.245). Muita gente confunde com a escritura de compra e venda.",
+    "destino": "Usucapião, em que o tempo de posse de quem passou a posse para você pode somar ao seu (Código Civil, art. 1.243); ou, se existir matrícula e o dono registrado for localizado e concordar, escritura de compra e venda com ele.",
+    "advogado": true,
+    "pergunta": "Existe matrícula desse imóvel no Cartório de Registro de Imóveis?",
+    "opcoes": [
+     {
+      "label": "Não existe, ou ninguém sabe dela",
+      "caminho": "N0",
+      "nota": "Sem matrícula, o caminho é a usucapião, que abre a matrícula em seu nome. O Código Civil permite somar a posse dos anteriores: \"Art. 1.243. O possuidor pode, para o fim de contar o tempo exigido pelos artigos antecedentes, acrescentar à sua posse a dos seus antecessores (art. 1.207), contanto que todas sejam contínuas, pacíficas e, nos casos do art. 1.242, com justo título e de boa-fé.\""
+     },
+     {
+      "label": "Existe, em nome de outra pessoa (nem eu nem quem me passou a posse)",
+      "caminho": "N0",
+      "nota": "O dono registrado continua sendo o dono: \"Art. 1.245. Transfere-se entre vivos a propriedade mediante o registro do título translativo no Registro de Imóveis.\" O caminho costuma ser a usucapião, em que o dono da matrícula é notificado."
+     },
+     {
+      "label": "Existe, em nome de quem me passou a posse",
+      "caminho": "N1_escritura",
+      "nota": "Se o dono da matrícula é quem passou a posse para você, o caminho mais curto é ele fazer a escritura de compra e venda e você registrá-la. Se ele não fizer, o caminho é a usucapião."
+     },
+     {
+      "label": "Não sei",
+      "caminho": "N0",
+      "nota": "Não sei: peça no Cartório de Registro de Imóveis a busca pelo endereço do imóvel e pelos nomes de quem teve a posse antes (ato 223). Enquanto isso, o Oráculo mostra o caminho da usucapião, o mais comum para quem tem só a escritura de posse."
+     }
+    ],
+    "itensExtras": [
+     {
+      "id": "nat_escritura_posse",
+      "nome": "Escritura de cessão de posse e as anteriores, se houver (a corrente da posse)",
+      "obrigatorio": true,
+      "onde": "Tabelionato de Notas",
+      "motivo": "Prova a data e a sequência da posse; o tempo dos anteriores pode somar na usucapião (Código Civil, art. 1.243)."
+     },
+     {
+      "id": "nat_busca_matricula",
+      "nome": "Busca no Cartório de Registro de Imóveis pelo endereço e pelos nomes dos antigos possuidores",
+      "obrigatorio": true,
+      "onde": "Cartório de Registro de Imóveis",
+      "motivo": "Mostra se existe matrícula e quem é o dono registrado."
+     }
+    ],
+    "gatilhos": [
+     "Escritura de posse não é escritura de compra e venda: ela não põe o imóvel no seu nome (Código Civil, art. 1.245)."
+    ]
+   }
+  },
+  {
+   "id": "transcricao_antiga",
+   "categoria_widget": "Tenho um documento de propriedade",
+   "nivel": "N1_escritura / N2.5 / PLENO (conforme a resposta)",
+   "regra_de_nivel": "Transcrição em nome de quem vende = registro de propriedade (PLENO), com abertura de matrícula no primeiro registro",
+   "conteudo_oraculo": {
+    "origem": "Site kenny-corretor-imoveis, data/oraculo-raiox.json e data/oraculo-calculadora.json (PR #121, ADR-006, 25/11/2026)",
+    "label": "Registro antigo em \"transcrição\" (de antes de 1976), sem matrícula aberta",
+    "descricao": "Antes de 1976, os imóveis eram registrados em livros de transcrição, sem matrícula. A transcrição continua valendo como registro de propriedade; a matrícula é aberta no primeiro ato registrado depois disso. Lei 6.015/1973, art. 176, § 1º, I (redação da Lei 14.382/2022): \"cada imóvel terá matrícula própria, que será aberta por ocasião do primeiro ato de registro ou de averbação caso a transcrição possua todos os requisitos elencados para a abertura de matrícula\".",
+    "destino": "Na venda, o cartório abre a matrícula com base na transcrição e registra a escritura. Se a descrição antiga não bater com o terreno, pode ser preciso retificar antes.",
+    "advogado": false,
+    "pergunta": "Quem vende é a pessoa que está na transcrição?",
+    "opcoes": [
+     {
+      "label": "Sim",
+      "caminho": "PLENO",
+      "nota": "A matrícula será aberta no primeiro registro, com base na transcrição. A calculadora já soma o ato de abertura de matrícula. Lei 6.015/1973, art. 176, § 1º, I (redação da Lei 14.382/2022): \"cada imóvel terá matrícula própria, que será aberta por ocasião do primeiro ato de registro ou de averbação caso a transcrição possua todos os requisitos elencados para a abertura de matrícula\"."
+     },
+     {
+      "label": "A pessoa da transcrição faleceu",
+      "caminho": "N2.5"
+     },
+     {
+      "label": "Não: quem vende tem só um contrato com a pessoa da transcrição",
+      "caminho": "N1_escritura",
+      "nota": "Quem vende ainda não é o dono registrado. Escolha \"Contrato de gaveta\" para ver todas as situações (corrente de contratos, vendedor que não assina)."
+     },
+     {
+      "label": "Não sei",
+      "caminho": "PLENO",
+      "nota": "Não sei: peça ao Cartório de Registro de Imóveis a certidão da transcrição (número, livro e folha). Ela mostra em nome de quem está e a descrição do imóvel."
+     }
+    ],
+    "itensExtras": [
+     {
+      "id": "nat_certidao_transcricao",
+      "nome": "Certidão de inteiro teor da transcrição (número, livro e folha)",
+      "obrigatorio": true,
+      "onde": "Cartório de Registro de Imóveis",
+      "motivo": "Mostra em nome de quem está e a descrição do imóvel; a matrícula é aberta com base nela (Lei 6.015/1973, art. 176, § 1º, I)."
+     }
+    ],
+    "gatilhos": [
+     "Descrição antiga que não bate com o terreno (medidas, confrontantes): pode exigir retificação antes da venda."
+    ]
+   }
+  },
+  {
+   "id": "titulo_reforma_agraria",
+   "categoria_widget": "Situações especiais",
+   "nivel": "PLENO / sem caminho (conforme a resposta)",
+   "regra_de_nivel": "Título de domínio registrado há mais de 10 anos: PLENO (rural); antes disso ou concessão de uso: sem caminho de venda",
+   "conteudo_oraculo": {
+    "origem": "Site kenny-corretor-imoveis, data/oraculo-raiox.json e data/oraculo-calculadora.json (PR #121, ADR-006, 25/11/2026)",
+    "label": "Título do INCRA ou do ITERAL (reforma agrária ou terra do Estado)",
+    "descricao": "Título dado pelo Poder Público a quem recebeu terra em assentamento (INCRA) ou em terra do Estado (ITERAL, em Alagoas). Pode ser título de domínio ou concessão de uso, e tem regras próprias de venda. A Constituição diz: \"Art. 189. Os beneficiários da distribuição de imóveis rurais pela reforma agrária receberão títulos de domínio ou de concessão de uso, inegociáveis pelo prazo de dez anos.\"",
+    "destino": "Antes de qualquer negócio, peça ao órgão que deu o título (INCRA ou ITERAL) uma certidão da situação do título: se é domínio ou concessão, se as condições foram cumpridas e se já pode ser vendido.",
+    "advogado": true,
+    "pergunta": "Que título é?",
+    "opcoes": [
+     {
+      "label": "Título de domínio, registrado na matrícula, dado há mais de 10 anos",
+      "caminho": "PLENO",
+      "nota": "Mesmo depois de 10 anos, confirme no órgão que deu o título se as condições dele foram cumpridas e liberadas. Marque também \"Imóvel rural\"."
+     },
+     {
+      "label": "Título de domínio dado há menos de 10 anos",
+      "caminho": null,
+      "nota": "A Constituição proíbe negociar o título nesse prazo: \"Art. 189. Os beneficiários da distribuição de imóveis rurais pela reforma agrária receberão títulos de domínio ou de concessão de uso, inegociáveis pelo prazo de dez anos.\""
+     },
+     {
+      "label": "Contrato de concessão de uso (CCU ou CDRU)",
+      "caminho": null,
+      "nota": "Concessão de uso não é propriedade. \"Art. 189. Os beneficiários da distribuição de imóveis rurais pela reforma agrária receberão títulos de domínio ou de concessão de uso, inegociáveis pelo prazo de dez anos.\" Fale com o INCRA antes de qualquer negócio."
+     },
+     {
+      "label": "Título do ITERAL (terra do Estado de Alagoas)",
+      "caminho": null,
+      "nota": "As regras de venda dos títulos do ITERAL dependem da lei estadual e do próprio título, que o Oráculo ainda não conferiu (NÃO VERIFICADO). Peça ao ITERAL a certidão da situação do título antes de qualquer negócio."
+     },
+     {
+      "label": "Não sei",
+      "caminho": null,
+      "nota": "Não sei: leia o título (ele diz o órgão, o tipo e a data) e peça ao INCRA ou ao ITERAL a certidão da situação dele."
+     }
+    ],
+    "itensExtras": [
+     {
+      "id": "nat_titulo_incra_iteral",
+      "nome": "Título (de domínio ou de concessão de uso) e certidão da situação dele no órgão que o deu",
+      "obrigatorio": true,
+      "onde": "INCRA ou ITERAL",
+      "motivo": "Títulos da reforma agrária são inegociáveis por 10 anos (Constituição, art. 189); o órgão informa se as condições foram cumpridas."
+     }
+    ],
+    "gatilhos": [
+     "Título de reforma agrária com menos de 10 anos, ou concessão de uso: não negociar (Constituição, art. 189)."
+    ]
+   }
+  },
+  {
+   "id": "procuracao_causa_propria",
+   "categoria_widget": "Tenho um contrato ou papel de compra",
+   "nivel": "N1_escritura / N2 / PLENO (conforme a resposta)",
+   "regra_de_nivel": "Só procuração: N1 (falta a escritura); escritura sem registro: N2; registrada: PLENO",
+   "conteudo_oraculo": {
+    "origem": "Site kenny-corretor-imoveis, data/oraculo-raiox.json e data/oraculo-calculadora.json (PR #121, ADR-006, 25/11/2026)",
+    "label": "Comprei por procuração (o vendedor me deu uma procuração para passar o imóvel)",
+    "descricao": "Procuração em que o dono autoriza alguém a vender o imóvel, muitas vezes ao próprio comprador. Ela não é a venda: a propriedade só passa com a escritura de compra e venda registrada na matrícula (Código Civil, art. 1.245). A procuração \"em causa própria\" tem regra especial: \"Art. 685. Conferido o mandato com a cláusula \"em causa própria\", a sua revogação não terá eficácia, nem se extinguirá pela morte de qualquer das partes, ficando o mandatário dispensado de prestar contas, e podendo transferir para si os bens móveis ou imóveis objeto do mandato, obedecidas as formalidades legais.\"",
+    "destino": "Fazer a escritura de compra e venda usando a procuração e registrá-la. Procuração comum acaba com a morte de quem a deu (Código Civil, art. 682, II), por isso não deixe para depois.",
+    "advogado": false,
+    "pergunta": "Como está hoje?",
+    "opcoes": [
+     {
+      "label": "Só tenho a procuração, e ela diz \"em causa própria\"",
+      "caminho": "N1_escritura",
+      "nota": "A procuração em causa própria não se revoga nem acaba com a morte (Código Civil, art. 685), mas não é a venda: ainda falta a escritura de compra e venda e o registro."
+     },
+     {
+      "label": "Só tenho uma procuração comum (sem \"em causa própria\")",
+      "caminho": "N1_escritura",
+      "nota": "Procuração comum acaba com a morte ou interdição de quem a deu e pode ser revogada (Código Civil, art. 682). Faça a escritura logo. Se o dono já faleceu, ela não serve mais: o caminho passa pelo inventário dele."
+     },
+     {
+      "label": "A escritura já foi feita com a procuração, mas não foi registrada",
+      "caminho": "N2"
+     },
+     {
+      "label": "A escritura foi feita e registrada na matrícula",
+      "caminho": "PLENO"
+     },
+     {
+      "label": "Não sei que tipo de procuração é",
+      "caminho": "N1_escritura",
+      "nota": "Não sei: peça ao tabelionato que lavrou a procuração uma certidão atualizada. Ela mostra se é \"em causa própria\" e se foi revogada."
+     }
+    ],
+    "itensExtras": [
+     {
+      "id": "nat_certidao_procuracao",
+      "nome": "Certidão atualizada da procuração (diz se é em causa própria e se foi revogada)",
+      "obrigatorio": true,
+      "onde": "Tabelionato de Notas que lavrou a procuração",
+      "motivo": "Procuração comum acaba com a morte e pode ser revogada (Código Civil, art. 682); a em causa própria não (art. 685)."
+     }
+    ],
+    "gatilhos": [
+     "Procuração não é escritura de compra e venda: a propriedade só passa com a escritura registrada (Código Civil, art. 1.245)."
+    ]
+   }
+  },
+  {
+   "id": "contrato_financiamento_banco",
+   "categoria_widget": "Tenho um documento de propriedade",
+   "nivel": "N2 / N4 / PLENO (conforme a resposta)",
+   "regra_de_nivel": "Contrato registrado com alienação ativa: N4; alienação cancelada: PLENO; sem registro: N2",
+   "conteudo_oraculo": {
+    "origem": "Site kenny-corretor-imoveis, data/oraculo-raiox.json e data/oraculo-calculadora.json (PR #121, ADR-006, 25/11/2026)",
+    "label": "Contrato de financiamento do banco (Caixa e outros), com força de escritura",
+    "descricao": "Contrato de compra com financiamento e alienação fiduciária, feito pelo banco por instrumento particular. A lei dá a ele força de escritura: \"Art. 38. Os atos e contratos referidos nesta Lei ou resultantes da sua aplicação, mesmo aqueles que visem à constituição, transferência, modificação ou renúncia de direitos reais sobre imóveis, poderão ser celebrados por escritura pública ou por instrumento particular com efeitos de escritura pública.\" Registrado na matrícula, quem comprou é o dono, mas o imóvel fica em garantia do banco até a quitação.",
+    "destino": "Com o financiamento quitado, o banco dá o termo de quitação e o cartório cancela a alienação fiduciária. Para vender antes disso, é preciso quitar ou transferir o financiamento com o banco.",
+    "advogado": false,
+    "pergunta": "O contrato está registrado na matrícula?",
+    "opcoes": [
+     {
+      "label": "Registrado; o financiamento ainda não foi quitado",
+      "caminho": "N4",
+      "nota": "O imóvel está em alienação fiduciária ao banco. Para vender, é preciso quitar o financiamento ou transferi-lo com a concordância do banco."
+     },
+     {
+      "label": "Registrado; já quitei, mas não dei baixa no cartório",
+      "caminho": "N4",
+      "nota": "Falta cancelar a alienação no cartório com o termo de quitação do banco. A Lei 9.514/1997 diz: \"Art. 25. Com o pagamento da dívida e seus encargos, resolve-se, nos termos deste artigo, a propriedade fiduciária do imóvel.\" E o § 2º: \"À vista do termo de quitação de que trata o parágrafo anterior, o oficial do competente Registro de Imóveis efetuará o cancelamento do registro da propriedade fiduciária.\""
+     },
+     {
+      "label": "Registrado e a alienação já foi cancelada (baixada)",
+      "caminho": "PLENO"
+     },
+     {
+      "label": "Não foi registrado",
+      "caminho": "N2",
+      "nota": "Sem registro, quem vendeu continua sendo o dono para a lei (Código Civil, art. 1.245). Leve o contrato ao Cartório de Registro de Imóveis."
+     },
+     {
+      "label": "Não sei",
+      "caminho": "N4",
+      "nota": "Não sei: peça a certidão de inteiro teor da matrícula (ato 223) e veja se o contrato e a alienação fiduciária aparecem nela."
+     }
+    ],
+    "itensExtras": [
+     {
+      "id": "nat_contrato_banco",
+      "nome": "Contrato com o banco e, se quitado, o termo de quitação",
+      "obrigatorio": true,
+      "onde": "Banco",
+      "motivo": "Com o termo de quitação, o cartório cancela a alienação fiduciária (Lei 9.514/1997, art. 25, § 2º)."
+     }
+    ],
+    "gatilhos": [
+     "Imóvel em alienação fiduciária: sem quitação ou concordância do banco, não há venda livre."
     ]
    }
   }

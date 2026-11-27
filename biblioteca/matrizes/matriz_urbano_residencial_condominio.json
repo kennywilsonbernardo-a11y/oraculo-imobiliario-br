@@ -130,5 +130,75 @@
     "bloco_B_checklist": "Dividir em Documentos do Imóvel / Vendedor / Onde Emitir",
     "bloco_C_termo": "Material educacional PEI - Não é PTAM/CNAI nem laudo jurídico - Não substitui certidão oficial - Valide com advogado - VIS-001 S8"
   },
-  "observacao_trilha": "Trilha A apenas - NAO usar em e1/matrizes/ - E1 continua bloqueado esperando A4 real - disciplina separada - este arquivo não satisfaz requisitos E1"
+  "observacao_trilha": "Trilha A apenas - NAO usar em e1/matrizes/ - E1 continua bloqueado esperando A4 real - disciplina separada - este arquivo não satisfaz requisitos E1",
+  "checklist_especifico_comercial": [
+    {
+      "id": "averbacao_construcao",
+      "nome": "Construção averbada na matrícula, com a área que existe hoje (habite-se + certidão negativa da obra + averbação)",
+      "obrigatorio": true,
+      "onde": "Prefeitura, Receita Federal e Cartório de Registro de Imóveis",
+      "lei": "Lei 6.015/1973, art. 167, II, 4; Lei 8.212/1991, art. 47, II",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    },
+    {
+      "id": "alvara_funcionamento",
+      "nome": "Alvará de funcionamento da Prefeitura em dia, para a atividade que funciona no imóvel",
+      "obrigatorio": false,
+      "onde": "Prefeitura",
+      "motivo": "Necessário para quem vai continuar o negócio.",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    },
+    {
+      "id": "licenca_bombeiros",
+      "nome": "Vistoria e licença do Corpo de Bombeiros em dia (aprovar o projeto e vistoriar são etapas diferentes)",
+      "obrigatorio": false,
+      "onde": "Corpo de Bombeiros Militar de Alagoas",
+      "lei": "Lei 13.425/2017, arts. 3º e 4º, V e § 2º",
+      "motivo": "O alvará municipal depende do laudo dos Bombeiros e vale pelo prazo dele.",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    },
+    {
+      "id": "cadastur",
+      "nome": "Cadastro no Ministério do Turismo (Cadastur), se for pousada, hotel ou outro meio de hospedagem (validade de 2 anos)",
+      "obrigatorio": false,
+      "onde": "Ministério do Turismo - Cadastur",
+      "lei": "Lei 11.771/2008, arts. 21, I, e 22, caput e § 4º",
+      "motivo": "Meio de hospedagem é obrigado ao cadastro para prestar o serviço.",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    },
+    {
+      "id": "licenca_sanitaria",
+      "nome": "Licença da Vigilância Sanitária, se houver restaurante, café da manhã ou cozinha",
+      "obrigatorio": false,
+      "onde": "Vigilância Sanitária municipal",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    },
+    {
+      "id": "empresa_operadora",
+      "nome": "Dados da empresa que opera no imóvel: contrato social, certidão simplificada da Junta e CNPJ (confira na aba Consulta Empresa)",
+      "obrigatorio": false,
+      "onde": "Junta Comercial e Receita Federal",
+      "motivo": "Mostra se o imóvel é da pessoa ou da empresa e quem pode assinar.",
+      "origem": "Checklist comercial",
+      "tipo_imovel": [
+        "comercial"
+      ]
+    }
+  ],
+  "observacao_comercial": "Tipo 'Imóvel comercial em funcionamento' (pousada, hotel, loja, restaurante): ADR-007, Kenny, 27/11/2026."
 }
