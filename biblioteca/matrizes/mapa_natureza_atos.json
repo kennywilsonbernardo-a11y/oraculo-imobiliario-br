@@ -227,6 +227,54 @@
     "georreferenciamento (profissional)",
     "CCIR/ITR em dia"
    ]
+  },
+  "N7": {
+   "descricao": "Construção não averbada → averbação da construção + compra e venda",
+   "atos": [
+    {
+     "codigo": "223",
+     "qtd": 1,
+     "obs": "certidão de ônus/inteiro teor"
+    },
+    {
+     "codigo": "202",
+     "faixa_mult": 1.0,
+     "obs": "averbação da construção (a base é o valor da construção; aqui estimada pelo valor informado)"
+    },
+    {
+     "codigo": "259",
+     "faixa_mult": 1.0,
+     "obs": "escritura com valor declarado"
+    },
+    {
+     "codigo": "200",
+     "faixa_mult": 1.0,
+     "obs": "registro da escritura"
+    }
+   ],
+   "itbi": true,
+   "outros": [
+    "projeto ou levantamento da construção com ART ou RRT",
+    "habite-se da Prefeitura (taxa municipal; confirmar na Prefeitura)",
+    "certidão do INSS da obra (CND de obra, Receita Federal): o valor depende da área e do tipo de obra; casa própria pequena pode ter redução ou dispensa. Simule no sistema da Receita (SERO) antes de fechar o preço"
+   ]
+  }
+ },
+ "atos_por_resposta": {
+  "_descricao": "Atos que uma resposta do documento acrescenta ao caminho (site, lib/oraculo-custos.js, campo atos_extra).",
+  "transcricao_antiga": {
+   "respostas": [
+    "Sim",
+    "Não sei"
+   ],
+   "caminho": "PLENO",
+   "atos_extra": [
+    {
+     "codigo": "231",
+     "obs": "abertura da matrícula a partir da transcrição (Lei 6.015/1973, art. 176, § 1º, I)"
+    }
+   ],
+   "decisao": "pendência do ADR-006 resolvida em 27/11/2026"
   }
  }
 }

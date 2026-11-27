@@ -36,7 +36,7 @@ Ao rodar o caso no Oráculo, apareceram três lacunas:
 
 ## Pendências
 
-1. Levar o N7, as situações 23 e 24 e o checklist comercial para as matrizes deste repositório. Por enquanto foram editados direto no `data/oraculo-raiox.json` do site, como no ADR-006.
+1. ~~Levar o N7, as situações 23 e 24 e o checklist comercial para as matrizes deste repositório~~ — **resolvido em 27/11/2026**: N7 em `matriz_naturezas_titulo.json` e `mapa_natureza_atos.json`; situações em `matriz_casos_especiais.json`; checklist em `matriz_urbano_residencial_condominio.json` (`checklist_especifico_comercial`).
 2. Na calculadora, separar o preço do imóvel do preço do negócio (móveis, marca, ponto). A base do ITBI é o imóvel; a regra de cada município fica NÃO VERIFICADA.
 3. Licença sanitária e alvará: a exigência e o prazo variam por município (NÃO VERIFICADO para São Miguel dos Milagres).
-4. Lei 14.195/2021, art. 41: as EIRELI existentes foram transformadas em sociedade limitada unipessoal (texto conferido). Ainda não entrou no Oráculo; avaliar se vale uma ficha na busca.
+4. ~~Lei 14.195/2021, art. 41 (EIRELI)~~ — **resolvido em 27/11/2026**: ficha na busca (site, PR #125).

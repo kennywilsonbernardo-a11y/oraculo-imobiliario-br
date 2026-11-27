@@ -33,11 +33,11 @@ Regras mantidas:
 
 ## Fora desta decisão (pendente)
 
-- Somar o ato de **abertura de matrícula** (ato 231) ao custo da transcrição antiga: hoje só aparece em nota.
+- ~~Somar o ato de **abertura de matrícula** (ato 231) ao custo da transcrição antiga~~ — **resolvido em 27/11/2026** (site, PR #125; matriz `mapa_natureza_atos.json`, campo `atos_por_resposta`).
 - Regras dos títulos do **ITERAL**: depende de ler a lei estadual e um título real.
 - Cessão de posse de imóvel **rural** com CCIR/CAR: segue o caminho N0 com a marcação N6.
 
 ## Consequências
 
-- As matrizes deste repositório (biblioteca/matrizes) não têm ainda estas cinco naturezas; a fonte de verdade delas, por enquanto, é `data/oraculo-calculadora.json` e `data/oraculo-raiox.json` do site. Levar para as matrizes na próxima consolidação.
+- As matrizes deste repositório (biblioteca/matrizes) não têm ainda estas cinco naturezas; a fonte de verdade delas, por enquanto, é `data/oraculo-calculadora.json` e `data/oraculo-raiox.json` do site. Levar para as matrizes na próxima consolidação. **Resolvido em 27/11/2026**: as cinco estão em `matriz_naturezas_especificas.json` (campo `conteudo_oraculo`).
 - Testes no site: `tests/naturezas.test.mjs` garante que toda resposta leva a um caminho com custo e etapa, e que as naturezas novas existem na calculadora e no Raio-X. O golden de custos foi ampliado sem alterar nenhum caso anterior.
